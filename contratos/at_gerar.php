@@ -9,7 +9,7 @@
 
 <body>
       <div align="center">
-      <form method="get" action="http://www.yourwebskills.com/files/examples/process.php">
+      <form method="get" action="">
 
         <p>SISTEMA DE GERAÇÃO AUTOMÁTICA DE CONTRATO</p>
         <p>&nbsp;</p>
@@ -24,22 +24,29 @@
 		</p>
 
         <p>
-          <label for="numcontrato">Selecione a fatura do contrato:</label>
+          <label for="numcontrato">Para qual produto ou serviço deseja gerar o contrato?</label>
           <br>
-          <select name=fatura>
+          <select name=servico>
             <option value=0>Selecione</option>
           </select>
         </p>
-        <p>
+
+
+<!--        Opção desativada devido ao ajuste para que o campo serviço já defina o tipo do contrato a ser gerado
+
+		<p>
           <label for="tipocontrato">Selecione o tipo de contrato a ser gerado:</label>
           <br>
           <select name="tipocontrato" id="tipocontrato">
-            <OPTION VALUE="criacao">Criação de website</option>
+            <OPTION VALUE="criacao" selected>Criação de website</option>
             <OPTION VALUE="edicao">Edição/Manutenção de website</option>
             <OPTION VALUE="admredesoc">Administração de Redes Sociais</option>
           </select>
         </p>
-        <p>&nbsp;</p>
+
+-->
+
+       <p>&nbsp;</p>
         <p>
         </p>
 
