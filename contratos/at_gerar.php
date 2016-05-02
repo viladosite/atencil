@@ -28,11 +28,19 @@
           <br>
           <select name=servico>
             <option value=0>Selecione</option>
+<?php
+		$sql = "SELECT cod_estados, sigla
+				FROM estados
+				ORDER BY sigla";
+		$res = mysql_query( $sql );
+		while ( $row = mysql_fetch_assoc( $res ) ) {
+			echo '<option value="'.$row['cod_estados'].'">'.$row['sigla'].'</option>';
+		}
+	?>
           </select>
         </p>
 
 
-<!--        Opção desativada devido ao ajuste para que o campo serviço já defina o tipo do contrato a ser gerado
 
 		<p>
           <label for="tipocontrato">Selecione o tipo de contrato a ser gerado:</label>
@@ -44,7 +52,6 @@
           </select>
         </p>
 
--->
 
        <p>&nbsp;</p>
         <p>
