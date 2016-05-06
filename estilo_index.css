@@ -1,0 +1,103 @@
+ /* bla bla bla */
+/* usado para não deixar a tela ficar tão pequena ou "quebrar" a formatação */
+@media (max-width: 40em) {
+    .quadro_login {
+    min-width: 65%;
+    }
+    }
+
+
+
+
+/* Smartphone em modo retrato */
+
+@media only screen and (device-width : 360px) {
+
+      /* estilos */
+
+       .quadro_login {
+            height: 100%!important;
+            width: 100%!important;
+            
+            overflow: hidden;
+            position: fixed;
+            padding: 0px 0px 0px 0px;
+            margin-top: 0!important;
+            margin-left: auto!important;
+            margin-right: 0!important;
+    }
+
+        .vform{
+            width: 100%;
+        }
+
+       #login , #senha{
+        padding: 30%;
+        width: 60%;
+        height: 35%;
+        font-size: 60pt;
+        margin: 1px;
+    } 
+
+    #btn_esq , #btn_entrar{
+        width: 30%;
+    }
+
+}
+
+
+
+
+
+ body{
+    width: 100%;
+    overflow: hidden;
+ }   
+
+/* formatação da div central */
+.quadro_login{
+	background-color: #56707a;
+	width: 60%;
+	padding: 10px 0px 30px 0px;
+    text-align: center;
+    color: #cccccc;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    box-shadow: 2px 1px 20px rgba(0,0,0,.8);
+    font-family: arial;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    overflow: hidden;
+
+}
+
+
+/* botões do form */
+#btn_esq , #btn_entrar {
+	color: #eeeeee;
+    background: #234047;
+    padding: 5px; 
+    margin: 1px;
+}
+
+/* hover dos botões */
+#btn_esq:hover , #btn_entrar:hover {
+	color: #234047;
+    background: rgb(64,196,255)
+   }
+
+
+/* edição do formulário */
+.vform{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*campos de texto */
+#login , #senha{
+    padding: 5px;
+}
