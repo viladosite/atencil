@@ -55,7 +55,6 @@
 <p><strong>Cláusula 13ª.</strong>&nbsp;A&nbsp;<strong>CONTRATANTE</strong>&nbsp;pagará à&nbsp;<strong>CONTRATADA</strong>,  a quantia definida na página inicial deste contrato, sob as condições de pagamento indicadas nesta mesma  página.</p>
 <p><strong>Cláusula 14ª.</strong>&nbsp;Caso a&nbsp;<strong>CONTRATANTE</strong>&nbsp;fique em mora  pela falta de pagamento do valor da Cláusula anterior, pagará a multa de (1,0)%  do valor.</p>
 <p><strong>Cláusula 15ª.</strong>&nbsp;&nbsp;No caso de pagamentos parcelados diretamente  com a <strong>CONTRATADA</strong>, a conclusão e  continuidade do serviço e principalmente o obedecimento dos prazos de entrega,  ficam DIRETAMENTE vinculados ao pagamento das parcelas nas devidas datas.</p>
-<p>&nbsp;</p>
 
 
 <h3>DA RESCISÃO3</h3>

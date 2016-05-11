@@ -8,7 +8,7 @@
 
 
 //Monta as variáveis para os campos do form
-$usuario = $_POST['usuario'];
+$login = $_POST['usuario'];
 $senha = $_POST['senha'];
 $email = $_POST['email'];
 $nome = $_POST['nome'];
@@ -16,13 +16,10 @@ $nome = $_POST['nome'];
 
 
 // Define as variáveis com a configuração do banco de dados
-/*
-$dbserver = 'atencil.tk';
+$dbserver = 'localhost';
 $dbname = 'atencilt_usuario';
 $dbuser = 'atencilt_usuario';
 $dbpass = '78964123Vi';
-*/
-
 
 // Tenta se conectar ao servidor MySQL
 $mysql = mysql_connect($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysql_error());
@@ -39,7 +36,22 @@ if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
 
     $query = mysql_query($sql);
 	
-    if (mysql_num_rows($query) != 1) {
+// Comparativo antigo
+//    if (mysql_num_rows($query) != 1) {
+
+// Montando o comparativo de login
+
+
+	$sql2 = "SELECT 'senha' FROM 'usuarios' WHERE (`usuario` = '".$usuario ."') AND (`ativo` = 1) LIMIT 1";
+
+	$query2 = mysql_query($sql2);
+
+	$checalogin = mysql_fetch_field($query2);
+
+	if $login = $checalogin
+
+
+
 
 // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
 	echo '<script type="text/javascript"> 
