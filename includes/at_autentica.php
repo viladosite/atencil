@@ -16,12 +16,12 @@ $nome = $_POST['nome'];
 
 
 // Define as variáveis com a configuração do banco de dados
-/*
+
 $dbserver = 'atencil.tk';
 $dbname = 'atencilt_usuario';
 $dbuser = 'atencilt_usuario';
 $dbpass = '78964123Vi';
-*/
+
 
 
 // Tenta se conectar ao servidor MySQL
