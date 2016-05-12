@@ -2,8 +2,10 @@
 /* usado para não deixar a tela ficar tão pequena ou "quebrar" a formatação */
 @media (max-width: 40em) {
     .quadro_login {
-    min-width: 65%;
+    min-width: 70%;
     }
+
+
     }
 
 
@@ -31,7 +33,7 @@
             width: 100%;
         }
 
-       #login , #senha{
+       #usuario , #senha{
         padding: 30%;
         width: 60%;
         height: 35%;
@@ -67,7 +69,6 @@
     
     box-shadow: 2px 1px 20px rgba(0,0,0,.8);
     font-family: arial;
-    text-align: center;
     font-weight: bold;
     text-shadow: 1px 1px 1px rgba(0,0,0,.5);
     overflow: hidden;
@@ -98,6 +99,18 @@
 }
 
 /*campos de texto */
-#login , #senha{
+#usuario , #senha{
     padding: 5px;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 20%;
+}
+}
+
+label{
+    }
+
+.campo2{
+    text-indent: 14px;
 }
