@@ -13,7 +13,7 @@
 
 /* Smartphone em modo retrato */
 
-@media only screen and (device-width : 360px) {
+@media only screen and (max-device-width : 360px) {
 
       /* estilos */
 
@@ -112,6 +112,6 @@ label{
     }
 
 .campo2{
-    text-indent: 14px;
+    text-indent: 16px;
 }
 //testando os commits
