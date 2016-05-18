@@ -1,4 +1,4 @@
- /* bla bla bla */
+
 /* usado para não deixar a tela ficar tão pequena ou "quebrar" a formatação */
 @media (max-width: 40em) {
     .quadro_login {
@@ -19,14 +19,15 @@
 
        .quadro_login {
             height: 100%!important;
-            width: 100%!important;
+            width: 98%!important;
             
             overflow: hidden;
             position: fixed;
-            padding: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px!important;
             margin-top: 0!important;
             margin-left: auto!important;
-            margin-right: 0!important;
+            margin-right: auto!important;
+
     }
 
         .vform{
@@ -38,11 +39,28 @@
         width: 60%;
         height: 35%;
         font-size: 60pt;
-        margin: 1px;
+        margin: 2px;
     } 
 
     #btn_esq , #btn_entrar{
-        width: 30%;
+        width: 38%;
+        min-height: 65%;
+        padding-bottom: 24%;
+        font-size: 2em;
+        margin: 4px;
+    }
+
+/* tamanho do titulo */
+    h1{
+        font-size: 6em;
+    }
+/* tamanho do texto "label" dos campso de texto */
+    label{
+        font-size: 4em;
+    }
+/* solução encontrada para alinhar os textos e caixas do "form" */
+    .campo2{
+        text-indent: 5%!important;
     }
 
 }
@@ -96,6 +114,7 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 /*campos de texto */
@@ -111,7 +130,7 @@
 label{
     }
 
+/* solução encontrada para alinhar os textos e caixas do "form" */
 .campo2{
     text-indent: 16px;
 }
-//testando os commits
