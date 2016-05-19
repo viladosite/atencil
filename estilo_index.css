@@ -10,65 +10,6 @@
 
 
 
-
-/* Smartphone em modo retrato */
-
-@media only screen and (max-device-width : 360px) {
-
-      /* estilos */
-
-       .quadro_login {
-            height: 100%!important;
-            width: 98%!important;
-            
-            overflow: hidden;
-            position: fixed;
-            padding: 0px 0px 0px 0px!important;
-            margin-top: 0!important;
-            margin-left: auto!important;
-            margin-right: auto!important;
-
-    }
-
-        .vform{
-            width: 100%;
-        }
-
-       #usuario , #senha{
-        padding: 30%;
-        width: 60%;
-        height: 35%;
-        font-size: 60pt;
-        margin: 2px;
-    } 
-
-    #btn_esq , #btn_entrar{
-        width: 38%;
-        min-height: 65%;
-        padding-bottom: 24%;
-        font-size: 2em;
-        margin: 4px;
-    }
-
-/* tamanho do titulo */
-    h1{
-        font-size: 6em;
-    }
-/* tamanho do texto "label" dos campso de texto */
-    label{
-        font-size: 4em;
-    }
-/* solução encontrada para alinhar os textos e caixas do "form" */
-    .campo2{
-        text-indent: 5%!important;
-    }
-
-}
-
-
-
-
-
  body{
     width: 100%;
     overflow: hidden;

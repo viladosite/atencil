@@ -1,0 +1,119 @@
+
+/* Smartphone em modo retrato */
+
+@media only screen and (max-device-width : 414px)  and (orientation:portrait) {
+
+      /* estilos */ 
+
+       .quadro_login {
+            height: 100%!important;
+            width: 98%!important;
+            
+            overflow: scroll!important;
+            position: fixed;
+            padding: 0px 0px 0px 0px!important;
+            margin-top: 0!important;
+            margin-left: auto!important;
+            margin-right: auto!important;
+
+    }
+
+        .vform{
+            width: 100%;
+        }
+
+       #usuario , #senha{
+        padding: 2.2%!important;
+        width: 80%;
+        min-height: 45%;
+        font-size: 60pt;
+        margin: 5px;
+    } 
+
+    #btn_esq , #btn_entrar{
+        width: 60%;
+        margin: 20px!important;
+        padding: 5.5%!important;
+        font-size: 300%;
+        font-weight: bold;
+    }
+
+
+
+/* tamanho do titulo */
+    h1{
+        font-size: 7.6em;
+        line-height: 14px!important;
+    }
+/* tamanho do texto "label" dos campso de texto */
+    label{
+        font-size: 5.2em;
+        line-height: 135%!important;
+    }
+/* solução encontrada para alinhar os textos e caixas do "form" */
+    .campo2{
+        text-indent: 4.5%!important;
+
+    }
+
+}
+
+
+
+
+
+/* fim do modo retrato */
+
+
+/* Smartphone em modo paisagem 
+@media only screen and (min-device-width : 480px) and (max-device-width : 736px){
+
+        body {
+            overflow: scroll;
+        }
+
+        .vform{
+            width: 100%;
+        }
+
+       #usuario , #senha{
+        padding: 10%;
+        width: 60%;
+        height: 35%;
+        font-size: 50pt;
+        margin: 0px;
+    } 
+
+    #btn_esq , #btn_entrar{
+        width: 38%;
+        min-height: 65%;
+        padding-bottom: 24%;
+        font-size: 3em;
+        margin: 4px;
+    }
+
+/* tamanho do titulo 
+    h1#titulo{
+        font-size: 5.5em;
+        padding: 0!important;
+        line-height: 50%!important;
+    }
+/* tamanho do texto "label" dos campso de texto 
+    label{
+        font-size: 4em;
+    }
+/* solução encontrada para alinhar os textos e caixas do "form" *
+    .campo2{
+        text-indent: 5%!important;
+    }
+
+}
+
+*/
+
+
+ body{
+    width: 100%;
+    overflow: hidden;
+ }   
+
