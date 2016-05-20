@@ -30,7 +30,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
   <div id="conteudo">
     <div id="conteudo-left">
       <?php  
-        include "menu.php";
+        include_once "menu.php";
       ?>
     </div>
     <div id="conteudo-right"></div>

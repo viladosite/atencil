@@ -12,6 +12,7 @@
   <div class="nome_painel">
     <ul id="nav">
       <li><a href="#">Inicio</a></li>
+     
       <li><a href="#">Atendimentos</a>
         <ul>
           <li><a href="#">Atendimentos Recentes</a></li>
@@ -20,9 +21,7 @@
       </li>
  
       <li><a href="#">Clientes</a></li>
-      <li><a href="#">Usuários</a></li>
-
-      <br><br><br><br><br><br>
+      <li ><a href="#">Usuários</a></li>
       <li><a href="#">Ajuda</a></li>
     </ul>
   </div> 	

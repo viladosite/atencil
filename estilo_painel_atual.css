@@ -78,20 +78,21 @@
 
 
 #conteudo-left{
+
     /*Novamente definimos a largura da div*/
-    width:35%;
+    position: fixed;
+    width:20%;
+    min-height: 50%;
     /* altura da div */
-    height:400px;
+   /* height:400px; */
     /* O atributo Float é utilizado para fazermos o nosso bloco(div) literalmente flutue e se posicione onde queremos na página, quando escolhemos left, dizemos que esse bloco irá se posicionar na parte esquerda da página */
     float:left;
     /* Cor de fundo da div */
     background-color:#FF0;
 
-    margin-top:0;
     /* left: posição de esquerda*/
     margin-left:auto;
     /* bottom : posição de baixo */
-    margin-bottom:0;
     /* right : posição de direita */
     margin-right:auto;
 

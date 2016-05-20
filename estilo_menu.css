@@ -1,84 +1,11 @@
-/* Estilos para celulares de no máximo 176 x 220
-========================================================================== */
-@media all and (max-width: 319px) {
-    /*aqui vai o css*/
-}
-  
-/* Estilos para celulares principais - 320 x 568
-========================================================================== */
-@media all and (min-width: 320px) and (max-width: 532px) {
-    /*aqui vai o css*/
-    .nome_painel { 
-  display: block; 
-  position: relative;
-  background-color: #56707a;
-  width: 40%;
-
-}
-
-
-.nome_painel ul  { 
-  clear: both;
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
-  z-index: 1000;
-}
-
-
-.nome_painel ul > li {  position: relative; }
-
-.nome_painel ul > li a { 
- display: block;
- text-decoration: none;
-  position: relative;
-  color: #cccccc;
-   background: #56707a;
-   padding: 5px;
-    border: 1px solid #ccc;
-    text-align: center;
-    font-family: arial;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
-    transition: 0.2s;
-}
-
-
-
-.nome_painel ul > li ul { display: none; position: absolute; visibility: hidden; vertical-align: middle; padding: 0; width: 100%;}
-.nome_painel ul > li:hover ul { display: block; visibility: visible; }
-.nome_painel ul > li li { float: none; margin: 0; position: relative; white-space: nowrap }
-.nome_painel ul > li li a { display: block; text-decoration: none }
-.nome_painel ul > li li ul { left: 50%; top: -1px;  }
-
-ul li a:hover{
-  color: #56707a;
-    font-weight: bold;
-    background: rgb(64,196,255);
-     text-shadow: 1px 1px 1px rgba(0,0,0,.2); 
-   }
-
-}
-  
-/* Estilos para tablet de no mínimo 533 x 853
-========================================================================== */
-@media all and (min-width: 533px) and (max-width: 800px) {
-    /*aqui vai o css*/
-}
-  
-/* Estilos para desktop/notebook a partir de 801 x n
-========================================================================== */
-@media all and (min-width: 801px) {
-    /*aqui vai o css*/
-}
-
 
 
 .nome_painel { 
 	display: block; 
-	position: relative;
 	background-color: #56707a;
-  width: 40%;
+  width: 98%;
+  
+  margin-right: auto;
 
 }
 
@@ -86,9 +13,9 @@ ul li a:hover{
 .nome_painel ul  { 
 	clear: both;
 	list-style: none; 
-	margin: 0; 
+	margin-right: auto;
 	padding: 0; 
-	z-index: 1000;
+	z-index: 100;
 }
 
 
@@ -97,7 +24,7 @@ ul li a:hover{
 .nome_painel ul > li a { 
  display: block;
  text-decoration: none;
-  position: relative;
+  
   color: #cccccc;
    background: #56707a;
    padding: 5px;
@@ -113,9 +40,8 @@ ul li a:hover{
 
 .nome_painel ul > li ul { display: none; position: absolute; visibility: hidden; vertical-align: middle; padding: 0; width: 100%;}
 .nome_painel ul > li:hover ul { display: block; visibility: visible; }
-.nome_painel ul > li li { float: none; margin: 0; position: relative; white-space: nowrap }
-.nome_painel ul > li li a { display: block; text-decoration: none }
-.nome_painel ul > li li ul { left: 50%; top: -1px;  }
+
+
 
 ul li a:hover{
 	color: #56707a;
@@ -126,13 +52,3 @@ ul li a:hover{
 
 
 
-$(".nome_painel>ul").addClass("js");
-$(".nome_painel>ul").addClass("js").before('&lt;div&gt;Menu&lt;/div&gt;'); 
-$(".atalho").click(function(){ 
-    $(".nome_painel &gt; ul").toggle(); 
-}); 
-$(window).resize(function(){ 
-    if(window.innerWidth &gt; 768) { 
-        $(".nome_painel &gt; ul").removeAttr("style"); 
-    } 
-});
