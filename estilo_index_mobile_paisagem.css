@@ -1,0 +1,63 @@
+
+/* Smartphone em modo paisagem */
+
+
+ body{
+    width: 100%;
+    overflow: hidden;
+ }   
+
+@media only screen and (max-device-width : 736px)  and (orientation: landscape){
+        
+        .quadro_login {
+            height: 100%!important;
+            width: 98%!important;
+            
+            overflow: scroll!important;
+            position: fixed;
+            padding: 0px 0px 0px 0px!important;
+            margin-top: 0!important;
+            margin-left: auto!important;
+            margin-right: auto!important;
+
+    }
+
+        .vform{
+            width: 90%;
+        }
+
+       #usuario , #senha{
+        padding: 1%!important;
+        width: 55%;
+        min-height: 45%;
+        font-size: 50pt;
+        margin: 4px;
+    } 
+
+    #btn_esq , #btn_entrar{
+        width: 45%;
+        margin: 0px 10px 30px 10px!important;
+        padding: 2%!important;
+        font-size: 200%;
+        font-weight: bold;
+    }
+
+
+
+/* tamanho do titulo */
+    h1{
+        font-size: 6em;
+        line-height: 8px!important;
+    }
+/* tamanho do texto "label" dos campso de texto */
+    label{
+        font-size: 3.6em;
+        line-height: 130%!important;
+    }
+/* solução encontrada para alinhar os textos e caixas do "form" */
+    .campo2{
+        text-indent: 4.5%!important;
+
+    }
+
+}

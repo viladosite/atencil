@@ -59,61 +59,7 @@
 }
 
 
-
-
-
-/* fim do modo retrato */
-
-
-/* Smartphone em modo paisagem 
-@media only screen and (min-device-width : 480px) and (max-device-width : 736px){
-
-        body {
-            overflow: scroll;
-        }
-
-        .vform{
-            width: 100%;
-        }
-
-       #usuario , #senha{
-        padding: 10%;
-        width: 60%;
-        height: 35%;
-        font-size: 50pt;
-        margin: 0px;
-    } 
-
-    #btn_esq , #btn_entrar{
-        width: 38%;
-        min-height: 65%;
-        padding-bottom: 24%;
-        font-size: 3em;
-        margin: 4px;
-    }
-
-/* tamanho do titulo 
-    h1#titulo{
-        font-size: 5.5em;
-        padding: 0!important;
-        line-height: 50%!important;
-    }
-/* tamanho do texto "label" dos campso de texto 
-    label{
-        font-size: 4em;
-    }
-/* solução encontrada para alinhar os textos e caixas do "form" *
-    .campo2{
-        text-indent: 5%!important;
-    }
-
-}
-
-*/
-
-
  body{
     width: 100%;
     overflow: hidden;
  }   
-
