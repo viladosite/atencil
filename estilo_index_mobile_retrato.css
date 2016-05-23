@@ -19,42 +19,44 @@
     }
 
         .vform{
-            width: 100%;
+            width: 85%;
         }
 
        #usuario , #senha{
-        padding: 2.2%!important;
-        width: 80%;
+        padding: 1.5%!important;
+        width: 85%;
         min-height: 45%;
-        font-size: 60pt;
-        margin: 5px;
+        font-size: 55pt;
+        margin: 4px;
     } 
 
     #btn_esq , #btn_entrar{
         width: 60%;
         margin: 20px!important;
-        padding: 5.5%!important;
-        font-size: 300%;
+        padding: 4%!important;
+        font-size: 260%!important;
         font-weight: bold;
+        text-align: center!important;
     }
 
 
 
-/* tamanho do titulo */
-    h1{
-        font-size: 7.6em;
-        line-height: 14px!important;
-    }
+
 /* tamanho do texto "label" dos campso de texto */
     label{
-        font-size: 5.2em;
-        line-height: 135%!important;
+        font-size: 3.5em;
+        line-height: 125%!important;
     }
 /* solução encontrada para alinhar os textos e caixas do "form" */
     .campo2{
         text-indent: 4.5%!important;
 
     }
+
+    .logo{
+        width: 55%!important;
+    }
+
 
 }
 
