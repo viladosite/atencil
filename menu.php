@@ -9,7 +9,7 @@
 
   <body>
 
-  <div class="nome_painel">
+  <div class="nome_menu">
     <ul id="nav">
       <li><a href="#">Inicio</a></li>
      

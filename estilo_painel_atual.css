@@ -1,7 +1,7 @@
 #site{
     /* Definimos a largura da página */
-    width: 85%;
-    min-width: 65%!important;
+    width: 98%;
+   
 
     /* Definirmos a altura da página*/
     height: 100%;
@@ -23,7 +23,7 @@
 
 #header{
     /*Novamente definimos a largura da div*/
-    width:98%;
+    width:99%;
     /* altura da div */
     height:80px;
     /* Cor de fundo da div */
@@ -59,7 +59,7 @@
 }  
 #footer{
     /*Novamente definimos a largura da div*/
-    width:98%;
+    width:99%;
     /* altura da div */
     height:100px;
     /* Cor de fundo da div */
@@ -81,8 +81,9 @@
 
     /*Novamente definimos a largura da div*/
     position: fixed;
-    width:20%;
-    min-height: 50%;
+    width:25%;
+    min-width: 20%;
+    min-height: 55%;
     /* altura da div */
    /* height:400px; */
     /* O atributo Float é utilizado para fazermos o nosso bloco(div) literalmente flutue e se posicione onde queremos na página, quando escolhemos left, dizemos que esse bloco irá se posicionar na parte esquerda da página */
@@ -95,11 +96,13 @@
     /* bottom : posição de baixo */
     /* right : posição de direita */
     margin-right:auto;
+    
+
 
     }
 #conteudo-right{
     /*Novamente definimos a largura da div*/
-    width:65%;
+    width:73%;
     /* altura da div */
     height:400px;
     /* Pode parecer meio estranho usarmos o mesmo atributo left para o bloco em que queremos posicionar na direita, mas como sabemos, o css é um estilo em cascata, nossa div conteúdo definimos a largura de 1000px e na conteudo-left 500px,
@@ -114,7 +117,7 @@ automaticamente ao definirmos o conteudo-right com 500px e à esquerda também, 
     /* bottom : posição de baixo */
     margin-bottom:0;
     /* right : posição de direita */
-    margin-right:auto;
+    margin-right:.2%;
     }
 
 

@@ -1,34 +1,39 @@
 
 
-.nome_painel { 
-	display: block; 
+.nome_menu { 
+	 
 	background-color: #56707a;
+  display: block;
   width: 98%;
-  
+  height: 100%!important;
+  margin-left: 1%;
   margin-right: auto;
+  position: absolute;
+  
 
 }
 
 
-.nome_painel ul  { 
+.nome_menu ul  { 
 	clear: both;
 	list-style: none; 
 	margin-right: auto;
 	padding: 0; 
 	z-index: 100;
+  margin-top: 0;
 }
 
 
-.nome_painel ul > li {  position: relative; }
+.nome_menu ul > li {  position: relative; line-height: 260%; padding: .2%;}
 
-.nome_painel ul > li a { 
+.nome_menu ul > li a { 
  display: block;
  text-decoration: none;
   
   color: #cccccc;
    background: #56707a;
-   padding: 5px;
-    border: 1px solid #ccc;
+   padding: 1%;
+    border: 2px solid #ccc;
     text-align: center;
     font-family: arial;
     font-weight: bold;
@@ -38,8 +43,8 @@
 
 
 
-.nome_painel ul > li ul { display: none; position: absolute; visibility: hidden; vertical-align: middle; padding: 0; width: 100%;}
-.nome_painel ul > li:hover ul { display: block; visibility: visible; }
+.nome_menu ul > li ul { display: none; position: absolute; visibility: hidden; vertical-align: middle; padding: 0; width: 100%;}
+.nome_menu ul > li:hover ul { display: block; visibility: visible; }
 
 
 
