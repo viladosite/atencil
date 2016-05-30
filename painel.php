@@ -27,6 +27,10 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		.mdl-cell{
 			background-color: #bbb;
 		}
+
+		#busca{
+			width: 40%!important;
+		}
 	</style>
 	 
 </head>
@@ -48,7 +52,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 
 		<!-- construção do campo de busca -->
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right">
+                  mdl-textfield--floating-label mdl-textfield--align-right" id="busca">
         		<label class="mdl-button mdl-js-button mdl-button--icon"
                	for="fixed-header-drawer-exp">
           			<i class="material-icons">search</i>
