@@ -43,8 +43,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 
 				<nav class="mdl-navigation">
 				<a href="#" class="mdl-navigation__link">Link 1</a>
-				<a href="#" class="mdl-navigation__link">Link 2</a>
-				<a href="#" class="mdl-navigation__link">Link 3</a>
+				
 				</nav>
 
 		<!-- construção do campo de busca -->
