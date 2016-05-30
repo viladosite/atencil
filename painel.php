@@ -37,14 +37,13 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 	<div class=" mdl.layout mdl-js-layout mdl-layout--fixed-header"> <!-- header fixo -->
 		<header class=" mdl-layout__header">
 			<div class="mdl-layout__header-row">
-				<span class="mdl-layout-title"> &nbsp; ATENCIL </span>
+				<span class="mdl-layout-title"> ATENCIL </span>
 
 				<div class="mdl-layout-spacer"></div>  <!-- essa class serve para dar um espaçamento grande -->
 
 				<nav class="mdl-navigation">
 				<a href="#" class="mdl-navigation__link">Link 1</a>
-				<a href="#" class="mdl-navigation__link">Link 2</a>
-				<a href="#" class="mdl-navigation__link">Link 3</a>
+				
 				</nav>
 
 		<!-- construção do campo de busca -->
