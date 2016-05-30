@@ -70,10 +70,10 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
   	<div class="mdl-layout__drawer"> <!-- criação do drawer padrão -->
     	<span class="mdl-layout-title">Title</span>
     	<nav class="mdl-navigation">
-      		<a class="mdl-navigation__link" href="">Link</a>
-      		<a class="mdl-navigation__link" href="">Link</a>
-      		<a class="mdl-navigation__link" href="">Link</a>
-      		<a class="mdl-navigation__link" href="">Link</a>
+      		<a class="mdl-navigation__link" href="">Atendimentos</a>
+      		<a class="mdl-navigation__link" href="">Clientes</a>
+      		<a class="mdl-navigation__link" href="">Usuários</a>
+      		<a class="mdl-navigation__link" href="">Ajuda</a>
     	</nav>
   	</div>
 		
