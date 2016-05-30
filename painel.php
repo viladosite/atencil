@@ -22,6 +22,12 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-amber.min.css" />
 	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+	<style >
+		.mdl-cell{
+			background-color: #bbb;
+		}
+	</style>
 	 
 </head>
 <body>
@@ -71,10 +77,17 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
     	</nav>
   	</div>
 		
+	<!-- grids -->
+	<div class="mdl-grid">
+  		<div class="mdl-cell mdl-cell--4-col">Coluna 1</div>
+  		<div class="mdl-cell mdl-cell--4-col">Coluna 2</div>
+  		<div class="mdl-cell mdl-cell--2-col">Coluna 3</div>
+  		<div class="mdl-cell mdl-cell--2-col">Coluna 3</div>
+	</div>
+
+
 	<main class="mdl-layout__content">	
-		<p>Conteúdo</p>	
-		<p>da página</p>
-		<p>Aqui</p>
+		
 	</main>
 		
 	</div>
