@@ -66,8 +66,27 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		
 
 				
-  	<div class="mdl-layout__drawer"> <!-- criação do drawer padrão -->
-    	<span class="mdl-layout-title">Menu Principal</span>
+  	<div class="demo-drawer mdl-layout__drawer"> <!-- criação do drawer padrão -->
+       	<span class="mdl-layout-title">Menu Principal</span>
+
+		<!-- Criação do header do menu com dados do usuário -->
+		<header class="demo-drawer-header">
+          <img src="images/user.jpg" class="demo-avatar">
+          <div class="demo-avatar-dropdown">
+            <span>admin@viladosite.com.br</span>
+            <div class="mdl-layout-spacer"></div>
+            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">Contas</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+              <li class="mdl-menu__item">admin@viladosite.com.br</li>
+              <li class="mdl-menu__item">comercial@viladosite.com.br</li>
+              <li class="mdl-menu__item"><i class="material-icons">add</i>Adicionar conta...</li>
+            </ul>
+          </div>
+        </header>
+
     	<nav class="mdl-navigation">
       		<a class="mdl-navigation__link" href="">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">perm_phone_msg</i>
