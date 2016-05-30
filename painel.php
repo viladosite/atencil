@@ -74,6 +74,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
       		<a class="mdl-navigation__link" href="">Clientes</a>
       		<a class="mdl-navigation__link" href="">Usuários</a>
       		<a class="mdl-navigation__link" href="">Ajuda</a>
+			<a class="mdl-navigation__link" href="">Sair</a>
     	</nav>
   	</div>
 		
