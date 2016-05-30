@@ -69,7 +69,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		</header>
 		
 
-				
+	<!-- Inclui o drawer com o menu principal -->
   	<?php 
   	include "drawer.php";
   	?>
