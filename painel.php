@@ -85,13 +85,16 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group</i>
             Usuários</a>
 
-      		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help</i>
-            Ajuda</a>
-
 			<a class="mdl-navigation__link" href="">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i>
             Sair</a>
+            
+
+            
+       		<a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help</i>
+            Ajuda</a>
+            
     	</nav>
   	</div>
 		
