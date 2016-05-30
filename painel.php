@@ -69,11 +69,25 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
   	<div class="mdl-layout__drawer"> <!-- criação do drawer padrão -->
     	<span class="mdl-layout-title">Title</span>
     	<nav class="mdl-navigation">
-      		<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_atm</i>Atendimentos</a>
-      		<a class="mdl-navigation__link" href="">Clientes</a>
-      		<a class="mdl-navigation__link" href="">Usuários</a>
-      		<a class="mdl-navigation__link" href="">Ajuda</a>
-			<a class="mdl-navigation__link" href="">Sair</a>
+      		<a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_atm</i>
+            Atendimentos</a>
+
+      		<a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_atm</i>
+            Clientes</a>
+
+      		<a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_atm</i>
+            Usuários</a>
+
+      		<a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_atm</i>
+            Ajuda</a>
+
+			<a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_atm</i>
+            Sair</a>
     	</nav>
   	</div>
 		
