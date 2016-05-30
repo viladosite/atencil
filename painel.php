@@ -29,7 +29,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		}
 
 		#busca{
-			width: 20%!important;
+			width: 40%!important;
 		}
 	</style>
 	 
