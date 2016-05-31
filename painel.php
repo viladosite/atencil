@@ -74,12 +74,12 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
   	include "drawer.php";
   	?>
 		
-	<!-- grids -->
+	<!-- Criação dos grids -->
 	<div class="mdl-grid">
-  		<div class="mdl-cell mdl-cell--4-col">Coluna 1</div>
-  		<div class="mdl-cell mdl-cell--4-col">Coluna 2</div>
-  		<div class="mdl-cell mdl-cell--2-col">Coluna 3</div>
-  		<div class="mdl-cell mdl-cell--2-col">Coluna 3</div>
+  		<div class="mdl-cell mdl-cell--4-col">Atendimentos Recentes</div>
+  		<div class="mdl-cell mdl-cell--4-col">Atendimentos Pendentes</div>
+  		<div class="mdl-cell mdl-cell--2-col">Usuários</div>
+  		<div class="mdl-cell mdl-cell--2-col">Clientes</div>
 	</div>
 
 

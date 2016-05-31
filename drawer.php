@@ -27,9 +27,29 @@
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin</i>
             Clientes</a>
 
-      		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group</i>
-            Usuários</a>
+<!-- Item usuários é exibido apenas se o usuário tiver permissão -->
+
+		<?php
+				// Nível necessário para exibição deste item de menu
+				$nivel_necessario = 2;
+
+				// Verifica se não há a variável da sessão que identifica o usuário
+				if ($_SESSION['UsuarioNivel'] >= $nivel_necessario)
+				{
+
+				    // Exibe o item de menu
+					echo '<a class="mdl-navigation__link" href="">
+	    	        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group</i>
+    	    	    Usuários</a>'
+				
+					// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
+					;
+				
+				}
+		?>
+			
+			
+
 
 			<a class="mdl-navigation__link" href="">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i>
