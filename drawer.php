@@ -72,7 +72,7 @@
 			
 
 
-			<a class="mdl-navigation__link" href="">
+			<a class="mdl-navigation__link" href="includes/logout.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i>
             Sair</a>
 
