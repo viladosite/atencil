@@ -18,7 +18,6 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 	<meta name="viewport" content="width= device-width, initial-scale=1">
 	<title>ATENCIL - Painel</title>
 
-<link rel="stylesheet" type="text/css"  href="troca.css" /> 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-amber.min.css" />
 	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
