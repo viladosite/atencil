@@ -22,7 +22,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-amber.min.css" />
-   	<link rel="stylesheet" href="css/style_painel.css" />
+   	<link rel="stylesheet" href="css/style_dashboard.css" />
 	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
 	<style >
