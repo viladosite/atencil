@@ -79,7 +79,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		</header>
 		
 
-<<<<<<< HEAD
+
 	<!-- Criação do drawer padrão -->				
   	<div class="demo-drawer mdl-layout__drawer">
 	   	<span class="mdl-layout-title">Menu Principal</span>
@@ -102,11 +102,10 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
         </header>
 
         <!-- Criação do menu principal -->
-=======
 				
   	<div class="mdl-layout__drawer"> <!-- criação do drawer padrão -->
     	<span class="mdl-layout-title">Menu Principal</span>
->>>>>>> master
+
     	<nav class="mdl-navigation">
       		<a class="mdl-navigation__link" href="">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">perm_phone_msg</i>
