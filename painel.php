@@ -71,7 +71,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 
 	<!-- Inclui o drawer com o menu principal -->
   	<?php 
-  	include "drawer.php";
+  	include "includes/at_drawer.php";
   	?>
 		
 	<!-- Criação dos grids -->

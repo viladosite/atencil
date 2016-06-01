@@ -5,7 +5,7 @@
 <!-- Criação do header do menu com dados do usuário -->
 
 		<header class="demo-drawer-header">
-          <img src="images/user.jpg" class="demo-avatar">
+          <img src="../images/user.jpg" class="demo-avatar">
           <div class="demo-avatar-dropdown">
           <span><?php echo $_SESSION['UsuarioNome'] ?></span>
             <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
@@ -72,7 +72,7 @@
 			
 
 
-			<a class="mdl-navigation__link" href="includes/at_logout.php">
+			<a class="mdl-navigation__link" href="at_logout.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i>
             Sair</a>
 
