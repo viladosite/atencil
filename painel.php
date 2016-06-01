@@ -29,9 +29,6 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 			background-color: #bbb;
 		}
 
-		#main{
-			width: 100%!important;
-		}
 	</style>
 	 
 </head>
