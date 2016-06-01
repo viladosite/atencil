@@ -68,7 +68,9 @@
 				}
 ?>
 			
-
+      		<a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">search</i>
+            Buscar</a>
 
 			<a class="mdl-navigation__link" href="auth/at_logout.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i>
