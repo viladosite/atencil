@@ -57,14 +57,20 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		        <a class="mdl-navigation__link" href="">
                 <i id="icon1" class="material-icons" role="presentation">phone</i></a>
                 <div class="mdl-tooltip" for="icon1">
-				Veja e edite<br>seus atendimentos
+				Acesse e edite<br>seus atendimentos
 				</div>
 
 		        <a class="mdl-navigation__link" href="">
-                <i class="material-icons" role="presentation">notifications</i></a>
+                <i id="icon2" class="material-icons" role="presentation">notifications</i></a>
+                <div class="mdl-tooltip" for="icon2">
+				Veja as notificações<br>para a sua conta
+				</div>
 
    		        <a class="mdl-navigation__link" href="">
-                <i class="material-icons" role="presentation">search</i></a>
+                <i id= "icon3" class="material-icons" role="presentation">search</i></a>
+                <div class="mdl-tooltip" for="icon3">
+				Procure um termo<br>ou expressão
+				</div>
 
 			</nav>
 
