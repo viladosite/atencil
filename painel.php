@@ -30,7 +30,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		}
 
 		#busca{
-			width: 50%!important;
+			width: 10%!important;
 		}
 	</style>
 	 
@@ -44,34 +44,22 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 			<div class="mdl-layout__header-row">
 				<span class="mdl-layout-title"> ATENCIL </span>
 
-		<!-- Construção dos ícones indicativos no menu -->
-			<nav class="mdl-navigation">
-		        <a class="mdl-navigation__link" href="">
-                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">phone</i></a>
-                
-   		        <a class="mdl-navigation__link" href="">
-                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">notifications</i></a>
-
-			</nav>
-
 		<!-- essa class serve para dar um espaçamento grande -->
 			<div class="mdl-layout-spacer"></div>
 
+		<!-- Construção dos ícones indicativos no menu -->
+			<nav class="mdl-navigation">
 
+		        <a class="mdl-navigation__link" href="">
+                <i class="material-icons" role="presentation">phone</i></a>
 
-		<!-- construção do campo de busca -->
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right" id="busca">
-        		<label class="mdl-button mdl-js-button mdl-button--icon"
-               	for="fixed-header-drawer-exp">
-          			<i class="material-icons">search</i>
-        		</label>
-        	<div class="mdl-textfield__expandable-holder">
-          		<input class="mdl-textfield__input" type="text" name="sample"
-                 id="fixed-header-drawer-exp">
-        	</div>
-      		</div>
-			
+		        <a class="mdl-navigation__link" href="">
+                <i class="material-icons" role="presentation">notifications</i></a>
+
+   		        <a class="mdl-navigation__link" href="">
+                <i class="material-icons" role="presentation">search</i></a>
+
+			</nav>
 
 			</div>
 
