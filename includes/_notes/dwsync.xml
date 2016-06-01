@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="at_login.php" server="ftp.atencil.tk/public_html/" local="131092858055058944" remote="131092858800000000" Dst="1" />
-<file name="at_logout.php" server="ftp.atencil.tk/public_html/" local="131092667041414839" remote="131092858800000000" Dst="1" />
 <file name="at_drawer.php" server="ftp.atencil.tk/public_html/" local="131092725139939312" remote="131092858800000000" Dst="1" />
 <file name="at_content.php" server="ftp.atencil.tk/public_html/" local="131092827786460635" remote="131092858800000000" Dst="1" />
-<file name="at_header.php" server="ftp.atencil.tk/public_html/" local="131092904947474926" remote="131092904400000000" Dst="1" />
+<file name="at_header.php" server="ftp.atencil.tk/public_html/" local="131092906946073658" remote="131092907400000000" Dst="1" />
+<file name="at_footer.php" server="ftp.atencil.tk/public_html/" local="131092909891777429" remote="131092909800000000" Dst="1" />
 </dwsync>

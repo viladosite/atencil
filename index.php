@@ -19,7 +19,7 @@ http://www.viladosite.com.br/atencil
 
 <div class="quadro_login">
 	<p><img class="logo" src="images/logo_atencil_vert.png"  alt=""/></p>
-	<form class="vform" action="includes/at_login.php" method="post" autocomplete="on">
+	<form class="vform" action="auth/at_login.php" method="post" autocomplete="on">
   	<div class="campo1">
   	<label for="usuario">Usuário:</label>
     <input type="text" name="usuario" id="usuario" class="login"><br>

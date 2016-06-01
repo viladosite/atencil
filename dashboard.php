@@ -40,72 +40,25 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
      a terceira informa ao mdl que o header é fixo
      -->
 
-	<!-- header fixo -->
+	<!-- Div de montagem do layout e definições de header -->
     <div class=" mdl.layout mdl-js-layout mdl-layout--fixed-header">
 
-		<!-- Início do header -->
-    	<header class=" mdl-layout__header">
-			<div class="mdl-layout__header-row">
-				<span class="mdl-layout-title"> ATENCIL </span>
+			<!-- Inclui o header -->
+		  	<?php include "includes/at_header.php"; ?>
 
-			<!-- Class destinada a dar um espaçamento grande -->
-			<div class="mdl-layout-spacer"></div>
+			<!-- Inclui o drawer com o menu principal -->
+		  	<?php include "includes/at_drawer.php"; ?>
 
-			<!-- Construção dos ícones indicativos no menu -->
-			<nav class="mdl-navigation">
-
-		        <a class="mdl-navigation__link" href="">
-                <i id="icon1" class="material-icons" role="presentation">phone</i></a>
-                <div class="mdl-tooltip" for="icon1">
-				Acesse e edite<br>seus atendimentos
-				</div>
-
-		        <a class="mdl-navigation__link" href="">
-                <i id="icon2" class="material-icons" role="presentation">notifications</i></a>
-                <div class="mdl-tooltip" for="icon2">
-				Veja as notificações<br>para a sua conta
-				</div>
-
-   		        <a class="mdl-navigation__link" href="">
-                <i id= "icon3" class="material-icons" role="presentation">search</i></a>
-                <div class="mdl-tooltip" for="icon3">
-				Procure um termo<br>ou expressão
-				</div>
-
-			</nav>
-
+			<!-- Div de montagem do conteúdo -->
+			<div class="mdl-layout__content">
+				<main class="page-content">
+					<!-- Inclui o conteúdo principal do painel -->
+				  	<?php include "includes/at_content.php"; ?>
+				</main>
 			</div>
 
-		</header>
-		
-
-		<!-- Inclui o drawer com o menu principal -->
-	  	<?php include "includes/at_drawer.php"; ?>
-
-
-		<!-- Conteiner para o conteúdo da página -->
-
-		<div class="mdl-layout__content">
-		<main class="page-content">			
-
-			<!-- Inclui o conteúdo principal do painel -->
-		  	<?php include "includes/at_content.php"; ?>
-
-		</main>
-		</div>
-		
-
-
-		<!-- Inclusão do mini footer provisoriamente , lgo será passado para um arquivo externo -->
-		<footer class="mdl-mini-footer">
-  			<div class="mdl-mini-footer--left-section">
-  				<div class="mdl-logo">Atencil - 2016</div>
-  				<ul class="mdl-mini-footer--link-list">
-	  			<li><a href="#">Vila do Site</a></li>
-  				<li><a href="#">Pagina do Facebook</a></li>
-  				</ul>
-  			</div>
-	  	</footer>
+			<!-- Inclui o footer -->
+		  	<?php include "includes/at_footer.php"; ?>
 
 	</div>
 
