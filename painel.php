@@ -47,16 +47,11 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		<!-- Construção dos ícones indicativos no menu -->
 			<nav class="mdl-navigation">
 		        <a class="mdl-navigation__link" href="">
-                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">phone</i></a>
                 
    		        <a class="mdl-navigation__link" href="">
-                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">notifications</i></a>
 
-   		        <a class="mdl-navigation__link" href="">
-                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
-                
-				<a class="mdl-navigation__link" href="">
-                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
 			</nav>
 
 		<!-- essa class serve para dar um espaçamento grande -->
