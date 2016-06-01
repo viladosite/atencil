@@ -1,5 +1,3 @@
-<!-- Este é o arquvio principal de exibição do painel -->
-
 <?php
 // A sessão precisa ser iniciada em cada página diferente
 if (!isset($_SESSION)) session_start();
@@ -13,7 +11,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 }
 ?>
 
-
+<!-- Este é o arquvio principal de exibição do painel -->
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -57,7 +55,10 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 			<nav class="mdl-navigation">
 
 		        <a class="mdl-navigation__link" href="">
-                <i class="material-icons" role="presentation">phone</i></a>
+                <i id="icon1" class="material-icons" role="presentation">phone</i></a>
+                <div class="mdl-tooltip" for="icon1">
+				Veja e edite<br>seus atendimentos
+				</div>
 
 		        <a class="mdl-navigation__link" href="">
                 <i class="material-icons" role="presentation">notifications</i></a>
@@ -81,11 +82,12 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 
 			<!-- Inclui o conteúdo principal do painel -->
 		  	<?php include "includes/at_content.php"; ?>
-    
+
 		</main>
 		
-		<!-- Inclusão do mini footer provisoriamente , lgo será passado para um arquivo externo -->
 
+
+		<!-- Inclusão do mini footer provisoriamente , lgo será passado para um arquivo externo -->
 		<footer class="mdl-mini-footer">
   			<div class="mdl-mini-footer--left-section">
   				<div class="mdl-logo">Atencil - 2016</div>

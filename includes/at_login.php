@@ -16,7 +16,6 @@ $nome = $_POST['nome'];
 
 
 // Define as variáveis com a configuração do banco de dados
-
 $dbserver = 'localhost';
 $dbname = 'atencilt_usuario';
 $dbuser = 'atencilt_usuario';
