@@ -25,7 +25,7 @@
 	</header>
 
 	
-<form method="post" id="contrato_vs" action=" " oninput=" " >
+<form method="post" id="contrato_vs" action="../../../contratos/templates/ " oninput=" " >
 	<fieldset id="d_pessoais"><legend>Dados Pessoais</legend>
 			<p><label for="nome_rs">Nome/Razão Social:</label>
 			<input type="text" name="nome_rs" id="nome_rs" placeholder="Nome ou Razão Social" /></p>
