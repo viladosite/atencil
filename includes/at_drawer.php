@@ -1,3 +1,5 @@
+<!-- Este arquivo é responsável pela montagem do menu -->
+
 <!-- criação do drawer padrão -->
 <div class="mdl-layout__drawer">
     	<span class="mdl-layout-title">ATENCIL</span>
