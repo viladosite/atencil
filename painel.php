@@ -29,8 +29,8 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 			background-color: #bbb;
 		}
 
-		#busca{
-			width: 10%!important;
+		#main{
+			width: 100%!important;
 		}
 	</style>
 	 
@@ -72,17 +72,17 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		</header>
 		
 
-	<!-- Inclui o drawer com o menu principal -->
-  	<?php include "includes/at_drawer.php"; ?>
-
-	<!-- Inclui o conteúdo principal do painel -->
-  	<?php include "includes/at_content.php"; ?>
-
-	<!-- Conteiner para o conteúdo da página -->
-	<main class="mdl-layout__content">			
+		<!-- Inclui o drawer com o menu principal -->
+	  	<?php include "includes/at_drawer.php"; ?>
 
 
-	</main>
+		<!-- Conteiner para o conteúdo da página -->
+		<main class="mdl-layout__content">			
+
+			<!-- Inclui o conteúdo principal do painel -->
+		  	<?php include "includes/at_content.php"; ?>
+    
+		</main>
 		
 	</div>
 
