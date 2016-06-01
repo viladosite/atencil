@@ -29,6 +29,10 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 			background-color: #bbb;
 		}
 
+		.mdl-layout__content{
+			width: 100%;
+		}
+
 	</style>
 	 
 </head>
