@@ -1,3 +1,5 @@
+<!-- Este é o arquvio principal de exibição do painel -->
+
 <?php
 // A sessão precisa ser iniciada em cada página diferente
 if (!isset($_SESSION)) session_start();
@@ -7,11 +9,11 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
   // Destrói a sessão por segurança
   session_destroy();
   // Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
-  header("Location: /index.html"); exit;
+  header("Location: /index.php"); exit;
 }
 ?>
 
-<!-- Este é o arquvio principal de exibição do painel -->
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">

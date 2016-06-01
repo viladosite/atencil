@@ -1,3 +1,10 @@
+<!--
+ATENCIL - Atendimento Fácil é um sistema criado e mantido pela Vila do Site (www.viladosite.com.br)
+
+Para mais informações sobre o sistema ou suas características por favor acesse o nosso site:
+http://www.viladosite.com.br/atencil
+-->
+
 <!doctype html>
 <html lang="pt-br">
   <head>
