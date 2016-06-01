@@ -67,21 +67,14 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		
 
 	<!-- Inclui o drawer com o menu principal -->
-  	<?php 
-  	include "includes/at_drawer.php";
-  	?>
-		
-	<!-- Criação dos grids -->
-	<div class="mdl-grid">
-  		<div class="mdl-cell mdl-cell--4-col">Atendimentos Recentes</div>
-  		<div class="mdl-cell mdl-cell--4-col">Atendimentos Pendentes</div>
-  		<div class="mdl-cell mdl-cell--2-col">Usuários</div>
-  		<div class="mdl-cell mdl-cell--2-col">Clientes</div>
-	</div>
+  	<?php include "includes/at_drawer.php"; ?>
 
+	<!-- Conteiner para o conteúdo da página -->
+	<main class="mdl-layout__content">			
 
-	<main class="mdl-layout__content">	
-		
+		<!-- Inclui o conteúdo da página -->
+	  	<?php include "includes/at_content.php"; ?>
+
 	</main>
 		
 	</div>
