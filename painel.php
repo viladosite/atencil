@@ -11,6 +11,8 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 }
 ?>
 
+<!-- Este é o arquvio principal de exibição do painel -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -45,15 +47,17 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		<!-- Construção dos ícones indicativos no menu -->
 			<nav class="mdl-navigation">
 		        <a class="mdl-navigation__link" href="">
-                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">phone</i></a>
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
                 
    		        <a class="mdl-navigation__link" href="">
-                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">contact_phone</i></a>
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
 
-				<nav class="mdl-navigation">
-				
-				
-				</nav>
+   		        <a class="mdl-navigation__link" href="">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
+                
+				<a class="mdl-navigation__link" href="">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
+			</nav>
 
 		<!-- essa class serve para dar um espaçamento grande -->
 			<div class="mdl-layout-spacer"></div>
@@ -79,58 +83,10 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 		</header>
 		
 
-
-	<!-- Criação do drawer padrão -->				
-  	<div class="demo-drawer mdl-layout__drawer">
-	   	<span class="mdl-layout-title">Menu Principal</span>
-
-		<!-- Criação do header do menu com dados do usuário -->
-		<header class="demo-drawer-header">
-          <img src="images/user.jpg" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span><?php echo $_SESSION['UsuarioNome'] ?></span>
-            <div class="mdl-layout-spacer"></div>
-            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-              <i class="material-icons" role="presentation">arrow_drop_down</i>
-              <span class="visuallyhidden">Opções</span>
-            </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-              <li class="mdl-menu__item">Editar minha conta</li>
-              <li class="mdl-menu__item"><i class="material-icons">replay</i>Trocar de conta</li>
-            </ul>
-          </div>
-        </header>
-
-        <!-- Criação do menu principal -->
-				
-  	<div class="mdl-layout__drawer"> <!-- criação do drawer padrão -->
-    	<span class="mdl-layout-title">Menu Principal</span>
-
-    	<nav class="mdl-navigation">
-      		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">perm_phone_msg</i>
-            Atendimentos</a>
-
-      		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin</i>
-            Clientes</a>
-
-      		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group</i>
-            Usuários</a>
-
-			<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i>
-            Sair</a>
-            
-
-            
-       		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help</i>
-            Ajuda</a>
-            
-    	</nav>
-  	</div>
+	<!-- Inclui o drawer com o menu principal -->
+  	<?php 
+  	include "includes/at_drawer.php";
+  	?>
 		
 	<!-- Criação dos grids -->
 	<div class="mdl-grid">
