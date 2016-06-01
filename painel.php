@@ -42,12 +42,25 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 			<div class="mdl-layout__header-row">
 				<span class="mdl-layout-title"> ATENCIL </span>
 
-				<div class="mdl-layout-spacer"></div>  <!-- essa class serve para dar um espaçamento grande -->
+		<!-- Construção dos ícones indicativos no menu -->
+			<nav class="mdl-navigation">
+		        <a class="mdl-navigation__link" href="">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
+                
+   		        <a class="mdl-navigation__link" href="">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
 
-				<nav class="mdl-navigation">
-				
-				
-				</nav>
+   		        <a class="mdl-navigation__link" href="">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
+                
+				<a class="mdl-navigation__link" href="">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i></a>
+			</nav>
+
+		<!-- essa class serve para dar um espaçamento grande -->
+			<div class="mdl-layout-spacer"></div>
+
+
 
 		<!-- construção do campo de busca -->
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
