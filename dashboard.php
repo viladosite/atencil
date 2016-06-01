@@ -17,7 +17,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 <html lang="pt-BR">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width= device-width, initial-scale=1">
+	<meta name="viewport" content="width= device-width, initial-scale=1.0">
 	<title>ATENCIL - Painel</title>
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -84,12 +84,15 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 
 
 		<!-- Conteiner para o conteúdo da página -->
-		<main class="mdl-layout__content">			
+
+		<div class="mdl-layout__content">
+		<main class="page-content">			
 
 			<!-- Inclui o conteúdo principal do painel -->
 		  	<?php include "includes/at_content.php"; ?>
 
 		</main>
+		</div>
 		
 
 
