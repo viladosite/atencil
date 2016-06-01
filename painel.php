@@ -38,16 +38,22 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 <body>
 	<!-- 
 	 a primeira classe define que a div é um componente do mdl
-	 e a segunda atribui comportamentos basicos para que o layout funcione-->
-	<div class=" mdl.layout mdl-js-layout mdl-layout--fixed-header"> <!-- header fixo -->
-		<header class=" mdl-layout__header">
+	 a segunda atribui comportamentos basicos para que o layout funcione
+     a terceira informa ao mdl que o header é fixo
+     -->
+
+	<!-- header fixo -->
+    <div class=" mdl.layout mdl-js-layout mdl-layout--fixed-header">
+
+		<!-- Início do header -->
+    	<header class=" mdl-layout__header">
 			<div class="mdl-layout__header-row">
 				<span class="mdl-layout-title"> ATENCIL </span>
 
-		<!-- essa class serve para dar um espaçamento grande -->
+			<!-- Class destinada a dar um espaçamento grande -->
 			<div class="mdl-layout-spacer"></div>
 
-		<!-- Construção dos ícones indicativos no menu -->
+			<!-- Construção dos ícones indicativos no menu -->
 			<nav class="mdl-navigation">
 
 		        <a class="mdl-navigation__link" href="">
@@ -69,11 +75,12 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 	<!-- Inclui o drawer com o menu principal -->
   	<?php include "includes/at_drawer.php"; ?>
 
+	<!-- Inclui o conteúdo principal do painel -->
+  	<?php include "includes/at_content.php"; ?>
+
 	<!-- Conteiner para o conteúdo da página -->
 	<main class="mdl-layout__content">			
 
-		<!-- Inclui o conteúdo da página -->
-	  	<?php include "includes/at_content.php"; ?>
 
 	</main>
 		
