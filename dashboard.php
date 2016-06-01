@@ -43,7 +43,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 	<!-- Div de montagem do layout e definições de header -->
     <div class=" mdl.layout mdl-js-layout mdl-layout--fixed-header">
 
-			<!-- Inclui o header -->
+            <!-- Inclui o header -->
 		  	<?php include "includes/at_header.php"; ?>
 
 			<!-- Inclui o drawer com o menu principal -->
@@ -52,9 +52,13 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 			<!-- Div de montagem do conteúdo -->
 			<div class="mdl-layout__content">
 				<main class="page-content">
-					<!-- Inclui o conteúdo principal do painel -->
+				
+                	<!-- Inclui o conteúdo principal do painel -->
+                	<div id="content_container">
 				  	<?php include "includes/at_content.php"; ?>
-				</main>
+                    </div>
+				
+                </main>
 			</div>
 
 			<!-- Inclui o footer -->
