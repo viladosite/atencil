@@ -64,7 +64,7 @@ if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
         $_SESSION['UsuarioNivel'] = $resultado['nivel'];
       
         // Redireciona o visitante
-        header("Location: /painel.php"); exit;
+        header("Location: /dashboard.php"); exit;
     }
 
 ?>
