@@ -14,18 +14,10 @@ $email = $_POST['email'];
 $nome = $_POST['nome'];
 
 // Pega as definições de banco de dados do arquivo de config
-require "config.php";
+require '../config.php';
 
-// Pega as definições de banco de dados do arquivo de config
-require "auth/at_connect.php";
-
-
-// Tenta se conectar ao servidor MySQL
-// $mysql = mysql_connect($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysql_error());
-
-// Tenta se conectar a um banco de dados MySQL
-// mysql_select_db($dbname) or trigger_error(mysql_error());
-
+// Faz a conexão com o banco
+require 'at_connect.php';
 
 // Caso algo tenha dado errado, exibe uma mensagem de erro
 if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
