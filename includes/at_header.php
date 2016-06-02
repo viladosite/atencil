@@ -21,14 +21,7 @@
 			Veja as notificações<br>para a sua conta
 			</div>
 
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-			<label class="mdl-button mdl-js-button mdl-button--icon" for="pesquisa">
-				<i class="material-icons">search</i>
-			</label>
-			<div class="mdl-textfield__expandable-holder">
-				<input class="mdl-textfield__input" type="text" id="pesquisa">
-			</div>
-		</div>
+			
 
 		</nav>
 		</div>
