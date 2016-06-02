@@ -31,7 +31,7 @@ include "config.php";
 		{
 
 		    // Exibe o item de menu
-      		echo '<a class="mdl-navigation__link mdl-navigation__link--current" href="">
+      		echo '<a class="mdl-navigation__link mdl-navigation__link--current" href="dashboard.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>
             Início</a>'
 
@@ -47,7 +47,7 @@ include "config.php";
 		{
 
 		    // Exibe o item de menu
-      		echo '<a class="mdl-navigation__link" href="">
+      		echo '<a class="mdl-navigation__link" href="pages/acc.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">build</i>
             Editar Minha Conta</a>'
 
