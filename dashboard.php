@@ -11,7 +11,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 }
 ?>
 
-<!-- Este é o arquvio principal de exibição do painel -->
+<!-- Este é o arquvio principal de exibição do dashboard -->
 
 <!DOCTYPE html>
 <html lang="pt-BR">
