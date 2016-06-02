@@ -14,7 +14,7 @@ $perm_view_editacc = '1';
 $perm_view_attendance = '1';
 $perm_view_clients = '1';
 $perm_view_users = '1';
-$perm_view_config = '3';
+$perm_view_sys = '3';
 $perm_view_search = '1';
 
 
@@ -29,7 +29,7 @@ $perm_edit_editacc = '1';
 $perm_edit_attendance = '2';
 $perm_edit_clients = '2';
 $perm_edit_users = '3';
-$perm_edit_config = '3';
+$perm_edit_sys = '3';
 $perm_edit_search = '1';
 
 

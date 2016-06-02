@@ -69,7 +69,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $perm_view_da
 			<div class="mdl-layout__content">
 				<main class="page-content">
 				
-                	<!-- Inclui o conteúdo principal do painel -->
+                	<!-- Inclui o conteúdo principal do painel (Variável a partir do carregamento Jquery) -->
                 	<div id="content">
 				  	<?php include "includes/at_content.php"; ?>
                     </div>
