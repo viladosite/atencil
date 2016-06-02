@@ -3,8 +3,6 @@
 // Faz a conexão com o banco
 require 'at_connect.php';
 
-
-
 // Tenta se conectar ao servidor MySQL
 $mysql = mysql_connect($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysql_error());
 
@@ -48,5 +46,24 @@ if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
         header("Location: /dashboard.php"); exit;
     }
 	
+
+// Define os caminhos das tabelas utilizadas pelo sistema
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+$perm_dashboard = '';
+
+
+
+
 
 ?>

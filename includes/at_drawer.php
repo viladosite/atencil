@@ -21,47 +21,74 @@ include "config.php";
         </header>
     	<nav class="mdl-navigation">
 
-      		<a class="mdl-navigation__link" href="">
+<?php
+// Item de menu Editar minha conta
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc)
+		{
+
+		    // Exibe o item de menu
+      		echo '<a class="mdl-navigation__link" href="">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">build</i>
-            Editar Minha Conta</a>
+            Editar Minha Conta</a>'
 
-      		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">perm_phone_msg</i>
-            Atendimentos</a>
-
-      		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin</i>
-            Clientes</a>
-
-<!-- Item Usuários é exibido apenas se o usuário tiver permissão -->
-<?php
-			// Nível necessário para exibição deste item de menu
-			$nivel_necessario = 2;
-
-			// Verifica se não há a variável da sessão que identifica o usuário
-			if ($_SESSION['UsuarioNivel'] >= $nivel_necessario)
-			{
-
-			    // Exibe o item de menu
-				echo '<a class="mdl-navigation__link" href="">
-    	        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group</i>
-   	    	    Usuários</a>'
-			
-				// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
-
+			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
 				;
-			}
-?>
-			
-            
-<!-- Item Configurações é exibido apenas se o usuário tiver permissão -->
-<?php
-			// Nível necessário para exibição deste item de menu
-			$nivel_necessario = 2;
+		}
 
-			// Verifica se não há a variável da sessão que identifica o usuário
-			if ($_SESSION['UsuarioNivel'] >= $nivel_necessario)
-				{
+
+// Item de menu Atendimentos
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if ($_SESSION['UsuarioNivel'] >= $perm_view_attendance)
+		{
+
+		    // Exibe o item de menu
+      		echo '<a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">perm_phone_msg</i>
+            Atendimentos</a>'
+
+			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
+				;
+		}
+
+// Item de menu Clientes
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if ($_SESSION['UsuarioNivel'] >= $perm_view_clients)
+		{
+
+		    // Exibe o item de menu
+      		echo '<a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin</i>
+            Clientes</a>'
+
+			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
+				;
+		}
+
+// Item de menu Usuários
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if ($_SESSION['UsuarioNivel'] >= $perm_view_users)
+		{
+
+		    // Exibe o item de menu
+			echo '<a class="mdl-navigation__link" href="">
+   	        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group</i>
+    	    Usuários</a>'
+			
+			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
+				;
+		}
+
+
+// Item de menu Configurações
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if ($_SESSION['UsuarioNivel'] >= $perm_view_config)
+			{
 				    // Exibe o item de menu
 					echo '<a class="mdl-navigation__link" href="">
     		        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">settings</i>
@@ -70,22 +97,56 @@ include "config.php";
 					// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
 
 					;
-				}
-?>
+			}
+
+
+// Item de menu Buscar
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if ($_SESSION['UsuarioNivel'] >= $perm_view_search)
+			{
+				    // Exibe o item de menu
+					echo '<a class="mdl-navigation__link" href="">
+					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">search</i>
+					Buscar</a>'
+				
+					// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
+
+					;
+			}
+
+
+// Item de menu Sair
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if ($_SESSION['UsuarioNivel'] >= $perm_view_dashboard)
+			{
+				    // Exibe o item de menu
+					echo '<a class="mdl-navigation__link" href="auth/at_logout.php">
+					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i>
+					Sair</a>'
+				
+					// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
+
+					;
+			}
 			
-      		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">search</i>
-            Buscar</a>
+// Item de menu Ajuda
 
-			<a class="mdl-navigation__link" href="auth/at_logout.php">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i>
-            Sair</a>
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if ($_SESSION['UsuarioNivel'] >= $perm_view_dashboard)
+			{
+				    // Exibe o item de menu
+					echo '<a class="mdl-navigation__link" href="">
+					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help</i>
+					Ajuda</a>'
+				
+					// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
 
-            <div class="mdl-layout-spacer"></div>
-            
-       		<a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help</i>
-            Ajuda</a>
+					;
+			}
+						
+?>
             
     	</nav>
   	</div>
