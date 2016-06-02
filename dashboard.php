@@ -31,10 +31,7 @@ require "config.php";
 	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
 	<style >
-		.mdl-cell{
-			background-color: #bbb;
-		}
-
+		
 	</style>
 	 
 </head>

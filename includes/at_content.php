@@ -5,7 +5,7 @@
   		<div class="mdl-cell mdl-cell--4-col">
   			<h3>Atendimentos Recentes</h3>
 		  				
-		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
+		  				<div class="at-recente-card mdl-card mdl-shadow--4dp demonstracao-card">
 		  					<div class="mdl-card__title">
 		  						<h2 class="mdl-card__title-text">Titulo do cartão</h2>
 		  					</div>

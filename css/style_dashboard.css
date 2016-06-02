@@ -1,3 +1,16 @@
+		/* dimensão do conteudo */
 		.mdl-layout__content{
 			width: 100%;
+		}
+
+		/*edição das cell dentro do grid */
+		.mdl-cell{
+			background-color: #dddddd;
+		}
+
+		.mdl-card{
+			width: 90%;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 10%;
 		}
