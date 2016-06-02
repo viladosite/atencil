@@ -15,13 +15,8 @@ $nome = $_POST['nome'];
 
 
 
-// Define as variáveis com a configuração do banco de dados
-$dbserver = 'localhost';
-$dbname = 'atencilt_usuario';
-$dbuser = 'atencilt_usuario';
-$dbpass = '78964123Vi';
-
-
+// Pega as definições de banco de dados do arquivo de config
+include "config.php";
 
 // Tenta se conectar ao servidor MySQL
 $mysql = mysql_connect($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysql_error());
