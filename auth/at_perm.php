@@ -1,5 +1,9 @@
 <?php
 
+// Faz a conexão com o banco
+require 'at_connect.php';
+
+
 
 // Tenta se conectar ao servidor MySQL
 $mysql = mysql_connect($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysql_error());
