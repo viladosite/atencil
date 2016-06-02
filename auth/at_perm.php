@@ -1,30 +1,11 @@
 <?php
 
-// Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-    if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
-        header("Location: /index.php"); exit;
-    }
-      
-
-
-//Monta as variáveis para os campos do form
-$usuario = $_POST['usuario'];
-$senha = $_POST['senha'];
-$email = $_POST['email'];
-$nome = $_POST['nome'];
-
-// Pega as definições de banco de dados do arquivo de config
-require "config.php";
-
-// Pega as definições de banco de dados do arquivo de config
-require "auth/at_connect.php";
-
 
 // Tenta se conectar ao servidor MySQL
-// $mysql = mysql_connect($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysql_error());
+$mysql = mysql_connect($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysql_error());
 
 // Tenta se conectar a um banco de dados MySQL
-// mysql_select_db($dbname) or trigger_error(mysql_error());
+    mysql_select_db($dbname) or trigger_error(mysql_error());
 
 
 // Caso algo tenha dado errado, exibe uma mensagem de erro
@@ -62,5 +43,6 @@ if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
         // Redireciona o visitante
         header("Location: /dashboard.php"); exit;
     }
+	
 
 ?>

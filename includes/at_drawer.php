@@ -1,5 +1,10 @@
 <!-- Este arquivo é responsável pela montagem do menu retrátil -->
 
+<?php
+// Pega as definições de banco de dados do arquivo de config
+include "config.php";
+?>
+
 <link rel="stylesheet" href="css/style_dashboard.css" />
 
 <!-- criação do drawer padrão -->

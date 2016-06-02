@@ -11,8 +11,13 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $nivel_necess
 }
 ?>
 
-<!-- Este é o arquvio principal de exibição do dashboard -->
+<?php
+// Pega as definições de banco de dados do arquivo de config
+require "config.php";
+?>
 
+
+<!-- Este é o arquvio principal de exibição do dashboard -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
