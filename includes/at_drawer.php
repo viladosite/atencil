@@ -8,7 +8,7 @@ include "config.php";
 <link rel="stylesheet" href="css/style_dashboard.css" />
 
 <!-- criação do drawer padrão -->
-<div class="mdl-layout__drawer">
+<div id="menu" name="menu" class="mdl-layout__drawer">
    	<span class="mdl-layout-title">ATENCIL</span>
 
 <!-- Criação do header do menu com dados do usuário -->
@@ -19,9 +19,27 @@ include "config.php";
           <span><?php echo $_SESSION['UsuarioNome'] ?></span>
           </div>
         </header>
-    	<nav class="mdl-navigation">
+    	
+
+        <nav class="mdl-navigation">
 
 <?php
+// Item de menu Início
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if ($_SESSION['UsuarioNivel'] >= $perm_view_dashboard)
+		{
+
+		    // Exibe o item de menu
+      		echo '<a class="mdl-navigation__link mdl-navigation__link--current" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">build</i>
+            Início</a>'
+
+			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
+				;
+		}
+
+
 // Item de menu Editar minha conta
 
 	// Verifica se não há a variável da sessão que identifica o usuário
@@ -45,7 +63,7 @@ include "config.php";
 		{
 
 		    // Exibe o item de menu
-      		echo '<a class="mdl-navigation__link" href="">
+      		echo '<a class="mdl-navigation__link" href="attendance.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">perm_phone_msg</i>
             Atendimentos</a>'
 

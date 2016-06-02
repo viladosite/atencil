@@ -5,18 +5,16 @@ if (!isset($_SESSION)) session_start();
 // Pega as definições de banco de dados e permissões do arquivo de config
 require "config.php";
 // Verifica se não há a variável da sessão que identifica o usuário
-if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $$perm_view_dashboard))
+if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $perm_view_dashboard))
 	{
 	// Destrói a sessão por segurança
 	session_destroy();
 	// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
 	header("Location: /index.php"); exit;
 	}
+	
 ?>
 
-<?php
-
-?>
 
 
 <!-- Este é o arquvio principal de exibição do dashboard -->
@@ -31,12 +29,26 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $$perm_view_d
 	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-amber.min.css" />
    	<link rel="stylesheet" href="css/style_dashboard.css" />
 	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 	<style >
 		
 	</style>
 	 
 </head>
+
+<!-- Função para abrir o conteúdo das páginas em DIV -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#menu a").click(function( e ){
+		e.preventDefault();
+		var href = $( this ).attr('href');
+		$("#content").load( href +" #content");
+		});
+	});
+</script>
+
+
 <body>
 	<!-- 
 	 a primeira classe define que a div é um componente do mdl
@@ -58,7 +70,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $$perm_view_d
 				<main class="page-content">
 				
                 	<!-- Inclui o conteúdo principal do painel -->
-                	<div id="content_container">
+                	<div id="content">
 				  	<?php include "includes/at_content.php"; ?>
                     </div>
 				
