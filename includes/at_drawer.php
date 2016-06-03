@@ -8,7 +8,7 @@ include "config.php";
 <link rel="stylesheet" href="css/style_dashboard.css" />
 
 <!-- criação do drawer padrão -->
-<div id="menu" name="menu" class="mdl-layout__drawer">
+<div class="mdl-layout__drawer">
    	<span class="mdl-layout-title">ATENCIL</span>
 
 <!-- Criação do header do menu com dados do usuário -->
@@ -18,9 +18,18 @@ include "config.php";
           <div class="avatar_name">
           <span><?php echo $_SESSION['UsuarioNome'] ?></span>
           </div>
+			<button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+			<i class="material-icons" role="presentation">arrow_drop_down</i>
+			<span class="visuallyhidden">Opções</span>
+			</button>
+			<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+				<li class="mdl-menu__item">Sair</li>
+				<li class="mdl-menu__item"><i class="material-icons">build</i>Editar Minha Conta</li>
+			</ul>
         </header>
-    	
 
+
+		<div id="menu" name="menu">
         <nav class="mdl-navigation">
 
 <?php
@@ -31,7 +40,7 @@ include "config.php";
 		{
 
 		    // Exibe o item de menu
-      		echo '<a class="mdl-navigation__link mdl-navigation__link--current" href="dashboard.php">
+      		echo '<a class="mdl-navigation__link" href="dashboard.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>
             Início</a>'
 
@@ -124,7 +133,7 @@ include "config.php";
 	if ($_SESSION['UsuarioNivel'] >= $perm_view_search)
 		{
 			// Exibe o item de menu
-			echo '<a class="mdl-navigation__link" href="">
+			echo '<a class="mdl-navigation__link" href="pages/search.php">
 			<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">search</i>
 			Buscar</a>'
 		
@@ -134,28 +143,13 @@ include "config.php";
 		}
 
 
-// Item de menu Sair
-
-	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UsuarioNivel'] >= $perm_view_dashboard)
-			{
-				    // Exibe o item de menu
-					echo '<a class="mdl-navigation__link" href="auth/at_logout.php">
-					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">close</i>
-					Sair</a>'
-				
-					// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
-
-					;
-			}
-			
 // Item de menu Ajuda
 
 	// Verifica se não há a variável da sessão que identifica o usuário
 	if ($_SESSION['UsuarioNivel'] >= $perm_view_dashboard)
 			{
 				    // Exibe o item de menu
-					echo '<a class="mdl-navigation__link" href="">
+					echo '<a class="mdl-navigation__link" href="pages/help.php">
 					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help</i>
 					Ajuda</a>'
 				
@@ -167,4 +161,5 @@ include "config.php";
 ?>
             
     	</nav>
+        </div>
   	</div>

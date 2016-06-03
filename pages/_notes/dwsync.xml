@@ -4,5 +4,7 @@
 <file name="users.php" server="ftp.atencil.tk/public_html/" local="131093850204263924" remote="131093850000000000" Dst="1" />
 <file name="clients.php" server="ftp.atencil.tk/public_html/" local="131093850407459782" remote="131093850000000000" Dst="1" />
 <file name="system.php" server="ftp.atencil.tk/public_html/" local="131093850345230882" remote="131093850000000000" Dst="1" />
-<file name="acc.php" server="ftp.atencil.tk/public_html/" local="131093847076781281" remote="131093850000000000" Dst="1" />
+<file name="acc.php" server="ftp.atencil.tk/public_html/" local="131093852335943173" remote="131093851800000000" Dst="1" />
+<file name="help.php" server="ftp.atencil.tk/public_html/" local="131093856368531279" remote="131093860800000000" Dst="1" />
+<file name="search.php" server="ftp.atencil.tk/public_html/" local="131093854875000382" remote="131093860800000000" Dst="1" />
 </dwsync>

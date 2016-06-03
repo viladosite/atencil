@@ -1,3 +1,3 @@
 <div id="content">
-<b> Minha Conta </b>
+<b> Ajuda </b>
 </div>
