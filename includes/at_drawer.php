@@ -17,14 +17,11 @@ include "config.php";
           <img src="../images/user.jpg" class="avatar_img">
           <div class="avatar_name">
 			<span><?php echo $_SESSION['UsuarioNome'] ?></span>
-			<button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-			<i class="material-icons" role="presentation">arrow_drop_down</i>
-			<span class="visuallyhidden">Opções</span>
+			<a href="/auth/at_logout.php">
+			<button id="logout" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+			<i class="material-icons" role="presentation">close</i>
 			</button>
-			<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-				<li class="mdl-menu__item"><i class="material-icons">close</i>Sair</li>
-			</ul>
-
+            </a>
           </div>
         </header>
 
