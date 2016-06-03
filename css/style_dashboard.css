@@ -14,3 +14,11 @@
 			margin-left: auto;
 			margin-bottom: 10%;
 		}
+
+		.avatar_box{
+			margin-left: auto!important;
+			margin-right: auto!important;
+			color: #78909c !important;
+			font-weight: bold;
+		}
+
