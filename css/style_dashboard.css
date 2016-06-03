@@ -15,6 +15,15 @@
 			margin-left: auto;
 			margin-bottom: 8%;
 			margin-top: 4%;
+			background-color: #22aae2;
+		}
+
+		.mdl-card__title{
+		color: #fff;
+		}
+
+		.mdl-card--border{
+			background-color: #44ccf4;
 		}
 
 		.avatar_box{
@@ -24,3 +33,7 @@
 			font-weight: bold;
 		}
 
+		.demonstracao-card > .mdl-card__menu{
+		color: #fff;
+		
+	}
