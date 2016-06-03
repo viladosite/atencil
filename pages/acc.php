@@ -6,7 +6,7 @@
 //Obtem as configurações do arquivo de config
 require "../config.php";
 // Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições
-if ($_SESSION['UsuarioNivel'] >= $perm_edit_users):
+if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 ?>
 
 
@@ -21,20 +21,9 @@ if ($_SESSION['UsuarioNivel'] >= $perm_edit_users):
 
 
 <!-- Fim do conteúdo da página -->
+<?php
+// Caso o usuário não tenha permissão para visualizar o conteúdo exibe o arquivo de erro
+else: include "../includes/at_errorperm.php";
 
-<?php else: ?>
-
-<!-- Início do conteúdo do erro de permissão -->
-
-
-
-
-<b> Você não tem permissão para visualizar este conteúdo </b>
-
-
-
-
-<!-- Fim do conteúdo do erro de permissão -->
-
-<?php endif; ?>
+endif; ?>
 </div>
