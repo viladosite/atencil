@@ -16,8 +16,7 @@ include "config.php";
 		<header class="avatar_box">
           <img src="../images/user.jpg" class="avatar_img">
           <div class="avatar_name">
-          <span><?php echo $_SESSION['UsuarioNome'] ?></span>
-          </div>
+			<span><?php echo $_SESSION['UsuarioNome'] ?></span>
 			<button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 			<i class="material-icons" role="presentation">arrow_drop_down</i>
 			<span class="visuallyhidden">Opções</span>
@@ -26,6 +25,8 @@ include "config.php";
 				<li class="mdl-menu__item">Sair</li>
 				<li class="mdl-menu__item"><i class="material-icons">build</i>Editar Minha Conta</li>
 			</ul>
+
+          </div>
         </header>
 
 
@@ -42,10 +43,10 @@ include "config.php";
 		    // Exibe o item de menu
       		echo '<a class="mdl-navigation__link" href="dashboard.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>
-            Início</a>'
+            Início</a>';
 
 			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
-				;
+
 		}
 
 
@@ -58,10 +59,10 @@ include "config.php";
 		    // Exibe o item de menu
       		echo '<a class="mdl-navigation__link" href="pages/acc.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">build</i>
-            Editar Minha Conta</a>'
+            Editar Minha Conta</a>';
 
 			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
-				;
+			
 		}
 
 
@@ -74,10 +75,10 @@ include "config.php";
 		    // Exibe o item de menu
       		echo '<a class="mdl-navigation__link" href="pages/attendance.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">perm_phone_msg</i>
-            Atendimentos</a>'
+            Atendimentos</a>';
 
 			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
-				;
+
 		}
 
 // Item de menu Clientes
@@ -89,10 +90,10 @@ include "config.php";
 		    // Exibe o item de menu
       		echo '<a class="mdl-navigation__link" href="pages/clients.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin</i>
-            Clientes</a>'
+            Clientes</a>';
 
 			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
-				;
+
 		}
 
 // Item de menu Usuários
@@ -104,10 +105,10 @@ include "config.php";
 		    // Exibe o item de menu
 			echo '<a class="mdl-navigation__link" href="pages/users.php">
    	        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group</i>
-    	    Usuários</a>'
+    	    Usuários</a>';
 			
 			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
-				;
+
 		}
 
 
@@ -119,11 +120,10 @@ include "config.php";
 		    // Exibe o item de menu
 			echo '<a class="mdl-navigation__link" href="pages/system.php">
 	        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">settings</i>
-    	    Sistema</a>'
+    	    Sistema</a>';
 			
 			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
 
-			;
 		}
 
 
@@ -135,11 +135,10 @@ include "config.php";
 			// Exibe o item de menu
 			echo '<a class="mdl-navigation__link" href="pages/search.php">
 			<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">search</i>
-			Buscar</a>'
+			Buscar</a>';
 		
 			// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
 
-			;
 		}
 
 
@@ -151,11 +150,10 @@ include "config.php";
 				    // Exibe o item de menu
 					echo '<a class="mdl-navigation__link" href="pages/help.php">
 					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help</i>
-					Ajuda</a>'
+					Ajuda</a>';
 				
 					// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
 
-					;
 			}
 						
 ?>
