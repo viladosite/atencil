@@ -23,7 +23,7 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $perm_view_da
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width= device-width, initial-scale=1.0">
-	<title>ATENCIL - Painel</title>
+	<title>ATENCIL</title>
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-amber.min.css" />
@@ -37,11 +37,22 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $perm_view_da
 	 
 </head>
 
-<!-- Função para abrir o conteúdo das páginas em DIV -->
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("#menu a").click(function( e ){
-		e.preventDefault();
+<!--   ORIGINAL
+<script>
+$(document).ready(function() {
+		$(document).on('click', '#menu a', function( e ){
+ 		e.preventDefault();
+		var href = $( this ).attr('href');
+		$("#content").load( href +" #content");
+		});
+	});
+</script>
+-->
+
+<script>
+$(document).ready(function() {
+		$(document).on('click', '#menu a', function( e ){
+ 		e.preventDefault();
 		var href = $( this ).attr('href');
 		$("#content").load( href +" #content");
 		});
@@ -50,12 +61,6 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $perm_view_da
 
 
 <body>
-	<!-- 
-	 a primeira classe define que a div é um componente do mdl
-	 a segunda atribui comportamentos basicos para que o layout funcione
-     a terceira informa ao mdl que o header é fixo
-     -->
-
 	<!-- Div de montagem do layout e definições de header -->
     <div class=" mdl.layout mdl-js-layout mdl-layout--fixed-header">
 

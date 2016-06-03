@@ -15,7 +15,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_clients):
 
 
 
-<b> Conteúdo da página de usuários </b>
+<b> Conteúdo da página de clientes </b>
 
 
 

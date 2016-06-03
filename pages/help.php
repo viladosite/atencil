@@ -15,7 +15,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_dashboard):
 
 
 
-<b> Conteúdo da página de usuários </b>
+<b> Conteúdo da página de ajuda </b>
 
 
 

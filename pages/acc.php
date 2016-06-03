@@ -10,7 +10,16 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 ?>
 <!-- Início do conteúdo da página -->
 
-<b> Edição de dados da conta do usuário </b>
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="user">
+    <label class="mdl-textfield__label" for="user">Nome de Usuário</label>
+  </div>
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="name">
+    <label class="mdl-textfield__label" for="name">Nome Completo</label>
+  </div>
+</form>
 
 <!-- Fim do conteúdo da página -->
 <?php
