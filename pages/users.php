@@ -1,20 +1,27 @@
+<?php if (!isset($_SESSION)) session_start(); ?>
+
+<div id="content">
+
 <?php
-// A sessão precisa ser iniciada em cada página diferente
-if (!isset($_SESSION)) session_start();
-// Pega as configurações e permissões do arquivo de config
-require "config.php";
-// Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições -->
-if ($_SESSION['UsuarioNivel'] >= $perm_edit_users): ?>
+//Obtem as configurações do arquivo de config
+require "../config.php";
+// Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições
+if ($_SESSION['UsuarioNivel'] >= $perm_view_users):
+?>
+<!-- Início do conteúdo da página -->
 
-<div id="content">
+
+
+
 <b> Conteúdo da página de usuários </b>
-<?php $_SESSION['UsuarioNivel'] ?>
+
+
+
+
+<!-- Fim do conteúdo da página -->
+<?php
+// Caso o usuário não tenha permissão para visualizar o conteúdo exibe o arquivo de erro
+else: include "../includes/at_errorperm.php";
+
+endif; ?>
 </div>
-
-<?php else: ?>
-
-<div id="content">
-<b> Você não tem permissão para visualizar este conteúdo </b>
-</div>
-
-<?php endif; ?>
