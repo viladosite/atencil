@@ -21,6 +21,9 @@ include "config.php";
 			<button id="logout" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 			<i class="material-icons" role="presentation">close</i>
 			</button>
+            <div class="mdl-tooltip mdl-tooltip--large" for="logout">
+			Sair desta conta
+			</div>
             </a>
           </div>
         </header>
