@@ -1,7 +1,18 @@
 		/* dimensão do conteudo */
 		.mdl-layout__content{
 			width: 100%;
-			height: 100%!important;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-flow: column nowrap;
+			-ms-flex-flow: column nowrap;
+			flex-flow: column nowrap;
+		}
+		
+		.mdl-layout__content > *:not(.mdl-layout-spacer) {
+			-webkit-flex: none;
+			-ms-flex: none;
+			flex: none;
 		}
 
 		/*edição das cell dentro do grid */
@@ -34,7 +45,7 @@
 		.demonstracao-card > .mdl-card__menu{
 		color: #fff;
 		
-	}
+		}
 		
 		/* alinhamento da imagem do usuario , cor e estilo da fonte de exibição do nome do mesmo */
 		.avatar_box{
@@ -43,5 +54,3 @@
 			color: #78909c !important;
 			font-weight: bold;
 		}
-
-

@@ -5,8 +5,6 @@
 include "config.php";
 ?>
 
-<link rel="stylesheet" href="css/style_dashboard.css" />
-
 <!-- criação do drawer padrão -->
 <div class="mdl-layout__drawer">
    	<span class="mdl-layout-title">ATENCIL</span>

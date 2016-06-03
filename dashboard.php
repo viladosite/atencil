@@ -62,29 +62,27 @@ $(document).ready(function() {
 
 <body>
 	<!-- Div de montagem do layout e definições de header -->
-    <div class=" mdl.layout mdl-js-layout mdl-layout--fixed-header">
+    <div class=" mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-            <!-- Inclui o header -->
-		  	<?php include "includes/at_header.php"; ?>
+        <!-- Inclui o header -->
+        <?php include "includes/at_header.php"; ?>
 
-			<!-- Inclui o drawer com o menu principal -->
-		  	<?php include "includes/at_drawer.php"; ?>
+        <!-- Inclui o drawer com o menu principal -->
+        <?php include "includes/at_drawer.php"; ?>
 
-			<!-- Div de montagem do conteúdo -->
-			<div class="mdl-layout__content">
-				<main class="page-content">
-				
-                	<!-- Inclui o conteúdo principal do painel (Variável a partir do carregamento Jquery) -->
-                	<div id="content">
-				  	<?php include "includes/at_content.php"; ?>
-                    </div>
-				
-                </main>
-			</div>
-
-			<!-- Inclui o footer -->
-		  	<?php include "includes/at_footer.php"; ?>
-
+        <!-- Div de montagem do conteúdo -->
+        <main class="mdl-layout__content">
+        
+            <!-- Inclui o conteúdo principal do painel (Variável a partir do carregamento Jquery) -->
+            <div id="content"> <?php include "includes/at_content.php"; ?> </div>
+    
+            <!-- Inclui um espaçador para separar o footer -->
+            <div class="mdl-layout-spacer"></div>
+    
+            <!-- Inclui o footer -->
+            <?php include "includes/at_footer.php"; ?>
+        
+        </main>
 	</div>
 
 </body>

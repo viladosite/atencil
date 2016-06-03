@@ -1,6 +1,6 @@
 <!-- Início do header -->
 <header class=" mdl-layout__header">
-		<div class="mdl-layout__header-row">
+	<div class="mdl-layout__header-row">
 		<span class="mdl-layout-title"> ATENCIL </span>
 
 		<!-- Class destinada a dar um espaçamento grande -->
@@ -24,5 +24,5 @@
 			
 
 		</nav>
-		</div>
-	</header>	
+	</div>
+</header>	

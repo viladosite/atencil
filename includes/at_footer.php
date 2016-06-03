@@ -1,4 +1,4 @@
-		<!-- Inclusão do mini footer provisoriamente , lgo será passado para um arquivo externo -->
+<!-- Inclusão do mini footer -->
 		<footer class="mdl-mini-footer">
   			<div class="mdl-mini-footer--left-section">
   				<div class="mdl-logo">Atencil - 2016</div>
@@ -7,4 +7,4 @@
   				<li><a href="#">Pagina do Facebook</a></li>
   				</ul>
   			</div>
-	  	</footer>
+		</footer>
