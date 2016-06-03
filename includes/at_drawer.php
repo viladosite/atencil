@@ -22,8 +22,7 @@ include "config.php";
 			<span class="visuallyhidden">Opções</span>
 			</button>
 			<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-				<li class="mdl-menu__item">Sair</li>
-				<li class="mdl-menu__item"><i class="material-icons">build</i>Editar Minha Conta</li>
+				<li class="mdl-menu__item"><i class="material-icons">close</i>Sair</li>
 			</ul>
 
           </div>
