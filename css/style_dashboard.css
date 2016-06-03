@@ -9,6 +9,8 @@
 			background-color: #eeeeee;
 		}
 
+
+		/*edição de tamanho e posicionamento do card além da cor principal */
 		.mdl-card{
 			width: 90%;
 			margin-right: auto;
@@ -18,14 +20,23 @@
 			background-color: #22aae2;
 		}
 
+		/* edição da cor do titulo do card */
 		.mdl-card__title{
 		color: #fff;
 		}
 
+		/* edição da parte de baixo do card */
 		.mdl-card--border{
 			background-color: #44ccf4;
 		}
 
+			/* cor do card menu (topo perto do titulo)*/
+		.demonstracao-card > .mdl-card__menu{
+		color: #fff;
+		
+	}
+		
+		/* alinhamento da imagem do usuario , cor e estilo da fonte de exibição do nome do mesmo */
 		.avatar_box{
 			margin-left: auto!important;
 			margin-right: auto!important;
@@ -33,7 +44,4 @@
 			font-weight: bold;
 		}
 
-		.demonstracao-card > .mdl-card__menu{
-		color: #fff;
-		
-	}
+
