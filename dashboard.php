@@ -43,22 +43,21 @@ $(document).ready(function() {
 		$(document).on('click', '#menu a', function( e ){
  		e.preventDefault();
 		var href = $( this ).attr('href');
-		$("#content").load( href +" #content");
+		$("#content").load( href +" #content", null, function(){componentHandler.upgradeAllRegistered();});
 		});
-	});
+});
 </script>
 -->
 
 <script>
 $(document).ready(function() {
-		$(document).on('click', '#menu a', function( e ){
+		$(document).on('click', '#menu a', function( e ){ 
  		e.preventDefault();
 		var href = $( this ).attr('href');
-		$("#content").load( href +" #content");
+		$("#content").load( href +" #content", null, function(){componentHandler.upgradeAllRegistered();});
 		});
-	});
+});
 </script>
-
 
 <body>
 	<!-- Div de montagem do layout e definições de header -->

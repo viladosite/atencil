@@ -10,16 +10,250 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 ?>
 <!-- Início do conteúdo da página -->
 
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" id="user">
-    <label class="mdl-textfield__label" for="user">Nome de Usuário</label>
-  </div>
-  <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" id="name">
-    <label class="mdl-textfield__label" for="name">Nome Completo</label>
-  </div>
-</form>
+	<div class="mdl-grid">
+  		<div class="mdl-cell mdl-cell--6-col">
+		  			<h3>Informações Pessoais</h3>
+						<!-- Início do Card -->
+		  				<div class="mdl-card mdl-shadow--4dp demonstracao-card">
+		  					<div class="mdl-card__title">
+		  						<h2 class="mdl-card__title-text">Identificação</h2>
+		  					</div>
+		  					<div class="mdl-card__supporting-text">
+                                <form action="#">
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="firstname">
+                                    <label class="mdl-textfield__label" for="firstname">Primeiro Nome</label>
+                                  </div>
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="lastname">
+                                    <label class="mdl-textfield__label" for="lastname">Último Nome</label>
+                                  </div>
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="username">
+                                    <label class="mdl-textfield__label" for="username">Nome de Usuário</label>
+                                  </div>
+                                  
+                                </form>
+		  					</div>
+
+		  					<div class="mdl-card__actions mdl-card--border">
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  					</div>
+
+		  					<div class="mdl-card__menu">
+		  					<button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+		  						<i class="material-icons">info</i>	
+		  					</button>
+                            <div class="mdl-tooltip mdl-tooltip--large" for="infoperson">
+                            Informe seus dados pessoais e informações relativas à você e seus meios de contato
+                            </div>
+		  					</div>
+  						</div>
+						<!-- Fim do Card -->
+                        
+                        <!-- Início do Card -->
+		  				<div class="mdl-card mdl-shadow--4dp demonstracao-card">
+		  					<div class="mdl-card__title">
+		  						<h2 class="mdl-card__title-text">Contato</h2>
+		  					</div>
+		  					<div class="mdl-card__supporting-text">
+                                <form action="#">
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="phone1">
+                                    <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                                  </div>
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="phone2">
+                                    <label class="mdl-textfield__label" for="phone2">Telefone Secundário</label>
+                                  </div>
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="whatsapp">
+                                    <label class="mdl-textfield__label" for="whatsapp">Whatsapp</label>
+                                  </div>
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="email">
+                                    <label class="mdl-textfield__label" for="email">E-mail</label>
+                                  </div>
+                                  
+                                </form>
+		  					</div>
+
+		  					<div class="mdl-card__actions mdl-card--border">
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  					</div>
+
+		  					<div class="mdl-card__menu">
+		  					<button id="infocontact" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+		  						<i class="material-icons">info</i>	
+		  					</button>
+                            <div class="mdl-tooltip mdl-tooltip--large" for="infocontact">
+                            Informe seus dados para contato e comunicação
+                            </div>
+		  					</div>
+  						</div>
+						<!-- Fim do Card -->
+                        
+  		</div>
+
+  		<div class="mdl-cell mdl-cell--6-col">
+	  				<h3>Informações Corporativas</h3>
+
+						<!-- Início do Card -->
+		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
+		  					<div class="mdl-card__title">
+		  						<h2 class="mdl-card__title-text">Empresa</h2>
+		  					</div>
+		  					<div class="mdl-card__supporting-text">
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  					</div>
+
+		  					<div class="mdl-card__actions mdl-card--border">
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  					</div>
+
+		  					<div class="mdl-card__menu">
+		  					<button id="infocorp" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+		  						<i class="material-icons">info</i>	
+		  					</button>
+                            <div class="mdl-tooltip mdl-tooltip--large" for="infocorp">
+                            Edite e/ou visualize os dados de sua empresa. Para editar você deve ser administrador de uma empresa.
+                            </div>
+		  					</div>
+  						</div>
+						<!-- Fim do Card -->
+                        
+                        <!-- Início do Card -->
+		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
+		  					<div class="mdl-card__title">
+		  						<h2 class="mdl-card__title-text">Empresa</h2>
+		  					</div>
+		  					<div class="mdl-card__supporting-text">
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  					</div>
+
+		  					<div class="mdl-card__actions mdl-card--border">
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  					</div>
+
+		  					<div class="mdl-card__menu">
+		  					<button id="infocorp2" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+		  						<i class="material-icons">info</i>	
+		  					</button>
+                            <div class="mdl-tooltip mdl-tooltip--large" for="infocorp2">
+                            Edite e/ou visualize os dados de sua empresa. Para editar você deve ser administrador de uma empresa.
+                            </div>
+		  					</div>
+  						</div>
+						<!-- Fim do Card -->
+                        
+						<!-- Início do Card -->
+		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
+		  					<div class="mdl-card__title">
+		  						<h2 class="mdl-card__title-text">Empresa</h2>
+		  					</div>
+		  					<div class="mdl-card__supporting-text">
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  					</div>
+
+		  					<div class="mdl-card__actions mdl-card--border">
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  					</div>
+
+		  					<div class="mdl-card__menu">
+		  					<button id="infocorp3" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+		  						<i class="material-icons">info</i>	
+		  					</button>
+                            <div class="mdl-tooltip mdl-tooltip--large" for="infocorp3">
+                            Edite e/ou visualize os dados de sua empresa. Para editar você deve ser administrador de uma empresa.
+                            </div>
+		  					</div>
+  						</div>
+						<!-- Fim do Card -->
+                        
+  		</div>
+
+  		<div class="mdl-cell mdl-cell--6-col">
+		  			<h3>Preferências de Sistema</h3>
+
+						<!-- Início do Card -->
+                        <div class="mdl-card mdl-shadow--3dp demonstracao-card">
+		  					<div class="mdl-card__title">
+		  						<h2 class="mdl-card__title-text">E-mails</h2>
+		  					</div>
+		  					<div class="mdl-card__supporting-text">
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  					</div>
+
+		  					<div class="mdl-card__actions mdl-card--border">
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  					</div>
+
+		  					<div class="mdl-card__menu">
+		  					<button id="infosys" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+		  						<i class="material-icons">info</i>	
+		  					</button>
+							<div class="mdl-tooltip mdl-tooltip--large" for="infosys">
+                            Selecione quais os e-mails e notificações que deseja receber do sistema.
+                            </div>
+		  					</div>
+  						</div>
+						<!-- Fim do Card -->
+  		</div>
+
+  		<div class="mdl-cell mdl-cell--6-col">
+		  			<h3>Funções de Conta</h3>
+
+						<!-- Início do Card -->
+                        <div class="mdl-card mdl-shadow--3dp demonstracao-card">
+		  					<div class="mdl-card__title">
+		  						<h2 class="mdl-card__title-text">Funções</h2>
+		  					</div>
+		  					<div class="mdl-card__supporting-text">
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  						tempor incididunt ut labore et dolore magna aliqua.
+		  					</div>
+
+		  					<div class="mdl-card__actions mdl-card--border">
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  					</div>
+
+		  					<div class="mdl-card__menu">
+		  					<button id="infoacc" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+		  						<i class="material-icons">info</i>	
+		  					</button>
+							<div class="mdl-tooltip mdl-tooltip--large" for="infoacc">
+                            Execute funções avançadas em sua conta.
+                            <br><br>
+                            <b>ATENÇÃO:</b> As funções aqui disponíveis são irreversíveis. Utilize-as com caute-la.
+                            </div>
+		  					</div>
+  						</div>
+						<!-- Fim do Card -->
+  		</div>
+
+	</div>
+
 
 <!-- Fim do conteúdo da página -->
 <?php

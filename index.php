@@ -17,21 +17,21 @@ http://www.viladosite.com.br/atencil
   
 <body>
 
-<div class="quadro_login">
+<div class="box_login">
 	<p><img class="logo" src="images/logo_atencil_vert.png"  alt=""/></p>
 	<form class="vform" action="auth/at_login.php" method="post" autocomplete="on">
-  	<div class="campo1">
-  	<label for="usuario">Usuário:</label>
-    <input type="text" name="usuario" id="usuario" class="login"><br>
+  	<div class="field1">
+  	<label for="user">Usuário:</label>
+    <input type="text" name="user" id="user" class="login"><br>
     </div>
-    <div class="campo2">
- 	<label for="senha">Senha:</label>
-	<input type="password" name="senha" id="senha" class"senha">
+    <div class="field2">
+ 	<label for="pass">Senha:</label>
+	<input type="password" name="pass" id="pass" class"pass">
     <br>
     </div>
     <br><br>
-  	<input type="submit" value="Esqueci minha senha" id="btn_esq">
-  	<input type="submit" value="Entrar" id="btn_entrar">
+  	<input type="submit" value="Esqueci minha senha" id="btn_forgot">
+  	<input type="submit" value="Entrar" id="btn_login">
 	</form>
 	</div>
 <br/>
