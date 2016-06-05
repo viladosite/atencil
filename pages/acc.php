@@ -41,7 +41,9 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 
 		  					<div class="mdl-card__actions mdl-card--border">
 		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+<!-- 							<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div> -->
 		  					</div>
+
 
 		  					<div class="mdl-card__menu">
 		  					<button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
