@@ -5,7 +5,7 @@
 
       /* estilos */ 
 
-       .quadro_login {
+       .box_login {
             height: 100%!important;
             width: 98%!important;
             
@@ -22,7 +22,7 @@
             width: 85%;
         }
 
-       #usuario , #senha{
+       #user , #pass{
         padding: 1.5%!important;
         width: 85%;
         min-height: 45%;
@@ -30,7 +30,7 @@
         margin: 4px;
     } 
 
-    #btn_esq , #btn_entrar{
+    #btn_forgot , #btn_login{
         width: 60%;
         margin: 20px!important;
         padding: 4%!important;
@@ -48,7 +48,7 @@
         line-height: 125%!important;
     }
 /* solução encontrada para alinhar os textos e caixas do "form" */
-    .campo2{
+    .field2{
         text-indent: 4.5%!important;
 
     }
