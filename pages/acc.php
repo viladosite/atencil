@@ -158,7 +158,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                 <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                                   <thead>
                                     <tr>
-                                      <th class="mdl-data-table__cell--non-numeric">Funcionário</th>
+                                      <th class="mdl-data-table__cell--non-numeric mdl-data-table__header--sorted-ascending">Funcionário</th>
                                       <th>Nome de Usuário</th>
                                       <th>Cargo</th>
                                       <th>Funções</th>
