@@ -1,17 +1,17 @@
 <?php
 
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-    if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
+    if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))) {
         header("Location: /index.php"); exit;
     }
       
 
 
 //Monta as variáveis para os campos do form
-$usuario = $_POST['usuario'];
-$senha = $_POST['senha'];
+$user = $_POST['user'];
+$pass = $_POST['pass'];
 $email = $_POST['email'];
-$nome = $_POST['nome'];
+$name = $_POST['name'];
 
 // Pega as definições de banco de dados do arquivo de config
 require '../config.php';
@@ -23,7 +23,7 @@ require 'at_connect.php';
 if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
-	$sql = "SELECT `id`, `nome`, `nivel` FROM `usuarios` WHERE (`usuario` = '".$usuario ."') AND (`senha` = '". sha1($senha) ."') AND (`ativo` = 1) LIMIT 1";
+	$sql = "SELECT `id`, `name`, `lvl` FROM `at_users` WHERE (`user` = '".$user ."') AND (`pass` = '". sha1($pass) ."') AND (`active` = 1) LIMIT 1";
 
     $query = mysql_query($sql);
 	
@@ -48,8 +48,8 @@ if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
       
         // Salva os dados encontrados na sessão
         $_SESSION['UsuarioID'] = $resultado['id'];
-        $_SESSION['UsuarioNome'] = $resultado['nome'];
-        $_SESSION['UsuarioNivel'] = $resultado['nivel'];
+        $_SESSION['UsuarioNome'] = $resultado['name'];
+        $_SESSION['UsuarioNivel'] = $resultado['lvl'];
       
         // Redireciona o visitante
         header("Location: /dashboard.php"); exit;
