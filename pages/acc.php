@@ -157,39 +157,39 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                             
                                 <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                                   <thead>
-                                    <tr>
-                                      <th class="mdl-data-table__cell--non-numeric mdl-data-table__header--sorted-ascending">Funcionário</th>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="all">
+                                      <th class="mdl-data-table__cell--non-numeric">Funcionário</th>
                                       <th>Nome de Usuário</th>
                                       <th>Cargo</th>
                                       <th>Funções</th>
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="jdoe">
                                       <td class="mdl-data-table__cell--non-numeric">John Doe</td>
                                       <td>jdoe</td>
                                       <td>Atendente</td>
                                       <td>Clique</td>
                                     </tr>
-                                    <tr>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="luisandre">
                                       <td class="mdl-data-table__cell--non-numeric">Luis André</td>
                                       <td>luisandre</td>
                                       <td>Gerente</td>
                                       <td>Clique</td>
                                     </tr>
-                                    <tr>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="marcelaf">
                                       <td class="mdl-data-table__cell--non-numeric">Marcela Freitas</td>
                                       <td>marcelaf</td>
                                       <td>Diretora</td>
                                       <td>Clique</td>
                                     </tr>
-                                    <tr>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="fmaia">
                                       <td class="mdl-data-table__cell--non-numeric">Fernando Maia</td>
                                       <td>fmaia</td>
                                       <td>Financeiro</td>
                                       <td>Clique</td>
                                     </tr>
-                                    <tr>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="andressalm">
                                       <td class="mdl-data-table__cell--non-numeric">Andressa Lima</td>
                                       <td>andressalm</td>
                                       <td>Recepção</td>
