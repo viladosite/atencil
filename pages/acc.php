@@ -160,6 +160,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                     <tr>
                                       <th class="mdl-data-table__cell--non-numeric">Funcionário</th>
                                       <th>Nome de Usuário</th>
+                                      <th>Cargo</th>
                                       <th>Funções</th>
                                     </tr>
                                   </thead>
@@ -167,17 +168,20 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                     <tr>
                                       <td class="mdl-data-table__cell--non-numeric">John Doe</td>
                                       <td>jdoe</td>
-                                      <td>Funções</td>
+                                      <td>Atendente</td>
+                                      <td>Clique</td>
                                     </tr>
                                     <tr>
                                       <td class="mdl-data-table__cell--non-numeric">Luis André</td>
                                       <td>luisandre</td>
-                                      <td>Funções</td>
+                                      <td>Gerente</td>
+                                      <td>Clique</td>
                                     </tr>
                                     <tr>
                                       <td class="mdl-data-table__cell--non-numeric">Marcela Freitas</td>
                                       <td>marcelaf</td>
-                                      <td>Funções</td>
+                                      <td>Diretora</td>
+                                      <td>Clique</td>
                                     </tr>
                                   </tbody>
                                 </table>
