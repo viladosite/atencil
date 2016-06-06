@@ -37,18 +37,6 @@ if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] < $perm_view_da
 	 
 </head>
 
-<!--   ORIGINAL
-<script>
-$(document).ready(function() {
-		$(document).on('click', '#menu a', function( e ){
- 		e.preventDefault();
-		var href = $( this ).attr('href');
-		$("#content").load( href +" #content", null, function(){componentHandler.upgradeAllRegistered();});
-		});
-});
-</script>
--->
-
 <script>
 $(document).ready(function() {
 		$(document).on('click', '#menu a', function( e ){ 

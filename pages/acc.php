@@ -41,7 +41,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 
 		  					<div class="mdl-card__actions mdl-card--border">
 		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
- 								<div class="spinnerAlign mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active" id="spinnerBarra"></div> 
+ 							<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
 		  					</div>
 
 
@@ -110,13 +110,27 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 						<!-- Início do Card -->
 		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
 		  					<div class="mdl-card__title">
-		  						<h2 class="mdl-card__title-text">Empresa</h2>
+		  						<h2 class="mdl-card__title-text">Sua Empresa</h2>
 		  					</div>
 		  					<div class="mdl-card__supporting-text">
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
+                                <form action="#">
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="corp_name">
+                                    <label class="mdl-textfield__label" for="corp_name">Nome da Empresa</label>
+                                  </div>
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="corp_tel">
+                                    <label class="mdl-textfield__label" for="corp_tel">Telefone da Empresa</label>
+                                  </div>
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="corp_mail">
+                                    <label class="mdl-textfield__label" for="corp_mail">E-mail da Empresa</label>
+                                  </div>
+
+                                </form>
 		  					</div>
 
 		  					<div class="mdl-card__actions mdl-card--border">
@@ -137,13 +151,60 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                         <!-- Início do Card -->
 		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
 		  					<div class="mdl-card__title">
-		  						<h2 class="mdl-card__title-text">Empresa</h2>
+		  						<h2 class="mdl-card__title-text">Funcionários</h2>
 		  					</div>
 		  					<div class="mdl-card__supporting-text">
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
+                            
+                                <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                                  <thead>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="all">
+                                      <th class="mdl-data-table__cell--non-numeric">Funcionário</th>
+                                      <th>Nome de Usuário</th>
+                                      <th>Cargo</th>
+                                      <th>
+										<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+										<i id ="more_opt" class="material-icons">more_vert</i>
+										</button>
+                                        <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
+                                        Mais<br>Opções
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="jdoe">
+                                      <td class="mdl-data-table__cell--non-numeric">John Doe</td>
+                                      <td>jdoe</td>
+                                      <td>Atendente</td>
+                                      <td>Clique</td>
+                                    </tr>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="luisandre">
+                                      <td class="mdl-data-table__cell--non-numeric">Luis André</td>
+                                      <td>luisandre</td>
+                                      <td>Gerente</td>
+                                      <td>Clique</td>
+                                    </tr>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="marcelaf">
+                                      <td class="mdl-data-table__cell--non-numeric">Marcela Freitas</td>
+                                      <td>marcelaf</td>
+                                      <td>Diretora</td>
+                                      <td>Clique</td>
+                                    </tr>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="fmaia">
+                                      <td class="mdl-data-table__cell--non-numeric">Fernando Maia</td>
+                                      <td>fmaia</td>
+                                      <td>Financeiro</td>
+                                      <td>Clique</td>
+                                    </tr>
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="andressalm">
+                                      <td class="mdl-data-table__cell--non-numeric">Andressa Lima</td>
+                                      <td>andressalm</td>
+                                      <td>Recepção</td>
+                                      <td>Clique</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
 		  					</div>
 
 		  					<div class="mdl-card__actions mdl-card--border">
