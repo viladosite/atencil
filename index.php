@@ -39,7 +39,7 @@ http://www.viladosite.com.br/atencil
     </div>
     <div class="field2">
  	<label for="pass">Senha:</label>
-	<input type="password" name="pass" id="pass" class"pass">
+	<input type="password" name="pass" id="pass" class="pass">
     <br>
     </div>
     <br><br>
