@@ -110,13 +110,27 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 						<!-- Início do Card -->
 		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
 		  					<div class="mdl-card__title">
-		  						<h2 class="mdl-card__title-text">Empresa</h2>
+		  						<h2 class="mdl-card__title-text">Sua Empresa</h2>
 		  					</div>
 		  					<div class="mdl-card__supporting-text">
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
+                                <form action="#">
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="corp_name">
+                                    <label class="mdl-textfield__label" for="corp_name">Nome da Empresa</label>
+                                  </div>
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="corp_tel">
+                                    <label class="mdl-textfield__label" for="corp_tel">Telefone da Empresa</label>
+                                  </div>
+
+                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="corp_mail">
+                                    <label class="mdl-textfield__label" for="corp_mail">E-mail da Empresa</label>
+                                  </div>
+
+                                </form>
 		  					</div>
 
 		  					<div class="mdl-card__actions mdl-card--border">
@@ -137,13 +151,37 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                         <!-- Início do Card -->
 		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
 		  					<div class="mdl-card__title">
-		  						<h2 class="mdl-card__title-text">Empresa</h2>
+		  						<h2 class="mdl-card__title-text">Funcionários</h2>
 		  					</div>
 		  					<div class="mdl-card__supporting-text">
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
+
+                                <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                                  <thead>
+                                    <tr>
+                                      <th class="mdl-data-table__cell--non-numeric">Funcionário</th>
+                                      <th>Nome de Usuário</th>
+                                      <th>Funções</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="mdl-data-table__cell--non-numeric">John Doe</td>
+                                      <td>jdoe</td>
+                                      <td>Funções</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="mdl-data-table__cell--non-numeric">Luis André</td>
+                                      <td>luisandre</td>
+                                      <td>Funções</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="mdl-data-table__cell--non-numeric">Marcela Freitas</td>
+                                      <td>marcelaf</td>
+                                      <td>Funções</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
 		  					</div>
 
 		  					<div class="mdl-card__actions mdl-card--border">
