@@ -161,14 +161,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                       <th class="mdl-data-table__cell--non-numeric">Funcionário</th>
                                       <th>Nome de Usuário</th>
                                       <th>Cargo</th>
-                                      <th>
-										<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-										<i id ="more_opt" class="material-icons">more_vert</i>
-										</button>
-                                        <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
-                                        Mais<br>Opções
-                                        </div>
-                                      </th>
+                                      <th>Mais Opções</th>
                                     </tr>
                                   </thead>
                                   <tbody>
@@ -176,31 +169,66 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                       <td class="mdl-data-table__cell--non-numeric">John Doe</td>
                                       <td>jdoe</td>
                                       <td>Atendente</td>
-                                      <td>Clique</td>
+                                      <td>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                        <i id ="more_opt" class="material-icons">more_vert</i>
+                                        </button>
+                                        <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
+                                        Mais<br>Opções
+                                        </div>
+                                      </td>
                                     </tr>
                                     <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="luisandre">
                                       <td class="mdl-data-table__cell--non-numeric">Luis André</td>
                                       <td>luisandre</td>
                                       <td>Gerente</td>
-                                      <td>Clique</td>
+                                      <td>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                        <i id ="more_opt" class="material-icons">more_vert</i>
+                                        </button>
+                                        <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
+                                        Mais<br>Opções
+                                        </div>
+                                      </td>
                                     </tr>
                                     <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="marcelaf">
                                       <td class="mdl-data-table__cell--non-numeric">Marcela Freitas</td>
                                       <td>marcelaf</td>
                                       <td>Diretora</td>
-                                      <td>Clique</td>
+                                      <td>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                        <i id ="more_opt" class="material-icons">more_vert</i>
+                                        </button>
+                                        <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
+                                        Mais<br>Opções
+                                        </div>
+                                      </td>
                                     </tr>
                                     <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="fmaia">
                                       <td class="mdl-data-table__cell--non-numeric">Fernando Maia</td>
                                       <td>fmaia</td>
                                       <td>Financeiro</td>
-                                      <td>Clique</td>
+                                      <td>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                        <i id ="more_opt" class="material-icons">more_vert</i>
+                                        </button>
+                                        <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
+                                        Mais<br>Opções
+                                        </div>
+                                      </td>
                                     </tr>
                                     <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="andressalm">
                                       <td class="mdl-data-table__cell--non-numeric">Andressa Lima</td>
                                       <td>andressalm</td>
                                       <td>Recepção</td>
-                                      <td>Clique</td>
+                                      <td>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                        <i id ="more_opt" class="material-icons">more_vert</i>
+                                        </button>
+                                        <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
+                                        Mais<br>Opções
+                                        </div>
+                                      </td>
                                     </tr>
                                   </tbody>
                                 </table>
