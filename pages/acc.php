@@ -175,7 +175,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                         <i id ="more_opt" class="material-icons">more_vert</i>
                                         </button>
                                         <!-- Tooltip do Mais Opções -->
-                                        <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
+                                        <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" for="more_opt">
                                         Mais<br>Opções
                                         </div>
                                         <!-- Menu Mais Opções -->
