@@ -4,7 +4,7 @@ if (!isset($_SESSION)) {session_start();}
 // Pega as definições de banco de dados e permissões do arquivo de config
 require 'config.php';
 // Verifica se não há a variável da sessão que identifica o usuário
-if (isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] > $perm_view_dashboard))
+if (isset($_SESSION['UsuarioID']) AND ($_SESSION['UsuarioNivel'] > $perm_view_dashboard))
 	{
 	// Encaminha para o dashboard
 	header("Location: /dashboard.php");
