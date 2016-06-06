@@ -161,7 +161,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                       <th class="mdl-data-table__cell--non-numeric">Funcionário</th>
                                       <th>Nome de Usuário</th>
                                       <th>Cargo</th>
-                                      <th>Mais Opções</th>
+                                      <th>Opções</th>
                                     </tr>
                                   </thead>
                                   <tbody>
@@ -170,12 +170,22 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                       <td>jdoe</td>
                                       <td>Atendente</td>
                                       <td>
+                                        <!-- Botão Mais Opções -->
                                         <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
                                         <i id ="more_opt" class="material-icons">more_vert</i>
                                         </button>
+                                        <!-- Tooltip do Mais Opções -->
                                         <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
                                         Mais<br>Opções
                                         </div>
+                                        <!-- Menu Mais Opções -->
+                                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                            for="more_opt">
+                                          <li class="mdl-menu__item">Excluir Funcionário</li>
+                                          <li class="mdl-menu__item">Ver Perfil</li>
+                                          <li disabled class="mdl-menu__item">Alterar Permissões</li>
+                                          <li class="mdl-menu__item">Enviar Mensagem</li>
+                                        </ul>
                                       </td>
                                     </tr>
                                     <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="luisandre">
