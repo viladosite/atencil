@@ -188,6 +188,84 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                         </ul>
                                       </td>
                                     </tr>
+                                    
+                                    
+                                    
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="marcelaf">
+                                      <td class="mdl-data-table__cell--non-numeric">Marcela Farias</td>
+                                      <td>marcelaf</td>
+                                      <td>Diretora</td>
+                                      <td>
+                                        <!-- Botão Mais Opções -->
+                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                        <i id ="more_opt_user2" class="material-icons">more_vert</i>
+                                        </button>
+                                        <!-- Tooltip do Mais Opções -->
+                                        <div class="mdl-tooltip mdl-tooltip--top" for="more_opt_user2">
+                                        Mais<br>Opções
+                                        </div>
+                                        <!-- Menu Mais Opções -->
+                                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                            for="more_opt_user2">
+                                          <li class="mdl-menu__item">Excluir Funcionário</li>
+                                          <li class="mdl-menu__item">Ver Perfil</li>
+                                          <li disabled class="mdl-menu__item">Alterar Permissões</li>
+                                          <li class="mdl-menu__item">Enviar Mensagem</li>
+                                        </ul>
+                                      </td>
+                                    </tr>
+
+
+
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="andrealencar">
+                                      <td class="mdl-data-table__cell--non-numeric">André Alencar</td>
+                                      <td>andrealencar</td>
+                                      <td>Gerente</td>
+                                      <td>
+                                        <!-- Botão Mais Opções -->
+                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                        <i id ="more_opt_user3" class="material-icons">more_vert</i>
+                                        </button>
+                                        <!-- Tooltip do Mais Opções -->
+                                        <div class="mdl-tooltip mdl-tooltip--top" for="more_opt_user3">
+                                        Mais<br>Opções
+                                        </div>
+                                        <!-- Menu Mais Opções -->
+                                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                            for="more_opt_user3">
+                                          <li class="mdl-menu__item">Excluir Funcionário</li>
+                                          <li class="mdl-menu__item">Ver Perfil</li>
+                                          <li disabled class="mdl-menu__item">Alterar Permissões</li>
+                                          <li class="mdl-menu__item">Enviar Mensagem</li>
+                                        </ul>
+                                      </td>
+                                    </tr>
+
+
+                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="felipem">
+                                      <td class="mdl-data-table__cell--non-numeric">Felipe Magalhães</td>
+                                      <td>felipem</td>
+                                      <td>Financeiro</td>
+                                      <td>
+                                        <!-- Botão Mais Opções -->
+                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                        <i id ="more_opt_user4" class="material-icons">more_vert</i>
+                                        </button>
+                                        <!-- Tooltip do Mais Opções -->
+                                        <div class="mdl-tooltip mdl-tooltip--top" for="more_opt_user4">
+                                        Mais<br>Opções
+                                        </div>
+                                        <!-- Menu Mais Opções -->
+                                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                            for="more_opt_user4">
+                                          <li class="mdl-menu__item">Excluir Funcionário</li>
+                                          <li class="mdl-menu__item">Ver Perfil</li>
+                                          <li disabled class="mdl-menu__item">Alterar Permissões</li>
+                                          <li class="mdl-menu__item">Enviar Mensagem</li>
+                                        </ul>
+                                      </td>
+                                    </tr>
+                                    
                                   </tbody>
                                 </table>
 
