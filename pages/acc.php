@@ -161,7 +161,14 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                       <th class="mdl-data-table__cell--non-numeric">Funcionário</th>
                                       <th>Nome de Usuário</th>
                                       <th>Cargo</th>
-                                      <th>Funções</th>
+                                      <th>
+										<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+										<i id ="more_opt" class="material-icons">more_vert</i>
+										</button>
+                                        <div class="mdl-tooltip mdl-tooltip--large" for="more_opt">
+                                        Mais<br>Opções
+                                        </div>
+                                      </th>
                                     </tr>
                                   </thead>
                                   <tbody>
