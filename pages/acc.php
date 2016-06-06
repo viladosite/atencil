@@ -154,7 +154,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  						<h2 class="mdl-card__title-text">Funcionários</h2>
 		  					</div>
 		  					<div class="mdl-card__supporting-text">
-
+                            
                                 <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                                   <thead>
                                     <tr>
@@ -181,6 +181,18 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
                                       <td class="mdl-data-table__cell--non-numeric">Marcela Freitas</td>
                                       <td>marcelaf</td>
                                       <td>Diretora</td>
+                                      <td>Clique</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="mdl-data-table__cell--non-numeric">Fernando Maia</td>
+                                      <td>fmaia</td>
+                                      <td>Financeiro</td>
+                                      <td>Clique</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="mdl-data-table__cell--non-numeric">Andressa Lima</td>
+                                      <td>andressalm</td>
+                                      <td>Recepção</td>
                                       <td>Clique</td>
                                     </tr>
                                   </tbody>
