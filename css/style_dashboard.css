@@ -55,10 +55,19 @@
 			font-weight: bold;
 		}
 
-		#spinnerBarra{
-			top: 10%;
+		/* alinhamento do spinner para ficar no nível do botão*/
+		 .mdl-spinner{
+			display: inline!important;
+			float: left!important;
 		}
 
+		/* dando prioridade à esquerda para o botão */
+		.mdl-card--border > #cb{
+			display: inline!important;
+			float: left;
+		}
+
+		/* alinhando o objeto à direita */
 		.share{
 			display: inline!important;
 			float: right!important;
