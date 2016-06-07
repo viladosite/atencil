@@ -49,7 +49,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					<button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 		  						<i class="material-icons">info</i>	
 		  					</button>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="infoperson">
+                            <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
                             Informe seus dados pessoais e informações relativas à você e seus meios de contato
                             </div>
 		  					</div>
@@ -95,7 +95,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					<button id="infocontact" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 		  						<i class="material-icons">info</i>	
 		  					</button>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="infocontact">
+                            <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infocontact">
                             Informe seus dados para contato e comunicação
                             </div>
 		  					</div>
@@ -141,7 +141,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					<button id="infocorp" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 		  						<i class="material-icons">info</i>	
 		  					</button>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="infocorp">
+                            <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infocorp">
                             Edite e/ou visualize os dados de sua empresa. Para editar você deve ser administrador de uma empresa.
                             </div>
 		  					</div>
@@ -279,7 +279,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					<button id="infocorp2" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 		  						<i class="material-icons">info</i>	
 		  					</button>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="infocorp2">
+                            <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infocorp2">
                             Edite e/ou visualize os dados de sua empresa. Para editar você deve ser administrador de uma empresa.
                             </div>
 		  					</div>
@@ -306,7 +306,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					<button id="infocorp3" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 		  						<i class="material-icons">info</i>	
 		  					</button>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="infocorp3">
+                            <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infocorp3">
                             Edite e/ou visualize os dados de sua empresa. Para editar você deve ser administrador de uma empresa.
                             </div>
 		  					</div>
@@ -338,7 +338,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					<button id="infosys" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 		  						<i class="material-icons">info</i>	
 		  					</button>
-							<div class="mdl-tooltip mdl-tooltip--large" for="infosys">
+							<div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infosys">
                             Selecione quais os e-mails e notificações que deseja receber do sistema.
                             </div>
 		  					</div>
@@ -369,7 +369,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					<button id="infoacc" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 		  						<i class="material-icons">info</i>	
 		  					</button>
-							<div class="mdl-tooltip mdl-tooltip--large" for="infoacc">
+							<div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoacc">
                             Execute funções avançadas em sua conta.
                             <br><br>
                             <b>ATENÇÃO:</b> As funções aqui disponíveis são irreversíveis. Utilize-as com caute-la.
