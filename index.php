@@ -43,8 +43,9 @@ http://www.viladosite.com.br/atencil
     <br>
     </div>
     <br><br>
-  	<input type="submit" value="Esqueci minha senha" id="btn_forgot">
-  	<input type="submit" value="Entrar" id="btn_login">
+    <input type="submit" value="Entrar" id="btn_login">
+  	<input type="button" value="Esqueci minha senha" id="btn_forgot">
+  	
 	</form>
 	</div>
 <br/>

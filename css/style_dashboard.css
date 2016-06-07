@@ -72,3 +72,7 @@
 			display: inline!important;
 			float: right!important;
 		}
+
+		.mdl-textfield__label{
+			color: #ffffff!important;
+		}
