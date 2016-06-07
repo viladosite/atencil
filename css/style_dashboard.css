@@ -67,8 +67,8 @@
 			float: left;
 		}
 
-		/* alinhando o objeto à direita */
-		.share{
+		/* Alinha os botões dos cards à direita */
+		.at-cardbutton-right{
 			display: inline!important;
 			float: right!important;
 		}

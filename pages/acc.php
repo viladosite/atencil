@@ -273,6 +273,11 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 
 		  					<div class="mdl-card__actions mdl-card--border">
 		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+                                
+		  						<button class="at-cardbutton-right mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--colored">
+		  						<i class="material-icons">add</i>
+		  						</button>	
+
 		  					</div>
 
 		  					<div class="mdl-card__menu">
@@ -280,34 +285,9 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  						<i class="material-icons">info</i>	
 		  					</button>
                             <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infocorp2">
-                            Edite e/ou visualize os dados de sua empresa. Para editar você deve ser administrador de uma empresa.
-                            </div>
-		  					</div>
-  						</div>
-						<!-- Fim do Card -->
-                        
-						<!-- Início do Card -->
-		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
-		  					<div class="mdl-card__title">
-		  						<h2 class="mdl-card__title-text">Empresa</h2>
-		  					</div>
-		  					<div class="mdl-card__supporting-text">
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
-		  					</div>
-
-		  					<div class="mdl-card__actions mdl-card--border">
-		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
-		  					</div>
-
-		  					<div class="mdl-card__menu">
-		  					<button id="infocorp3" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-		  						<i class="material-icons">info</i>	
-		  					</button>
-                            <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infocorp3">
-                            Edite e/ou visualize os dados de sua empresa. Para editar você deve ser administrador de uma empresa.
+                            Inclua, exclua ou edite as informações e permissões de funcionários vinculados a sua empresa.
+                            <br>
+                            Os funcionários vinculados à sua empresa compartilham os atendimentos ligados a ela.
                             </div>
 		  					</div>
   						</div>
@@ -372,7 +352,8 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 							<div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoacc">
                             Execute funções avançadas em sua conta.
                             <br><br>
-                            <b>ATENÇÃO:</b> As funções aqui disponíveis são irreversíveis. Utilize-as com caute-la.
+                            <b>ATENÇÃO:</b><br>
+                            As funções aqui disponíveis são irreversíveis. Utilize-as com caute-la.
                             </div>
 		  					</div>
   						</div>
