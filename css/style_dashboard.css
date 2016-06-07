@@ -58,3 +58,8 @@
 		#spinnerBarra{
 			top: 10%;
 		}
+
+		.share{
+			display: inline!important;
+			float: right!important;
+		}
