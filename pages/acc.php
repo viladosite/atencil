@@ -14,7 +14,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
   		<div class="mdl-cell mdl-cell--6-col">
 		  			<h3>Informações Pessoais</h3>
 						<!-- Início do Card -->
-		  				<div class="mdl-card mdl-shadow--4dp at-card">
+		  				<div class="mdl-card mdl-shadow--4dp demonstracao-card">
 		  					<div class="mdl-card__title">
 		  						<h2 class="mdl-card__title-text">Identificação</h2>
 		  					</div>
@@ -57,7 +57,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 						<!-- Fim do Card -->
                         
                         <!-- Início do Card -->
-		  				<div class="mdl-card mdl-shadow--4dp at-card">
+		  				<div class="mdl-card mdl-shadow--4dp demonstracao-card">
 		  					<div class="mdl-card__title">
 		  						<h2 class="mdl-card__title-text">Contato</h2>
 		  					</div>
@@ -108,7 +108,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 	  				<h3>Informações Corporativas</h3>
 
 						<!-- Início do Card -->
-		  				<div class="mdl-card mdl-shadow--3dp at-card">
+		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
 		  					<div class="mdl-card__title">
 		  						<h2 class="mdl-card__title-text">Sua Empresa</h2>
 		  					</div>
@@ -149,7 +149,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 						<!-- Fim do Card -->
                         
                         <!-- Início do Card -->
-		  				<div class="mdl-card mdl-shadow--3dp at-card">
+		  				<div class="mdl-card mdl-shadow--3dp demonstracao-card">
 		  					<div class="mdl-card__title">
 		  						<h2 class="mdl-card__title-text">Funcionários</h2>
 		  					</div>
@@ -299,7 +299,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  			<h3>Preferências de Sistema</h3>
 
 						<!-- Início do Card -->
-                        <div class="mdl-card mdl-shadow--3dp at-card">
+                        <div class="mdl-card mdl-shadow--3dp demonstracao-card">
 		  					<div class="mdl-card__title">
 		  						<h2 class="mdl-card__title-text">E-mails</h2>
 		  					</div>
@@ -330,7 +330,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  			<h3>Funções de Conta</h3>
 
 						<!-- Início do Card -->
-                        <div class="mdl-card mdl-shadow--3dp at-card">
+                        <div class="mdl-card mdl-shadow--3dp demonstracao-card">
 		  					<div class="mdl-card__title">
 		  						<h2 class="mdl-card__title-text">Funções</h2>
 		  					</div>
