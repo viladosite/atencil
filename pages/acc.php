@@ -40,7 +40,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					</div>
 
 		  					<div class="mdl-card__actions mdl-card--border">
-		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">botão</button>
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">salvar</button>
  							<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active" id="spinnerBarra"></div>
 		  					</div>
 
@@ -88,7 +88,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					</div>
 
 		  					<div class="mdl-card__actions mdl-card--border">
-		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">salvar</button>
 		  					</div>
 
 		  					<div class="mdl-card__menu">
@@ -134,7 +134,7 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					</div>
 
 		  					<div class="mdl-card__actions mdl-card--border">
-		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">salvar</button>
 		  					</div>
 
 		  					<div class="mdl-card__menu">
@@ -155,128 +155,134 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  					</div>
 		  					<div class="mdl-card__supporting-text">
                             
-                                <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                                  <thead>
-                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="all">
-                                      <th class="mdl-data-table__cell--non-numeric">Funcionário</th>
-                                      <th>Nome de Usuário</th>
-                                      <th>Cargo</th>
-                                      <th>Opções</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="jdoe">
-                                      <td class="mdl-data-table__cell--non-numeric">John Doe</td>
-                                      <td>jdoe</td>
-                                      <td>Atendente</td>
-                                      <td>
-                                        <!-- Botão Mais Opções -->
-                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                        <i id ="more_opt_user1" class="material-icons">more_vert</i>
-                                        </button>
-                                        <!-- Tooltip do Mais Opções -->
-                                        <div class="mdl-tooltip mdl-tooltip--top" for="more_opt_user1">
-                                        Mais<br>Opções
-                                        </div>
-                                        <!-- Menu Mais Opções -->
-                                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                            for="more_opt_user1">
-                                          <li class="mdl-menu__item">Excluir Funcionário</li>
-                                          <li class="mdl-menu__item">Ver Perfil</li>
-                                          <li disabled class="mdl-menu__item">Alterar Permissões</li>
-                                          <li class="mdl-menu__item">Enviar Mensagem</li>
-                                        </ul>
-                                      </td>
-                                    </tr>
-                                    
-                                    
-                                    
-                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="marcelaf">
-                                      <td class="mdl-data-table__cell--non-numeric">Marcela Farias</td>
-                                      <td>marcelaf</td>
-                                      <td>Diretora</td>
-                                      <td>
-                                        <!-- Botão Mais Opções -->
-                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                        <i id ="more_opt_user2" class="material-icons">more_vert</i>
-                                        </button>
-                                        <!-- Tooltip do Mais Opções -->
-                                        <div class="mdl-tooltip mdl-tooltip--top" for="more_opt_user2">
-                                        Mais<br>Opções
-                                        </div>
-                                        <!-- Menu Mais Opções -->
-                                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                            for="more_opt_user2">
-                                          <li class="mdl-menu__item">Excluir Funcionário</li>
-                                          <li class="mdl-menu__item">Ver Perfil</li>
-                                          <li disabled class="mdl-menu__item">Alterar Permissões</li>
-                                          <li class="mdl-menu__item">Enviar Mensagem</li>
-                                        </ul>
-                                      </td>
-                                    </tr>
+                            <!-- Lista de funcionários -->
+                            <ul class="at-employ-list mdl-list">
+                              <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
+                                  <i class="material-icons mdl-list__item-avatar">person</i>
+                                  <span>Marcela Freitas</span>
+                                  <span class="mdl-list__item-text-body">
+                                    Login: marcelaf
+                                    <br>
+                                    Cargo: Diretora
+                                  </span>
+                                </span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <button id="btn_employ1" class="mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action">
+                                      <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                        for="btn_employ1">
+                                      <li class="mdl-menu__item">Excluir</li>
+                                      <li class="mdl-menu__item">Perfil</li>
+                                      <li disabled class="mdl-menu__item">Permissões</li>
+                                    </ul>
+                                </span>
+                              </li>
 
-
-
-                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="andrealencar">
-                                      <td class="mdl-data-table__cell--non-numeric">André Alencar</td>
-                                      <td>andrealencar</td>
-                                      <td>Gerente</td>
-                                      <td>
-                                        <!-- Botão Mais Opções -->
-                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                        <i id ="more_opt_user3" class="material-icons">more_vert</i>
-                                        </button>
-                                        <!-- Tooltip do Mais Opções -->
-                                        <div class="mdl-tooltip mdl-tooltip--top" for="more_opt_user3">
-                                        Mais<br>Opções
-                                        </div>
-                                        <!-- Menu Mais Opções -->
-                                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                            for="more_opt_user3">
-                                          <li class="mdl-menu__item">Excluir Funcionário</li>
-                                          <li class="mdl-menu__item">Ver Perfil</li>
-                                          <li disabled class="mdl-menu__item">Alterar Permissões</li>
-                                          <li class="mdl-menu__item">Enviar Mensagem</li>
-                                        </ul>
-                                      </td>
-                                    </tr>
-
-
-                                    <tr data-mdl-data-table-selectable-name="emply_select" data-mdl-data-table-selectable-value="felipem">
-                                      <td class="mdl-data-table__cell--non-numeric">Felipe Magalhães</td>
-                                      <td>felipem</td>
-                                      <td>Financeiro</td>
-                                      <td>
-                                        <!-- Botão Mais Opções -->
-                                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                        <i id ="more_opt_user4" class="material-icons">more_vert</i>
-                                        </button>
-                                        <!-- Tooltip do Mais Opções -->
-                                        <div class="mdl-tooltip mdl-tooltip--top" for="more_opt_user4">
-                                        Mais<br>Opções
-                                        </div>
-                                        <!-- Menu Mais Opções -->
-                                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                            for="more_opt_user4">
-                                          <li class="mdl-menu__item">Excluir Funcionário</li>
-                                          <li class="mdl-menu__item">Ver Perfil</li>
-                                          <li disabled class="mdl-menu__item">Alterar Permissões</li>
-                                          <li class="mdl-menu__item">Enviar Mensagem</li>
-                                        </ul>
-                                      </td>
-                                    </tr>
-                                    
-                                  </tbody>
-                                </table>
-
+                              <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
+                                  <i class="material-icons mdl-list__item-avatar">person</i>
+                                  <span>Marcela Freitas</span>
+                                  <span class="mdl-list__item-text-body">
+                                    Login: marcelaf
+                                    <br>
+                                    Cargo: Diretora
+                                  </span>
+                                </span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <button id="btn_employ2" class="mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action">
+                                      <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                        for="btn_employ2">
+                                      <li class="mdl-menu__item">Excluir</li>
+                                      <li class="mdl-menu__item">Perfil</li>
+                                      <li disabled class="mdl-menu__item">Permissões</li>
+                                    </ul>
+                                </span>
+                              </li>
+                              
+                              <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
+                                  <i class="material-icons mdl-list__item-avatar">person</i>
+                                  <span>Marcela Freitas</span>
+                                  <span class="mdl-list__item-text-body">
+                                    Login: marcelaf
+                                    <br>
+                                    Cargo: Diretora
+                                  </span>
+                                </span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <button id="btn_employ3" class="mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action">
+                                      <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                        for="btn_employ3">
+                                      <li class="mdl-menu__item">Excluir</li>
+                                      <li class="mdl-menu__item">Perfil</li>
+                                      <li disabled class="mdl-menu__item">Permissões</li>
+                                    </ul>
+                                </span>
+                              </li>
+                              
+                              <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
+                                  <i class="material-icons mdl-list__item-avatar">person</i>
+                                  <span>Marcela Freitas</span>
+                                  <span class="mdl-list__item-text-body">
+                                    Login: marcelaf
+                                    <br>
+                                    Cargo: Diretora
+                                  </span>
+                                </span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <button id="btn_employ4" class="mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action">
+                                      <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                        for="btn_employ4">
+                                      <li class="mdl-menu__item">Excluir</li>
+                                      <li class="mdl-menu__item">Perfil</li>
+                                      <li disabled class="mdl-menu__item">Permissões</li>
+                                    </ul>
+                                </span>
+                              </li>
+                              
+                              <li class="mdl-list__item mdl-list__item--three-line">
+                                <span class="mdl-list__item-primary-content">
+                                  <i class="material-icons mdl-list__item-avatar">person</i>
+                                  <span>Marcela Freitas</span>
+                                  <span class="mdl-list__item-text-body">
+                                    Login: marcelaf
+                                    <br>
+                                    Cargo: Diretora
+                                  </span>
+                                </span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <button id="btn_employ5" class="mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action">
+                                      <i class="material-icons">more_vert</i>
+                                    </button>
+                                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                        for="btn_employ5">
+                                      <li class="mdl-menu__item">Excluir</li>
+                                      <li class="mdl-menu__item">Perfil</li>
+                                      <li disabled class="mdl-menu__item">Permissões</li>
+                                    </ul>
+                                </span>
+                              </li>
+                              
+                              </ul>
 		  					</div>
 
 		  					<div class="mdl-card__actions mdl-card--border">
-		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">salvar</button>
                                 
+								<a href="#">
 		  						<button class="at-cardbutton-right mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--colored">
-		  						<i class="material-icons">add</i>
-		  						</button>	
+		  						<i class="material-icons">add_circle</i>
+		  						</button>
+                                </a>
 
 		  					</div>
 
@@ -304,14 +310,26 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  						<h2 class="mdl-card__title-text">E-mails</h2>
 		  					</div>
 		  					<div class="mdl-card__supporting-text">
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
+
+                                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="mails1">
+                                  <input type="checkbox" id="mails1" class="mdl-switch__input" checked>
+                                  <span class="mdl-switch__label">E-mails de sistema</span>
+                                </label>
+
+                                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="mails2">
+                                  <input type="checkbox" id="mails2" class="mdl-switch__input">
+                                  <span class="mdl-switch__label">E-mails dos administradores</span>
+                                </label>
+
+                                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="mails3">
+                                  <input type="checkbox" id="mails3" class="mdl-switch__input">
+                                  <span class="mdl-switch__label">E-mails de sua empresa</span>
+                                </label>
+
 		  					</div>
 
 		  					<div class="mdl-card__actions mdl-card--border">
-		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">salvar</button>
 		  					</div>
 
 		  					<div class="mdl-card__menu">
@@ -335,14 +353,12 @@ if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc):
 		  						<h2 class="mdl-card__title-text">Funções</h2>
 		  					</div>
 		  					<div class="mdl-card__supporting-text">
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
-		  						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		  						tempor incididunt ut labore et dolore magna aliqua.
-		  					</div>
 
-		  					<div class="mdl-card__actions mdl-card--border">
-		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
+                            <!-- Botão excluir conta -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                              excluir minha conta
+                            </button>
+                            
 		  					</div>
 
 		  					<div class="mdl-card__menu">
