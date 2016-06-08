@@ -47,8 +47,8 @@
 		  					<div class="mdl-card__actions mdl-card--border">
 		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
 		  						<button class="at-cardbutton-right mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--colored">
-		  						<i class="material-icons">share</i>
-		  						</button>
+		  						<i class="material-icons">more_vert</i>
+		  						</button>	
 		  					</div>
 
 		  					<!-- estrutura pro card menu	
@@ -75,8 +75,8 @@
 		  					<div class="mdl-card__actions mdl-card--border">
 		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
 		  						<button class="at-cardbutton-right mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--colored">
-		  						<i class="material-icons">share</i>
-		  						</button>
+		  						<i class="material-icons">more_vert</i>
+		  						</button>	
 		  					</div>
 
 		  					<!-- estrutura pro card menu	
@@ -103,8 +103,8 @@
 		  					<div class="mdl-card__actions mdl-card--border">
 		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">botão</button>
 		  						<button class="at-cardbutton-right mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--colored">
-		  						<i class="material-icons">share</i>
-		  						</button>
+		  						<i class="material-icons">more_vert</i>
+		  						</button>	
 		  					</div>
 
 		  					<!-- estrutura pro card menu	
