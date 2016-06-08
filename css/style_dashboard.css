@@ -41,11 +41,8 @@
 			background-color: #44ccf4;
 		}
 
-			/* cor do card menu (topo perto do titulo)*/
-		.demonstracao-card > .mdl-card__menu{
-		color: #fff;
+			
 		
-		}
 		
 		/* alinhamento da imagem do usuario , cor e estilo da fonte de exibição do nome do mesmo */
 		.avatar_box{
