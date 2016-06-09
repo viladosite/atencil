@@ -10,9 +10,9 @@
 //Monta as variáveis para os campos do form
 $user = $_POST['user'];
 $pass = $_POST['pass'];
-$email = $_POST['email'];
-$name = $_POST['fname'];
-$name = $_POST['lname'];
+// $email = $_POST['email'];
+// $name = $_POST['fname'];
+// $name = $_POST['lname'];
 
 // Pega as definições de banco de dados do arquivo de config
 require '../config.php';
@@ -24,7 +24,7 @@ require 'at_connect.php';
 if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
-	$sql = "SELECT `id`, `fname`, `lname`,  `email`, `lvl`, `company`, `companylvl`, `active`, `registerdate` FROM `at_users` WHERE (`user` = '".$user ."') AND (`pass` = '". sha1($pass) ."') AND (`active` = 1) LIMIT 1";
+	$sql = "SELECT `id`, `fname`, `lname`, `email`, `lvl`, `company`, `companylvl`, `active`, `registerdate` FROM `at_users` WHERE (`user` = '".$user ."') AND (`pass` = '". sha1($pass) ."') AND (`active` = 1) LIMIT 1";
 
     $query = mysql_query($sql);
 	
