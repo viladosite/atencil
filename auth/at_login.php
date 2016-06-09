@@ -24,7 +24,7 @@ require 'at_connect.php';
 if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
-	$sql = "SELECT `id`, `fname`, `lname`, `lvl` FROM `at_users` WHERE (`user` = '".$user ."') AND (`pass` = '". sha1($pass) ."') AND (`active` = 1) LIMIT 1";
+	$sql = "SELECT `id`, `fname`, `lname`,  `email`, `lvl`, `company`, `companylvl`, `active`, `registerdate` FROM `at_users` WHERE (`user` = '".$user ."') AND (`pass` = '". sha1($pass) ."') AND (`active` = 1) LIMIT 1";
 
     $query = mysql_query($sql);
 	
@@ -50,7 +50,13 @@ if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
         // Salva os dados encontrados na sessão
         $_SESSION['UserID'] = $resultado['id'];
         $_SESSION['UserFname'] = $resultado['fname'];
+        $_SESSION['UserLname'] = $resultado['lname'];
+        $_SESSION['UserEmail'] = $resultado['email'];
         $_SESSION['UserLvl'] = $resultado['lvl'];
+        $_SESSION['UserCompany'] = $resultado['company'];
+        $_SESSION['UserCompanyLvl'] = $resultado['companylvl'];
+        $_SESSION['UserActive'] = $resultado['active'];
+        $_SESSION['UserRdate'] = $resultado['registerdate'];
       
         // Redireciona o visitante
         header("Location: /dashboard.php"); exit;
