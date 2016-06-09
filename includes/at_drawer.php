@@ -11,9 +11,9 @@ include "config.php";
 
 <!-- Criação do header do menu com dados do usuário -->
 
-		<header class="avatar_box">
-          <img src="../images/user.jpg" class="avatar_img">
-          <div class="avatar_name">
+		<header class="at-avatar-box">
+          <img src="../images/user.jpg">
+          <div>
 			<span><?php echo $_SESSION['UserFname'] ?></span> <span><?php echo $_SESSION['UserLname'] ?></span>
 			<a href="/auth/at_logout.php">
 			<button id="logout" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
