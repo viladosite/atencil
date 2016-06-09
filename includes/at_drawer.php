@@ -14,7 +14,7 @@ include "config.php";
 		<header class="avatar_box">
           <img src="../images/user.jpg" class="avatar_img">
           <div class="avatar_name">
-			<span><?php echo $_SESSION['UserFname'] $_SESSION['UserLname'] ?></span>
+			<span><?php echo $_SESSION['UserFname'] ?></span> <span><?php echo $_SESSION['UserLname'] ?></span>
 			<a href="/auth/at_logout.php">
 			<button id="logout" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 			<i class="material-icons" role="presentation">close</i>
