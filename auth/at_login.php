@@ -11,7 +11,8 @@
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 $email = $_POST['email'];
-$name = $_POST['name'];
+$name = $_POST['fname'];
+$name = $_POST['lname'];
 
 // Pega as definições de banco de dados do arquivo de config
 require '../config.php';
@@ -23,7 +24,7 @@ require 'at_connect.php';
 if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
-	$sql = "SELECT `id`, `name`, `lvl` FROM `at_users` WHERE (`user` = '".$user ."') AND (`pass` = '". sha1($pass) ."') AND (`active` = 1) LIMIT 1";
+	$sql = "SELECT `id`, `fname`, `lname`, `lvl` FROM `at_users` WHERE (`user` = '".$user ."') AND (`pass` = '". sha1($pass) ."') AND (`active` = 1) LIMIT 1";
 
     $query = mysql_query($sql);
 	
@@ -47,9 +48,9 @@ if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
         if (!isset($_SESSION)) session_start();
       
         // Salva os dados encontrados na sessão
-        $_SESSION['UsuarioID'] = $resultado['id'];
-        $_SESSION['UsuarioNome'] = $resultado['name'];
-        $_SESSION['UsuarioNivel'] = $resultado['lvl'];
+        $_SESSION['UserID'] = $resultado['id'];
+        $_SESSION['UserFname'] = $resultado['fname'];
+        $_SESSION['UserLvl'] = $resultado['lvl'];
       
         // Redireciona o visitante
         header("Location: /dashboard.php"); exit;

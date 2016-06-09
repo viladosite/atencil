@@ -14,7 +14,7 @@ include "config.php";
 		<header class="avatar_box">
           <img src="../images/user.jpg" class="avatar_img">
           <div class="avatar_name">
-			<span><?php echo $_SESSION['UsuarioNome'] ?></span>
+			<span><?php echo $_SESSION['UserFname'] $_SESSION['UserLname'] ?></span>
 			<a href="/auth/at_logout.php">
 			<button id="logout" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 			<i class="material-icons" role="presentation">close</i>
@@ -34,7 +34,7 @@ include "config.php";
 // Item de menu Início
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UsuarioNivel'] >= $perm_view_dashboard)
+	if ($_SESSION['UserLvl'] >= $perm_view_dashboard)
 		{
 
 		    // Exibe o item de menu
@@ -50,7 +50,7 @@ include "config.php";
 // Item de menu Editar minha conta
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UsuarioNivel'] >= $perm_view_editacc)
+	if ($_SESSION['UserLvl'] >= $perm_view_editacc)
 		{
 
 		    // Exibe o item de menu
@@ -66,7 +66,7 @@ include "config.php";
 // Item de menu Atendimentos
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UsuarioNivel'] >= $perm_view_attendance)
+	if ($_SESSION['UserLvl'] >= $perm_view_attendance)
 		{
 
 		    // Exibe o item de menu
@@ -81,7 +81,7 @@ include "config.php";
 // Item de menu Clientes
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UsuarioNivel'] >= $perm_view_clients)
+	if ($_SESSION['UserLvl'] >= $perm_view_clients)
 		{
 
 		    // Exibe o item de menu
@@ -96,7 +96,7 @@ include "config.php";
 // Item de menu Usuários
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UsuarioNivel'] >= $perm_view_users)
+	if ($_SESSION['UserLvl'] >= $perm_view_users)
 		{
 
 		    // Exibe o item de menu
@@ -112,7 +112,7 @@ include "config.php";
 // Item de menu Configurações
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UsuarioNivel'] >= $perm_view_sys)
+	if ($_SESSION['UserLvl'] >= $perm_view_sys)
 		{
 		    // Exibe o item de menu
 			echo '<a class="mdl-navigation__link" href="pages/system.php">
@@ -127,7 +127,7 @@ include "config.php";
 // Item de menu Buscar
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UsuarioNivel'] >= $perm_view_search)
+	if ($_SESSION['UserLvl'] >= $perm_view_search)
 		{
 			// Exibe o item de menu
 			echo '<a class="mdl-navigation__link" href="pages/search.php">
@@ -142,7 +142,7 @@ include "config.php";
 // Item de menu Ajuda
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UsuarioNivel'] >= $perm_view_dashboard)
+	if ($_SESSION['UserLvl'] >= $perm_view_dashboard)
 			{
 				    // Exibe o item de menu
 					echo '<a class="mdl-navigation__link" href="pages/help.php">

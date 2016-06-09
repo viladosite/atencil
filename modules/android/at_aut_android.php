@@ -61,7 +61,7 @@ if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
         // Salva os dados encontrados na sessão
         $_SESSION['UsuarioID'] = $resultado['id'];
         $_SESSION['UsuarioNome'] = $resultado['nome'];
-        $_SESSION['UsuarioNivel'] = $resultado['nivel'];
+        $_SESSION['UserLvl'] = $resultado['nivel'];
       
         // Redireciona o visitante
         header("Location: /painel.php"); exit;

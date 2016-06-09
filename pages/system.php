@@ -6,7 +6,7 @@
 //Obtem as configurações do arquivo de config
 require "../config.php";
 // Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições
-if ($_SESSION['UsuarioNivel'] >= $perm_view_sys):
+if ($_SESSION['UserLvl'] >= $perm_view_sys):
 ?>
 
 
