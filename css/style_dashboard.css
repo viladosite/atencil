@@ -49,30 +49,30 @@
 		
 		/* alinhamento da imagem do usuario , cor e estilo da fonte de exibição do nome do mesmo */
 		.avatar_box{
-			margin-left: auto!important;
-			margin-right: auto!important;
-			color: #78909c !important;
+			margin-left: auto;
+			margin-right: auto;
+			color: #78909c;
 			font-weight: bold;
 		}
 
 		/* alinhamento do spinner para ficar no nível do botão*/
 		 .mdl-spinner{
-			display: inline!important;
-			float: left!important;
+			display: inline;
+			float: left;
 		}
 
 		/* dando prioridade à esquerda para o botão */
 		.mdl-card--border > #cb{
-			display: inline!important;
+			display: inline;
 			float: left;
 		}
 
 		/* Alinha os botões dos cards à direita */
 		.at-cardbutton-right{
-			display: inline!important;
-			float: right!important;
+			display: inline;
+			float: right;
 		}
 
 		.mdl-textfield__label{
-			color: #ffffff!important;
+			color: #ffffff;
 		}
