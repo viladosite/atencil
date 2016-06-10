@@ -21,18 +21,18 @@ if ($_SESSION['UserLvl'] >= $perm_view_editacc):
 		  					<div class="mdl-card__supporting-text">
                                 <form action="#">
 
-                                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="firstname">
+                                  <div class="at_flabel mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="at_input mdl-textfield__input" type="text" id="firstname">
                                     <label class="mdl-textfield__label" for="firstname">Primeiro Nome</label>
                                   </div>
 
                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="lastname">
+                                    <input class="at_input mdl-textfield__input" type="text" id="lastname">
                                     <label class="mdl-textfield__label" for="lastname">Último Nome</label>
                                   </div>
 
                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="username">
+                                    <input class="at_input mdl-textfield__input" type="text" id="username">
                                     <label class="mdl-textfield__label" for="username">Nome de Usuário</label>
                                   </div>
                                   
@@ -65,22 +65,22 @@ if ($_SESSION['UserLvl'] >= $perm_view_editacc):
                                 <form action="#">
 
                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="phone1">
+                                    <input class="at_input mdl-textfield__input" type="text" id="phone1">
                                     <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
                                   </div>
 
                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="phone2">
+                                    <input class="at_input mdl-textfield__input" type="text" id="phone2">
                                     <label class="mdl-textfield__label" for="phone2">Telefone Secundário</label>
                                   </div>
 
                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="whatsapp">
+                                    <input class="at_input mdl-textfield__input" type="text" id="whatsapp">
                                     <label class="mdl-textfield__label" for="whatsapp">Whatsapp</label>
                                   </div>
 
                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="email">
+                                    <input class="at_input mdl-textfield__input" type="text" id="email">
                                     <label class="mdl-textfield__label" for="email">E-mail</label>
                                   </div>
                                   
@@ -116,17 +116,17 @@ if ($_SESSION['UserLvl'] >= $perm_view_editacc):
                                 <form action="#">
 
                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="corp_name">
+                                    <input class="at_input mdl-textfield__input" type="text" id="corp_name">
                                     <label class="mdl-textfield__label" for="corp_name">Nome da Empresa</label>
                                   </div>
 
                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="corp_tel">
+                                    <input class="at_input mdl-textfield__input" type="text" id="corp_tel">
                                     <label class="mdl-textfield__label" for="corp_tel">Telefone da Empresa</label>
                                   </div>
 
                                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="corp_mail">
+                                    <input class="at_input mdl-textfield__input" type="text" id="corp_mail">
                                     <label class="mdl-textfield__label" for="corp_mail">E-mail da Empresa</label>
                                   </div>
 
@@ -312,7 +312,7 @@ if ($_SESSION['UserLvl'] >= $perm_view_editacc):
 		  					<div class="mdl-card__supporting-text">
 
                                 <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="mails1">
-                                  <input type="checkbox" id="mails1" class="mdl-switch__input" checked>
+                                  <input type="checkbox" id="mails1" class="at_switch mdl-switch__input" checked>
                                   <span class="mdl-switch__label">E-mails de sistema</span>
                                 </label>
 

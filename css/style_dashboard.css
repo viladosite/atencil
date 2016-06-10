@@ -73,6 +73,15 @@
 			float: right;
 		}
 
-		.mdl-textfield__label{
-			color: #ffffff;
+		/* deixar o label e o textfield na cor branca */
+		.at_input , .mdl-textfield__label{
+			color: #ffffff!important;
+		}
+
+		.mdl-cell{
+			color: #78909c;
+		}
+
+		.mdl-card__supporting-text{
+			color: #fff;
 		}
