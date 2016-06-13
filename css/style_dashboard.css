@@ -78,10 +78,21 @@
 			color: #ffffff!important;
 		}
 
+		/* cor do texto da cell */
 		.mdl-cell{
 			color: #78909c;
 		}
 
+		/*cor do texto padrão do card */
 		.mdl-card__supporting-text{
 			color: #fff;
+		}
+
+		/*cor do texto do card funcionario */
+		.f_name{
+			color: #ffffff;
+		}
+
+		.f_text{
+			color: #ffffff!important;
 		}
