@@ -1,0 +1,67 @@
+
+/* Smartphone em modo retrato */
+
+@media only screen and (max-device-width : 414px)  and (orientation:portrait) {
+
+      /* estilos */ 
+
+       .box_login {
+            height: 100%!important;
+            width: 98%!important;
+            
+            overflow: hidden!important;
+            position: fixed;
+            padding: 0px 0px 0px 0px!important;
+            margin-top: 0!important;
+            margin-left: auto!important;
+            margin-right: auto!important;
+
+    }
+
+        .vform{
+            width: 85%;
+        }
+
+       #user , #pass{
+        padding: 1.5%!important;
+        width: 85%;
+        min-height: 45%;
+        font-size: 55pt;
+        margin: 4px;
+    } 
+
+    #btn_forgot , #btn_login{
+        width: 60%;
+        margin: 20px!important;
+        padding: 4%!important;
+        font-size: 260%!important;
+        font-weight: bold;
+        text-align: center!important;
+    }
+
+
+
+
+/* tamanho do texto "label" dos campso de texto */
+    label{
+        font-size: 3.5em;
+        line-height: 125%!important;
+    }
+/* solução encontrada para alinhar os textos e caixas do "form" */
+    .field2{
+        text-indent: 4.5%!important;
+
+    }
+
+    .logo{
+        width: 55%!important;
+    }
+
+
+}
+
+
+ body{
+    width: 100%;
+    overflow: hidden;
+ }   
