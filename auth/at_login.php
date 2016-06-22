@@ -23,7 +23,7 @@ require 'at_connect.php';
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
 	$sql = "SELECT `id`, `fname`, `lname`, `email`, `lvl`, `company`, `companylvl`, `active`, `registerdate` FROM `at_users` WHERE (`user` = '".$user ."') AND (`pass` = '". sha1($pass) ."') AND (`active` = 1) LIMIT 1";
 
-    $query = mysqli_query($sql);
+    $query = mysqli_query($mysql, $sql);
 	
     if (mysqli_num_rows($query) != 1) {
 
