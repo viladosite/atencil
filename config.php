@@ -1,7 +1,7 @@
 <?php
 
 // Define as variáveis com a configuração do banco de dados
-$dbserver = 'localhost';
+$dbserver = 'mysql524.umbler.com';
 $dbname = 'atencil';
 $dbuser = 'atencil';
 $dbpass = 'gPpN1357';
