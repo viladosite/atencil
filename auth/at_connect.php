@@ -1,9 +1,9 @@
 <?php
 
 // Tenta se conectar ao servidor MySQL
-$mysqli = mysql_connect($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysql_error());
+$mysqli = new mysqli($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysqli_connect_error());
 
 // Tenta se conectar ao banco de dados MySQL prédefinido nas configurações
-mysql_select_db($dbname) or trigger_error(mysql_error());
+mysqli_select_db($dbname) or trigger_error(mysqli_connect_error());
 
 ?>
