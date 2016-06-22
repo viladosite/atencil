@@ -2,9 +2,9 @@
 
 // Define as variáveis com a configuração do banco de dados
 $dbserver = 'localhost';
-$dbname = 'atencilt_usuario';
-$dbuser = 'atencilt_usuario';
-$dbpass = '78964123Vi';
+$dbname = 'atencil';
+$dbuser = 'atencil';
+$dbpass = 'gPpN1357';
 
 // Abaixo define-se a permissão de visualização e de edição para cada uma das áreas e recursos do sistema.
 
