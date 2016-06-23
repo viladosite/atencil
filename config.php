@@ -7,6 +7,7 @@ $dbuser = 'atencil';
 $dbpass = 'gPpN1357';
 
 // Abaixo define-se a permissão de visualização e de edição para cada uma das áreas e recursos do sistema.
+// Below you can set the permissions.
 
 // Define as permissões de visualização para as funções primárias
 $perm_view_dashboard = 1;
