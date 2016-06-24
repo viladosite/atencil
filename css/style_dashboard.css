@@ -23,11 +23,11 @@
 
 		/*edição de tamanho e posicionamento do card além da cor principal */
 		.mdl-card{
-			/* width: 90%; */
+			/* width: 90%; 
 			margin-right: auto;
 			margin-left: auto;
 			margin-bottom: 8%;
-			margin-top: 4%;
+			margin-top: 4%; */
 			background-color: #22aae2;
 		}
 
