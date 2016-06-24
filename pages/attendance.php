@@ -18,6 +18,7 @@ if ($_SESSION['UserLvl'] >= $perm_view_attendance):
 <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--12-col">
             <h3>Atendimentos</h3>
+            <div class="mdl-cell mdl-cell--4-col">
             <!-- Início do Card -->
               <div class="mdl-card mdl-shadow--4dp at-card at-atcard" >
                 <div class="mdl-card__title">
@@ -60,7 +61,9 @@ if ($_SESSION['UserLvl'] >= $perm_view_attendance):
                 </div>
               </div>
             <!-- Fim do Card -->
+            </div>
 
+            <div class="mdl-cell mdl-cell--4-col">
             <div class="mdl-card mdl-shadow--4dp at-card">
                 <div class="mdl-card__title">
                   <h2 class="mdl-card__title-text">Atendimento 2</h2>
@@ -102,6 +105,7 @@ if ($_SESSION['UserLvl'] >= $perm_view_attendance):
                 </div>
               </div>
             <!-- Fim do Card -->
+            </div>
             
             <div class="mdl-card mdl-shadow--4dp at-card" >
                 <div class="mdl-card__title">
