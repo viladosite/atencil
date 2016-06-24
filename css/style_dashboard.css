@@ -23,7 +23,7 @@
 
 		/*edição de tamanho e posicionamento do card além da cor principal */
 		.mdl-card{
-			width: 90%;
+			/* width: 90%; */
 			margin-right: auto;
 			margin-left: auto;
 			margin-bottom: 8%;
@@ -99,4 +99,8 @@
 
 		.at_suptxt{
 			width: 80%;
+		}
+
+		.at-atcard{
+
 		}
