@@ -16,7 +16,7 @@ if ($_SESSION['UserLvl'] >= $perm_view_attendance):
 
 
 <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--12-col">
+      <div class="mdl-cell mdl-cell--12-col at-gridatd">
             <h3>Atendimentos</h3>
             <div class="mdl-cell mdl-cell--4-col mdl-grid--no-spacing">
             <!-- Início do Card -->
