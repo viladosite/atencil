@@ -17,7 +17,7 @@ if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $perm_view_dashbo
 
 
 
-<!-- Este é o arquvio principal de exibição do dashboard -->
+<!-- This is the main dashboard exibition file -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
