@@ -35,11 +35,11 @@ http://www.viladosite.com.br/atencil
 	<form class="vform" action="auth/at_login.php" method="post" autocomplete="on">
   	<div class="field1">
   	<label for="user">Usuário:</label>
-    <input type="text" name="user" id="user" class="login"><br>
+    <input type="text" name="fielduser" id="fielduser" class="login"><br>
     </div>
     <div class="field2">
  	<label for="pass">Senha:</label>
-	<input type="password" name="pass" id="pass" class="pass">
+	<input type="password" name="fieldpass" id="fieldpass" class="pass">
     <br>
     </div>
     <br><br>

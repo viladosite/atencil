@@ -6,7 +6,7 @@
 //Obtem as configurações do arquivo de config
 require "../config.php";
 // Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições
-if ($_SESSION['UserLvl'] >= $perm_view_editacc):
+if ($_SESSION['UserPermLvl'] >= $perm_view_editacc):
 ?>
 <!-- Início do conteúdo da página -->
 

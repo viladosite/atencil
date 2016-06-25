@@ -68,7 +68,7 @@
 }
 
 /*campos de texto */
-#user , #pass{
+#fielduser , #fieldpass{
     padding: 5px;
     margin-bottom: 2px;
     margin-left: auto;
