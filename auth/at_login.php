@@ -1,15 +1,15 @@
 <?php
 
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-    if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))) {
+    if (!empty($_POST) AND (empty($_POST['fielduser']) OR empty($_POST['fieldpass']))) {
         header("Location: /index.php"); exit;
     }
       
 
 
 //Monta as variáveis para os campos do form
-$user = $_POST['user'];
-$pass = $_POST['pass'];
+$user = $_POST['fielduser'];
+$pass = $_POST['fieldpass'];
 // $email = $_POST['email'];
 // $name = $_POST['fname'];
 // $name = $_POST['lname'];
@@ -21,7 +21,7 @@ require '../config.php';
 require 'at_connect.php';
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
-	$sql = "SELECT `id`, `fname`, `lname`, `email`, `lvl`, `company`, `companylvl`, `active`, `registerdate` FROM `at_users` WHERE (`user` = '".$user ."') AND (`pass` = '". sha1($pass) ."') AND (`active` = 1) LIMIT 1";
+	$sql = "SELECT `userid`, `userfname`, `userlname`, `usermail`, `userpermlvl`, `usercomp`, `usercomplvl`, `userstatus`, `userregdate` FROM `at_users` WHERE (`userlogin` = '".$user ."') AND (`userpass` = '". sha1($pass) ."') AND (`userstatus` = 1) LIMIT 1";
 
     $query = mysqli_query($mysql, $sql);
 	
@@ -45,15 +45,15 @@ require 'at_connect.php';
         if (!isset($_SESSION)) session_start();
       
         // Salva os dados encontrados na sessão
-        $_SESSION['UserID'] = $resultado['id'];
-        $_SESSION['UserFname'] = $resultado['fname'];
-        $_SESSION['UserLname'] = $resultado['lname'];
-        $_SESSION['UserEmail'] = $resultado['email'];
-        $_SESSION['UserLvl'] = $resultado['lvl'];
-        $_SESSION['UserCompany'] = $resultado['company'];
-        $_SESSION['UserCompanyLvl'] = $resultado['companylvl'];
-        $_SESSION['UserActive'] = $resultado['active'];
-        $_SESSION['UserRdate'] = $resultado['registerdate'];
+        $_SESSION['UserID'] = $resultado['userid'];
+        $_SESSION['UserFname'] = $resultado['userfname'];
+        $_SESSION['UserLname'] = $resultado['userlname'];
+        $_SESSION['UserEmail'] = $resultado['usermail'];
+        $_SESSION['UserPermLvl'] = $resultado['userpermlvl'];
+        $_SESSION['UserCompany'] = $resultado['usercomp'];
+        $_SESSION['UserCompanyLvl'] = $resultado['usercomplvl'];
+        $_SESSION['UserActive'] = $resultado['userstatus'];
+        $_SESSION['UserRegDate'] = $resultado['userregdate'];
       
         // Redireciona o visitante
         header("Location: /dashboard.php"); exit;

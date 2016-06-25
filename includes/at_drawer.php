@@ -34,7 +34,7 @@ include "config.php";
 // Item de menu Início
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UserLvl'] >= $perm_view_dashboard)
+	if ($_SESSION['UserPermLvl'] >= $perm_view_dashboard)
 		{
 
 		    // Exibe o item de menu
@@ -50,7 +50,7 @@ include "config.php";
 // Item de menu Editar minha conta
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UserLvl'] >= $perm_view_editacc)
+	if ($_SESSION['UserPermLvl'] >= $perm_view_editacc)
 		{
 
 		    // Exibe o item de menu
@@ -66,7 +66,7 @@ include "config.php";
 // Item de menu Atendimentos
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UserLvl'] >= $perm_view_attendance)
+	if ($_SESSION['UserPermLvl'] >= $perm_view_attendance)
 		{
 
 		    // Exibe o item de menu
@@ -81,7 +81,7 @@ include "config.php";
 // Item de menu Clientes
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UserLvl'] >= $perm_view_clients)
+	if ($_SESSION['UserPermLvl'] >= $perm_view_clients)
 		{
 
 		    // Exibe o item de menu
@@ -96,7 +96,7 @@ include "config.php";
 // Item de menu Usuários
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UserLvl'] >= $perm_view_users)
+	if ($_SESSION['UserPermLvl'] >= $perm_view_users)
 		{
 
 		    // Exibe o item de menu
@@ -112,7 +112,7 @@ include "config.php";
 // Item de menu Configurações
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UserLvl'] >= $perm_view_sys)
+	if ($_SESSION['UserPermLvl'] >= $perm_view_sys)
 		{
 		    // Exibe o item de menu
 			echo '<a class="mdl-navigation__link" href="pages/system.php">
@@ -127,7 +127,7 @@ include "config.php";
 // Item de menu Buscar
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UserLvl'] >= $perm_view_search)
+	if ($_SESSION['UserPermLvl'] >= $perm_view_search)
 		{
 			// Exibe o item de menu
 			echo '<a class="mdl-navigation__link" href="pages/search.php">
@@ -142,7 +142,7 @@ include "config.php";
 // Item de menu Ajuda
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if ($_SESSION['UserLvl'] >= $perm_view_dashboard)
+	if ($_SESSION['UserPermLvl'] >= $perm_view_dashboard)
 			{
 				    // Exibe o item de menu
 					echo '<a class="mdl-navigation__link" href="pages/help.php">
