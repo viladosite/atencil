@@ -102,5 +102,8 @@
 		}
 
 		.at-cardatd{
-
+			width: 95%;
+			height: 95%
+			max-height: 100px !important;
+			min-height: 50px !important;
 		}
