@@ -1866,44 +1866,21 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
 <!-- Fim do Loop Simulado -->
 
+<div id="atd_add">
 
+        <!-- Botão adicionar atendimento -->
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
+          <i class="material-icons">add</i>
+        </button>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
 
 
 
 </div>
 <!-- Fim do Grid -->
 
-    <div id="atd_add">
-
-        <!-- Botão adicionar atendimento -->
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-          <i class="material-icons">add</i>
-        </button>
-
-    </div>
+    
 
 
 <!-- Fim do conteúdo da página -->
