@@ -30,6 +30,28 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
               </div>
 
               <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
+                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
+                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
+                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
               </div>
 
               <div class="mdl-card__menu">
@@ -42,7 +64,8 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 menu
                 </div>
 
-              </div>
+              </div>   
+
           </div>
         <!-- Fim do Card -->
 

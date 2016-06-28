@@ -110,7 +110,34 @@
 		#atd_add{
 			display:scroll;
 			position:fixed;
-			bottom: 0.7%;
-			right: 2%;
+			bottom: 1%;
+			right: 2.5%;
 			z-index: 1000;
+			opacity: 0.7;
+			
 		}
+
+		#atd_add:hover{
+			opacity: 1;
+		}
+
+		@media (max-width: 500px){
+				#atd_add{
+					right: 5%;
+					opacity: 0.9;
+				}
+			}
+
+		.at_txtat{
+			max-width: 80%;
+			margin-bottom: -40px;
+		}
+
+		#at_date{
+			background-color: #ffd740;
+			font-size: 90%;
+			width: 65%;
+		}
+		#at_day{
+			font-size: 100%;
+		}	
