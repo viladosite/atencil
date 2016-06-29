@@ -30,10 +30,6 @@ if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $perm_view_dashbo
    	<link rel="stylesheet" href="css/style_dashboard.css" />
 	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-	<style >
-		
-	</style>
 	 
 </head>
 
