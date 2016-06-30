@@ -107,7 +107,7 @@
 			min-height: 50px !important;
 		}
 
-		#atd_add{
+		.atd_add{
 			display:scroll;
 			position:fixed;
 			bottom: 1%;
@@ -117,12 +117,12 @@
 			
 		}
 
-		#atd_add:hover{
+		.atd_add:hover{
 			opacity: 1;
 		}
 
 		@media (max-width: 500px){
-				#atd_add{
+				.atd_add{
 					right: 5%;
 					opacity: 0.9;
 				}

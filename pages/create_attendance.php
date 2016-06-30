@@ -15,7 +15,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
   
     <div class="mdl-cell mdl-cell--12-col">
         <div id="atd_title">
-        <h3>Atendimentos</h3>
+        <h3>Criar Atendimento</h3>
         </div>
 
     </div>
@@ -1903,7 +1903,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
 <!-- Fim do Loop Simulado -->
 
-<div id="atd_add">
+<div class="atd_add" id="menu">
 
         <!-- Botão adicionar atendimento -->
         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">

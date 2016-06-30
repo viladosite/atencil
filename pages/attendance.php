@@ -1903,7 +1903,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
 <!-- Fim do Loop Simulado -->
 
-<div id="atd_add">
+<div class="atd_add" id="menu">
   <a href="pages/create_attendance.php">
         <!-- Botão adicionar atendimento -->
         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect" >
