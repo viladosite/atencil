@@ -70,7 +70,7 @@ include "config.php";
 		{
 
 		    // Exibe o item de menu
-      		echo '<a class="mdl-navigation__link" href="pages/attendance.php">
+      		echo '<a class="mdl-navigation__link" href="pages/atten.php">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">perm_phone_msg</i>
             Atendimentos</a>';
 
