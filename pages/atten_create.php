@@ -34,18 +34,64 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="at_id">
+                        <label class="mdl-textfield__label" for="at_id">ID</label>
+                        <span class="mdl-textfield__error">Somente Numeros!</span>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="companyid">
+                        <label class="mdl-textfield__label" for="companyid">Empresa</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Usuário</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attendate">
+                        <label class="mdl-textfield__label" for="attendate">Data</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenhour">
+                        <label class="mdl-textfield__label" for="attenhour">Hora</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenchannel">
+                        <label class="mdl-textfield__label" for="attenchannel">Canal</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenobs">
+                        <label class="mdl-textfield__label" for="attenobs">Observações</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenflag">
+                        <label class="mdl-textfield__label" for="attenflg">Attenflag</label>
                 </div>
 
                 <div class="at_opt">

@@ -96,10 +96,12 @@
 			color: #ffffff!important;
 		}
 
+		/* tamanho do supporting text */
 		.at_suptxt{
 			width: 80%;
 		}
 
+		/* alterações nos cards d atendimento */
 		.at-cardatd{
 			width: 95%;
 			height: 95%
@@ -107,6 +109,7 @@
 			min-height: 50px !important;
 		}
 
+		/* botão de add novo atendimento */
 		.atd_add{
 			display:scroll;
 			position:fixed;
@@ -129,6 +132,7 @@
 				}
 			}
 
+		/* caixa com a data */	
 		.at_txtat{
 			max-width: 80%;
 			margin-bottom: -40px;
@@ -142,11 +146,13 @@
 		#at_day{
 			font-size: 100%;
 		}
+
 		.at_opt{
 			width: 90%;
 			margin-top: 10%;
 		}
 
+		/* mini fabs dos cards */
 		button.at_btnAt.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--mini-fab.mdl-button--accent{
 			height: 30px;
     		min-width: 20px;
