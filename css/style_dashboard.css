@@ -41,6 +41,11 @@
 			background-color: #44ccf4;
 		}
 
+		/* card da pagina inicial */
+		.at-card{
+			width: 90%;
+		}
+
 			/* cor do card menu (topo perto do titulo)*/
 		.at-card > .mdl-card__menu{
 		color: #fff;

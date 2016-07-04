@@ -98,7 +98,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
     <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
         
-        <!-- Início do Card -->
+         <!-- Início do Card -->
           <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
 
               <div class="mdl-card__title">
@@ -110,18 +110,23 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -180,18 +185,23 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -238,7 +248,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
     
     <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
         
-        <!-- Início do Card -->
+         <!-- Início do Card -->
           <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
 
               <div class="mdl-card__title">
@@ -250,18 +260,23 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -308,7 +323,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
     
     <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
         
-        <!-- Início do Card -->
+         <!-- Início do Card -->
           <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
 
               <div class="mdl-card__title">
@@ -320,18 +335,23 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -390,18 +410,473 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_opt">
+
+                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">add</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">create</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  
+              </div>
+
+              <div class="mdl-card__menu">
+
+      
+                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <i class="material-icons">info</i>  
+                </button>
+      
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                menu
+                </div>
+
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+
+    </div>
+
+    
+    <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-phone">
+        
+         <!-- Início do Card -->
+          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
+
+              <div class="mdl-card__title">
+                <span>Atendimento 1</span>
+              </div>
+
+              <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_opt">
+
+                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">add</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">create</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  
+              </div>
+
+              <div class="mdl-card__menu">
+
+      
+                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <i class="material-icons">info</i>  
+                </button>
+      
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                menu
+                </div>
+
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+
+    </div>
+
+    
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+        
+        <!-- Início do Card -->
+          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
+
+              <div class="mdl-card__title">
+                <span>Atendimento 1</span>
+              </div>
+
+              <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_opt">
+
+                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">add</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">create</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  
+              </div>
+
+              <div class="mdl-card__menu">
+
+      
+                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <i class="material-icons">info</i>  
+                </button>
+      
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                menu
+                </div>
+
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+
+    </div>
+
+
+
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+        
+         <!-- Início do Card -->
+          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
+
+              <div class="mdl-card__title">
+                <span>Atendimento 1</span>
+              </div>
+
+              <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_opt">
+
+                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">add</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">create</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  
+              </div>
+
+              <div class="mdl-card__menu">
+
+      
+                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <i class="material-icons">info</i>  
+                </button>
+      
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                menu
+                </div>
+
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+
+    </div>
+
+    
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+        
+        <!-- Início do Card -->
+          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
+
+              <div class="mdl-card__title">
+                <span>Atendimento 1</span>
+              </div>
+
+              <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_opt">
+
+                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">add</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">create</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  
+              </div>
+
+              <div class="mdl-card__menu">
+
+      
+                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <i class="material-icons">info</i>  
+                </button>
+      
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                menu
+                </div>
+
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+
+    </div>
+
+    
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+        
+         <!-- Início do Card -->
+          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
+
+              <div class="mdl-card__title">
+                <span>Atendimento 1</span>
+              </div>
+
+              <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_opt">
+
+                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">add</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">create</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  
+              </div>
+
+              <div class="mdl-card__menu">
+
+      
+                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <i class="material-icons">info</i>  
+                </button>
+      
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                menu
+                </div>
+
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+    </div>
+
+    
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+        
+        <!-- Início do Card -->
+          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
+
+              <div class="mdl-card__title">
+                <span>Atendimento 1</span>
+              </div>
+
+              <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -460,18 +935,248 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_opt">
+
+                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">add</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">create</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  
+              </div>
+
+              <div class="mdl-card__menu">
+
+      
+                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <i class="material-icons">info</i>  
+                </button>
+      
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                menu
+                </div>
+
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+
+    </div>
+
+    
+    <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-phone">
+        
+         <!-- Início do Card -->
+          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
+
+              <div class="mdl-card__title">
+                <span>Atendimento 1</span>
+              </div>
+
+              <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_opt">
+
+                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">add</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">create</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  
+              </div>
+
+              <div class="mdl-card__menu">
+
+      
+                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <i class="material-icons">info</i>  
+                </button>
+      
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                menu
+                </div>
+
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+
+    </div>
+
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+        
+        <!-- Início do Card -->
+          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
+
+              <div class="mdl-card__title">
+                <span>Atendimento 1</span>
+              </div>
+
+              <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                </div>
+
+                <div class="at_opt">
+
+                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">add</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">create</i>
+                  </button>
+
+                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                  <i class="material-icons">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+              <div class="mdl-card__actions mdl-card--border">
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  
+              </div>
+
+              <div class="mdl-card__menu">
+
+      
+                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <i class="material-icons">info</i>  
+                </button>
+      
+                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                menu
+                </div>
+
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+
+    </div>
+
+
+
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+        
+        <!-- Início do Card -->
+          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
+
+              <div class="mdl-card__title">
+                <span>Atendimento 1</span>
+              </div>
+
+              <div class="mdl-card__supporting-text">
+
+                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -530,89 +1235,23 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
-                </div>
-
-                <div class="at_opt">
-
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
-
-                  </div>
-
-              </div>
-
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
-
-              <div class="mdl-card__menu">
-
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
-
-              </div>   
-
-          </div>
-        <!-- Fim do Card -->
-
-    </div>
-
-
-
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-        
-        <!-- Início do Card -->
-          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
-
-              <div class="mdl-card__title">
-                <span>Atendimento 1</span>
-              </div>
-
-              <div class="mdl-card__supporting-text">
-
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -659,7 +1298,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
     
     <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
         
-        <!-- Início do Card -->
+         <!-- Início do Card -->
           <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
 
               <div class="mdl-card__title">
@@ -671,18 +1310,23 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -729,7 +1373,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
     
     <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
         
-        <!-- Início do Card -->
+         <!-- Início do Card -->
           <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
 
               <div class="mdl-card__title">
@@ -741,88 +1385,23 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
-                </div>
-
-                <div class="at_opt">
-
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
-
-                  </div>
-
-              </div>
-
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
-
-              <div class="mdl-card__menu">
-
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
-
-              </div>   
-
-          </div>
-        <!-- Fim do Card -->
-
-    </div>
-
-    
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-        
-        <!-- Início do Card -->
-          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
-
-              <div class="mdl-card__title">
-                <span>Atendimento 1</span>
-              </div>
-
-              <div class="mdl-card__supporting-text">
-
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -881,18 +1460,23 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                </div>
+
+                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
@@ -939,7 +1523,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
     
     <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-phone">
         
-        <!-- Início do Card -->
+         <!-- Início do Card -->
           <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
 
               <div class="mdl-card__title">
@@ -951,508 +1535,23 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="userid">
+                        <label class="mdl-textfield__label" for="userid">Cliente</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
+                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
-                </div>
-
-                <div class="at_opt">
-
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
-
-                  </div>
-
-              </div>
-
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
-
-              <div class="mdl-card__menu">
-
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
-
-              </div>   
-
-          </div>
-        <!-- Fim do Card -->
-
-    </div>
-
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-        
-        <!-- Início do Card -->
-          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
-
-              <div class="mdl-card__title">
-                <span>Atendimento 1</span>
-              </div>
-
-              <div class="mdl-card__supporting-text">
-
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
+                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
                 </div>
 
                 <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
-                </div>
-
-                <div class="at_opt">
-
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
-
-                  </div>
-
-              </div>
-
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
-
-              <div class="mdl-card__menu">
-
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
-
-              </div>   
-
-          </div>
-        <!-- Fim do Card -->
-
-    </div>
-
-
-
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-        
-        <!-- Início do Card -->
-          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
-
-              <div class="mdl-card__title">
-                <span>Atendimento 1</span>
-              </div>
-
-              <div class="mdl-card__supporting-text">
-
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
-                </div>
-
-                <div class="at_opt">
-
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
-
-                  </div>
-
-              </div>
-
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
-
-              <div class="mdl-card__menu">
-
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
-
-              </div>   
-
-          </div>
-        <!-- Fim do Card -->
-
-    </div>
-
-    
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-        
-        <!-- Início do Card -->
-          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
-
-              <div class="mdl-card__title">
-                <span>Atendimento 1</span>
-              </div>
-
-              <div class="mdl-card__supporting-text">
-
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
-                </div>
-
-                <div class="at_opt">
-
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
-
-                  </div>
-
-              </div>
-
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
-
-              <div class="mdl-card__menu">
-
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
-
-              </div>   
-
-          </div>
-        <!-- Fim do Card -->
-
-    </div>
-
-    
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-        
-        <!-- Início do Card -->
-          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
-
-              <div class="mdl-card__title">
-                <span>Atendimento 1</span>
-              </div>
-
-              <div class="mdl-card__supporting-text">
-
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
-                </div>
-
-                <div class="at_opt">
-
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
-
-                  </div>
-
-              </div>
-
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
-
-              <div class="mdl-card__menu">
-
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
-
-              </div>   
-
-          </div>
-        <!-- Fim do Card -->
-
-    </div>
-
-    
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-        
-        <!-- Início do Card -->
-          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
-
-              <div class="mdl-card__title">
-                <span>Atendimento 1</span>
-              </div>
-
-              <div class="mdl-card__supporting-text">
-
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
-                </div>
-
-                <div class="at_opt">
-
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
-
-                  </div>
-
-              </div>
-
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
-
-              <div class="mdl-card__menu">
-
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
-
-              </div>   
-
-          </div>
-        <!-- Fim do Card -->
-
-    </div>
-
-    
-    <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-phone">
-        
-        <!-- Início do Card -->
-          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
-
-              <div class="mdl-card__title">
-                <span>Atendimento 1</span>
-              </div>
-
-              <div class="mdl-card__supporting-text">
-
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
-                </div>
-
-                <div class="at_opt">
-
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
-
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
-
-                  </div>
-
-              </div>
-
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
-
-              <div class="mdl-card__menu">
-
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
-
-              </div>   
-
-          </div>
-        <!-- Fim do Card -->
-
-    </div>
-
-    
-    <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-phone">
-        
-        <!-- Início do Card -->
-          <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
-
-              <div class="mdl-card__title">
-                <span>Atendimento 1</span>
-              </div>
-
-              <div class="mdl-card__supporting-text">
-
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Telefone Principal</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Nome</label>
-                </div>
-
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="phone1">
-                        <label class="mdl-textfield__label" for="phone1">Email</label>
+                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
+                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
                 </div>
 
                 <div class="at_opt">
