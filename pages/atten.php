@@ -29,65 +29,68 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <span>Atendimento 1</span>
               </div>
 
-              <div class="mdl-card__supporting-text">
+              <form id="atten-add" action="" method="post">
 
-                <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
+                  <div class="mdl-card__supporting-text">
 
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="userid">
-                        <label class="mdl-textfield__label" for="userid">Cliente</label>
-                </div>
+                      <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
 
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="attensubject">
-                        <label class="mdl-textfield__label" for="attensubject">Assunto</label>
-                </div>
+                      <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="at_input mdl-textfield__input" type="text" id="userid" name="userid">
+                          <label class="mdl-textfield__label" for="userid">Cliente</label>
+                      </div>
 
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="attenstatus">
-                        <label class="mdl-textfield__label" for="attenstatus">Status</label>
-                </div>
+                      <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="at_input mdl-textfield__input" type="text" id="attensubject" name="attensubject">
+                          <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                      </div>
 
-                <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="at_input mdl-textfield__input" type="text" id="attenreturn">
-                        <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
-                </div>
+                      <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="at_input mdl-textfield__input" type="text" id="attenstatus" name="attenstatus">
+                          <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                      </div>
 
-                <div class="at_opt">
+                      <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="at_input mdl-textfield__input" type="text" id="attenreturn" name="attenreturn">
+                          <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
+                      </div>
 
-                <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">add</i>
-                  </button>
+                      <div class="at_opt">
 
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">create</i>
-                  </button>
+                            <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                            <i class="material-icons">add</i>
+                            </button>
 
-                  <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                  <i class="material-icons">delete</i>
-                  </button>
+                            <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                            <i class="material-icons">create</i>
+                            </button>
+
+                            <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
+                            <i class="material-icons">delete</i>
+                            </button>
+
+                      </div>
 
                   </div>
 
-              </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                      
+                  </div>
 
-              <div class="mdl-card__actions mdl-card--border">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
-                  
-              </div>
+                  <div class="mdl-card__menu">
 
-              <div class="mdl-card__menu">
+                      <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                        <i class="material-icons">info</i>  
+                      </button>
+            
+                      <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
+                      menu
+                      </div>
 
-      
-                <button id="infoperson" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">info</i>  
-                </button>
-      
-                <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--left" for="infoperson">
-                menu
-                </div>
+                  </div>   
 
-              </div>   
+              </form>
 
           </div>
         <!-- Fim do Card -->
