@@ -35,7 +35,7 @@ GitHub.sublime-settings
 _notes
 _compareTemp
 configs/
-dwsync.xml
+*dwsync.xml
 dw_php_codehinting.config
 *.mno
 
