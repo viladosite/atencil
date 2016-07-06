@@ -84,7 +84,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <div class=\"at_opt\">
 
                 <button class=\"at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent\">
-                  <i class=\"material-icons\">add</i>
+                  <i class=\"material-icons\">visibility</i>
                   </button>
 
                   <button class=\"at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent\">
@@ -99,10 +99,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
               </div>
 
-              <div class=\"mdl-card__actions mdl-card--border\">
-                  <button class=\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised\" id=\"cb\">Checar</button>
-                  
-              </div>
 
               <div class=\"mdl-card__menu\">
 
