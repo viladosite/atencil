@@ -144,11 +144,25 @@
 		}
 
 		#at_date{
+			position: absolute;
+			display: block;
 			background-color: #ffd740;
 			font-size: 90%;
-			width: 65%;
+			width: 26%;
+			height: 26%;
+			top: 0px;
+			right: 0;
 		}
+
+		@media screen and (max-width: 479px){
+			#at_date{
+				width: 30%;
+				width: 30%;
+			}
+		}
+
 		#at_day{
+			display: block;
 			font-size: 100%;
 		}
 
