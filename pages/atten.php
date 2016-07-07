@@ -103,14 +103,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
               <div class=\"mdl-card__menu\">
 
       
-                <button id=\"infoperson\" class=\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon\">
-                  <i class=\"material-icons\">info</i>  
-                </button>
-      
-                <div class=\"mdl-tooltip mdl-tooltip--large mdl-tooltip--left\" for=\"infoperson\">
-                menu
-                </div>
-
+                
               </div>   
 
           </div>
