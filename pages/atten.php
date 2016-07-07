@@ -58,7 +58,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
 
 
-    <div class=\"mdl-cell mdl-cell--2-col mdl-cell--4-col-phone\">
+    <div class=\"mdl-cell mdl-cell--2-col mdl-cell--4-col-phone mdl-cell--4-col-tablet\">
         
          <!-- Início do Card -->
           <div class=\"mdl-card mdl-shadow--4dp at-card at-cardatd\" >
@@ -67,7 +67,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <span>".$attentype."</span>
               </div>
 
-              <div class=\"mdl-card__supporting-text\">
+              <div class=\"mdl-card__supporting-text at_txtsup\">
 
                 <div id=\"at_date\"><span id=\"at_day\">Data: ".$attendate."</span></div>
 
