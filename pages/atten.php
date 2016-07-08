@@ -48,6 +48,10 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 $attenreturn = $row['attenreturn'];
                 $attenflag = $row['attenflag'];
 
+                $day = date('d',strtotime($attendate));
+                $month = date('M',strtotime($attendate));
+                $year = date('Y',strtotime($attendate));
+
 
 
 
@@ -69,7 +73,11 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
               <div class=\"mdl-card__supporting-text at_txtsup\">
 
-                <div id=\"at_date\"><span id=\"at_day\">Data: ".$attendate."</span></div>
+                <div id=\"at_date\">
+                <span id=\"at_day\">".$day."<br></span>
+                <span id=\"at_month\">".$month."<br></span>
+                <span id=\"at_year\">".$year."</span>
+                </div>
 
                 <div> Hora: ".$attenhour." </div>
 
