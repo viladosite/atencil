@@ -17,7 +17,14 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 
 <b> Conteúdo da página de clientes </b>
 
-
+<div class="atd_add" id="menu">
+  <a href="pages/clients_create.php">
+        <!-- Botão adicionar atendimento -->
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect" >
+          <i class="material-icons">add</i>
+        </button>
+        </a>
+    </div>
 
 
 <!-- Fim do conteúdo da página -->

@@ -154,6 +154,7 @@
 			font-weight: bold;
 			text-shadow: 1px 0px 4px #777777;
 			text-align: center;
+			padding-top: 2px;
 		}
 
 		@media screen and (max-width: 479px){
@@ -163,11 +164,11 @@
 		}
 
 		#at_day{
-			font-size: 160%;
+			font-size: 180%;
 		}
 
 		#at_month{
-			font-size: 135%;
+			font-size: 155%;
 		}
 
 
