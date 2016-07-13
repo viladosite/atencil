@@ -13,9 +13,121 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 <!-- Início do conteúdo da página -->
 
 
+<div class="mdl-grid">
+  
+    <div class="mdl-cell mdl-cell--12-col">
+        <div id="atd_title">
+        <h3>Atendimentos</h3>
+        </div>
+
+    </div>
 
 
-<b> Conteúdo da página de clientes </b>
+<?php
+          // Select all the attendances in the table
+          $query = "SELECT * FROM at_attendances";
+
+          // Results of the select
+          $result = mysqli_query($mysql, $query);
+
+          // While mysql find attendances it will show and create it's card
+          while ($row = mysqli_fetch_assoc($result))
+          
+          // Starting the while
+          { 
+                $attendanceid = $row['attendanceid'];
+                $attencompany = $row['attencompany'];
+                $attenuser = $row['attenuser'];
+                $attenclient = $row['attenclient'];
+                $attendate = $row['attendate'];
+                $attenhour = $row['attenhour'];
+                $attentype = $row['attentype'];
+                $attenchannel = $row['attenchannel'];
+                $attensubject = $row['attensubject'];
+                $attenobs = $row['attenobs'];
+                $attenstatus = $row['attenstatus'];
+                $attenreturn = $row['attenreturn'];
+                $attenflag = $row['attenflag'];
+
+                $day = date('d',strtotime($attendate));
+                $month = date('M',strtotime($attendate));
+                $year = date('Y',strtotime($attendate));
+
+
+
+
+
+
+                // Starting the loop
+                echo"
+
+
+
+    <div class=\"mdl-cell mdl-cell--2-col mdl-cell--4-col-phone mdl-cell--4-col-tablet\">
+        
+         <!-- Início do Card -->
+          <div class=\"mdl-card mdl-shadow--4dp at-card at-cardatd\" >
+
+              <div class=\"mdl-card__title\">
+                <span>".$attentype."</span>
+              </div>
+
+              <div class=\"mdl-card__supporting-text at_txtsup\">
+
+                <div id=\"at_date\">
+                <span id=\"at_day\">".$day."<br></span>
+                <span id=\"at_month\">".$month."<br></span>
+                <span id=\"at_year\">".$year."</span>
+                </div>
+
+                <div> Hora: ".$attenhour." </div>
+
+                <div> Cadastrado por: ".$attenuser." </div>
+
+                <div> Cliente: ".$attenclient." </div>
+
+                <div> Tipo: ".$attentype." </div>
+
+                <div> Status: ".$attenstatus." </div>
+
+                <div class=\"at_opt\">
+
+                <button class=\"at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent\">
+                  <i class=\"material-icons\">visibility</i>
+                  </button>
+
+                  <button class=\"at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent\">
+                  <i class=\"material-icons\">create</i>
+                  </button>
+
+                  <button class=\"at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent\">
+                  <i class=\"material-icons\">delete</i>
+                  </button>
+
+                  </div>
+
+              </div>
+
+
+              <div class=\"mdl-card__menu\">
+
+      
+                
+              </div>   
+
+          </div>
+        <!-- Fim do Card -->
+
+    </div>
+
+
+
+
+                    ";
+                // Finishing the loop
+          }
+          // Finishing the while and php tag
+?>
 
 <div class="atd_add" id="menu">
   <a href="pages/clients_create.php">
@@ -25,6 +137,8 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
         </button>
         </a>
     </div>
+
+ </div>   
 
 
 <!-- Fim do conteúdo da página -->
