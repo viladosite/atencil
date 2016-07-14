@@ -33,7 +33,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_users):
                                     <br>
                                     Cargo: Diretora
                                     <br>
-                                    Email: at_dir@atencil.com
                                   </span>
 
                                 </span>
@@ -60,7 +59,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_users):
                                     <br>
                                     Cargo: Diretora
                                     <br>
-                                    Email: at_dir@atencil.com
                                   </span>
 
                                 </span>
@@ -86,7 +84,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_users):
                                     <br>
                                     Cargo: Diretora
                                     <br>
-                                    Email: at_dir@atencil.com
                                   </span>
 
                                 </span>
@@ -112,7 +109,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_users):
                                     <br>
                                     Cargo: Diretora
                                     <br>
-                                    Email: at_dir@atencil.com
                                   </span>
 
                                 </span>
