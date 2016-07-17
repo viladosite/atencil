@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="README.md" server="ftp.atencil.tk/public_html/" local="131110848577501151" remote="131113462200000000" Dst="1" />
-<file name="index.php" server="ftp.atencil.tk/public_html/" local="131113468332950577" remote="131113468200000000" Dst="1" />
-<file name="dashboard.php" server="ftp.atencil.tk/public_html/" local="131113471800839555" remote="131113471800000000" Dst="1" />
-<file name="favicon.ico" server="ftp.atencil.tk/public_html/" local="131110848576891067" remote="131113462200000000" Dst="1" />
-<file name="config.php" server="ftp.atencil.tk/public_html/" local="131113463875273503" remote="131113463400000000" Dst="1" />
+<file name="README.md" server="ftp.atencil.tk/public_html/" local="131110848577501151" remote="131132631000000000" Dst="1" />
+<file name="index.php" server="ftp.atencil.tk/public_html/" local="131115096511798512" remote="131132630400000000" Dst="1" />
+<file name="dashboard.php" server="ftp.atencil.tk/public_html/" local="131122111869640809" remote="131132630400000000" Dst="1" />
+<file name="favicon.ico" server="ftp.atencil.tk/public_html/" local="131110848576891067" remote="131132630400000000" Dst="1" />
+<file name="config.php" server="ftp.atencil.tk/public_html/" local="131123174563848788" remote="131132630400000000" Dst="1" />
+<file name=".gitignore" server="ftp.atencil.tk/public_html/" local="131122060393889688" remote="131132630400000000" Dst="1" />
+<file name="sftp-config.json" server="ftp.atencil.tk/public_html/" local="131115096517588894" remote="131132631000000000" Dst="1" />
 </dwsync>

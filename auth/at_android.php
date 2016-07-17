@@ -1,9 +1,4 @@
 <?php
-
-// Verifica se houve POST e se o usuário ou a senha é(são) vazio(s). Se estiver vazio retorna EMPTY
-    if (!empty($_POST) AND (empty($_POST['fielduser']) OR empty($_POST['fieldpass']))) {
-        echo "empty"; exit;
-    }
       
 // Pega as definições de banco de dados do arquivo de config
 require '../config.php';
