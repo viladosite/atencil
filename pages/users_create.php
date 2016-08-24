@@ -6,7 +6,7 @@
 //Obtem as configurações do arquivo de config
 require "../config.php";
 // Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições
-if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
+if ($_SESSION['UserPermLvl'] >= $perm_edit_users):
 ?>
 
 
@@ -33,7 +33,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
                 <span>Usuario 1</span>
               </div>
 
-              <form id="atten-add" action="" method="post">
+              <form id="atten-add" action="user_cria.php" method="post">
 
               <div class="mdl-card__supporting-text">
 
