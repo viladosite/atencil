@@ -106,11 +106,13 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_users):
 		  					<div class="mdl-card__actions mdl-card--border">
 		  						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised">salvar</button>
                                 
-								<a href="#">
+								<div class="user_add" id="menu">
+                <a href="pages/users_create.php">
 		  						<button class="at-cardbutton-right mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--colored">
 		  						<i class="material-icons">add_circle</i>
 		  						</button>
                                 </a>
+                </div>                
 
 		  					</div>
 
