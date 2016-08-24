@@ -28,78 +28,77 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_users):
                             <ul class="at-employ-list mdl-list">
 
 
-<?php
-          // Select all the attendances in the table
-          $query = "SELECT * FROM at_users";
+                    <?php
+                              // Select all the attendances in the table
+                              $query = "SELECT * FROM at_users";
 
-          // Results of the select
-          $result = mysqli_query($mysql, $query);
+                              // Results of the select
+                              $result = mysqli_query($mysql, $query);
 
-          // While mysql find attendances it will show and create it's card
-          while ($row = mysqli_fetch_assoc($result))
-          
-          // Starting the while
-          { 
-                $userid = $row['userid'];
-                $userfname = $row['userfname'];
-                $userlname = $row['userlname'];
-                $userlogin = $row['userlogin'];
-                $usermail = $row['usermail'];
-                $userpermlvl = $row['userpermlvl'];
-                $usercomp = $row['usercomp'];
-                $usercomplvl = $row['usercomplvl'];
-                $userstatus = $row['userstatus'];
-                $userregdate = $row['userregdate'];
-
-
-                $day = date('d',strtotime($userregdate));
-                $month = date('M',strtotime($userregdate));
-                $year = date('Y',strtotime($userregdate));
+                              // While mysql find attendances it will show and create it's card
+                              while ($row = mysqli_fetch_assoc($result))
+                              
+                              // Starting the while
+                              { 
+                                    $userid = $row['userid'];
+                                    $userfname = $row['userfname'];
+                                    $userlname = $row['userlname'];
+                                    $userlogin = $row['userlogin'];
+                                    $usermail = $row['usermail'];
+                                    $userpermlvl = $row['userpermlvl'];
+                                    $usercomp = $row['usercomp'];
+                                    $usercomplvl = $row['usercomplvl'];
+                                    $userstatus = $row['userstatus'];
+                                    $userregdate = $row['userregdate'];
 
 
-
-                // Starting the loop
-                echo"
+                                    $day = date('d',strtotime($userregdate));
+                                    $month = date('M',strtotime($userregdate));
+                                    $year = date('Y',strtotime($userregdate));
 
 
 
-                              <!-- Início do Item -->
-
-                              <li class=\"mdl-list__item mdl-list__item--three-line\">
-                                <span class=\"mdl-list__item-primary-content\">
-                                  <i class=\"material-icons mdl-list__item-avatar\">person</i>
-                                  <span class=\"f_name\">".$userfname." ".$userlname."</span>
-                                  <span class=\"f_text mdl-list__item-text-body\">
-                                    Login: ".$userlogin."
-                                    <br>
-                                    Cargo: ".$usercomplvl."
-                                    <br>
-                                  </span>
-
-                                </span>
-                                <span class=\"mdl-list__item-secondary-content\">
-                                    <button id=\"btn_employ1\" class=\"mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action\">
-                                      <i class=\"material-icons\">more_vert</i>
-                                    </button>
-                                    <ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect\"
-                                        for=\"btn_employ1\">
-                                      <li class=\"mdl-menu__item\">Excluir</li>
-                                      <li class=\"mdl-menu__item\">Perfil</li>
-                                      <li disabled class=\"mdl-menu__item\">Permissões</li>
-                                    </ul>
-                                </span>
-                              </li>
-
-                              <!-- Fim do Item -->
+                                    // Starting the loop
+                                    echo"
 
 
 
-                    ";
-                // Finishing the loop
-          }
-          // Finishing the while and php tag
-?>
+                                                  <!-- Início do Item -->
 
+                                                  <li class=\"mdl-list__item mdl-list__item--three-line\">
+                                                    <span class=\"mdl-list__item-primary-content\">
+                                                      <i class=\"material-icons mdl-list__item-avatar\">person</i>
+                                                      <span class=\"f_name\">".$userfname." ".$userlname."</span>
+                                                      <span class=\"f_text mdl-list__item-text-body\">
+                                                        Login: ".$userlogin."
+                                                        <br>
+                                                        Cargo: ".$usercomplvl."
+                                                        <br>
+                                                      </span>
+
+                                                    </span>
+                                                    <span class=\"mdl-list__item-secondary-content\">
+                                                        <button id=\"btn_employ1\" class=\"mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action\">
+                                                          <i class=\"material-icons\">more_vert</i>
+                                                        </button>
+                                                        <ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect\"
+                                                            for=\"btn_employ1\">
+                                                          <li class=\"mdl-menu__item\">Excluir</li>
+                                                          <li class=\"mdl-menu__item\">Perfil</li>
+                                                          <li disabled class=\"mdl-menu__item\">Permissões</li>
+                                                        </ul>
+                                                    </span>
+                                                  </li>
+
+                                                  <!-- Fim do Item -->
+
+
+
+                                        ";
+                                    // Finishing the loop
+                              }
+                              // Finishing the while and php tag
+                    ?>
                              
                               </ul>
 		  					</div>
