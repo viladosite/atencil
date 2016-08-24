@@ -5,6 +5,8 @@
 <?php
 //Obtem as configurações do arquivo de config
 require "../config.php";
+// Faz a conexão com o banco
+require "../auth/at_connect.php";
 // Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições
 if ($_SESSION['UserPermLvl'] >= $perm_view_users):
 ?>
@@ -24,109 +26,81 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_users):
                             
                             <!-- Lista de funcionários -->
                             <ul class="at-employ-list mdl-list">
-                              <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                  <i class="material-icons mdl-list__item-avatar">person</i>
-                                  <span class="f_name">Marcela Freitas</span>
-                                  <span class="f_text mdl-list__item-text-body">
-                                    Login: marcelaf
-                                    <br>
-                                    Cargo: Diretora
-                                    <br>
-                                  </span>
-
-                                </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <button id="btn_employ1" class="mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action">
-                                      <i class="material-icons">more_vert</i>
-                                    </button>
-                                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                        for="btn_employ1">
-                                      <li class="mdl-menu__item">Excluir</li>
-                                      <li class="mdl-menu__item">Perfil</li>
-                                      <li disabled class="mdl-menu__item">Permissões</li>
-                                    </ul>
-                                </span>
-                              </li>
 
 
-                              <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                  <i class="material-icons mdl-list__item-avatar">person</i>
-                                  <span class="f_name">Marcela Freitas</span>
-                                  <span class="f_text mdl-list__item-text-body">
-                                    Login: marcelaf
-                                    <br>
-                                    Cargo: Diretora
-                                    <br>
-                                  </span>
+<?php
+          // Select all the attendances in the table
+          $query = "SELECT * FROM at_users";
 
-                                </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <button id="btn_employ1" class="mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action">
-                                      <i class="material-icons">more_vert</i>
-                                    </button>
-                                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                        for="btn_employ1">
-                                      <li class="mdl-menu__item">Excluir</li>
-                                      <li class="mdl-menu__item">Perfil</li>
-                                      <li disabled class="mdl-menu__item">Permissões</li>
-                                    </ul>
-                                </span>
-                              </li>
+          // Results of the select
+          $result = mysqli_query($mysql, $query);
 
-                              <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                  <i class="material-icons mdl-list__item-avatar">person</i>
-                                  <span class="f_name">Marcela Freitas</span>
-                                  <span class="f_text mdl-list__item-text-body">
-                                    Login: marcelaf
+          // While mysql find attendances it will show and create it's card
+          while ($row = mysqli_fetch_assoc($result))
+          
+          // Starting the while
+          { 
+                $userid = $row['userid'];
+                $userfname = $row['userfname'];
+                $userlname = $row['userlname'];
+                $userlogin = $row['userlogin'];
+                $usermail = $row['usermail'];
+                $userpermlvl = $row['userpermlvl'];
+                $usercomp = $row['usercomp'];
+                $usercomplvl = $row['usercomplvl'];
+                $userstatus = $row['userstatus'];
+                $userregdate = $row['userregdate'];
+
+
+                $day = date('d',strtotime($userregdate));
+                $month = date('M',strtotime($userregdate));
+                $year = date('Y',strtotime($userregdate));
+
+
+
+                // Starting the loop
+                echo"
+
+
+
+                              <!-- Início do Item -->
+
+                              <li class=\"mdl-list__item mdl-list__item--three-line\">
+                                <span class=\"mdl-list__item-primary-content\">
+                                  <i class=\"material-icons mdl-list__item-avatar\">person</i>
+                                  <span class=\"f_name\">".$userfname." ".$userlname."</span>
+                                  <span class=\"f_text mdl-list__item-text-body\">
+                                    Login: ".$userlogin."
                                     <br>
-                                    Cargo: Diretora
+                                    Cargo: ".$usercomplvl."
                                     <br>
                                   </span>
 
                                 </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <button id="btn_employ1" class="mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action">
-                                      <i class="material-icons">more_vert</i>
+                                <span class=\"mdl-list__item-secondary-content\">
+                                    <button id=\"btn_employ1\" class=\"mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action\">
+                                      <i class=\"material-icons\">more_vert</i>
                                     </button>
-                                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                        for="btn_employ1">
-                                      <li class="mdl-menu__item">Excluir</li>
-                                      <li class="mdl-menu__item">Perfil</li>
-                                      <li disabled class="mdl-menu__item">Permissões</li>
+                                    <ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect\"
+                                        for=\"btn_employ1\">
+                                      <li class=\"mdl-menu__item\">Excluir</li>
+                                      <li class=\"mdl-menu__item\">Perfil</li>
+                                      <li disabled class=\"mdl-menu__item\">Permissões</li>
                                     </ul>
                                 </span>
                               </li>
 
-                              <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                  <i class="material-icons mdl-list__item-avatar">person</i>
-                                  <span class="f_name">Marcela Freitas</span>
-                                  <span class="f_text mdl-list__item-text-body">
-                                    Login: marcelaf
-                                    <br>
-                                    Cargo: Diretora
-                                    <br>
-                                  </span>
-
-                                </span>
-                                <span class="mdl-list__item-secondary-content">
-                                    <button id="btn_employ1" class="mdl-button mdl-js-button mdl-button--accent mdl-button--icon mdl-list__item-secondary-action">
-                                      <i class="material-icons">more_vert</i>
-                                    </button>
-                                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                        for="btn_employ1">
-                                      <li class="mdl-menu__item">Excluir</li>
-                                      <li class="mdl-menu__item">Perfil</li>
-                                      <li disabled class="mdl-menu__item">Permissões</li>
-                                    </ul>
-                                </span>
-                              </li>
+                              <!-- Fim do Item -->
 
 
-                              
+
+                    ";
+                // Finishing the loop
+          }
+          // Finishing the while and php tag
+?>
+
+                             
                               </ul>
 		  					</div>
 
