@@ -105,30 +105,11 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                           <label class="mdl-textfield__label" for="attenflg">Attenflag</label>
                       </div>
 
-                      <div class="at_opt">
-
-                            <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                            <i class="material-icons">add</i>
-                            </button>
-
-                            <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                            <i class="material-icons">create</i>
-                            </button>
-
-                            <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                            <i class="material-icons">delete</i>
-                            </button>
-
-                      </div>
-
-
               </div>
 
               <div class="mdl-card__actions mdl-card--border">
 
-                  <input type="button" value="Salvar" id="add" name="add" />
-
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Salvar</button>
                   
               </div>
 
@@ -154,14 +135,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
 <!-- Fim do Loop Simulado -->
 
-    <div class="atd_add" id="menu">
-
-        <!-- Botão adicionar atendimento -->
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
-          <i class="material-icons">add</i>
-        </button>
-
-    </div>
 
 
 
