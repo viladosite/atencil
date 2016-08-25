@@ -5,6 +5,9 @@
 <?php
 //Obtem as configurações do arquivo de config
 require "../config.php";
+//conexão com o banco
+// Faz a conexão com o banco
+require "../auth/at_connect.php";
 // Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições
 if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 ?>
@@ -33,7 +36,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
                 <span>Usuario 1</span>
               </div>
 
-              <form id="atten-add" action="" method="post">
+              <form id="atten-add" action="users_created.php" method="post">
 
               <div class="mdl-card__supporting-text">
 
@@ -50,7 +53,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="password" id="userid" name="userpass">
+                          <input class="at_input mdl-textfield__input" type="password" id="userpass" name="userpass">
                           <label class="mdl-textfield__label" for="userpass">Senha</label>
                       </div>
 
@@ -88,17 +91,17 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 
               </div>
 
-              
+                  <div class="mdl-card__actions mdl-card--border">
+
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb"  type="submit">Salvar</button>
+                  
+                  </div>
+
 
 
               </form>
 
-              <div class="mdl-card__actions mdl-card--border">
-
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Salvar</button>
-                  
-              </div>
-
+            
 
               </div>   
 

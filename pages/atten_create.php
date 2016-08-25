@@ -37,8 +37,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
               <div class="mdl-card__supporting-text">
 
-                      <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                           <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="attenid" name="attenid">
                           <label class="mdl-textfield__label" for="attenid">ID</label>

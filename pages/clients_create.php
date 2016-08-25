@@ -37,8 +37,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 
               <div class="mdl-card__supporting-text">
 
-                      <div id="at_date"><span id="at_day">Dia</span>/mês/ano</div>
-
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                           <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="clientid" name="clientid">
                           <label class="mdl-textfield__label" for="clientid">ID</label>
@@ -105,30 +103,12 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
                           <label class="mdl-textfield__label" for="clientstatus">Status</label>
                       </div>
 
-                      <div class="at_opt">
-
-                            <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                            <i class="material-icons">add</i>
-                            </button>
-
-                            <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                            <i class="material-icons">create</i>
-                            </button>
-
-                            <button class="at_btnAt mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--accent">
-                            <i class="material-icons">delete</i>
-                            </button>
-
-                      </div>
-
-
               </div>
 
               <div class="mdl-card__actions mdl-card--border">
 
-                  <input type="button" value="Salvar" id="add" name="add" />
 
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Checar</button>
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Salvar</button>
                   
               </div>
 
@@ -153,15 +133,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 
 
 <!-- Fim do Loop Simulado -->
-
-    <div class="atd_add" id="menu">
-
-        <!-- Botão adicionar atendimento -->
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
-          <i class="material-icons">add</i>
-        </button>
-
-    </div>
 
 
 
