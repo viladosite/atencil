@@ -8,7 +8,7 @@ require "../config.php";
 //conexão com o banco
 // Faz a conexão com o banco
 require "../auth/at_connect.php";
-
+if ($_SESSION['UserPermLvl'] >= $perm_edit_clients):
 ?>
 
 <?php
@@ -24,10 +24,8 @@ $companyid = $_POST ["companyid"];
 $userstatus = $_POST ["userstatus"];    
 //Gravando no banco de dados !
 
-
-
-
-<!-- Início do conteúdo da página -->
+$query = "INSERT INTO `at_users` ( `userid` , `userlogin` , `userpass` , `userfname` , `userlname` , `usermail` , `userpermlvl` , `companyid` , `userstatus` ) 
+VALUES ('$userid', '$userlogin', '$userpass', '$userfname', '$userlname', '$usermail', '$userpermlvl', '$companyid', '$userstatus' )";
 
 echo "
 

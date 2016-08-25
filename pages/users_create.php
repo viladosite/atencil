@@ -36,7 +36,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
                 <span>Usuario 1</span>
               </div>
 
-              <form id="atten-add" action="users_created.php" method="post">
+              <form id="atten-add" action="../pages/users_created.php" method="post">
 
               <div class="mdl-card__supporting-text">
 
