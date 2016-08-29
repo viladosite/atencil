@@ -5,6 +5,7 @@ require "../config.php";
 // Faz a conexão com o banco
 require "../auth/at_connect.php";
 
+error_reporting(E_ALL && ~E_NOTICE);
 
 // RECEBENDO OS DADOS PREENCHIDOS DO FORMULÁRIO !
 $userid = $_POST ["userid"];    
@@ -14,15 +15,16 @@ $userfname  = $_POST ["userfname"];
 $userlname = $_POST ["userlname"];  
 $usermail = $_POST ["usermail"];  
 $userpermlvl = $_POST ["userpermlvl"]; 
-$companyid = $_POST ["companyid"];  
+$usercomp = $_POST ["usercomp"];  
 $userstatus = $_POST ["userstatus"];    
+
 //Gravando no banco de dados !
-
-$query = "INSERT INTO at_users ( userlogin , userpass , userfname , userlname , usermail , userpermlvl , companyid , userstatus ) 
-VALUES ('".$userlogin."', '".$userpass."', '".$userfname."', '".$userlname."', '".$usermail."', '".$userpermlvl."', '".$companyid."', '".$userstatus."' )";
-
-mysqli_query($mysql, $query) or die(error());
-$response = array("success" => true );
-echo json_encode($response);
-?>
+ $query = "INSERT INTO at_users ( userlogin , userpass , userfname , userlname , usermail ,userpermlvl , usercomp , userstatus )
+    VALUES ('".$userlogin."', '".$userpass."', '".$userfname."', '".$userlname."', '".$usermail."', '".$userpermlvl."', '".$usercomp."', '".$userstatus."' )"; 
+    if ($mysql->query($query) === TRUE)
+    { $response = array("success" => true );
+    echo json_encode($response); }
+     else {echo "Erro: " . $query . "<br>" . $mysql->error;}
+     $mysql->close();
+ ?>
 

@@ -78,8 +78,8 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="companyid" name="companyid">
-                          <label class="mdl-textfield__label" for="companyid">Empresa ID</label>
+                          <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="usercomp" name="usercomp">
+                          <label class="mdl-textfield__label" for="usercomp">Empresa ID</label>
                           <span class="mdl-textfield__error">Somente Numeros!</span>
                       </div>
 
