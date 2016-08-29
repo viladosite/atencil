@@ -113,18 +113,18 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 </div>
 <!-- Fim do Grid -->
 
-<script type="text/javascript" language="javascript">
 
+<script type="text/javascript" language="javascript">
     $(document).ready(function() {
         /// Quando usuário clicar em salvar será feito todos os passo abaixo
-        $('#add').click(function() {
+        $('#cb').click(function() {
 
-            var data = $('#atten-add').serialize();
+            var data = $('#users-add').serialize();
 
             $.ajax({
                 type: 'POST',
                 dataType: 'json',
-                url: '../includes/atten_add.php',
+                url: '../includes/users_add.php',
                 async: true,
                 data: data,
                 success: function(response) {
@@ -134,10 +134,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 
             return false;
         });
-
 </script>
-
-
 
 
 <!-- Fim do conteúdo da página -->
