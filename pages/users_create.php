@@ -36,7 +36,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
                 <span>Usuario 1</span>
               </div>
 
-              <form id="atten-add" action="../pages/users_created.php" method="post">
+              <form id="users-add" action="../includes/users_add.php" method="post">
 
               <div class="mdl-card__supporting-text">
 
@@ -91,18 +91,16 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 
               </div>
 
+
                   <div class="mdl-card__actions mdl-card--border">
 
                   <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb"  type="submit">Salvar</button>
                   
                   </div>
 
-
-
               </form>
 
-            
-
+          
               </div>   
 
           </div>
