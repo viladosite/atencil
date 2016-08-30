@@ -128,7 +128,9 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
                 async: true,
                 data: data,
                 success: function(response) {
-                    location.reload();
+
+                window.alert("Usuário Adicionado com Sucesso!");
+
                 }
             });
 
