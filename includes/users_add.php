@@ -22,8 +22,9 @@ $userstatus = $_POST ["userstatus"];
  $query = "INSERT INTO at_users ( userlogin , userpass , userfname , userlname , usermail ,userpermlvl , usercomp , userstatus )
     VALUES ('".$userlogin."', '".$userpass."', '".$userfname."', '".$userlname."', '".$usermail."', '".$userpermlvl."', '".$usercomp."', '".$userstatus."' )"; 
     if ($mysql->query($query) === TRUE)
-    { $response = array("success" => true );
-    echo json_encode($response); }
+    /*{ $response = array("success" => true );
+    echo json_encode($response); } */
+     { $response = location.reload(); }
      else {echo "Erro: " . $query . "<br>" . $mysql->error;}
      $mysql->close();
  ?>
