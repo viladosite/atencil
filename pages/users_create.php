@@ -24,8 +24,11 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
         <div id="atd_title">
         <h3>Novo Usuário</h3>
         </div>
-
     </div>
+
+    <div class="mdl-cell mdl-cell--12-col">
+        <iframe name="at_resposta" id="at_resposta" src="" sandbox="allow-scripts" height="40">at_resposta</iframe>
+    </div>    
 
     <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-cell--8-col-tablet">
         
@@ -33,16 +36,16 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
           <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
 
               <div class="mdl-card__title">
-                <span>Usuario 1</span>
+                <span>Criar Usuário</span>
               </div>
 
-              <form id="users-add" action="../includes/users_add.php" method="post">
+              <form id="users-add" action="../includes/users_add.php" method="post" target="at_resposta" onSubmit="this.submit(); this.reset(); return false;">
 
               <div class="mdl-card__supporting-text">
 
-                      <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="userid" name="userid">
-                          <label class="mdl-textfield__label" for="userid">ID</label>
+                      <div class="at_txtat mdl-textfield mdl-js-textfield">
+                          <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="userid" name="userid" placeholder="ID">
+                          
                           <span class="mdl-textfield__error">Somente Numeros!</span>
                       </div>
 
