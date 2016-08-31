@@ -94,15 +94,13 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 
               </div>
 
+              </form>
 
                   <div class="mdl-card__actions mdl-card--border">
 
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb"  type="submit">Salvar</button>
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb"  type="submit" form="users-add">Salvar</button>
                   
                   </div>
-
-              </form>
-
           
               </div>   
 
@@ -117,29 +115,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 <!-- Fim do Grid -->
 
 
-<script type="text/javascript" language="javascript">
-    $(document).ready(function() {
-        /// Quando usuário clicar em salvar será feito todos os passo abaixo
-        $('#cb').click(function() {
 
-            var data = $('#users-add').serialize();
-
-            $.ajax({
-                type: 'POST',
-                dataType: 'json',
-                url: '../includes/users_add.php',
-                async: true,
-                data: data,
-                success: function(response) {
-
-                window.alert("Usuário Adicionado com Sucesso!");
-
-                }
-            });
-
-            return false;
-        });
-</script>
 
 
 <!-- Fim do conteúdo da página -->
