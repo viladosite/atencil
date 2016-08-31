@@ -15,8 +15,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 
 <!-- Início do conteúdo da página -->
 
-
-
 <!-- Início do Grid -->
 <div class="mdl-grid">
   
@@ -39,7 +37,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
                 <span>Criar Usuário</span>
               </div>
 
-              <form id="users-add" action="../includes/users_add.php" method="post" target="at_resposta" onSubmit="this.submit(); this.reset(); return false;">
+              <form id="users-add" action="../includes/users_add.php" method="post" target="at_resposta">
 
               <div class="mdl-card__supporting-text">
 
