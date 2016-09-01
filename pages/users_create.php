@@ -41,12 +41,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 
               <div class="mdl-card__supporting-text">
 
-                      <div class="at_txtat mdl-textfield mdl-js-textfield">
-                          <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="userid" name="userid" placeholder="ID">
-                          
-                          <span class="mdl-textfield__error">Somente Numeros!</span>
-                      </div>
-
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                           <input class="at_input mdl-textfield__input" type="text" id="userlogin" name="userlogin">
