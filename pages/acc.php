@@ -373,7 +373,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_editacc):
                             Execute funções avançadas em sua conta.
                             <br><br>
                             <b>ATENÇÃO:</b><br>
-                            As funções aqui disponíveis são irreversíveis. Utilize-as com caute-la.
+                            As funções aqui disponíveis são irreversíveis. Utilize-as com cuidado.
                             </div>
 		  					</div>
   						</div>

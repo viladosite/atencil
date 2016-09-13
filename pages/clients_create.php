@@ -6,12 +6,12 @@
 //Obtem as configurações do arquivo de config
 require "../config.php";
 // Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições
-if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
+if ($_SESSION['UserPermLvl'] >= $perm_view_clients):
 ?>
 
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-</head>
+
+<!-- Início do conteúdo da página -->
+
 
 
 <!-- Início do Grid -->
@@ -19,7 +19,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
   
     <div class="mdl-cell mdl-cell--12-col">
         <div id="atd_title">
-        <h3>Criar Atendimento</h3>
+        <h3>Novo Cliente</h3>
         </div>
 
     </div>
@@ -30,7 +30,7 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
           <div class="mdl-card mdl-shadow--4dp at-card at-cardatd" >
 
               <div class="mdl-card__title">
-                <span>Atendimento 1</span>
+                <span>Cliente 1</span>
               </div>
 
               <form id="atten-add" action="" method="post">
@@ -38,14 +38,14 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
               <div class="mdl-card__supporting-text">
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="attenid" name="attenid">
-                          <label class="mdl-textfield__label" for="attenid">ID</label>
+                          <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="clientid" name="clientid">
+                          <label class="mdl-textfield__label" for="clientid">ID</label>
                           <span class="mdl-textfield__error">Somente Numeros!</span>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                           <input class="at_input mdl-textfield__input" type="text" id="companyid" name="companyid">
-                          <label class="mdl-textfield__label" for="companyid">Empresa</label>
+                          <label class="mdl-textfield__label" for="companyid"> Cliente Empresa</label>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -54,58 +54,59 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="clientid" name="clientid">
-                          <label class="mdl-textfield__label" for="userid">Cliente</label>
+                          <input class="at_input mdl-textfield__input" type="text" id="clientfname" name="clientfname">
+                          <label class="mdl-textfield__label" for="clientefname">Nome Cliente</label>
+                      </div>
+
+                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="at_input mdl-textfield__input" type="text" id="clientlname" name="clientlname">
+                          <label class="mdl-textfield__label" for="clientelname">Sobrenome Cliente</label>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="attendate" name="attendate">
-                          <label class="mdl-textfield__label" for="attendate">Data</label>
+                          <input class="at_input mdl-textfield__input" type="text" id="clientmail" name="clientmail">
+                          <label class="mdl-textfield__label" for="clientmail">Email</label>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="attenhour" name="attenhour">
-                          <label class="mdl-textfield__label" for="attenhour">Hora</label>
+                          <input class="at_input mdl-textfield__input" type="text" id="clienttel1" name="clienttel1">
+                          <label class="mdl-textfield__label" for="clienttel1">Telefone 1</label>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="attentype" name="attentype">
-                          <label class="mdl-textfield__label" for="attentype">Tipo</label>
+                          <input class="at_input mdl-textfield__input" type="text" id="clienttel2" name="clienttel2">
+                          <label class="mdl-textfield__label" for="clienttel2">Telefone 2</label>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="attenchannel" name="attenchannel">
-                          <label class="mdl-textfield__label" for="attenchannel">Canal</label>
+                          <input class="at_input mdl-textfield__input" type="text" id="clientzap" name="clientzap">
+                          <label class="mdl-textfield__label" for="clientzap">Whatsapp</label>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="attensubject" name="attensubject">
-                          <label class="mdl-textfield__label" for="attensubject">Assunto</label>
+                          <input class="at_input mdl-textfield__input" type="text" id="clientbirthdate" name="clientbirthdate">
+                          <label class="mdl-textfield__label" for="clientbirthdate">Data Nasc.</label>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="attenobs" name="attenobs">
-                          <label class="mdl-textfield__label" for="attenobs">Observações</label>
+                          <input class="at_input mdl-textfield__input" type="text" id="clientadress" name="clientadress">
+                          <label class="mdl-textfield__label" for="clientadress">Endereço</label>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="attenstatus" name="attenstatus">
-                          <label class="mdl-textfield__label" for="attenstatus">Status</label>
+                          <input class="at_input mdl-textfield__input" type="text" id="clientobs" name="clientobs">
+                          <label class="mdl-textfield__label" for="clientobs">Observações</label>
                       </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="attenreturn" name="attenreturn">
-                          <label class="mdl-textfield__label" for="attenreturn">Retorno</label>
-                      </div>
-
-                      <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" id="attenflag" name="attenflag">
-                          <label class="mdl-textfield__label" for="attenflg">Attenflag</label>
+                          <input class="at_input mdl-textfield__input" type="text" id="clientstatus" name="clientstatus">
+                          <label class="mdl-textfield__label" for="clientstatus">Status</label>
                       </div>
 
               </div>
 
               <div class="mdl-card__actions mdl-card--border">
+
 
                   <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Salvar</button>
                   
@@ -132,7 +133,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
 
 <!-- Fim do Loop Simulado -->
-
 
 
 
@@ -164,9 +164,6 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 </script>
 
 
-
-
-    
 
 
 <!-- Fim do conteúdo da página -->
