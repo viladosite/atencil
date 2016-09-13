@@ -5,6 +5,8 @@
 <?php
 //Obtem as configurações do arquivo de config
 require "../config.php";
+// Faz a conexão com o banco
+require "../auth/at_connect.php";
 // Verifica se a permissão do usuário é maior ou igual à necessária e monta as exibições
 if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 ?>
@@ -24,6 +26,10 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
     </div>
 
+    <div class="mdl-cell mdl-cell--12-col">
+        <iframe name="at_resposta" id="at_resposta" src="" sandbox="allow-scripts" height="40">at_resposta</iframe>
+    </div>  
+
     <div class="mdl-cell mdl-cell--8-col">
         
         <!-- Início do Card -->
@@ -33,15 +39,9 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
                 <span>Atendimento 1</span>
               </div>
 
-              <form id="atten-add" action="" method="post">
+              <form id="atten-add" action="../includes/atten_add.php" method="post" target="at_resposta">
 
               <div class="mdl-card__supporting-text">
-
-                      <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="at_input mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="attenid" name="attenid">
-                          <label class="mdl-textfield__label" for="attenid">ID</label>
-                          <span class="mdl-textfield__error">Somente Numeros!</span>
-                      </div>
 
                       <div class="at_txtat mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                           <input class="at_input mdl-textfield__input" type="text" id="companyid" name="companyid">
@@ -105,15 +105,15 @@ if ($_SESSION['UserPermLvl'] >= $perm_view_attendance):
 
               </div>
 
-              <div class="mdl-card__actions mdl-card--border">
-
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb">Salvar</button>
-                  
-              </div>
-
 
               </form>
 
+
+              <div class="mdl-card__actions mdl-card--border">
+
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised" id="cb" form="atten-add">Salvar</button>
+                  
+              </div>
 
               <div class="mdl-card__menu">
 
