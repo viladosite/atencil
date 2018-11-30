@@ -1,22 +1,13 @@
 <?php
+// ATENCIL - Atendimento Fácil é um sistema criado e mantido pela Vila do Site.
+// Mais informações em:   viladosite.com.br/atencil
 
-// A sessão precisa ser iniciada em cada página diferente
-if (!isset($_SESSION)) session_start();
-// Pega as definições de banco de dados e permissões do arquivo de config
-require "config.php";
+// Carrega as funções para funcionamento do sistema
+require "functions.php";
 
-// Informa qual o conjunto de caracteres a ser utilizado na conexão
-header('Content-Type: text/html; charset=utf-8');
+// Caso o usuário não atenda os requisitos de nivel direciona o usuário para outra página
+if (perm_check($perm_view_dashboard) == false) {header("Location: /index.php"); exit;}
 
-// Verifica se não há a variável da sessão que identifica o usuário
-if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $perm_view_dashboard))
-	{
-	// Destrói a sessão por segurança
-	session_destroy();
-	// Caso o usuário não atenda os requisitos de nivel assume o comportamento abaixo
-	header("Location: /index.php"); exit;
-	}
-	
 ?>
 
 
