@@ -3,8 +3,8 @@
 // Define as variáveis com a configuração do banco de dados
 $dbserver = 'localhost';
 $dbname = 'database_name';
-$dbuser = 'admin';
-$dbpass = 'password';
+$dbuser = 'database_user';
+$dbpass = 'database_password';
 
 // Abaixo define-se a permissão de visualização e de edição para cada uma das áreas e recursos do sistema.
 // Below you can set the permissions.
