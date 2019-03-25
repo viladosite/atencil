@@ -23,21 +23,21 @@
 			</address>
 			<table class="meta">
 				<tr>
-					<th><span contenteditable>Orçamento #</span></th>
+					<th><span>Orçamento Nº</span></th>
 					<td><span contenteditable>XXXXXX</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable>Criado em</span></th>
+					<th><span>Criado em</span></th>
 					<td><span contenteditable>25/03/2019</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable>Válido até</span></th>
+					<th><span>Válido até</span></th>
 					<td><span contenteditable>25/04/2019</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable>Valor Final</span></th>
+					<th><span>Valor Final</span></th>
 					<td>
-						<span id="prefix" contenteditable>R$</span>
+						<span id="prefix">R$</span>
 						<span>1.500,00</span>
 					</td>
 				</tr>
@@ -45,12 +45,12 @@
 			<table class="inventory">
 				<thead>
 					<tr>
-						<th><span contenteditable>Cód</span></th>
-						<th><span contenteditable>Item</span></th>
-						<th><span contenteditable>Descrição</span></th>
-						<th><span contenteditable>Subtotal</span></th>
-						<th><span contenteditable>Qt.</span></th>
-						<th><span contenteditable>Total</span></th>
+						<th><span>Cód</span></th>
+						<th><span>Item</span></th>
+						<th><span>Descrição</span></th>
+						<th><span>Subtotal</span></th>
+						<th><span>Qt.</span></th>
+						<th><span>Total</span></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -67,21 +67,21 @@
 			<a class="add">+</a>
 			<table class="balance">
 				<tr>
-					<th><span contenteditable>Total</span></th>
+					<th><span>Total</span></th>
 					<td><span data-prefix>R$</span><span>1.500,00</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable>Créditos e Descontos</span></th>
+					<th><span>Créditos e Descontos</span></th>
 					<td><span data-prefix>R$</span><span contenteditable>0.00</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable>Valor Final</span></th>
+					<th><span>Valor Final</span></th>
 					<td><span data-prefix>$</span><span>1.500,00</span></td>
 				</tr>
 			</table>
 		</article>
 		<aside>
-			<h1><span contenteditable>Notas e Observações</span></h1>
+			<h1><span>Notas e Observações</span></h1>
 			<div contenteditable>
 				<p>Este serviço inclui nosso suporte e manutenção gratuitos por 30 dias.</p>
 			</div>
