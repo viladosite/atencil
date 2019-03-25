@@ -10,16 +10,16 @@
 		<header>
 			<h1>Orçamento XXX - Assunto do orçamento</h1>
 			<address contenteditable>
-				<p>Jonathan Neal</p>
+				<p>Bruno Braga</p>
 				<p>101 E. Chapman Ave<br>Orange, CA 92866</p>
 				<p>(800) 555-1234</p>
 			</address>
-			<span><img alt="" src="http://www.jonathantneal.com/examples/invoice/logo.png"><input type="file" accept="image/*"></span>
+			<span><img alt="" src="http://www.viladosite.com.br/images/logo_horiz.png"><input type="file" accept="image/*"></span>
 		</header>
 		<article>
 			<h1>Recipient</h1>
 			<address contenteditable>
-				<p>Some Company<br>c/o Some Guy</p>
+				<p>Empresa Contratante<br>A/c Pessoa Responsável</p>
 			</address>
 			<table class="meta">
 				<tr>
