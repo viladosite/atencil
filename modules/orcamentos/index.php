@@ -4,7 +4,7 @@
 		<title>Orçamento - Vila do Site</title>
 		<link rel="stylesheet" href="style.css">
 		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
-		<script src="script.js"></script>
+		<script src="scripts.js"></script>
 	</head>
 	<body>
 		<header>
