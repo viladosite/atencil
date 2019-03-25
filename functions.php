@@ -22,4 +22,13 @@ function perm_check($permvar) {
 		{return TRUE;}
 }
 
+
+
+
+
+
+
+
+
+
 ?>

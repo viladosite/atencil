@@ -23,9 +23,8 @@ $userstatus = $_POST ["userstatus"];
     $insert = mysqli_query($mysql , $query);
 
     if($insert){
-        echo "Ok";
-    }
-    else{
+    	echo "Ok";
+    }else{
         echo "Houve um erro ao tentar incluir seu usuario. <br>".mysqli_error($mysql);
     }
 
