@@ -55,6 +55,7 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td><span contenteditable>01</span></td>
 						<td><a class="cut">-</a><span contenteditable>Criação de site pessoal</span></td>
 						<td><span contenteditable>Criação de site pessoal para profissionais liberais e pessoa física</span></td>
 						<td><span data-prefix>R$</span><span contenteditable>1.500,00</span></td>
