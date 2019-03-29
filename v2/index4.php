@@ -233,7 +233,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="inbox.html">
+                                            <a href="inbox.php">
                                                 <i class="fas fa-chart-bar"></i>Inbox</a>
                                             <span class="inbox-num">3</span>
                                         </li>
