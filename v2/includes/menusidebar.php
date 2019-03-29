@@ -10,33 +10,29 @@
             <ul class="list-unstyled navbar__list">
                 <li class="active has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-tachometer-alt"></i>Painel</a>
+                        <i class="fas fa-tachometer-alt"></i>Atendimentos</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="index.php">Resumos</a>
+                            <a href="index.php">Recentes</a>
                         </li>
                         <li>
-                            <a href="index2.php">Funcionários</a>
+                            <a href="index2.php">Pendentes</a>
                         </li>
                         <li>
-                            <a href="index3.php">Relatórios</a>
+                            <a href="index3.php">Em Andamento</a>
                         </li>
                         <li>
-                            <a href="index4.php">Informações</a>
+                            <a href="index4.php">Concluídos</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="chart.php">
-                        <i class="fas fa-chart-bar"></i>Gráficos</a>
+                    <a href="table.php">
+                        <i class="fas fa-table"></i>Clientes</a>
                 </li>
                 <li>
                     <a href="table.php">
-                        <i class="fas fa-table"></i>Tabelas</a>
-                </li>
-                <li>
-                    <a href="form.php">
-                        <i class="far fa-check-square"></i>Formulários</a>
+                        <i class="fas fa-table"></i>Usuários</a>
                 </li>
                 <li>
                     <a href="#">
@@ -45,6 +41,10 @@
                 <li>
                     <a href="map.php">
                         <i class="fas fa-map-marker-alt"></i>Mapas</a>
+                </li>
+                <li>
+                    <a href="chart.php">
+                        <i class="fas fa-chart-bar"></i>Relatórios</a>
                 </li>
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
