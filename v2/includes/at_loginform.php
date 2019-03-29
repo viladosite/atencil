@@ -25,7 +25,7 @@
                                 <a href="forgot-pass.php">Esqueci Minha Senha</a>
                             </label>
                         </div>
-                        <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Acessar</button>
+                        <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Acessar</button>
                         
                         <!--
                         <div class="social-login-content">

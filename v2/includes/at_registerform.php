@@ -26,7 +26,7 @@
                                 <input type="checkbox" name="aggree">Concordo com os termos e condições
                             </label>
                         </div>
-                        <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Cadastrar</button>
+                        <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Cadastrar</button>
                         
                         <!--
                         <div class="social-login-content">
