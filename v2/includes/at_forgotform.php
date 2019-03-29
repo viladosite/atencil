@@ -14,6 +14,7 @@
                             <input class="au-input au-input--full" type="email" name="email" placeholder="Digite o Email Cadastrado">
                         </div>
                         <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Recuperar Senha</button>
+                        <button class="au-btn au-btn--block au-btn--green m-b-20">Voltar</button>
                     </form>
                 </div>
             </div>
