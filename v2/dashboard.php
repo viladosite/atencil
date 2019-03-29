@@ -5,7 +5,7 @@
 // Carrega as funções para funcionamento do sistema
 require "functions/functions.php";
 
-// Caso o usuário não atenda os requisitos de nivel direciona o usuário para outra página
+// Caso o usuário não tenha as permissões de acesso, direciona para o index
 if (perm_check($perm_view_dashboard) == false) {header("Location: index.php"); exit;}
 ?>
 

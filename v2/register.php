@@ -20,7 +20,7 @@ if (perm_check($perm_view_dashboard) == true) {header("Location: dashboard.php")
     <body class="animsition">
         <div class="page-wrapper">
             <!-- Carregamento do conteúdo da página -->
-            <?php require 'includes/at_loginform.php'; ?>
+            <?php require 'includes/at_registerform.php'; ?>
         </div>
         <!-- Carregamento dos scripts -->
         <?php require 'includes/at_scripts.php'; ?>
