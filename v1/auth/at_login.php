@@ -2,7 +2,7 @@
 
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
     if (!empty($_POST) AND (empty($_POST['fielduser']) OR empty($_POST['fieldpass']))) {
-        header("Location: /index.php"); exit;
+        header("Location: ../index.php"); exit;
     }
       
 
