@@ -13,16 +13,16 @@
                         <i class="fas fa-tachometer-alt"></i>Painel</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="index.html">Resumos</a>
+                            <a href="index.php">Resumos</a>
                         </li>
                         <li>
-                            <a href="index2.html">Funcionários</a>
+                            <a href="index2.php">Funcionários</a>
                         </li>
                         <li>
-                            <a href="index3.html">Relatórios</a>
+                            <a href="index3.php">Relatórios</a>
                         </li>
                         <li>
-                            <a href="index4.html">Informações</a>
+                            <a href="index4.php">Informações</a>
                         </li>
                     </ul>
                 </li>
