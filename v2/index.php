@@ -19,14 +19,8 @@ if (perm_check($perm_view_dashboard) == true) {header("Location: /v2/dashboard.p
 
     <body class="animsition">
         <div class="page-wrapper">
-            <!-- Carregamento do header mobile -->
-            <?php require 'includes/at_headermobile.php'; ?>
-            <!-- Carregamento do menu sidebar -->
-            <?php require 'includes/at_menusidebar.php'; ?>
             <!-- PAGE CONTAINER-->
             <div class="page-container">
-                <!-- Carregamento do header desktop -->
-                <?php require 'includes/at_headerdesktop.php'; ?>
                 <!-- Carregamento do conteúdo da página -->
                 <?php require 'includes/at_login.php'; ?>
             </div>
