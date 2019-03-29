@@ -10,7 +10,7 @@
 //Monta as variáveis para os campos do form
 $user = $_POST['fielduser'];
 $pass = $_POST['fieldpass'];
-$email = $_POST['email'];
+$email = $_POST['fieldemail'];
 // $name = $_POST['fname'];
 // $name = $_POST['lname'];
 
