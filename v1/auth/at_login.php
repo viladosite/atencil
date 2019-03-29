@@ -56,7 +56,7 @@ require 'at_connect.php';
         $_SESSION['UserRegDate'] = $resultado['userregdate'];
       
         // Redireciona o visitante
-        header("Location: /dashboard.php"); exit;
+        header("Location: ../dashboard.php"); exit;
     }
 
 ?>
