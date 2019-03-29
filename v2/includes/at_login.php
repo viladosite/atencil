@@ -4,7 +4,7 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="#">
-                        <img src="images/icon/logo.png" alt="CoolAdmin">
+                        <img src="images/logo_atencil_horiz.png" alt="Atencil">
                     </a>
                 </div>
                 <div class="login-form">
