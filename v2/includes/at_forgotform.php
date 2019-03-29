@@ -3,7 +3,7 @@
         <div class="login-wrap">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="#">
+                    <a href="index.php">
                         <img src="images/logo_atencil_horiz.png" alt="CoolAdmin">
                     </a>
                 </div>
