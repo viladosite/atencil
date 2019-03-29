@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="header-mobile-inner">
                 <a class="logo" href="index.html">
-                    <img src="images/icon/logo.png" alt="CoolAdmin" />
+                    <img src="images/logo_atencil_horiz.png" alt="Atencil" />
                 </a>
                 <button class="hamburger hamburger--slider" type="button">
                     <span class="hamburger-box">
@@ -19,19 +19,19 @@
             <ul class="navbar-mobile__list list-unstyled">
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        <i class="fas fa-tachometer-alt"></i>Atendimentos</a>
                     <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                         <li>
-                            <a href="index.html">Dashboard 1</a>
+                            <a href="index.html">Recentes</a>
                         </li>
                         <li>
-                            <a href="index2.html">Dashboard 2</a>
+                            <a href="index2.html">Pendentes</a>
                         </li>
                         <li>
-                            <a href="index3.html">Dashboard 3</a>
+                            <a href="index3.html">Em Andamento</a>
                         </li>
                         <li>
-                            <a href="index4.html">Dashboard 4</a>
+                            <a href="index4.html">Concluídos</a>
                         </li>
                     </ul>
                 </li>
