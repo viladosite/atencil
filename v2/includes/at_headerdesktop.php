@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="header-wrap">
                 <form class="form-header" action="" method="POST">
-                    <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                    <input class="au-input au-input--xl" type="text" name="search" placeholder="Buscar ..." />
                     <button class="au-btn--submit" type="submit">
                         <i class="zmdi zmdi-search"></i>
                     </button>
@@ -128,20 +128,20 @@
                                 <img src="images/icon/avatar-01.jpg" alt="Diogo Fagundes" />
                             </div>
                             <div class="content">
-                                <a class="js-acc-btn" href="#">diogo fagundes</a>
+                                <a class="js-acc-btn" href="#"><?php echo $_SESSION['UserFname'] ?><?php echo $_SESSION['UserLname'] ?></a>
                             </div>
                             <div class="account-dropdown js-dropdown">
                                 <div class="info clearfix">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="images/icon/avatar-01.jpg" alt="Diogo Fagundes" />
+                                            <img src="images/icon/avatar-01.jpg" alt='<?php echo $_SESSION['UserFname'] ?><?php echo $_SESSION['UserLname'] ?>' />
                                         </a>
                                     </div>
                                     <div class="content">
                                         <h5 class="name">
-                                            <a href="#">diogo fagundes</a>
+                                            <a href="#"><?php echo $_SESSION['UserFname'] ?><?php echo $_SESSION['UserLname'] ?></a>
                                         </h5>
-                                        <span class="email">admin@viladosite.com.br</span>
+                                        <span class="email"><?php echo $_SESSION['UserEmail'] ?></span>
                                     </div>
                                 </div>
                                 <div class="account-dropdown__body">
