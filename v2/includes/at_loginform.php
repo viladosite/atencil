@@ -8,14 +8,14 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form action="" method="post">
+                    <form action="auth/at_login.php" method="post">
                         <div class="form-group">
                             <label>Email</label>
-                            <input class="au-input au-input--full" type="email" name="email" placeholder="Digite seu Email">
+                            <input class="au-input au-input--full" type="email" name="fieldemail" placeholder="Digite seu Email">
                         </div>
                         <div class="form-group">
                             <label>Senha</label>
-                            <input class="au-input au-input--full" type="password" name="senha" placeholder="Digite sua senha">
+                            <input class="au-input au-input--full" type="password" name="fieldpass" placeholder="Digite sua senha">
                         </div>
                         <div class="login-checkbox">
                             <label>
@@ -25,7 +25,7 @@
                                 <a href="#">Recuperar Senha</a>
                             </label>
                         </div>
-                        <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Login</button>
+                        <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Acessar</button>
                         <div class="social-login-content">
                             <div class="social-button">
                                 <button class="au-btn au-btn--block au-btn--blue m-b-20">Acessar com Facebook</button>
