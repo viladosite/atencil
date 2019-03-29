@@ -15,7 +15,7 @@ include "config.php";
           <img src="../images/user.jpg">
           <div>
 			<span><?php echo $_SESSION['UserFname'] ?></span> <span><?php echo $_SESSION['UserLname'] ?></span>
-			<a href="/auth/at_logout.php">
+			<a href="auth/at_logout.php">
 			<button id="logout" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
 			<i class="material-icons" role="presentation">close</i>
 			</button>
