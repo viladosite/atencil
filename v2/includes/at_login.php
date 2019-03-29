@@ -11,11 +11,11 @@
                     <form action="" method="post">
                         <div class="form-group">
                             <label>Email</label>
-                            <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+                            <input class="au-input au-input--full" type="email" name="email" placeholder="Digite seu Email">
                         </div>
                         <div class="form-group">
                             <label>Senha</label>
-                            <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                            <input class="au-input au-input--full" type="password" name="senha" placeholder="Digite sua senha">
                         </div>
                         <div class="login-checkbox">
                             <label>
