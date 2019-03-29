@@ -2,7 +2,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
         <a href="#">
-            <img src="images/icon/logo.png" alt="Cool Admin" />
+            <img src="images/logo_atencil_horiz.png" alt="Atencil" />
         </a>
     </div>
     <div class="menu-sidebar__content js-scrollbar1">
@@ -10,93 +10,93 @@
             <ul class="list-unstyled navbar__list">
                 <li class="active has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        <i class="fas fa-tachometer-alt"></i>Painel</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="index.html">Dashboard 1</a>
+                            <a href="index.html">Resumos</a>
                         </li>
                         <li>
-                            <a href="index2.html">Dashboard 2</a>
+                            <a href="index2.html">Funcionários</a>
                         </li>
                         <li>
-                            <a href="index3.html">Dashboard 3</a>
+                            <a href="index3.html">Relatórios</a>
                         </li>
                         <li>
-                            <a href="index4.html">Dashboard 4</a>
+                            <a href="index4.html">Informações</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="chart.html">
-                        <i class="fas fa-chart-bar"></i>Charts</a>
+                    <a href="chart.php">
+                        <i class="fas fa-chart-bar"></i>Gráficos</a>
                 </li>
                 <li>
-                    <a href="table.html">
-                        <i class="fas fa-table"></i>Tables</a>
+                    <a href="table.php">
+                        <i class="fas fa-table"></i>Tabelas</a>
                 </li>
                 <li>
-                    <a href="form.html">
-                        <i class="far fa-check-square"></i>Forms</a>
+                    <a href="form.php">
+                        <i class="far fa-check-square"></i>Formulários</a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        <i class="fas fa-calendar-alt"></i>Calendario</a>
                 </li>
                 <li>
-                    <a href="map.html">
-                        <i class="fas fa-map-marker-alt"></i>Maps</a>
+                    <a href="map.php">
+                        <i class="fas fa-map-marker-alt"></i>Mapas</a>
                 </li>
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-copy"></i>Pages</a>
+                        <i class="fas fa-copy"></i>Páginas</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="login.html">Login</a>
+                            <a href="login.php">Login</a>
                         </li>
                         <li>
-                            <a href="register.html">Register</a>
+                            <a href="register.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="forget-pass.html">Forget Password</a>
+                            <a href="forget-pass.php">Recuperar Senha</a>
                         </li>
                     </ul>
                 </li>
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-desktop"></i>UI Elements</a>
+                        <i class="fas fa-desktop"></i>Elementos Visuais</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="button.html">Button</a>
+                            <a href="button.php">Botões</a>
                         </li>
                         <li>
-                            <a href="badge.html">Badges</a>
+                            <a href="badge.php">Emblemas</a>
                         </li>
                         <li>
-                            <a href="tab.html">Tabs</a>
+                            <a href="tab.php">Abas</a>
                         </li>
                         <li>
-                            <a href="card.html">Cards</a>
+                            <a href="card.php">Cartões</a>
                         </li>
                         <li>
-                            <a href="alert.html">Alerts</a>
+                            <a href="alert.php">Alertas</a>
                         </li>
                         <li>
-                            <a href="progress-bar.html">Progress Bars</a>
+                            <a href="progress-bar.php">Barras de Progresso</a>
                         </li>
                         <li>
-                            <a href="modal.html">Modals</a>
+                            <a href="modal.php">Modais</a>
                         </li>
                         <li>
-                            <a href="switch.html">Switchs</a>
+                            <a href="switch.php">Acionáveis</a>
                         </li>
                         <li>
-                            <a href="grid.html">Grids</a>
+                            <a href="grid.php">Grids</a>
                         </li>
                         <li>
-                            <a href="fontawesome.html">Fontawesome Icon</a>
+                            <a href="fontawesome.php">Ícones Fontawesome</a>
                         </li>
                         <li>
-                            <a href="typo.html">Typography</a>
+                            <a href="typo.php">Tipografia</a>
                         </li>
                     </ul>
                 </li>
