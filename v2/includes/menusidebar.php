@@ -40,7 +40,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-calendar-alt"></i>Calendario</a>
+                        <i class="fas fa-calendar-alt"></i>Calendário</a>
                 </li>
                 <li>
                     <a href="map.php">
