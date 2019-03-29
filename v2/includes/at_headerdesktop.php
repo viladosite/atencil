@@ -128,18 +128,18 @@
                                 <img src="images/icon/avatar-01.jpg" alt="Diogo Fagundes" />
                             </div>
                             <div class="content">
-                                <a class="js-acc-btn" href="#"><?php echo $_SESSION['UserFname'] ?><?php echo $_SESSION['UserLname'] ?></a>
+                                <a class="js-acc-btn" href="#"><?php echo $_SESSION['UserFname'] ?> <?php echo $_SESSION['UserLname'] ?></a>
                             </div>
                             <div class="account-dropdown js-dropdown">
                                 <div class="info clearfix">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="images/icon/avatar-01.jpg" alt='<?php echo $_SESSION['UserFname'] ?><?php echo $_SESSION['UserLname'] ?>' />
+                                            <img src="images/icon/avatar-01.jpg" alt='<?php echo $_SESSION['UserFname'] ?> <?php echo $_SESSION['UserLname'] ?>' />
                                         </a>
                                     </div>
                                     <div class="content">
                                         <h5 class="name">
-                                            <a href="#"><?php echo $_SESSION['UserFname'] ?><?php echo $_SESSION['UserLname'] ?></a>
+                                            <a href="#"><?php echo $_SESSION['UserFname'] ?> <?php echo $_SESSION['UserLname'] ?></a>
                                         </h5>
                                         <span class="email"><?php echo $_SESSION['UserEmail'] ?></span>
                                     </div>
