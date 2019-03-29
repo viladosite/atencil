@@ -159,7 +159,7 @@
                                     </div>
                                 </div>
                                 <div class="account-dropdown__footer">
-                                    <a href="#">
+                                    <a href="auth/at_logout.php">
                                         <i class="zmdi zmdi-power"></i>Sair</a>
                                 </div>
                             </div>
