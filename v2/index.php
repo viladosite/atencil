@@ -6,7 +6,7 @@
 require 'functions/functions.php';
 
 // Caso o usuário não atenda os requisitos de nivel direciona o usuário para outra página
-if (perm_check($perm_view_dashboard) == true) {header("Location: /dashboard.php"); exit;}
+if (perm_check($perm_view_dashboard) == true) {header("Location: /v2/dashboard.php"); exit;}
 
 ?>
 
