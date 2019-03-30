@@ -55,16 +55,16 @@
                                         <label class=" form-control-label">Nome de Usuário</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <p class="form-control-static"><?php  ?></p>
+                                        <p class="form-control-static"><?php $_SESSION['UserLogin'] ?></p>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="text-input" class=" form-control-label">Text Input</label>
+                                        <label for="text-input" class=" form-control-label">Nome da Empresa</label>
                                     </div>
                                     <div class="col-12 col-md-9">
                                         <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
-                                        <small class="form-text text-muted">This is a help text</small>
+                                        <small class="form-text text-muted">Informe o Nome Fantasia de sua empresa</small>
                                     </div>
                                 </div>
                                 <div class="row form-group">
