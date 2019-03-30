@@ -6,11 +6,14 @@
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária
 function perm_check($permvar) {
 
+	// Obtem o path do config
+	$config_path = realpath('config.php');
+
 	// A sessão precisa ser iniciada em cada página diferente
 	if (!isset($_SESSION)) {session_start();}
 
 	// Pega as definições de banco de dados e permissões do arquivo de config
-	require 'realpath('config.php')';
+	require '$config_path';
 
 	// Informa qual o conjunto de caracteres a ser utilizado na conexão
 	header('Content-Type: text/html; charset=utf-8');
