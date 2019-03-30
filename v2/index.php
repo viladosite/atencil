@@ -12,6 +12,7 @@ require 'functions/functions.php';
 if (perm_check($perm_view_dashboard) == true) {header("Location: pages/dashboard.php"); exit;}
 
 echo $home_dir;
+echo ' separator ';
 echo $main_dir;
 
 ?>
