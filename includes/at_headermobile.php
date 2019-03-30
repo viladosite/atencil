@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="header-mobile-inner">
                 <a class="logo" href="index.html">
-                    <img src="images/logo_atencil_horiz.png" alt="Atencil" />
+                    <img src="/images/logo_atencil_horiz.png" alt="Atencil" />
                 </a>
                 <button class="hamburger hamburger--slider" type="button">
                     <span class="hamburger-box">
@@ -22,13 +22,13 @@
                         <i class="fas fa-tachometer-alt"></i>Atendimentos</a>
                     <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                         <li>
-                            <a href="index.html">Recentes</a>
+                            <a href="#">Recentes</a>
                         </li>
                         <li>
-                            <a href="index2.html">Pendentes</a>
+                            <a href="#">Pendentes</a>
                         </li>
                         <li>
-                            <a href="index3.html">Em Andamento</a>
+                            <a href="#">Em Andamento</a>
                         </li>
                         <li>
                             <a href="index4.html">Concluídos</a>
