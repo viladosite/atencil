@@ -48,6 +48,6 @@ if (perm_check($perm_view_dashboard) == false) {header("Location: ../index.php")
             <!-- END PAGE CONTAINER-->
         </div>
         <!-- Carregamento dos scripts -->
-        <?php require $website_path . $index_dir3 . '../includes/at_scripts.php'; ?>
+        <?php require '../includes/at_scripts.php'; ?>
     </body>
 </html>
