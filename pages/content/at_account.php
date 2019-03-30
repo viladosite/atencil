@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="text-input" class=" form-control-label">Nome da Empresa</label>
+                                        <label for="text-input" class=" form-control-label">Empresa</label>
                                     </div>
                                     <div class="col-12 col-md-9">
                                         <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
