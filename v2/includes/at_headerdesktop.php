@@ -11,6 +11,8 @@
                 </form>
                 <div class="header-button">
                     <div class="noti-wrap">
+
+                        <!-- INÍCIO DO ICONE DE MENSAGEM -->
                         <div class="noti__item js-item-menu">
                             <i class="zmdi zmdi-comment-more"></i>
                             <span class="quantity">2</span>
@@ -43,45 +45,51 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- FIM DO ICONE DE MENSAGEM -->
+
+                        <!-- INÍCIO DO ICONE DE ATENDIMENTOS -->
                         <div class="noti__item js-item-menu">
-                            <i class="zmdi zmdi-email"></i>
+                            <i class="zmdi zmdi-phone-msg"></i>
                             <span class="quantity">3</span>
                             <div class="email-dropdown js-dropdown">
                                 <div class="email__title">
-                                    <p>Você tem 3 novos e-mails</p>
+                                    <p>Você tem 3 novos atendimentos</p>
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-06.jpg" alt="Cynthia Harvey" />
+                                        <img src="images/icon/avatar-06.jpg" alt="Diogo Fagundes" />
                                     </div>
                                     <div class="content">
-                                        <p>Bem vindo ao Atencil...</p>
+                                        <p>Elogio sobre o sistema</p>
                                         <span>Diogo Fagundes, 5 min atrás</span>
                                     </div>
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-05.jpg" alt="Cynthia Harvey" />
+                                        <img src="images/icon/avatar-05.jpg" alt="Bruno Braga" />
                                     </div>
                                     <div class="content">
-                                        <p>Novos recursos disponíveis...</p>
+                                        <p>Solicitação de recursos</p>
                                         <span>Bruno Braga, Ontem</span>
                                     </div>
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-04.jpg" alt="Cynthia Harvey" />
+                                        <img src="images/icon/avatar-04.jpg" alt="Magno Dal Magro" />
                                     </div>
                                     <div class="content">
-                                        <p>Novo visual implementado...</p>
+                                        <p>Reclamação sobre interface</p>
                                         <span>Magno Dal Magro, 12/03/2019</span>
                                     </div>
                                 </div>
                                 <div class="email__footer">
-                                    <a href="#">Ver todos os e-mails</a>
+                                    <a href="#">Ver todos os atendimentos</a>
                                 </div>
                             </div>
                         </div>
+                        <!-- FIM DO ICONE DE ATENDIMENTOS -->
+
+                        <!-- INÍCIO DO ICONE DE NOTIFICAÇÕES -->
                         <div class="noti__item js-item-menu">
                             <i class="zmdi zmdi-notifications"></i>
                             <span class="quantity">3</span>
@@ -121,6 +129,8 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- FIM DO ICONE DE NOTIFICAÇÕES -->
+
                     </div>
                     <div class="account-wrap">
                         <div class="account-item clearfix js-item-menu">
@@ -147,7 +157,7 @@
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
                                         <a href="#">
-                                            <i class="zmdi zmdi-account"></i>Conta</a>
+                                            <i class="zmdi zmdi-account"></i>Minha Conta</a>
                                     </div>
                                     <div class="account-dropdown__item">
                                         <a href="#">
