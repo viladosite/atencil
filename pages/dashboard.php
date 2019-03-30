@@ -3,7 +3,7 @@
 // Mais informações em:   viladosite.com.br/atencil
 
 // Carrega as configurações para funcionamento do sistema
-require '../config.php';
+require 'config.php';
 
 // Carrega as funções para funcionamento do sistema
 require '../functions/functions.php';
