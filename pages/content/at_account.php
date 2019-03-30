@@ -55,7 +55,9 @@
                                         <label class=" form-control-label">Nome de Usuário</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <p class="form-control-static"><?php echo $_SESSION['UserLogin'] ?></p>
+                                        <p class="form-control-static">
+                                            <?php echo $_SESSION['UserLogin']; ?>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="row form-group">
