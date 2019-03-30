@@ -3,7 +3,7 @@
         <div class="login-wrap">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="index.php">
+                    <a href="/index.php">
                         <img src="/images/logo_atencil_horiz.png" alt="Atencil">
                     </a>
                 </div>
