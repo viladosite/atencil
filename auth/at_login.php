@@ -27,7 +27,9 @@ require 'at_connect.php';
 	
     if (mysqli_num_rows($query) != 1) {
 
-// Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
+// Caso a resposta do select seja diferente de 1, exibe a mensagem de erro
+// Este caso se aplica quando os dados são inválidos, o usuário não foi encontrado ou até mesmo por algum erro foram encontrados mais de 1 login
+        
 	echo '<script type="text/javascript"> 
     window.alert("Dados incorretos, tente novamente ou procure o administrador do sistema.");
     window.history.back();

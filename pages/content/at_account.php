@@ -63,7 +63,7 @@
                                         <label for="text-input" class=" form-control-label">Empresa</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                                        <input type="text" id="text-input" name="text-input" placeholder="Nome da Empresa" class="form-control">
                                         <small class="form-text text-muted">Informe o Nome Fantasia de sua empresa</small>
                                     </div>
                                 </div>
