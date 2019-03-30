@@ -22,7 +22,7 @@
                                 </div>
                                 <div class="mess__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-06.jpg" alt="Michelle Moreno" />
+                                        <img src="/images/icon/avatar-06.jpg" alt="Michelle Moreno" />
                                     </div>
                                     <div class="content">
                                         <h6>Michelle Moreno</h6>
@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="mess__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-04.jpg" alt="Diane Myers" />
+                                        <img src="/images/icon/avatar-04.jpg" alt="Diane Myers" />
                                     </div>
                                     <div class="content">
                                         <h6>Diane Myers</h6>
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-06.jpg" alt="Diogo Fagundes" />
+                                        <img src="/images/icon/avatar-06.jpg" alt="Diogo Fagundes" />
                                     </div>
                                     <div class="content">
                                         <p>Elogio sobre o sistema</p>
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-05.jpg" alt="Bruno Braga" />
+                                        <img src="/images/icon/avatar-05.jpg" alt="Bruno Braga" />
                                     </div>
                                     <div class="content">
                                         <p>Solicitação de recursos</p>
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-04.jpg" alt="Magno Dal Magro" />
+                                        <img src="/images/icon/avatar-04.jpg" alt="Magno Dal Magro" />
                                     </div>
                                     <div class="content">
                                         <p>Reclamação sobre interface</p>
@@ -135,7 +135,7 @@
                     <div class="account-wrap">
                         <div class="account-item clearfix js-item-menu">
                             <div class="image">
-                                <img src="images/icon/avatar-01.jpg" alt="Diogo Fagundes" />
+                                <img src="/images/icon/avatar-01.jpg" alt="Diogo Fagundes" />
                             </div>
                             <div class="content">
                                 <a class="js-acc-btn" href="#"><?php echo $_SESSION['UserFname'] ?> <?php echo $_SESSION['UserLname'] ?></a>
@@ -144,7 +144,7 @@
                                 <div class="info clearfix">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="images/icon/avatar-01.jpg" alt='<?php echo $_SESSION['UserFname'] ?> <?php echo $_SESSION['UserLname'] ?>' />
+                                            <img src="/images/icon/avatar-01.jpg" alt='<?php echo $_SESSION['UserFname'] ?> <?php echo $_SESSION['UserLname'] ?>' />
                                         </a>
                                     </div>
                                     <div class="content">
@@ -169,7 +169,7 @@
                                     </div>
                                 </div>
                                 <div class="account-dropdown__footer">
-                                    <a href="auth/at_logout.php">
+                                    <a href="/auth/at_logout.php">
                                         <i class="zmdi zmdi-power"></i>Sair</a>
                                 </div>
                             </div>

@@ -2,7 +2,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
         <a href="#">
-            <img src="images/logo_atencil_horiz.png" alt="Atencil" />
+            <img src="/images/logo_atencil_horiz.png" alt="Atencil" />
         </a>
     </div>
     <div class="menu-sidebar__content js-scrollbar1">
@@ -65,7 +65,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="chart.php">
+                    <a href="#">
                         <i class="fas fa-question"></i>Ajuda</a>
                 </li>
             </ul>
