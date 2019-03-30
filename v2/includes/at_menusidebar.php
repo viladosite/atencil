@@ -22,7 +22,7 @@
                             <a href="#">Por Meio de Contato</a>
                         </li>
                         <li>
-                            <a href="index4.php">Por Cliente</a>
+                            <a href="#">Por Cliente</a>
                         </li>
                     </ul>
                 </li>
