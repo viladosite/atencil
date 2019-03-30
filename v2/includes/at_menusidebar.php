@@ -13,16 +13,16 @@
                         <i class="fas fa-phone"></i>Atendimentos</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="index.php">Recentes</a>
+                            <a href="#">Listar Todos</a>
                         </li>
                         <li>
-                            <a href="index2.php">Pendentes</a>
+                            <a href="#">Por Status</a>
                         </li>
                         <li>
-                            <a href="index3.php">Em Andamento</a>
+                            <a href="#">Por Meio de Contato</a>
                         </li>
                         <li>
-                            <a href="index4.php">Concluídos</a>
+                            <a href="index4.php">Por Cliente</a>
                         </li>
                     </ul>
                 </li>
@@ -31,13 +31,13 @@
                         <i class="fas fa-briefcase"></i>Clientes</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="login.php">Listar</a>
+                            <a href="#">Listar Clientes</a>
                         </li>
                         <li>
-                            <a href="register.php">Novo Cliente</a>
+                            <a href="#">Novo Cliente</a>
                         </li>
                         <li>
-                            <a href="forget-pass.php">Grupos</a>
+                            <a href="#">Grupos de Clientes</a>
                         </li>
                     </ul>
                 </li>
@@ -46,7 +46,7 @@
                         <i class="fas fa-calendar-alt"></i>Calendário</a>
                 </li>
                 <li>
-                    <a href="chart.php">
+                    <a href="#">
                         <i class="fas fa-chart-bar"></i>Relatórios</a>
                 </li>
                 <li class="has-sub">
@@ -54,13 +54,13 @@
                         <i class="fas fa-users"></i>Usuários</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="login.php">Listar</a>
+                            <a href="#">Listar Usuários</a>
                         </li>
                         <li>
-                            <a href="register.php">Novo usuário</a>
+                            <a href="#">Novo Usuário</a>
                         </li>
                         <li>
-                            <a href="forget-pass.php">Grupos</a>
+                            <a href="#">Grupos de Usuários</a>
                         </li>
                     </ul>
                 </li>
