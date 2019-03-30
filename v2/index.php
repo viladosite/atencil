@@ -17,16 +17,16 @@ if (perm_check($perm_view_dashboard) == true) {header("Location: pages/dashboard
 <html lang="pt-br">
     <head>
         <!-- Carregamento do head -->
-        <?php require $website_path . $index_dir2 . '/includes/at_head.php'; ?>
+        <?php require $website_path . $index_dir3 . '/includes/at_head.php'; ?>
     </head>
 
     <body class="animsition">
         <div class="page-wrapper">
             <!-- Carregamento do conteúdo da página -->
-            <?php require $website_path . $index_dir2 . '/pages/content/at_loginform.php'; ?>
+            <?php require $website_path . $index_dir3 . '/pages/content/at_loginform.php'; ?>
         </div>
         <!-- Carregamento dos scripts -->
-        <?php require $website_path . $index_dir2 . '/includes/at_scripts.php'; ?>
+        <?php require $website_path . $index_dir3 . '/includes/at_scripts.php'; ?>
     </body>
 
 </html>

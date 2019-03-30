@@ -3,10 +3,10 @@
 // Mais informações em:   viladosite.com.br/atencil
 
 // Carrega as configurações para funcionamento do sistema
-require $website_path . $index_dir2 . '/config.php';
+require '../config.php';
 
 // Carrega as funções para funcionamento do sistema
-require $website_path . $index_dir2 . '/functions/functions.php';
+require $website_path . $index_dir3 . '/functions/functions.php';
 
 // Caso o usuário não tenha as permissões de acesso, direciona para o index
 if (perm_check($perm_view_dashboard) == false) {header("Location: ../index.php"); exit;}
@@ -17,7 +17,7 @@ if (perm_check($perm_view_dashboard) == false) {header("Location: ../index.php")
 <html lang="pt-br">
     <head>
         <!-- Carregamento do head -->
-        <?php require $website_path . $index_dir2 . '/includes/at_head.php'; ?>
+        <?php require $website_path . $index_dir3 . '/includes/at_head.php'; ?>
     </head>
 
 <!-- Tentativa de carregar conteúdos numa div
@@ -35,19 +35,19 @@ if (perm_check($perm_view_dashboard) == false) {header("Location: ../index.php")
     <body class="animsition">
         <div class="page-wrapper">
             <!-- Carregamento do header mobile -->
-            <?php require $website_path . $index_dir2 . '/includes/at_headermobile.php'; ?>
+            <?php require $website_path . $index_dir3 . '/includes/at_headermobile.php'; ?>
             <!-- Carregamento do menu sidebar -->
-            <?php require $website_path . $index_dir2 . '/includes/at_menusidebar.php'; ?>
+            <?php require $website_path . $index_dir3 . '/includes/at_menusidebar.php'; ?>
             <!-- PAGE CONTAINER-->
             <div class="page-container">
                 <!-- Carregamento do header desktop -->
-                <?php require $website_path . $index_dir2 . '/includes/at_headerdesktop.php'; ?>
+                <?php require $website_path . $index_dir3 . '/includes/at_headerdesktop.php'; ?>
                 <!-- Carregamento do conteúdo da página -->
-                <?php require $website_path . $index_dir2 . '/content/at_dashboard.php'; ?>
+                <?php require $website_path . $index_dir3 . '/content/at_dashboard.php'; ?>
             </div>
             <!-- END PAGE CONTAINER-->
         </div>
         <!-- Carregamento dos scripts -->
-        <?php require $website_path . $index_dir2 . '/includes/at_scripts.php'; ?>
+        <?php require $website_path . $index_dir3 . '/includes/at_scripts.php'; ?>
     </body>
 </html>
