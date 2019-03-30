@@ -52,11 +52,11 @@
                             <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label class=" form-control-label">Nome de Usuário</label>
+                                        <label class=" form-control-label">Login</label>
                                     </div>
                                     <div class="col-12 col-md-9">
                                         <p class="form-control-static">
-                                            <?php echo $_SESSION['UserLogin']; ?>
+                                            <?php echo $_SESSION['UserLogin'] ?>
                                         </p>
                                     </div>
                                 </div>
