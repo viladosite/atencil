@@ -3,6 +3,9 @@
 // Mais informações em:   viladosite.com.br/atencil
 
 // Carrega as funções para funcionamento do sistema
+require 'config.php';
+
+// Carrega as funções para funcionamento do sistema
 require 'functions/functions.php';
 
 // Caso o usuário já tenha as permissões de credencial, direciona para o dashboard
