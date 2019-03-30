@@ -9,6 +9,8 @@ function perm_check($permvar) {
 	// Obtem o path do config
 	$config_path = realpath('config.php');
 
+	echo $config_path;
+	
 	// A sessão precisa ser iniciada em cada página diferente
 	if (!isset($_SESSION)) {session_start();}
 
