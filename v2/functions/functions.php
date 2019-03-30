@@ -10,7 +10,7 @@ function perm_check($permvar) {
 	if (!isset($_SESSION)) {session_start();}
 
 	// Pega as definições de banco de dados e permissões do arquivo de config
-	require "../config.php";
+	require 'realpath('config.php')';
 
 	// Informa qual o conjunto de caracteres a ser utilizado na conexão
 	header('Content-Type: text/html; charset=utf-8');
