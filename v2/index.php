@@ -6,7 +6,7 @@
 require 'functions/functions.php';
 
 // Caso o usuário já tenha as permissões de credencial, direciona para o dashboard
-if (perm_check($perm_view_dashboard) == true) {header("Location: dashboard.php"); exit;}
+if (perm_check($perm_view_dashboard) == true) {header("Location: pages/dashboard.php"); exit;}
 
 ?>
 
@@ -20,7 +20,7 @@ if (perm_check($perm_view_dashboard) == true) {header("Location: dashboard.php")
     <body class="animsition">
         <div class="page-wrapper">
             <!-- Carregamento do conteúdo da página -->
-            <?php require 'includes/at_loginform.php'; ?>
+            <?php require 'pages/content/at_loginform.php'; ?>
         </div>
         <!-- Carregamento dos scripts -->
         <?php require 'includes/at_scripts.php'; ?>
