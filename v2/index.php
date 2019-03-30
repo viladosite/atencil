@@ -11,26 +11,22 @@ require 'functions/functions.php';
 // Caso o usuário já tenha as permissões de credencial, direciona para o dashboard
 if (perm_check($perm_view_dashboard) == true) {header("Location: pages/dashboard.php"); exit;}
 
-echo $home_dir;
-echo ' separator ';
-echo $main_dir;
-
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <!-- Carregamento do head -->
-        <?php require 'includes/at_head.php'; ?>
+        <?php require $website_path . $index_dir2 . '/includes/at_head.php'; ?>
     </head>
 
     <body class="animsition">
         <div class="page-wrapper">
             <!-- Carregamento do conteúdo da página -->
-            <?php require 'pages/content/at_loginform.php'; ?>
+            <?php require $website_path . $index_dir2 . '/pages/content/at_loginform.php'; ?>
         </div>
         <!-- Carregamento dos scripts -->
-        <?php require 'includes/at_scripts.php'; ?>
+        <?php require $website_path . $index_dir2 . '/includes/at_scripts.php'; ?>
     </body>
 
 </html>
