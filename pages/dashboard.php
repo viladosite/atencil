@@ -20,18 +20,6 @@ if (perm_check($perm_view_dashboard) == false) {header("Location: ../index.php")
         <?php require '../includes/at_head.php'; ?>
     </head>
 
-<!-- Tentativa de carregar conteúdos numa div
-    <script>
-    $(document).ready(function() {
-            $(document).on('click', '#menu a', function( e ){ 
-            e.preventDefault();
-            var href = $( this ).attr('href');
-            $("#content").load( href +" #content", null, function(){componentHandler.upgradeAllRegistered();});
-            });
-    });
-    </script>
--->
-
     <body class="animsition">
         <div class="page-wrapper">
             <!-- Carregamento do header mobile -->
