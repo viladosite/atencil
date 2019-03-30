@@ -6,7 +6,9 @@
                 
                 <div class="col-lg-6">
                     <div class="card">
-                        <div class="card-header">Example Form</div>
+                        <div class="card-header">
+                            Dados do <strong>Responsável</strong>
+                        </div>
                         <div class="card-body card-block">
                             <form action="" method="post" class="">
                                 <div class="form-group">
@@ -14,7 +16,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-user"></i>
                                         </div>
-                                        <input type="text" id="username" name="username" placeholder="Username" class="form-control">
+                                        <input type="text" id="respnomecomp" name="respnomecomp" placeholder="Nome Completo" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -34,7 +36,7 @@
                                     </div>
                                 </div>
                                 <div class="form-actions form-group">
-                                    <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                                    <button type="submit" class="btn btn-success btn-sm">Salvar</button>
                                 </div>
                             </form>
                         </div>
@@ -50,10 +52,10 @@
                             <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label class=" form-control-label">Static</label>
+                                        <label class=" form-control-label">Nome de Usuário</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <p class="form-control-static">Username</p>
+                                        <p class="form-control-static"><?php  ?></p>
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -309,7 +311,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div class="row">
                 <div class="col-md-12">

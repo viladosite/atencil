@@ -46,6 +46,7 @@ require 'at_connect.php';
       
         // Salva os dados encontrados na sessão
         $_SESSION['UserID'] = $resultado['userid'];
+        $_SESSION['UserLogin'] = $resultado['userlogin'];
         $_SESSION['UserFname'] = $resultado['userfname'];
         $_SESSION['UserLname'] = $resultado['userlname'];
         $_SESSION['UserEmail'] = $resultado['usermail'];
