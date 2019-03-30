@@ -4,7 +4,7 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.php">
-                        <img src='<?php $website_path . $index_dir3 ?>images/logo_atencil_horiz.png' alt="Atencil">
+                        <img src='<?php $website_path . $index_dir3 ?>/images/logo_atencil_horiz.png' alt="Atencil">
                     </a>
                 </div>
                 <div class="login-form">
@@ -41,7 +41,7 @@
                     <div class="register-link">
                         <p>
                             Já possui uma conta?
-                            <a href='<?php $website_path . $index_dir3 ?>index.php'>Acessar</a>
+                            <a href='<?php $website_path . $index_dir3 ?>/index.php'>Acessar</a>
                         </p>
                     </div>
                 </div>
