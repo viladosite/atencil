@@ -4,11 +4,11 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.php">
-                        <img src="../images/logo_atencil_horiz.png" alt="Atencil">
+                        <img src="/images/logo_atencil_horiz.png" alt="Atencil">
                     </a>
                 </div>
                 <div class="login-form">
-                    <form action='../../auth/at_login.php' method="post">
+                    <form action="/auth/at_login.php" method="post">
                         <div class="form-group">
                             <label>Email</label>
                             <input class="au-input au-input--full" type="email" name="fieldemail" placeholder="Digite seu Email">
@@ -22,7 +22,7 @@
                                 <input type="checkbox" name="remember">Lembrar de mim
                             </label>
                             <label>
-                                <a href="forgot-pass.php">Esqueci Minha Senha</a>
+                                <a href="/pages/forgot-pass.php">Esqueci Minha Senha</a>
                             </label>
                         </div>
                         <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Acessar</button>
@@ -40,7 +40,7 @@
                     <div class="register-link">
                         <p>
                             Não possui uma conta?
-                            <a href='../register.php'>Cadastre-se</a>
+                            <a href="/pages/register.php">Cadastre-se</a>
                         </p>
                     </div>
                 </div>
