@@ -4,11 +4,11 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.php">
-                        <img src='<?php $website_path . $index_dir3 ?>/images/logo_atencil_horiz.png' alt="Atencil">
+                        <img src="../../images/logo_atencil_horiz.png" alt="Atencil">
                     </a>
                 </div>
                 <div class="login-form">
-                    <form action='<?php $website_path . $index_dir3 ?>/auth/at_login.php' method="post">
+                    <form action='../../auth/at_login.php' method="post">
                         <div class="form-group">
                             <label>Email</label>
                             <input class="au-input au-input--full" type="email" name="fieldemail" placeholder="Digite seu Email">
@@ -40,7 +40,7 @@
                     <div class="register-link">
                         <p>
                             Não possui uma conta?
-                            <a href='<?php $website_path . $index_dir3 ?>/pages/register.php'>Cadastre-se</a>
+                            <a href='../register.php'>Cadastre-se</a>
                         </p>
                     </div>
                 </div>
