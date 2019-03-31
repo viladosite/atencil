@@ -529,7 +529,10 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Carregamento do rodapé -->
             <?php include '../includes/at_footer.php'; ?>
+
         </div>
     </div>
 </div>
