@@ -2,12 +2,58 @@
 <div class="main-content">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Dados da <strong>Conta</strong>
+                        </div>
+                        <div class="card-body">
+                            <div class="default-tab">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
+                                         aria-selected="true">Home</a>
+                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
+                                         aria-selected="false">Profile</a>
+                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
+                                         aria-selected="false">Contact</a>
+                                    </div>
+                                </nav>
+                                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+                                            master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+                                            dreamcatcher synth. Cosby sweater eu banh mi, irure terry richardson ex sd. Alip placeat salvia cillum iphone.
+                                            Seitan alip s cardigan american apparel, butcher voluptate nisi .</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+                                            master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+                                            dreamcatcher synth. Cosby sweater eu banh mi, irure terry richardson ex sd. Alip placeat salvia cillum iphone.
+                                            Seitan alip s cardigan american apparel, butcher voluptate nisi .</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+                                            master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+                                            dreamcatcher synth. Cosby sweater eu banh mi, irure terry richardson ex sd. Alip placeat salvia cillum iphone.
+                                            Seitan alip s cardigan american apparel, butcher voluptate nisi .</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            Dados do <strong>Responsável</strong>
+                            Dados da <strong>Conta</strong>
                         </div>
                         <div class="card-body card-block">
                             <form action="" method="post" class="">
@@ -16,7 +62,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-user"></i>
                                         </div>
-                                        <input type="text" id="respnomecomp" name="respnomecomp" placeholder="Nome Completo" class="form-control">
+                                        <input type="text" id="respnomecomp" name="respnomecomp" placeholder='<?php echo $_SESSION['UserLogin'] ?>' class="form-control" disabled="" alt="Login">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -32,7 +78,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-asterisk"></i>
                                         </div>
-                                        <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                                        <input type="password" id="password" name="password" placeholder="Senha" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-actions form-group">
@@ -66,91 +112,62 @@
                                     </div>
                                     <div class="col-12 col-md-9">
                                         <input type="text" id="text-input" name="text-input" placeholder="Nome da Empresa" class="form-control">
-                                        <small class="form-text text-muted">Informe o Nome Fantasia de sua empresa</small>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="email-input" class=" form-control-label">Email Input</label>
+                                        <label for="email-input" class=" form-control-label">Email</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control">
-                                        <small class="help-block form-text">Please enter your email</small>
+                                        <input type="email" id="email-input" name="email-input" placeholder="Email da Empresa" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="password-input" class=" form-control-label">Password</label>
+                                        <label for="password-input" class=" form-control-label">Senha</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="password" id="password-input" name="password-input" placeholder="Password" class="form-control">
-                                        <small class="help-block form-text">Please enter a complex password</small>
+                                        <input type="password" id="password-input" name="password-input" placeholder="Senha da Conta" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="disabled-input" class=" form-control-label">Disabled Input</label>
+                                        <label for="disabled-input" class=" form-control-label">Categoria</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="text" id="disabled-input" name="disabled-input" placeholder="Disabled" disabled="" class="form-control">
+                                        <input type="text" id="disabled-input" name="disabled-input" placeholder="Categoria da Empresa" disabled="" class="form-control">
+                                        <small class="help-block form-text">Este recurso estará disponível em breve</small>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="textarea-input" class=" form-control-label">Textarea</label>
+                                        <label for="textarea-input" class=" form-control-label">Descrição</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea>
+                                        <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Fale um pouco sobre a sua empresa" class="form-control"></textarea>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="select" class=" form-control-label">Select</label>
+                                        <label for="select" class=" form-control-label">Estado</label>
                                     </div>
                                     <div class="col-12 col-md-9">
                                         <select name="select" id="select" class="form-control">
-                                            <option value="0">Please select</option>
-                                            <option value="1">Option #1</option>
-                                            <option value="2">Option #2</option>
-                                            <option value="3">Option #3</option>
+                                            <option value="0">Selecione um Estado</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="SP">SP</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="selectLg" class=" form-control-label">Select Large</label>
-                                    </div>
-                                    <div class="col-12 col-md-9">
-                                        <select name="selectLg" id="selectLg" class="form-control-lg form-control">
-                                            <option value="0">Please select</option>
-                                            <option value="1">Option #1</option>
-                                            <option value="2">Option #2</option>
-                                            <option value="3">Option #3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="col col-md-3">
-                                        <label for="selectSm" class=" form-control-label">Select Small</label>
-                                    </div>
-                                    <div class="col-12 col-md-9">
-                                        <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                            <option value="0">Please select</option>
-                                            <option value="1">Option #1</option>
-                                            <option value="2">Option #2</option>
-                                            <option value="3">Option #3</option>
-                                            <option value="4">Option #4</option>
-                                            <option value="5">Option #5</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="col col-md-3">
-                                        <label for="disabledSelect" class=" form-control-label">Disabled Select</label>
+                                        <label for="disabledSelect" class=" form-control-label">Categoria</label>
                                     </div>
                                     <div class="col-12 col-md-9">
                                         <select name="disabledSelect" id="disabledSelect" disabled="" class="form-control">
-                                            <option value="0">Please select</option>
+                                            <option value="0">Selecione a Categoria</option>
                                             <option value="1">Option #1</option>
                                             <option value="2">Option #2</option>
                                             <option value="3">Option #3</option>
