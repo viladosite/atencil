@@ -6,10 +6,10 @@
 // -----------------------------------------------------
 
 // Define as variáveis com dados para acesso ao banco de dados
-$dbserver = 'nomedoserver';
-$dbname = 'nomedobanco';
-$dbuser = 'nomedousuario';
-$dbpass = 'senhadousuario';
+$dbserver = 'servername';
+$dbname = 'databasename';
+$dbuser = 'username';
+$dbpass = 'userpass';
 
 
 
@@ -25,7 +25,7 @@ Below you can set the main paths to the system directories
 
 // Caminho do website (websites http path)
 global $website_path;
-$website_path = "https://www.seusite.com.br";
+$website_path = "https://www.yourwebsite.com.br";
 
 // Diretório da home do servidor (Home server directory)
 global $home_dir;
@@ -45,7 +45,7 @@ $index_dir2 = str_replace("/index.php", '', $index_dir1);
 
 // Diretório do index - indicação manual (Index directory - manually provided)
 global $index_dir2;
-$index_dir3 = '/atencil';
+$index_dir3 = '/v2';
 
 // Diretório de funções (Functions directory)
 global $func_dir;
@@ -89,21 +89,26 @@ Below you can set the minimum permissions to view and edit each system area.
 // PERMISSÕES DE VISUALIZAÇÃO (View Permissions)
 // -----------------------------------------------------
 
+
 // Define as permissões de visualização para as funções primárias
 // Set the permissions to visualize the primary functions
-$perm_view_dashboard = 1;
-$perm_view_editacc = 1;
-$perm_view_attendance = 1;
-$perm_view_clients = 1;
-$perm_view_users = 1;
-$perm_view_sys = 3;
-$perm_view_search = 1;
+
+$perm_view_dashboard = 1; // Permissão para ver o dashboard
+$perm_view_editacc = 1; // Permissão para ver a própria conta
+$perm_view_attendance = 1; // Permissão para ver os atendimentos
+$perm_view_comps = 1; // Permissão para ver as empresas
+$perm_view_owncomp = 1; // Permissão para ver os dados da própria empresa
+$perm_view_clients = 1; // Permissão para ver os clientes
+$perm_view_users = 1; // Permissão para ver os usuários e logins
+$perm_view_sys = 3; // Permissão para ver as configurações de sistema
+$perm_view_search = 1; // Permissão para ver a busca
 
 
 // Define as permissões de visualização para as funções secundárias
 // Set the permissions to visualize the secundary functions
-$perm_view_modules = 2;
-$perm_view_perms = 2;
+
+$perm_view_modules = 2; // Permissão para ver os módulos ativos na conta
+$perm_view_perms = 2; // Permissão para ver as permissões de usuário da conta
 
 
 
@@ -112,21 +117,26 @@ $perm_view_perms = 2;
 // PERMISSÕES DE EDIÇÃO (Edit Permissions)
 // -----------------------------------------------------
 
+
 // Define as permissões de edição para as funções primárias
 // Set the permissions to edit the primary functions
-$perm_edit_dashboard = 2;
-$perm_edit_editacc = 1;
-$perm_edit_attendance = 2;
-$perm_edit_clients = 2;
-$perm_edit_users = 3;
-$perm_edit_sys = 3;
-$perm_edit_search = 1;
+
+$perm_edit_dashboard = 2; // Permissão para editar o dashboard
+$perm_edit_editacc = 1; // Permissão para editar a própria conta
+$perm_edit_attendance = 2; // Permissão para editar os atendimentos
+$perm_edit_comps = 1; // Permissão para editar as empresas
+$perm_edit_owncomp = 1; // Permissão para editar os dados da própria empresa
+$perm_edit_clients = 2; // Permissão para editar os clientes
+$perm_edit_users = 3; // Permissão para editar os usuários e logins
+$perm_edit_sys = 3; // Permissão para editar as configurações de sistema
+$perm_edit_search = 1; // Permissão para editar a busca
 
 
 // Define as permissões de edição para as funções secundárias
 // Set the permissions to edit the secundary functions
-$perm_edit_modules = 3;
-$perm_edit_perms = 3;
+
+$perm_edit_modules = 3; // Permissão para manipular os módulos ativos na conta
+$perm_edit_perms = 3; // Permissão para alterar as permissões de usuário da conta
 
 
 
