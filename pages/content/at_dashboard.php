@@ -529,7 +529,7 @@
                     </div>
                 </div>
             </div>
-            <?php include '../../includes/at_footer.php'; ?>
+            <?php include '../includes/at_footer.php'; ?>
         </div>
     </div>
 </div>
