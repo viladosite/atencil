@@ -53,7 +53,10 @@ function remove_user($permvar, $removeuserid, $removeuserlogin) {
 
 	// Verifica se não há a variável da sessão que identifica o usuário e se ele tem a permissão para criar outros usuários
 	if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $permvar))
-		{return FALSE;}
+		{
+			$userdelid = 'Não autorizado';
+			$userdellogin = 'Não autorizado';
+		}
 	else
 		{
 			$userdelid = $removeuserid;

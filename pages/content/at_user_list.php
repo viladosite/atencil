@@ -99,7 +99,7 @@
                                             <i class="zmdi zmdi-edit"></i>
                                         </button>
 
-                                        <button type="button" onClick="remove_user($perm_edit_users, $usuario['userid'], $usuario['userlogin'])" class="item" data-toggle="modal" data-target="#confirmar" title="Remover">
+                                        <button type="button" action="remove_user($perm_edit_users, $usuario['userid'], $usuario['userlogin'])" class="item" data-toggle="modal" data-target="#confirmar" title="Remover">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button>
 
