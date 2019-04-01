@@ -44,9 +44,9 @@ function create_user($login, $email, $pass) {
 
 
 
-// Função para criar usuários
+// Função para setar o usuário para remoção
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária
-function remove_user($permvar, $removeuserid) {
+function remove_user($permvar, $removeuserid, $removeuserlogin) {
 
 	// A sessão precisa estar iniciada
 	if (!isset($_SESSION)) {session_start();}
@@ -56,7 +56,8 @@ function remove_user($permvar, $removeuserid) {
 		{return FALSE;}
 	else
 		{
-			return TRUE;
+			$userdelid = $removeuserid;
+			$userdellogin = $removeuserlogin;
 		}
 }
 

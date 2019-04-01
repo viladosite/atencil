@@ -95,17 +95,13 @@
                             <td>
                                 <div class="table-data-feature">
 
-                                    <button class="item" title="Editar">
-                                        <i class="zmdi zmdi-edit"></i>
-                                    </button>
+                                        <button type="button" onClick="" class="item" title="Editar">
+                                            <i class="zmdi zmdi-edit"></i>
+                                        </button>
 
-                                    <button class="item" data-toggle="modal" data-target="#confirmar"
-                                    action='<?php
-                                        $userdelid = $usuario['userid'];
-                                        $userdellogin = $usuario['userlogin'];
-                                        ?>' title="Remover">
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
+                                        <button type="button" onClick="remove_user($perm_edit_users, $usuario['userid'], $usuario['userlogin'])" class="item" data-toggle="modal" data-target="#confirmar" title="Remover">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
 
                                 </div>
                             </td>
