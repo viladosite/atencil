@@ -74,13 +74,10 @@
                         <i class="fas fa-users"></i>Usuários</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="#">Listar Usuários</a>
+                            <a href="/pages/user_list.php">Listar Usuários</a>
                         </li>
                         <li>
-                            <a href="#">Novo Usuário</a>
-                        </li>
-                        <li>
-                            <a href="#">Grupos de Usuários</a>
+                            <a href="/pages/user_new.php">Novo Usuário</a>
                         </li>
                     </ul>
                 </li>
