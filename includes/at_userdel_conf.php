@@ -16,7 +16,7 @@
                 <p><strong>ATENÇÃO:</strong> Não é possível desfazer esta ação.</p>
                 <br>
                 <p>Você tem certeza que deseja <strong>remover este usuário?</strong></p>
-                <p><?php echo $userdel; ?></p>
+                <p><?php echo $userdelid . ' ' . $userdellogin; ?></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

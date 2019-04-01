@@ -99,7 +99,11 @@
                                         <i class="zmdi zmdi-edit"></i>
                                     </button>
 
-                                    <button class="item" data-toggle="modal" data-target="#confirmar" action='<?php $userdel = $usuario['userid']; ?>' title="Remover">
+                                    <button class="item" data-toggle="modal" data-target="#confirmar"
+                                    action='<?php
+                                        $userdelid = $usuario['userid'];
+                                        $userdellogin = $usuario['userlogin'];
+                                        ?>' title="Remover">
                                         <i class="zmdi zmdi-delete"></i>
                                     </button>
 
