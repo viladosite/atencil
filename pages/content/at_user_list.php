@@ -20,11 +20,11 @@
                     
                     <div class="rs-select2--light rs-select2--md">
                         <select class="js-select2" name="tempo">
-                            <option selected="selected">Tempo</option>
+                            <option selected="selected">Cadastrado</option>
                             <option value="">Hoje</option>
-                            <option value="">Últimos 7 dias</option>
-                            <option value="">Últimos 30 dias</option>
-                            <option value="">Últimos 365 Dias</option>
+                            <option value="">Até 7 dias</option>
+                            <option value="">Até 30 dias</option>
+                            <option value="">Até 365 Dias</option>
                             <option value="">Todos os períodos</option>
                         </select>
                         <div class="dropDownSelect2"></div>
