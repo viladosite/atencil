@@ -39,6 +39,10 @@ if (perm_check($perm_view_users) == false) {
                 <?php require 'content/at_user_list.php'; ?>
             </div>
             <!-- END PAGE CONTAINER-->
+
+        <!-- Carrega os avisos e modais da página -->
+        <?php include '../includes/at_userdel_conf.php' ?>
+        
         </div>
         <!-- Carregamento dos scripts -->
         <?php require '../includes/at_scripts.php'; ?>
