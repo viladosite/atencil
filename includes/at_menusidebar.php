@@ -26,6 +26,23 @@
                         </li>
                     </ul>
                 </li>
+                
+                <li class="has-sub">
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-briefcase"></i>Empresas</a>
+                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        <li>
+                            <a href="#">Listar Empresas</a>
+                        </li>
+                        <li>
+                            <a href="#">Nova Empresa</a>
+                        </li>
+                        <li>
+                            <a href="#">Grupos de Empresas</a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
                         <i class="fas fa-briefcase"></i>Clientes</a>
@@ -41,14 +58,17 @@
                         </li>
                     </ul>
                 </li>
+
                 <li>
                     <a href="#">
                         <i class="fas fa-calendar-alt"></i>Calendário</a>
                 </li>
+
                 <li>
                     <a href="#">
                         <i class="fas fa-chart-bar"></i>Relatórios</a>
                 </li>
+
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
                         <i class="fas fa-users"></i>Usuários</a>
@@ -64,10 +84,12 @@
                         </li>
                     </ul>
                 </li>
+
                 <li>
                     <a href="#">
                         <i class="fas fa-question"></i>Ajuda</a>
                 </li>
+                
             </ul>
         </nav>
     </div>
