@@ -31,3 +31,19 @@ Desenvolvimento de código, implementação de layout e estrutura e testes opera
 
 BRUNO FAGUNDES – (github.com/brunokenshin)
 Implementação modular e configuração de módulos
+
+
+
+INDICE
+
+
+
+
+
+------- Permissões e acesso
+
+O campo "userpermlvl" na tabela de usuários indica o nível de permissão do usuário no sistema Atencil. É possível configurar as permissões mínimas para cada área do sistema no arquivo config.php porem a recomendação básica é que se utilize 1 para usuário simples, 2 para proprietários de empresas e 3 para administradores. A função de checagem de permissão verifica sempre se a permissão do usuário no banco é menor que a permissão mínima exigida. Se for, o Atencil recusa o acesso.
+
+
+------- Permissões e acesso
+
