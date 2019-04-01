@@ -32,10 +32,10 @@ function edit_user() {
 
 
 
-if (isset($_get['select'])) {select_user($_get['select']);}
-if (isset($_get['create'])) {create_user();}
-if (isset($_get['delete'])) {delete_user();}
-if (isset($_get['edit'])) {edit_user();}
+if (isset($_post['select'])) {select_user($_post['select']);}
+if (isset($_post['create'])) {create_user();}
+if (isset($_post['delete'])) {delete_user();}
+if (isset($_post['edit'])) {edit_user();}
 
 
 ?>

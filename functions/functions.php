@@ -68,17 +68,4 @@ function remove_user($permvar, $removeuserid, $removeuserlogin) {
 
 
 
-
-
-// Função para setar o usuário para remoção
-// Retorna false quando o usuário não está logado ou não possui a permissão necessária
-function select_user($selecteduserid) {
-
-	// Define a variável do usuário selecionado
-	$seluserid = $selecteduserid;
-
-}
-
-
-
 ?>
