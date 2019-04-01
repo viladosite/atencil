@@ -35,7 +35,7 @@
                             <a href="#">Listar Empresas</a>
                         </li>
                         <li>
-                            <a href="#">Nova Empresa</a>
+                            <a href="#">Cadastrar Empresa</a>
                         </li>
                         <li>
                             <a href="#">Grupos de Empresas</a>
@@ -51,7 +51,7 @@
                             <a href="#">Listar Clientes</a>
                         </li>
                         <li>
-                            <a href="#">Novo Cliente</a>
+                            <a href="#">Cadastrar Cliente</a>
                         </li>
                         <li>
                             <a href="#">Grupos de Clientes</a>
@@ -89,7 +89,7 @@
                     <a href="#">
                         <i class="fas fa-question"></i>Ajuda</a>
                 </li>
-                
+
             </ul>
         </nav>
     </div>
