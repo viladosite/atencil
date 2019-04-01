@@ -10,7 +10,7 @@ function perm_check($permvar) {
 	if (!isset($_SESSION)) {session_start();}
 
 	// Informa qual o conjunto de caracteres a ser utilizado na conexão
-	header('Content-Type: text/html; charset=utf-8');
+	// header('Content-Type: text/html; charset=utf-8');
 
 	// Verifica se não há a variável da sessão que identifica o usuário
 	if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $permvar))
