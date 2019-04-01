@@ -10,9 +10,10 @@
             </div>
             <div class="modal-body">
                 <p>Esta ação apagará o usuário do banco de dados <strong>PERMANENTEMENTE</strong>.</p>
-                <p>O usuário não terá mais acesso ao sistema e não será capaz de recuperar o acesso à menos que um novo usuário seja criado.</p>
-                <p><strong>ATENÇÃO:</strong> Não é possível desfazer esta ação.</p>
                 <br>
+                <p>O usuário não terá mais acesso ao sistema e não será capaz de recuperar o acesso à menos que um novo usuário seja criado.</p>
+                <br>
+                <p><strong>ATENÇÃO:</strong> Não é possível desfazer esta ação.</p>
                 <br>
                 <p>Você tem certeza que deseja <strong>remover este usuário?</strong></p>
             </div>
