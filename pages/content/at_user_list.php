@@ -86,7 +86,7 @@
                             <td>
                                 <div class="table-data-feature">
 
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <button class="item" data-toggle="tooltip" data-placement="left" title="Edit">
                                         <i class="zmdi zmdi-edit"></i>
                                     </button>
 

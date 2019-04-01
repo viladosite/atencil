@@ -20,7 +20,22 @@ function perm_check($permvar) {
 }
 
 
+// Função para criar usuários
+// Retorna false quando o usuário não está logado ou não possui a permissão necessária
+function create_user($login, $email, $pass) {
 
+	// A sessão precisa estar iniciada
+	if (!isset($_SESSION)) {session_start();}
+
+	// Verifica se não há a variável da sessão que identifica o usuário e se ele tem a permissão para criar outros usuários
+	if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $permvar))
+		{session_destroy();	return FALSE;}
+	else
+		{
+			
+			return TRUE;
+		}
+}
 
 
 
