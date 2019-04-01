@@ -8,6 +8,9 @@ require '../config.php';
 // Carrega as funções para funcionamento do sistema
 require "../functions/functions.php";
 
+// Carrega os parâmetros de conexão
+require '../auth/at_connect.php';
+
 // Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
 if (perm_check($perm_view_users) == false) {
     header("Location: error_permission.php"); exit;
