@@ -83,7 +83,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/pages/help.php">
                         <i class="fas fa-question"></i>Ajuda</a>
                 </li>
 
