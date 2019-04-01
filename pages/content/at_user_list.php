@@ -4,7 +4,8 @@
         <div class="container-fluid">
 
             <!-- DATA TABLE -->
-            <h3 class="title-5 m-b-35">data table</h3>
+            <h3 class="title-5 m-b-35">Usuários Cadastrados</h3>
+            
             <div class="table-data__tool">
                 <div class="table-data__tool-left">
                     
@@ -48,8 +49,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="table-responsive table-responsive-data2">
                 <table class="table table-data2">
+
                     <thead>
                         <tr>
                             <th>
@@ -65,8 +68,19 @@
                             <th>ações</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        
+
+                        <?php
+                        // Monta os parâmetros da query
+                        $sql = "SELECT * FROM `at_users` WHERE (`usercomp` = '".$_SESSION['UserCompany'] ."')";
+
+                        // Monta a query para execução
+                        $usuarios = mysqli_query($mysql, $sql);
+
+                        // Executa o loop com a query
+                        foreach ($usuarios as $usuario) { ?>
+                            
                         <tr class="tr-shadow">
                             <td>
                                 <label class="au-checkbox">
@@ -75,13 +89,13 @@
                                 </label>
                             </td>
 
-                            <td>Usuário 1</td>
+                            <td><?php echo $usuario['userfname'] . $usuario['userlname']; ?></td>
 
-                            <td><span class="block-email">email@email.com</span></td>
+                            <td><span class="block-email"> <?php echo $usuario['usermail']; ?> </span></td>
 
-                            <td>2018-09-27 02:12</td>
+                            <td><?php echo $usuario['userregdate']; ?></td>
 
-                            <td>Funcionários</td>
+                            <td><?php echo $usuario['usercomplvl'];?> </td>
                             
                             <td>
                                 <div class="table-data-feature">
@@ -100,7 +114,12 @@
 
                         <tr class="spacer"></tr>
 
+                        <?php } ?>
+                        
+
+
                     </tbody>
+
                 </table>
             </div>
             <!-- END DATA TABLE -->

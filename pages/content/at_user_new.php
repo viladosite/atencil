@@ -12,8 +12,7 @@
                             <strong>Atenção:</strong>
                         </div>
                         <div class="card-body">
-                            <p>Você cadastrará este usuário em sua empresa.</p>
-                            <p>Isso permitirá que ele veja os seguintes dados:</p>
+                            <p>Este usuário será cadastrado como um usuário vinculado à sua empresa e poderá ver detalhes de sua empresa como </p>
                             <p>Em breve</p>
                         </div>
                     </div>
