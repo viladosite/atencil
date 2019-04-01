@@ -9,7 +9,12 @@ require 'config.php';
 require 'functions/functions.php';
 
 // Caso o usuário já tenha as permissões de credencial, direciona para o dashboard
-if (perm_check($perm_view_dashboard) == true) {header("Location: pages/dashboard.php"); exit;}
+if (perm_check($perm_view_dashboard) == true) {
+    header("Location: pages/dashboard.php"); exit;
+} else {
+    session_destroy();
+    echo '<script type="text/javascript">window.alert("Você não tem permissão para acessar esta página e foi deslogado do sistema.");</script>';
+}
 
 ?>
 

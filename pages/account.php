@@ -8,8 +8,12 @@ require '../config.php';
 // Carrega as funções para funcionamento do sistema
 require "../functions/functions.php";
 
-// Caso o usuário não tenha as permissões de acesso, direciona para o index
-if (perm_check($perm_view_dashboard) == false) {header("Location: ../index.php"); exit;}
+// Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
+if (perm_check($perm_view_editacc) == false) {
+    header("Location: error_permission.php"); exit;
+    // echo '<script type="text/javascript">window.alert("Você não tem permissão para acessar esta página e foi deslogado do sistema.");</script>';
+}
+
 ?>
 
 

@@ -15,8 +15,6 @@ function perm_check($permvar) {
 	// Verifica se não há a variável da sessão que identifica o usuário
 	if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $permvar)) {
 
-		session_destroy();
-		echo '<script type="text/javascript">window.alert("Você não tem permissão para acessar esta página e foi deslogado do sistema.");</script>';
 		return FALSE;
 
 	} else {
@@ -39,7 +37,6 @@ function create_user($login, $email, $pass) {
 		{session_destroy();	return FALSE;}
 	else
 		{
-			
 			return TRUE;
 		}
 }

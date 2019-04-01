@@ -6,14 +6,7 @@
 require '../config.php';
 
 // Carrega as funções para funcionamento do sistema
-require '../functions/functions.php';
-
-// Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
-if (perm_check($perm_view_dashboard) == false) {
-    session_destroy();
-    header("Location: ../index.php"); exit;
-    // echo '<script type="text/javascript">window.alert("Você não tem permissão para acessar esta página e foi deslogado do sistema.");</script>';
-}
+require "../functions/functions.php";
 
 ?>
 
@@ -36,7 +29,7 @@ if (perm_check($perm_view_dashboard) == false) {
                 <!-- Carregamento do header desktop -->
                 <?php require '../includes/at_headerdesktop.php'; ?>
                 <!-- Carregamento do conteúdo da página -->
-                <?php require 'content/at_dashboard.php'; ?>
+                <?php require 'content/at_error_permission.php'; ?>
             </div>
             <!-- END PAGE CONTAINER-->
         </div>
