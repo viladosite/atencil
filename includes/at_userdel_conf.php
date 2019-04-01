@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Esta ação apagará o usuário do banco de dados <strong>PERMANENTEMENTE</strong>.</p>
+                <p>Esta ação apagará o usuário <strong>PERMANENTEMENTE</strong>.</p>
                 <br>
                 <p>O usuário não terá mais acesso ao sistema e não será capaz de recuperar o acesso à menos que um novo usuário seja criado.</p>
                 <br>
