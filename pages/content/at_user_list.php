@@ -95,11 +95,11 @@
                             <td>
                                 <div class="table-data-feature">
 
-                                        <button type="button" onclick="" class="item" title="Editar">
+                                        <button class="item" title="Editar">
                                             <i class="zmdi zmdi-edit"></i>
                                         </button>
 
-                                        <button type="button" onclick="remove_user($perm_edit_users, $usuario['userid'], $usuario['userlogin'])" class="item" data-toggle="modal" data-target="#confirmar" title="Remover">
+                                        <button onclick="select_user($usuario['userid'])" class="item" data-toggle="modal" data-target="#confirmar" title="Remover">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button>
 
