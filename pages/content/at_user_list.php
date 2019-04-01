@@ -9,7 +9,7 @@
                 <div class="table-data__tool-left">
                     <div class="rs-select2--light rs-select2--md">
                         <select class="js-select2" name="grupo">
-                            <option selected="selected">Grupos de usuários</option>
+                            <option selected="selected">Grupos</option>
                             <option value="">Funcionários</option>
                             <option value="">Gerentes</option>
                             <option value="">Diretores</option>
@@ -18,7 +18,7 @@
                     </div>
                     <div class="rs-select2--light rs-select2--sm">
                         <select class="js-select2" name="tempo">
-                            <option selected="selected">Cadastrado em</option>
+                            <option selected="selected">Tempo</option>
                             <option value="">Hoje</option>
                             <option value="">Últimos 7 dias</option>
                             <option value="">Últimos 30 dias</option>
