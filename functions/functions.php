@@ -1,6 +1,8 @@
 <?php
-// Este arquivo monta as funções e variáveis básicas para o funcionamento do sistema
+// ATENCIL - Atendimento Fácil é um sistema criado e mantido pela Vila do Site.
+// Mais informações em:   viladosite.com.br/atencil
 
+// Este arquivo monta as funções e variáveis básicas para o funcionamento do sistema
 
 // Função para checagem das permissões de acesso
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária
@@ -74,7 +76,7 @@ function select_user($selecteduserid) {
 
 	// Define a variável do usuário selecionado
 	$seluserid = $selecteduserid;
-	
+
 }
 
 

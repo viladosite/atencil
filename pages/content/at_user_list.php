@@ -99,7 +99,7 @@
                                             <i class="zmdi zmdi-edit"></i>
                                         </button>
 
-                                        <button onclick="select_user($usuario['userid'])" class="item" data-toggle="modal" data-target="#confirmar" title="Remover">
+                                        <button action='/functions/users.php?select=$usuario[`usercomplvl`]' class="item" data-toggle="modal" data-target="#confirmar" title="Remover">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button>
 
