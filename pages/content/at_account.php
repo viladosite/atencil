@@ -25,11 +25,17 @@
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
-                                         aria-selected="true">Login e Conta</a>
+                                         aria-selected="true">Meu Login e Conta</a>
+                                        <?php if (perm_check($perm_view_owncomp) == true){ ?>
+
                                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
-                                         aria-selected="false">Empresa</a>
+                                         aria-selected="false">Minha Empresa</a>
+
+                                        <?php } ?>
+
                                     </div>
                                 </nav>
+
                                 <div class="tab-content pl-3 pt-2" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                         <form action="" method="post" class="">
@@ -62,6 +68,8 @@
                                             </div>
                                         </form>
                                     </div>
+
+                                    <?php if (perm_check($perm_view_owncomp) == true){ ?>
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             <div class="row form-group">
@@ -226,7 +234,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>                                            
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label class=" form-control-label">Inline Checkboxes</label>
@@ -272,6 +280,8 @@
                                         </button>
 
                                     </div>
+                                    <?php } ?>
+                                    
                                 </div>
 
                             </div>
