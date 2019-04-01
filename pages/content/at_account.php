@@ -69,7 +69,7 @@
                                         </form>
                                     </div>
 
-                                    <?php if (perm_check($perm_view_owncomp) == true){ ?>
+                                    <?php if (perm_check($perm_edit_owncomp) == true){ ?>
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             <div class="row form-group">
