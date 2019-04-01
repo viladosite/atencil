@@ -25,6 +25,26 @@
                         <div class="card-header">Dados do Usuário</div>
                         <div class="card-body card-block">
                             <form action="" method="post" class="">
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Primeiro Nome</div>
+                                        <input type="text" id="fname" name="fname" class="form-control">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Último Nome</div>
+                                        <input type="text" id="lname" name="lname" class="form-control">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                    </div>
+                                </div>
                                 
                                 <div class="form-group">
                                     <div class="input-group">
@@ -35,6 +55,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Email</div>
@@ -44,6 +65,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Senha</div>
@@ -53,7 +75,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="permissao" class=" form-control-label">Permissão</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <select name="permissao" id="permissao" class="form-control">
+                                            <option value="0">Selecione</option>
+                                            <option value="1">Ver</option>
+                                            <option value="2">Editar</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="form-actions form-group">
                                     <button type="submit" class="btn btn-primary btn-sm">
                                         Cadastrar
