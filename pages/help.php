@@ -8,6 +8,12 @@ require '../config.php';
 // Carrega as funções para funcionamento do sistema
 require "../functions/functions.php";
 
+// Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
+if (perm_check($perm_view_dashboard) == false) {
+    session_destroy();
+    header("Location: ../index.php"); exit;
+}
+
 ?>
 
 

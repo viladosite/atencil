@@ -12,7 +12,6 @@ require '../functions/functions.php';
 if (perm_check($perm_view_dashboard) == false) {
     session_destroy();
     header("Location: ../index.php"); exit;
-    // echo '<script type="text/javascript">window.alert("Você não tem permissão para acessar esta página e foi deslogado do sistema.");</script>';
 }
 
 ?>
