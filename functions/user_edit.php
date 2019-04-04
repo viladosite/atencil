@@ -1,34 +1,30 @@
 <?php
 
-// Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-    if (!empty($_POST) AND (empty($_POST['fieldemail']) OR empty($_POST['fieldpass']))) {
-        header("Location: ../index.php"); exit;
-    }
-
-
-// Check connection
-if (!$mysql) {
-    die("A Conexão Falhou: " . mysqli_connect_error());
-}
-
 // Monta os dados enviados nos campos em variáveis
 $formemail = $_POST['email'];
 $formsenhaatual = $_POST['senhaatual'];
 $formsenhanova = $_POST['senhanova'];
 
+// Caso o usuário não preencha o email, mantem o email do usuário logado
+if empty( $_POST['email'] ) { $formemail = $_SESSION['UserEmail']; }
+// Caso o usuário forneça uma senha nova, informa ela para update no banco
+if !empty( $_POST['senhanova'] ) { $formsenhanova = ',userpass='".sha1($formsenhanova)."''; }
 
 
-$checauser = "SELECT * FROM `at_users` WHERE (`userid` = '".$_SESSION['UserID'] ."') AND (`userpass` = '". sha1($) ."') AND (`userstatus` = 1) LIMIT 1";
+// Checa a conexão
+if (!$mysql) { die("A Conexão Falhou: " . mysqli_connect_error()); }
+// Verifica na tabela se encontrou o usuário com id logado e senha correspondente à fornecida
+$checauser = "SELECT * FROM `at_users` WHERE (`userid` = '".$_SESSION['UserID'] ."') AND (`userpass` = '". sha1($formsenhaatual) ."')";
 
-$checasenha = if (sha1($_POST['senhaatual']) !=  )
 
-$useredit = "UPDATE at_users SET usermail='Doe' WHERE id=2";
-
-if (mysqli_query($conn, $sql)) {
-    echo "Record updated successfully";
+// Define o comportamento caso encontre o usuário e caso não encontre
+if (mysqli_num_rows($checauser) = 1) {
+	$update = "UPDATE 'at_users' SET usermail='$formemail' ".$formsenhanova." WHERE userid='$_SESSION['UserID']'"
 } else {
-    echo "Error updating record: " . mysqli_error($conn);
+	echo '<script type="text/javascript"> 
+    window.alert("Houve um erro ou você não informou sua senha atual para salvar as alterações.");
+    </script>';
 }
 
-mysqli_close($conn);
+mysqli_close($mysql);
 ?>

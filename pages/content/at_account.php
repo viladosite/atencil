@@ -50,7 +50,7 @@
                                             </p>
                                             <br>
                                         </div>
-                                        <form action="" method="post" class="">
+                                        <form action="/functions/user_edit.php" method="post">
                                             
                                             <div class="form-group">
                                                 <div class="input-group">
