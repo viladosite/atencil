@@ -75,7 +75,7 @@
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-asterisk"></i>
                                                     </div>
-                                                    <input type="password" id="passwordold" name="passwordold" placeholder="Senha Atual" class="form-control">
+                                                    <input type="password" id="senhaatual" name="senhaatual" placeholder="Senha Atual" class="form-control">
                                                 </div>
                                             </div>
 
@@ -84,7 +84,7 @@
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-asterisk"></i>
                                                     </div>
-                                                    <input type="password" id="passwordnova" name="passwordnova" placeholder="Senha Nova" class="form-control">
+                                                    <input type="password" id="senhanova" name="senhanova" placeholder="Senha Nova" class="form-control">
                                                 </div>
                                             </div>
 

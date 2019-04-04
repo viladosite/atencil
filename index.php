@@ -2,14 +2,9 @@
 // ATENCIL - Atendimento Fácil é um sistema criado e mantido pela Vila do Site.
 // Mais informações em:   viladosite.com.br/atencil
 
-// Carrega as configurações para funcionamento do sistema
-require 'config.php';
-
 // Carrega as funções para funcionamento do sistema
 require 'functions/functions.php';
-
-// Faz a conexão com o banco
-require 'auth/at_connect.php';
+load_core();
 
 // Caso o usuário já tenha as permissões de credencial, direciona para o dashboard
 if (perm_check($perm_view_dashboard) == true) {

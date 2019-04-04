@@ -1,5 +1,11 @@
 <?php
 
+// Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
+    if (!empty($_POST) AND (empty($_POST['fieldemail']) OR empty($_POST['fieldpass']))) {
+        header("Location: ../index.php"); exit;
+    }
+
+
 // Check connection
 if (!$mysql) {
     die("A Conexão Falhou: " . mysqli_connect_error());
