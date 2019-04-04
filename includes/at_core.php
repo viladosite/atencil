@@ -1,5 +1,6 @@
 <?php
-
+// A sessão precisa ser iniciada em cada página diferente
+session_start();
 
 // Carrega as configurações para funcionamento do sistema
 require __DIR__ . '/../config.php';
