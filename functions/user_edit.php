@@ -58,7 +58,7 @@ if ($resultado = 1) {
 	session_destroy();
 
     // Direciona para a tela de login
-    header("Location: index.php");
+    header("Location: /index.php");
 
 } else {
 
