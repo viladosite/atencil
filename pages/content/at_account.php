@@ -10,16 +10,16 @@
                             Dados do <strong>Cadastro</strong>
                         </div>
                         <div class="card-body">
-                            <p><?php $_SESSION['UserID'] ?> </p>
-                            <p><?php $_SESSION['UserFname'] ?></p>
-                            <p><?php $_SESSION['UserLname'] ?></p>
-                            <p><?php $_SESSION['UserLogin'] ?></p>
-                            <p><?php $_SESSION['UserEmail'] ?></p>
-                            <p><?php $_SESSION['UserPermLvl'] ?></p>
-                            <p><?php $_SESSION['UserCompany'] ?></p>
-                            <p><?php $_SESSION['UserCompanyLvl'] ?></p>
-                            <p><?php $_SESSION['UserActive'] ?></p>
-                            <p><?php $_SESSION['UserRegDate'] ?></p>
+                            <p><?php echo $_SESSION['UserID'] ?> </p>
+                            <p><?php echo $_SESSION['UserFname'] ?></p>
+                            <p><?php echo $_SESSION['UserLname'] ?></p>
+                            <p><?php echo $_SESSION['UserLogin'] ?></p>
+                            <p><?php echo $_SESSION['UserEmail'] ?></p>
+                            <p><?php echo $_SESSION['UserPermLvl'] ?></p>
+                            <p><?php echo $_SESSION['UserCompany'] ?></p>
+                            <p><?php echo $_SESSION['UserCompanyLvl'] ?></p>
+                            <p><?php echo $_SESSION['UserActive'] ?></p>
+                            <p><?php echo $_SESSION['UserRegDate'] ?></p>
                         </div>
                     </div>
                 </div>
