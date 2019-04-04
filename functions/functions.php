@@ -69,7 +69,7 @@ function remove_user($permvar, $removeuserid, $removeuserlogin) {
 
 function load_core(){
 	// Carrega as configurações para funcionamento do sistema
-	require 'config.php';
+	require __DIR__ . '/../config.php';
 	
 	// Faz a conexão com o banco
 	require './auth/at_connect.php';

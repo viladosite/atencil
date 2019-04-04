@@ -15,7 +15,7 @@ $email = $_POST['fieldemail'];
 // $name = $_POST['lname'];
 
 // Carrega as funções para funcionamento do sistema
-require './functions/functions.php';
+require __DIR__ . '/../functions/functions.php';
 load_core();
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
