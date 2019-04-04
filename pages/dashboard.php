@@ -3,10 +3,13 @@
 // Mais informações em:   viladosite.com.br/atencil
 
 // Carrega as configurações para funcionamento do sistema
-require '../config.php';
+require __DIR__ . '/../config.php';
+
+// Faz a conexão com o banco
+require __DIR__ . '/../auth/at_connect.php';
 
 // Carrega as funções para funcionamento do sistema
-require '../functions/functions.php';
+require __DIR__ . '/../functions/functions.php';
 
 // Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
 if (perm_check($perm_view_dashboard) == false) {
