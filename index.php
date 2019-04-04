@@ -9,7 +9,7 @@ require 'config.php';
 require 'functions/functions.php';
 
 // Faz a conexão com o banco
-require 'at_connect.php';
+require 'auth/at_connect.php';
 
 // Caso o usuário já tenha as permissões de credencial, direciona para o dashboard
 if (perm_check($perm_view_dashboard) == true) {
