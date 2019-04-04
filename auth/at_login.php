@@ -1,5 +1,16 @@
 <?php
 
+// Carrega as configurações para funcionamento do sistema
+require __DIR__ . '/../config.php';
+
+// Faz a conexão com o banco
+require __DIR__ . '/at_connect.php';
+
+// Carrega as funções para funcionamento do sistema
+require __DIR__ . '/../functions/functions.php';
+
+
+
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
     if (!empty($_POST) AND (empty($_POST['fieldemail']) OR empty($_POST['fieldpass']))) {
         header("Location: ../index.php"); exit;
@@ -14,9 +25,6 @@ $email = $_POST['fieldemail'];
 // $name = $_POST['fname'];
 // $name = $_POST['lname'];
 
-// Carrega as funções para funcionamento do sistema
-require __DIR__ . '/../functions/functions.php';
-load_core();
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
 	$sql = "SELECT `userid`, `userfname`, `userlname`, `userlogin`, `usermail`, `userpermlvl`, `usercomp`, `usercomplvl`, `userstatus`, `userregdate` FROM `at_users` WHERE (`usermail` = '".$email ."') AND (`userpass` = '". sha1($pass) ."') AND (`userstatus` = 1) LIMIT 1";
