@@ -6,16 +6,16 @@ require __DIR__ . '/../includes/at_core.php';
 
 // Monta os dados enviados nos campos em variáveis e as prepara para uso no mysql
 $formemail = $_POST['email'];
-$formemail = mysqli_real_escape_string($mysql, $_POST['email']);
+// $formemail = mysqli_real_escape_string($mysql, $_POST['email']);
 
 $formsenhaatual = $_POST['senhaatual'];
-$formsenhaatual = mysqli_real_escape_string($mysql, sha1($_POST['senhaatual']));
+// $formsenhaatual = mysqli_real_escape_string($mysql, sha1($_POST['senhaatual']));
 
 $formsenhanova = $_POST['senhanova'];
-$formsenhanova = mysqli_real_escape_string($mysql, $_POST['senhanova']);
+// $formsenhanova = mysqli_real_escape_string($mysql, $_POST['senhanova']);
 
 $useridatual = $_SESSION['UserID'];
-$useridatual = mysqli_real_escape_string($mysql, $_SESSION['UserID']);
+// $useridatual = mysqli_real_escape_string($mysql, $_SESSION['UserID']);
 
 
 
@@ -39,16 +39,26 @@ $checauser = mysqli_query($mysql, $selectuser);
 // Monta a query de update dos dados
 $update = "UPDATE at_users SET usermail = '$formemail' '$formsenhanova' WHERE userid = '$useridatual' ";
 
+// Checa quantas linhas de resultado encontrou na checagem
+$resultado = mysqli_num_rows($checauser);
 
-if ($checauser = false) {echo 'não tá achando';};
 
-
-/*
 // Define o comportamento caso encontre o usuário e caso não encontre
-if (mysqli_num_rows($checauser) = 1) {
+if ($resultado = 1) {
 
 	// Executa a query de update dos dados
 	mysqli_query($mysql, $update);
+	
+	// Mostra o aviso para relogar
+	echo '<script type="text/javascript"> 
+    window.alert("Seus dados foram alterados. Por favor faça o login novamente com os novos dados.");
+    </script>';
+
+	// Destroi a sessão do usuário para forçar o relogin
+	session_destroy();
+
+    // Direciona para a tela de login
+    header("Location: index.php")
 
 } else {
 
@@ -57,9 +67,11 @@ if (mysqli_num_rows($checauser) = 1) {
     window.alert("Houve um erro ou você não informou sua senha atual para salvar as alterações.");
     </script>';
 
+    // Direciona de volta para a página da conta
+    header("Location: pages/account.php")
+
 }
 
-*/
 
 // Encerra a conexão
 mysqli_close($mysql);

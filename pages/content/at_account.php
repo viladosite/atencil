@@ -4,7 +4,7 @@
         <div class="container-fluid">
             
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="card-header">
                             Dados do <strong>Cadastro</strong>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-10">
+                <div class="col-lg-8">
                     <div class="card">
                         <div class="card-header">
                             <h4>Minha Conta</h4>
