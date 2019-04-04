@@ -68,7 +68,7 @@ if ($resultado = 1) {
     </script>';
 
     // Direciona de volta para a página da conta
-    header("Location: pages/account.php")
+    header("Location: pages/account.php");
 
 }
 
