@@ -7,10 +7,19 @@
                 <div class="col-lg-2">
                     <div class="card">
                         <div class="card-header">
-                            Dados da <strong>Empresa</strong>
+                            Dados do <strong>Cadastro</strong>
                         </div>
                         <div class="card-body">
-                            <p>Em breve</p>
+                            <p><?php $_SESSION['UserID'] ?> </p>
+                            <p><?php $_SESSION['UserFname'] ?></p>
+                            <p><?php $_SESSION['UserLname'] ?></p>
+                            <p><?php $_SESSION['UserLogin'] ?></p>
+                            <p><?php $_SESSION['UserEmail'] ?></p>
+                            <p><?php $_SESSION['UserPermLvl'] ?></p>
+                            <p><?php $_SESSION['UserCompany'] ?></p>
+                            <p><?php $_SESSION['UserCompanyLvl'] ?></p>
+                            <p><?php $_SESSION['UserActive'] ?></p>
+                            <p><?php $_SESSION['UserRegDate'] ?></p>
                         </div>
                     </div>
                 </div>
