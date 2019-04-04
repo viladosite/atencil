@@ -14,11 +14,6 @@ $email = $_POST['fieldemail'];
 // $name = $_POST['fname'];
 // $name = $_POST['lname'];
 
-// Pega as definições de banco de dados do arquivo de config
-require '../config.php';
-
-// Faz a conexão com o banco
-require 'at_connect.php';
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
 	$sql = "SELECT `userid`, `userfname`, `userlname`, `userlogin`, `usermail`, `userpermlvl`, `usercomp`, `usercomplvl`, `userstatus`, `userregdate` FROM `at_users` WHERE (`usermail` = '".$email ."') AND (`userpass` = '". sha1($pass) ."') AND (`userstatus` = 1) LIMIT 1";

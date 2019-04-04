@@ -37,8 +37,21 @@
                                 </nav>
 
                                 <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                                    
+                                    <!-- Aba Meu Login e Conta -->
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                        <div>
+                                            <br>
+                                            <p>
+                                                Informe a <strong>senha atual</strong> para salvar as alterações.
+                                            </p>
+                                            <p>
+                                                Informe a <strong>senha nova tambem</strong> caso deseje trocar sua senha.
+                                            </p>
+                                            <br>
+                                        </div>
                                         <form action="" method="post" class="">
+                                            
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon">
@@ -47,28 +60,42 @@
                                                     <input type="text" id="respnomecomp" name="respnomecomp" placeholder='<?php echo $_SESSION['UserLogin'] ?>' class="form-control" disabled="" alt="Login">
                                                 </div>
                                             </div>
+                                            
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-envelope"></i>
                                                     </div>
-                                                    <input type="email" id="email" name="email" placeholder="Email" class="form-control">
+                                                    <input type="email" id="email" name="email" placeholder="Email" class="form-control" value='<?php echo $_SESSION['UserEmail'] ?>'>
                                                 </div>
                                             </div>
+                                            
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-asterisk"></i>
                                                     </div>
-                                                    <input type="password" id="password" name="password" placeholder="Senha" class="form-control">
+                                                    <input type="password" id="passwordold" name="passwordold" placeholder="Senha Atual" class="form-control">
                                                 </div>
                                             </div>
+
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-asterisk"></i>
+                                                    </div>
+                                                    <input type="password" id="passwordnova" name="passwordnova" placeholder="Senha Nova" class="form-control">
+                                                </div>
+                                            </div>
+
                                             <div class="form-actions form-group">
                                                 <button type="submit" class="btn btn-success btn-sm">Salvar</button>
                                             </div>
                                         </form>
                                     </div>
 
+                                    <!-- Aba Minha Empresa -->
+                                    <br>
                                     <?php if (perm_check($perm_edit_owncomp) == true){ ?>
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
