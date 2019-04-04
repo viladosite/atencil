@@ -72,9 +72,9 @@ function load_core(){
 	require 'config.php';
 	
 	// Faz a conexão com o banco
-	require '$con_file';
+	require './auth/at_connect.php';
 
-	
+
 }
 
 
