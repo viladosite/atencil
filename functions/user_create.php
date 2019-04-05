@@ -6,12 +6,12 @@ require __DIR__ . '/../includes/at_core.php';
 
 
 // Variáveis com dados do formulário
-$formpnome = $_POST['pnome'];
-$formunome = $_POST['unome'];
-$formuser = $_POST['user'];
-$formemail = $_POST['email'];
+$formpnome = mysql_real_escape_string($_POST['pnome']);
+$formunome = mysql_real_escape_string($_POST['unome']);
+$formuser = mysql_real_escape_string($_POST['user']);
+$formemail = mysql_real_escape_string($_POST['email']);
 $formsenha = sha1($_POST['senha']);
-$usercompanylvl = $_POST['permissao'];
+$usercompanylvl = mysql_real_escape_string($_POST['permissao']);
 
 // Variáveis nativas do usuário
 $useridatual = $_SESSION['UserID'];
