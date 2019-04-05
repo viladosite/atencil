@@ -81,7 +81,6 @@
                                     </div>
                                     <div class="col-12 col-md-9">
                                         <select name="permissao" id="permissao" class="form-control">
-                                            <option value="0">Selecione</option>
                                             <option value="1">Ver</option>
                                             <option value="2">Editar</option>
                                         </select>

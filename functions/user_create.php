@@ -11,21 +11,21 @@ $formunome = $_POST['unome'];
 $formuser = $_POST['user'];
 $formemail = $_POST['email'];
 $formsenha = sha1($_POST['senha']);
+$usercompanylvl = $_POST['permissao'];
 
 // Variáveis nativas do usuário
 $useridatual = $_SESSION['UserID'];
-$userperm = 1;
 $usercompany = $_SESSION['UserCompany'];
-$usercompanylvl = 1;
+$userperm = 1;
 $userregstatus = 1;
-$regdate = date();
+$regdate = DateTime();
 
 
 // Condicionais de verificação de preenchimento de campos
 if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formemail) or empty($formsenha) ) {
 	
 	// Retorna o erro caso algum campo tenha sido deixado em branco
-	echo '<script type="text/javascript">alert("Você não preencheu algum campo. Preencha todos os campos para continuar.");history.go(-1);</script>'
+	echo '<script type="text/javascript">alert("Você não preencheu algum campo. Preencha todos os campos para continuar.");history.go(-1);</script>';
 
 } else {
 
@@ -51,7 +51,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: pages/user_list.php");
+	    header("Location: /pages/user_list.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
@@ -64,7 +64,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: pages/user_new.php");
+	    header("Location: /pages/user_new.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
