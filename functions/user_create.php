@@ -18,7 +18,7 @@ $useridatual = $_SESSION['UserID'];
 $usercompany = $_SESSION['UserCompany'];
 $userperm = 1;
 $userregstatus = 1;
-$regdate = DateTime();
+$regdate = date("Y-m-d H:i:s");
 
 
 // Condicionais de verificação de preenchimento de campos
