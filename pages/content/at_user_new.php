@@ -23,12 +23,12 @@
                     <div class="card">
                         <div class="card-header">Dados do Usuário</div>
                         <div class="card-body card-block">
-                            <form action="" method="post" class="">
+                            <form action="/functions/user_create.php" method="post">
 
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Primeiro Nome</div>
-                                        <input type="text" id="fname" name="fname" class="form-control">
+                                        <input type="text" id="pnome" name="pnome" class="form-control">
                                         <div class="input-group-addon">
                                             <i class="fa fa-user"></i>
                                         </div>
@@ -38,7 +38,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Último Nome</div>
-                                        <input type="text" id="lname" name="lname" class="form-control">
+                                        <input type="text" id="unome" name="unome" class="form-control">
                                         <div class="input-group-addon">
                                             <i class="fa fa-user"></i>
                                         </div>
@@ -48,7 +48,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Nome de Usuário</div>
-                                        <input type="text" id="username" name="username" class="form-control">
+                                        <input type="text" id="user" name="user" class="form-control">
                                         <div class="input-group-addon">
                                             <i class="fa fa-user"></i>
                                         </div>
@@ -68,7 +68,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Senha</div>
-                                        <input type="password" id="password" name="password" class="form-control">
+                                        <input type="password" id="senha" name="senha" class="form-control">
                                         <div class="input-group-addon">
                                             <i class="fa fa-asterisk"></i>
                                         </div>
