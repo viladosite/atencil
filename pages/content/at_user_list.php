@@ -95,13 +95,15 @@
                             <td>
                                 <div class="table-data-feature">
 
-                                    <button class="item" title="Editar" name="edit" value='$usuario[`userid`]'>
-                                        <i class="zmdi zmdi-edit"></i>
-                                    </button>
+                                    <form action="/functions/user_create.php" method="post">
+                                        <button class="item" title="Editar" name="function" value='edit' type="submit">
+                                            <i class="zmdi zmdi-edit"></i>
+                                        </button>
 
-                                    <button class="item" data-toggle="modal" data-target="#confirmar" title="Remover" name="delete" value='$usuario[`userid`]'>
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
+                                        <button class="item" data-toggle="modal" data-target="#confirmar" title="Remover" name="function" value='delete' type="submit">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                    </form>
 
                                 </div>
                             </td>

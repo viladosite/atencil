@@ -4,14 +4,14 @@
 require __DIR__ . '/../includes/at_core.php';
 
 
-
 // Variáveis com dados do formulário
 $formpnome = mysqli_real_escape_string($mysql, $_POST['pnome']);
 $formunome = mysqli_real_escape_string($mysql, $_POST['unome']);
 $formuser = mysqli_real_escape_string($mysql, $_POST['user']);
-$formemail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$formemail = mysqli_real_escape_string($mysql, $_POST['email']);
 $formsenha = sha1($_POST['senha']);
 $usercompanylvl = mysqli_real_escape_string($mysql, $_POST['permissao']);
+
 
 // Variáveis nativas do usuário
 $useridatual = $_SESSION['UserID'];
@@ -19,6 +19,7 @@ $usercompany = $_SESSION['UserCompany'];
 $userperm = 1;
 $userregstatus = 1;
 $regdate = date("Y-m-d H:i:s");
+
 
 
 // Condicionais de verificação de preenchimento de campos
@@ -35,8 +36,8 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 
 	// Queries de inserção dos dados
 	$usersql = "
-		INSERT INTO at_users (userfname, userlname, userlogin, userpass, userpermlvl, usercomp, usercomplvl, userstatus, userregdate)
-		VALUES ('$formpnome', '$formunome', '$formuser', '$formsenha', '$userperm', '$usercompany', '$usercompanylvl', '$userregstatus', '$regdate');
+		INSERT INTO at_users (userfname, userlname, userlogin, userpass, usermail, userpermlvl, usercomp, usercomplvl, userstatus, userregdate)
+		VALUES ('$formpnome', '$formunome', '$formuser', '$formsenha', '$formemail', '$userperm', '$usercompany', '$usercompanylvl', '$userregstatus', '$regdate');
 	";
 
 	// Execução de inserção de dados
@@ -68,7 +69,6 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
-
 	}
 
 }
