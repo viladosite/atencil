@@ -334,58 +334,58 @@
                                         <br>
 
                                         <p>Painel:</p>
-                                        <?php if(perm_check($perm_view_dashboard) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_dashboard) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_dashboard) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_dashboard) == true) {badge_edit();} ?>
                                         <br>
                                         
                                         <p>Minha Conta:</p>
-                                        <?php if(perm_check($perm_view_editacc) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_editacc) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_editacc) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_editacc) == true) {badge_edit();} ?>
                                         <br>
 
                                         <p>Atendimentos:</p>
-                                        <?php if(perm_check($perm_view_attendance) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_attendance) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_attendance) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_attendance) == true) {badge_edit();} ?>
                                         <br>
 
                                         <p>Empresas:</p>
-                                        <?php if(perm_check($perm_view_comps) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_comps) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_comps) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_comps) == true) {badge_edit();} ?>
                                         <br>
 
                                         <p>Sua Empresa:</p>
-                                        <?php if(perm_check($perm_view_owncomp) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_owncomp) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_owncomp) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_owncomp) == true) {badge_edit();} ?>
                                         <br>
 
                                         <p>Clientes:</p>
-                                        <?php if(perm_check($perm_view_clients) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_clients) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_clients) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_clients) == true) {badge_edit();} ?>
                                         <br>
 
                                         <p>Usuários:</p>
-                                        <?php if(perm_check($perm_view_users) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_users) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_users) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_users) == true) {badge_edit();} ?>
                                         <br>
 
                                         <p>Sistema Atencil:</p>
-                                        <?php if(perm_check($perm_view_sys) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_sys) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_sys) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_sys) == true) {badge_edit();} ?>
                                         <br>
 
                                         <p>Pesquisa:</p>
-                                        <?php if(perm_check($perm_view_search) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_search) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_search) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_search) == true) {badge_edit();} ?>
                                         <br>
 
                                         <p>Módulos:</p>
-                                        <?php if(perm_check($perm_view_modules) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_modules) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_modules) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_modules) == true) {badge_edit();} ?>
                                         <br>
 
                                         <p>Permissões:</p>
-                                        <?php if(perm_check($perm_view_perms) == true) {badge_view()} ?>
-                                        <?php if(perm_check($perm_edit_perms) == true) {badge_edit()} ?>
+                                        <?php if(perm_check($perm_view_perms) == true) {badge_view();} ?>
+                                        <?php if(perm_check($perm_edit_perms) == true) {badge_edit();} ?>
                                         <br>
 
                                     </div>
