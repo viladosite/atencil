@@ -22,7 +22,7 @@
                                 <input type="checkbox" name="remember">Lembrar de mim
                             </label>
                             <label>
-                                <a href="/pages/forgot-pass.php">Esqueci Minha Senha</a>
+                                <a href="/pages/forgot_pass.php">Esqueci Minha Senha</a>
                             </label>
                         </div>
                         <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Acessar</button>
