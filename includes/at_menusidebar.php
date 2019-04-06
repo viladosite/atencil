@@ -8,6 +8,7 @@
     <div class="menu-sidebar__content js-scrollbar1">
         <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
+                
                 <li class="active has-sub">
                     <a class="js-arrow" href="#">
                         <i class="fas fa-phone"></i>Atendimentos</a>
@@ -27,6 +28,13 @@
                     </ul>
                 </li>
                 
+
+
+                <?php
+                // Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
+                if (perm_check($perm_adm_comps) == true) { ?>
+                    
+                <!-- Item de empresas exclusivo para admins -->
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
                         <i class="fas fa-briefcase"></i>Empresas</a>
@@ -42,6 +50,9 @@
                         </li>
                     </ul>
                 </li>
+                <!-- Item de empresas exclusivo para admins -->
+
+                <?php }; ?>
 
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
