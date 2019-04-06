@@ -59,7 +59,7 @@ function perm_comp_check($permvar) {
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badge_no() {
-	if ($checkperm = true)) { echo '<span class="badge badge-dark">Sem Acesso</span><br>'; }
+	echo '<span class="badge badge-dark">Sem Acesso</span><br>'; }
 }
 
 
