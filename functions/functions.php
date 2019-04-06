@@ -4,7 +4,8 @@
 
 // Este arquivo monta as funções e variáveis básicas para o funcionamento do sistema
 
-// Função para checagem das permissões de acesso
+
+// Função para checagem das permissões de acesso geral ao sistema
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária
 function perm_check($permvar) {
 
@@ -25,6 +26,31 @@ function perm_check($permvar) {
 
 	}
 }
+
+
+// Função para checagem das permissões de acesso dos recursos específicos da empresa
+// Retorna false quando o usuário não está logado ou não possui a permissão necessária
+function perm_comp_check($permvar) {
+
+	// A sessão precisa ser iniciada em cada página diferente
+	if (!isset($_SESSION)) {session_start();}
+
+	// Informa qual o conjunto de caracteres a ser utilizado na conexão
+	// header('Content-Type: text/html; charset=utf-8');
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if (!isset($_SESSION['UserID']) OR ($_SESSION['UserCompanyLvl'] < $permvar)) {
+
+		return FALSE;
+
+	} else {
+
+		return TRUE;
+
+	}
+}
+
+
 
 
 // Função para criar usuários
