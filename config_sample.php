@@ -6,10 +6,10 @@
 // -----------------------------------------------------
 
 // Define as variáveis com dados para acesso ao banco de dados
-$dbserver = 'servername';
+$dbserver = 'server.name.com';
 $dbname = 'databasename';
 $dbuser = 'username';
-$dbpass = 'userpass';
+$dbpass = 'password';
 
 
 
@@ -23,9 +23,11 @@ Below you can set the main paths to the system directories
 */
 
 
+/*
+
 // Caminho do website (websites http path)
 global $website_path;
-$website_path = "https://www.yourwebsite.com.br";
+$website_path = "https://www.atencil.com.br";
 
 // Diretório da home do servidor (Home server directory)
 global $home_dir;
@@ -70,6 +72,12 @@ $contents_dir = '';
 // Diretório de plugins (Plugins directory)
 global $vendor_dir;
 $vendor_dir = '';
+
+// Arquivo de conexão (Connection file)
+global $con_file;
+$con_file = 'at_connect.php';
+
+*/
 
 
 
@@ -124,8 +132,8 @@ $perm_view_perms = 2; // Permissão para ver as permissões de usuário da conta
 $perm_edit_dashboard = 2; // Permissão para editar o dashboard
 $perm_edit_editacc = 1; // Permissão para editar a própria conta
 $perm_edit_attendance = 2; // Permissão para editar os atendimentos
-$perm_edit_comps = 1; // Permissão para editar as empresas
-$perm_edit_owncomp = 1; // Permissão para editar os dados da própria empresa
+$perm_edit_comps = 2; // Permissão para editar as empresas
+$perm_edit_owncomp = 3; // Permissão para editar os dados da própria empresa
 $perm_edit_clients = 2; // Permissão para editar os clientes
 $perm_edit_users = 3; // Permissão para editar os usuários e logins
 $perm_edit_sys = 3; // Permissão para editar as configurações de sistema
@@ -137,6 +145,28 @@ $perm_edit_search = 1; // Permissão para editar a busca
 
 $perm_edit_modules = 3; // Permissão para manipular os módulos ativos na conta
 $perm_edit_perms = 3; // Permissão para alterar as permissões de usuário da conta
+
+
+
+
+
+// -----------------------------------------------------
+// PERMISSÕES DE ADMIN ATENCIL (Atencil Admin Permissions)
+// -----------------------------------------------------
+
+
+// Define as permissões específicas para administração do sistema todo
+// Set the especific permissions to administrate the atencil system
+
+$perm_adm_generic = 10; // Permissão para manipular as configurações gerais do sistema
+$perm_adm_search = 10; // Permissão para definir e alterar as configurações de busca do sistema
+$perm_adm_users = 10; // Permissão para modificar as configurações de usuários do sistema
+$perm_adm_comps = 10; // Permissão para modificar as configurações de empresas cadastradas no sistema
+$perm_adm_modules = 10; // Permissão configurações de módulos e complementos do sistema
+$perm_adm_perm = 10; // Permissão para modificar e definir as permissões de usuários do sistema
+$perm_adm_con = 10; // Permissão para manipular as configurações de conexões (inclusive ao banco de dados)
+$perm_adm_plans = 10; // Permissão para manipular os planos de usuários e seus membros
+
 
 
 
