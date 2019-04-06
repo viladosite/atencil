@@ -52,6 +52,37 @@ function perm_comp_check($permvar) {
 
 
 
+// -----------------------------------------------------
+// FUNÇÕES DE EXIBIÇÃO DE BADGES
+// -----------------------------------------------------
+
+
+// Função para checagem das permissões de acesso dos recursos específicos da empresa
+function badge_no() {
+	if ($checkperm = true)) { echo '<span class="badge badge-dark">Sem Acesso</span><br>'; }
+}
+
+
+// Função para checagem das permissões de acesso dos recursos específicos da empresa
+function badge_view() {
+	echo '<span class="badge badge-success">Ver</span><br>';
+}
+
+
+// Função para checagem das permissões de acesso dos recursos específicos da empresa
+function badge_edit() {
+	echo '<span class="badge badge-warning">Editar</span><br>';
+}
+
+
+// Função para checagem das permissões de acesso dos recursos específicos da empresa
+function badge_adm() {
+	echo '<span class="badge badge-danger">ADM</span><br>';
+}
+
+
+
+
 
 // Função para criar usuários
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária

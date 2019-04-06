@@ -31,16 +31,19 @@
                         </div>
                         <div class="card-body">
                             <div class="default-tab">
+                                
+                                <!-- Orelhas das abas -->
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        
                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
                                          aria-selected="true">Meu Login e Conta</a>
+                                        
                                         <?php if (perm_check($perm_edit_owncomp) == true){ ?>
-
-                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
-                                         aria-selected="false">Minha Empresa</a>
-
+                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Minha Empresa</a>
                                         <?php } ?>
+
+                                        <a class="nav-item nav-link" id="nav-perm-tab" data-toggle="tab" href="#nav-perm" role="tab" aria-controls="nav-perm" aria-selected="false">Minhas Permissões</a>
 
                                     </div>
                                 </nav>
@@ -102,9 +105,11 @@
                                             </div>
                                         </form>
                                     </div>
+                                    <!-- Aba Meu Login e Conta -->
+
+                                    <br>
 
                                     <!-- Aba Minha Empresa -->
-                                    <br>
                                     <?php if (perm_check($perm_edit_owncomp) == true){ ?>
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -317,6 +322,73 @@
 
                                     </div>
                                     <?php } ?>
+                                    <!-- Aba Minha Empresa -->
+
+                                    <!-- Aba Minhas Permissões -->
+                                    <div class="tab-pane fade" id="nav-perm" role="tabpanel" aria-labelledby="nav-perm-tab">
+                                        
+                                        <p class="text-muted m-b-15">
+                                            Confira abaixo as permissões de seu usuário:
+                                        </p>
+                                        <br>
+
+                                        <p>Painel:</p>
+                                        <?php if(perm_check($perm_view_dashboard) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_dashboard) == true) {badge_edit()} ?>
+                                        <br>
+                                        
+                                        <p>Minha Conta:</p>
+                                        <?php if(perm_check($perm_view_editacc) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_editacc) == true) {badge_edit()} ?>
+                                        <br>
+
+                                        <p>Atendimentos:</p>
+                                        <?php if(perm_check($perm_view_attendance) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_attendance) == true) {badge_edit()} ?>
+                                        <br>
+
+                                        <p>Empresas:</p>
+                                        <?php if(perm_check($perm_view_comps) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_comps) == true) {badge_edit()} ?>
+                                        <br>
+
+                                        <p>Sua Empresa:</p>
+                                        <?php if(perm_check($perm_view_owncomp) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_owncomp) == true) {badge_edit()} ?>
+                                        <br>
+
+                                        <p>Clientes:</p>
+                                        <?php if(perm_check($perm_view_clients) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_clients) == true) {badge_edit()} ?>
+                                        <br>
+
+                                        <p>Usuários:</p>
+                                        <?php if(perm_check($perm_view_users) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_users) == true) {badge_edit()} ?>
+                                        <br>
+
+                                        <p>Sistema Atencil:</p>
+                                        <?php if(perm_check($perm_view_sys) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_sys) == true) {badge_edit()} ?>
+                                        <br>
+
+                                        <p>Pesquisa:</p>
+                                        <?php if(perm_check($perm_view_search) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_search) == true) {badge_edit()} ?>
+                                        <br>
+
+                                        <p>Módulos:</p>
+                                        <?php if(perm_check($perm_view_modules) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_modules) == true) {badge_edit()} ?>
+                                        <br>
+
+                                        <p>Permissões:</p>
+                                        <?php if(perm_check($perm_view_perms) == true) {badge_view()} ?>
+                                        <?php if(perm_check($perm_edit_perms) == true) {badge_edit()} ?>
+                                        <br>
+
+                                    </div>
+                                    <!-- Aba Minhas Permissões -->
                                     
                                 </div>
 
