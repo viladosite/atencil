@@ -47,7 +47,10 @@
 
                                     </div>
                                 </nav>
+                                <!-- Orelhas das abas -->
 
+
+                                <!-- Conteúdo das abas -->
                                 <div class="tab-content pl-3 pt-2" id="nav-tabContent">
                                     
                                     <!-- Aba Meu Login e Conta -->
@@ -106,8 +109,6 @@
                                         </form>
                                     </div>
                                     <!-- Aba Meu Login e Conta -->
-
-                                    <br>
 
                                     <!-- Aba Minha Empresa -->
                                     <?php if (perm_check($perm_edit_owncomp) == true){ ?>
@@ -391,6 +392,7 @@
                                     <!-- Aba Minhas Permissões -->
                                     
                                 </div>
+                                <!-- Conteúdo das abas -->
 
                             </div>
                         </div>
