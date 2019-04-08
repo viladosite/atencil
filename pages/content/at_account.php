@@ -10,15 +10,16 @@
                             Dados do <strong>Cadastro</strong>
                         </div>
                         <div class="card-body">
-                            <p><?php echo $_SESSION['UserID'] ?> </p>
-                            <p><?php echo $_SESSION['UserFname'] ?></p>
-                            <p><?php echo $_SESSION['UserLname'] ?></p>
-                            <p><?php echo $_SESSION['UserLogin'] ?></p>
-                            <p><?php echo $_SESSION['UserEmail'] ?></p>
-                            <p><?php echo $_SESSION['UserPermLvl'] ?></p>
-                            <p><?php echo $_SESSION['UserCompany'] ?></p>
-                            <p><?php echo $_SESSION['UserCompanyLvl'] ?></p>
-                            <p><?php echo $_SESSION['UserActive'] ?></p>
+                            <p><strong>ID do Usuário:</strong> <?php echo $_SESSION['UserID'] ?> </p>
+                            <p><strong>Nome:</strong> <?php echo $_SESSION['UserFname'] ?></p>
+                            <p><strong>Sobrenome:</strong> <?php echo $_SESSION['UserLname'] ?></p>
+                            <p><strong>Login:</strong> <?php echo $_SESSION['UserLogin'] ?></p>
+                            <p><strong>Email:</strong></p> <p><?php echo $_SESSION['UserEmail'] ?></p>
+                            <p><strong>Permissão no Atencil:</strong> <?php echo $_SESSION['UserPermLvl'] ?></p>
+                            <p><strong>Empresa:</strong> <?php echo $_SESSION['UserCompany'] ?></p>
+                            <p><strong>Permissão na Empresa:</strong> <?php echo $_SESSION['UserCompanyLvl'] ?></p>
+                            <p><strong>Status:</strong> <?php echo $_SESSION['UserActive'] ?></p>
+                            <p><strong>Data de Registro:</strong></p>
                             <p><?php echo $_SESSION['UserRegDate'] ?></p>
                         </div>
                     </div>
