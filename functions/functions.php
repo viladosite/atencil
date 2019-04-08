@@ -59,25 +59,25 @@ function perm_comp_check($permvar) {
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badge_no($permission) {
-	if(perm_check($permission) == true) {echo '<span class="badge badge-dark">Sem Acesso</span><br>';}
+	if(perm_check($permission) == true) {echo '<span class="badge badge-dark permtag">Sem Acesso</span><br>';}
 }
 
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badge_view($permission) {
-	if(perm_check($permission) == true) {echo '<span class="badge badge-success">Ver</span><br>';}
+	if(perm_check($permission) == true) {echo '<span class="badge badge-success permtag">Ver</span><br>';}
 }
 
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badge_edit($permission) {
-	if(perm_check($permission) == true) {echo '<span class="badge badge-warning">Editar</span><br>';}
+	if(perm_check($permission) == true) {echo '<span class="badge badge-warning permtag">Editar</span><br>';}
 }
 
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badge_adm($permission) {
-	if(perm_check($permission) == true) {echo '<span class="badge badge-danger">ADM</span><br>';}
+	if(perm_check($permission) == true) {echo '<span class="badge badge-danger permtag">ADM</span><br>';}
 }
 
 

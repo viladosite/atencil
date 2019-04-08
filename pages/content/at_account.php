@@ -333,60 +333,49 @@
                                         </p>
                                         <br>
 
-                                        <p>Painel:</p>
-                                        <?php badge_view($perm_view_dashboard); ?>
-                                        <?php badge_edit($perm_edit_dashboard); ?>
-                                        <br>
+                                        <p>Painel: 
+                                        <?php badge_view($perm_view_dashboard) . badge_edit($perm_edit_dashboard); ?>
+                                        </p><br>
                                         
-                                        <p>Minha Conta:</p>
-                                        <?php badge_view($perm_view_editacc); ?>
-                                        <?php badge_edit($perm_edit_editacc); ?>
-                                        <br>
+                                        <p>Minha Conta: 
+                                        <?php badge_view($perm_view_editacc) . badge_edit($perm_edit_editacc); ?>
+                                        </p><br>
 
-                                        <p>Atendimentos:</p>
-                                        <?php badge_view($perm_view_attendance); ?>
-                                        <?php badge_edit($perm_edit_attendance); ?>
-                                        <br>
+                                        <p>Atendimentos: 
+                                        <?php badge_view($perm_view_attendance) . badge_edit($perm_edit_attendance); ?>
+                                        </p><br>
 
-                                        <p>Empresas:</p>
-                                        <?php badge_view($perm_view_comps); ?>
-                                        <?php badge_edit($perm_edit_comps); ?>
-                                        <br>
+                                        <p>Empresas: 
+                                        <?php badge_view($perm_view_comps) . badge_edit($perm_edit_comps); ?>
+                                        </p><br>
 
-                                        <p>Sua Empresa:</p>
-                                        <?php badge_view($perm_view_owncomp); ?>
-                                        <?php badge_edit($perm_edit_owncomp); ?>
-                                        <br>
+                                        <p>Sua Empresa: 
+                                        <?php badge_view($perm_view_owncomp) . badge_edit($perm_edit_owncomp); ?>
+                                        </p><br>
 
-                                        <p>Clientes:</p>
-                                        <?php badge_view($perm_view_clients); ?>
-                                        <?php badge_edit($perm_edit_clients); ?>
-                                        <br>
+                                        <p>Clientes: 
+                                        <?php badge_view($perm_view_clients) . badge_edit($perm_edit_clients); ?>
+                                        </p><br>
 
-                                        <p>Usuários:</p>
-                                        <?php badge_view($perm_view_users); ?>
-                                        <?php badge_edit($perm_edit_users); ?>
-                                        <br>
+                                        <p>Usuários: 
+                                        <?php badge_view($perm_view_users) . badge_edit($perm_edit_users); ?>
+                                        </p><br>
 
-                                        <p>Sistema Atencil:</p>
-                                        <?php badge_view($perm_view_sys); ?>
-                                        <?php badge_edit($perm_edit_sys); ?>
-                                        <br>
+                                        <p>Sistema Atencil: 
+                                        <?php badge_view($perm_view_sys) . badge_edit($perm_edit_sys); ?>
+                                        </p><br>
 
-                                        <p>Pesquisa:</p>
-                                        <?php badge_view($perm_view_search); ?>
-                                        <?php badge_edit($perm_edit_search); ?>
-                                        <br>
+                                        <p>Pesquisa: 
+                                        <?php badge_view($perm_view_search) . badge_edit($perm_edit_search); ?>
+                                        </p><br>
 
-                                        <p>Módulos:</p>
-                                        <?php badge_view($perm_view_modules); ?>
-                                        <?php badge_edit($perm_edit_modules); ?>
-                                        <br>
+                                        <p>Módulos: 
+                                        <?php badge_view($perm_view_modules) . badge_edit($perm_edit_modules); ?>
+                                        </p><br>
 
-                                        <p>Permissões:</p>
-                                        <?php badge_view($perm_view_perms); ?>
-                                        <?php badge_edit($perm_edit_perms); ?>
-                                        <br>
+                                        <p>Permissões: 
+                                        <?php badge_view($perm_view_perms) . badge_edit($perm_edit_perms); ?>
+                                        </p><br>
 
                                     </div>
                                     <!-- Aba Minhas Permissões -->
