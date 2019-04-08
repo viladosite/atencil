@@ -59,26 +59,25 @@ function perm_comp_check($permvar) {
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badge_no($permission) {
-	if(perm_check($permission) == true) {echo '<span class="badge badge-dark permtag">', 'Sem Acesso', '</span><br>';}
+	if(perm_check($permission) == true) {echo '<span class="badge badge-dark permtag">Sem Acesso</span><br>';}
 }
 
-
-// Função para checagem das permissões de acesso dos recursos específicos da empresa
-function badge_view($permission) {
-	if(perm_check($permission) == true) {echo '<span class="badge badge-success permtag">', 'Ver', '</span><br>';}
-}
-
-
-// Função para checagem das permissões de acesso dos recursos específicos da empresa
-function badge_edit($permission) {
-	if(perm_check($permission) == true) {echo '<span class="badge badge-warning permtag">', 'Editar', '</span><br>';}
-}
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badges($permview, $permedit) {
+	
+	// Verifica se o usuário tem a permissão de visualização informada
 	if(perm_check($permview) == true) {echo '<span class="badge badge-success permtag">Ver</span>';}
-	echo " ";
+	
+	echo " "; // Espaçador entre tags
+	
+	// Verifica se o usuário tem a permissão de edição informada
 	if(perm_check($permedit) == true) {echo '<span class="badge badge-warning permtag">Editar</span>';}	
+
+	// Checa se o usuário não possui nenhuma das duas permissões anteriores para mostrar a tag de "sem acesso"
+	if(perm_check($permview) == false && perm_check($permedit) == false) {
+		echo '<span class="badge badge-dark permtag">Sem Acesso</span><br>';
+	}
 }
 
 
