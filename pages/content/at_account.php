@@ -339,8 +339,8 @@
                                         <br>
                                         
                                         <p>Minha Conta:</p>
-                                        <?php badge_view($perm_view_editacc);}; ?>
-                                        <?php badge_edit($perm_edit_editacc);}; ?>
+                                        <?php badge_view($perm_view_editacc); ?>
+                                        <?php badge_edit($perm_edit_editacc); ?>
                                         <br>
 
                                         <p>Atendimentos:</p>
