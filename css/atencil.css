@@ -14647,6 +14647,6 @@ section {
 
 
 .permtag {
-    display: inline;
-    white-space: nowrap;
+    display: inline !important;
+    white-space: nowrap !important;
 }
