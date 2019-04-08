@@ -76,8 +76,8 @@ function badge_edit($permission) {
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badges($permview, $permedit) {
-	if(perm_check($permview) == true) {echo '<span class="badge badge-success permtag">Ver</span><br>';}
-	if(perm_check($permedit) == true) {echo '<span class="badge badge-warning permtag">Editar</span><br>';}	
+	if(perm_check($permview) == true) {echo '<span class="badge badge-success permtag">Ver</span>';}
+	if(perm_check($permedit) == true) {echo '<span class="badge badge-warning permtag">Editar</span>';}	
 }
 
 
