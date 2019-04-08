@@ -333,49 +333,49 @@
                                         </p>
                                         <br>
 
-                                        <p>Painel: 
+                                        <p>Painel:  
                                         <?php badges($perm_view_dashboard, $perm_edit_dashboard); ?>
-                                        </p><br>
+                                        </p>
                                         
-                                        <p>Minha Conta: 
+                                        <p>Minha Conta:  
                                         <?php badges($perm_view_editacc, $perm_edit_editacc); ?>
-                                        </p><br>
+                                        </p>
 
-                                        <p>Atendimentos: 
+                                        <p>Atendimentos:  
                                         <?php badges($perm_view_attendance, $perm_edit_attendance); ?>
-                                        </p><br>
+                                        </p>
 
-                                        <p>Empresas: 
+                                        <p>Empresas:  
                                         <?php badges($perm_view_comps, $perm_edit_comps); ?>
-                                        </p><br>
+                                        </p>
 
-                                        <p>Sua Empresa: 
+                                        <p>Sua Empresa:  
                                         <?php badges($perm_view_owncomp, $perm_edit_owncomp); ?>
-                                        </p><br>
+                                        </p>
 
-                                        <p>Clientes: 
+                                        <p>Clientes:  
                                         <?php badges($perm_view_clients, $perm_edit_clients); ?>
-                                        </p><br>
+                                        </p>
 
-                                        <p>Usuários: 
+                                        <p>Usuários:  
                                         <?php badges($perm_view_users, $perm_edit_users); ?>
-                                        </p><br>
+                                        </p>
 
-                                        <p>Sistema Atencil: 
+                                        <p>Sistema Atencil:  
                                         <?php badges($perm_view_sys, $perm_edit_sys); ?>
-                                        </p><br>
+                                        </p>
 
-                                        <p>Pesquisa: 
+                                        <p>Pesquisa:  
                                         <?php badges($perm_view_search, $perm_edit_search); ?>
-                                        </p><br>
+                                        </p>
 
-                                        <p>Módulos: 
+                                        <p>Módulos:  
                                         <?php badges($perm_view_modules, $perm_edit_modules); ?>
-                                        </p><br>
+                                        </p>
 
-                                        <p>Permissões: 
+                                        <p>Permissões:  
                                         <?php badges($perm_view_perms, $perm_edit_perms); ?>
-                                        </p><br>
+                                        </p>
 
                                     </div>
                                     <!-- Aba Minhas Permissões -->
