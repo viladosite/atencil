@@ -41,3 +41,4 @@ dw_php_codehinting.config
 
 # Atencil Config File
 config.php
+pages/content/ftpsync\.settings
