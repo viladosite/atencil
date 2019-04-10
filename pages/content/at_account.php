@@ -28,7 +28,7 @@
                             <p><strong>Empresa:</strong></p>
                             <p><?php
                                 $getcomp = get_company_byid(echo $_SESSION['UserCompany']);
-                                echo $getcomp->companyname;
+                                echo $getcomp['companyname'];
                             ?></p>
 
                             <p><strong>Permissão na Empresa:</strong>
