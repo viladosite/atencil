@@ -135,7 +135,7 @@ function remove_user($permvar, $removeuserid, $removeuserlogin) {
 
 // Obtem os dados da compania a partir do ID dela
 // $compid é o id da compania, enquanto $info é o nome do campo desejado da tabela de empresas
-function get_comp_byid($compid, $info) {
+function compinfo_byid($compid, $info) {
 
 	global $mysql;
 	$sql = "SELECT * FROM at_companies WHERE companyid = '$compid'";
@@ -155,6 +155,28 @@ function get_comp_byid($compid, $info) {
 }
 
 
+
+
+// Obtem os dados de usuário a partir do ID dele
+// $compid é o id do usuário, enquanto $info é o nome do campo desejado da tabela de usuários
+function userinfo_byid($userid, $info) {
+
+	global $mysql;
+	$sql = "SELECT * FROM at_users WHERE userid = '$userid'";
+    $query = mysqli_query($mysql, $sql);
+	$result = mysqli_fetch_assoc($query);
+
+    if (empty($result)) {
+    
+    	echo "Não Encontrado";
+
+    } else {
+
+    	echo $result[$info];
+
+    };
+
+}
 
 
 
