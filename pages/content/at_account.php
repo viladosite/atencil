@@ -14,7 +14,7 @@
                             <?php echo $_SESSION['UserID'] ?></p>
                             
                             <p><strong>Nome:</strong></p>
-                            <p><?php echo $_SESSION['UserFname'], $_SESSION['UserLname']; ?></p>
+                            <p><?php echo $_SESSION['UserFname'], " " $_SESSION['UserLname']; ?></p>
 
                             <p><strong>Login:</strong>
                             <?php echo $_SESSION['UserLogin'] ?></p>
