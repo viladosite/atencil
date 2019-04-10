@@ -145,12 +145,10 @@ function get_comp_byid($compid, $info) {
     if (empty($result)) {
     
     	echo "Não Encontrado";
-    	return false;
 
     } else {
 
     	echo $result['$info'];
-    	return $result;
 
     };
 
