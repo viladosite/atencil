@@ -148,7 +148,7 @@ function get_comp_byid($compid, $info) {
 
     } else {
 
-    	echo $result['$info'];
+    	echo $result[$info];
 
     };
 
