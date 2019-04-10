@@ -10,7 +10,10 @@
                             Dados do <strong>Cadastro</strong>
                         </div>
                         <div class="card-body">
-                            <p>Opa</p>
+                            <p><strong>Data de Registro:</strong></p>
+                            <p><?php echo $_SESSION['UserRegDate'] ?></p>
+                            <br>
+
                             <p><strong>Nome:</strong></p>
                             <p><?php echo $_SESSION['UserFname'], " ", $_SESSION['UserLname']; ?></p>
                             <br>
@@ -41,8 +44,6 @@
                             <p><strong>Status:</strong>
                             <?php echo $_SESSION['UserActive'] ?></p>
                             <br>
-                            <p><strong>Data de Registro:</strong></p>
-                            <p><?php echo $_SESSION['UserRegDate'] ?></p>
                         </div>
                     </div>
                 </div>
