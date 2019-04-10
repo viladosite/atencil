@@ -140,7 +140,16 @@ function get_comp_byid($compid) {
 	$sql = "SELECT * FROM at_companies WHERE companyid = '$compid'";
     $query = mysqli_query($mysql, $sql);
 	
-    if (empty($query)) { return false; } else { return $query; };
+    if (empty($query)) {
+    
+    	echo "Não Encontrada";
+    	return false;
+
+    } else {
+
+    	return $query;
+
+    };
 
 }
 
