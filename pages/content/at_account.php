@@ -27,7 +27,7 @@
 
                             <p><strong>Empresa:</strong></p>
                             <p><?php
-                                $getcomp = get_comp_byid(echo $_SESSION['UserCompany']);
+                                $getcomp = get_comp_byid($_SESSION['UserCompany']);
                                 echo $getcomp['companyname'];
                             ?></p>
 
