@@ -139,8 +139,8 @@ function get_comp_byid($compid) {
 	$sql = "SELECT * FROM at_companies WHERE companyid = '$compid'";
     $query = mysqli_query($mysql, $sql);
 	
-    if !empty($query){ return $query; } else { return false; }
-    
+    if empty($query) { return false } else { return $query }
+
 }
 
 
