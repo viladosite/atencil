@@ -5,6 +5,10 @@
 // Este arquivo monta as funções e variáveis básicas para o funcionamento do sistema
 
 
+// Faz a conexão com o banco
+require __DIR__ . '/../auth/at_connect.php';
+
+
 // Função para checagem das permissões de acesso geral ao sistema
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária
 function perm_check($permvar) {
