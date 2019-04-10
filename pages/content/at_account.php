@@ -10,32 +10,32 @@
                             Dados do <strong>Cadastro</strong>
                         </div>
                         <div class="card-body">
-                                <p><strong>ID do Usuário:</strong></p>
-                                <p><?php echo $_SESSION['UserID'] ?></p>
-                            <br>
-                                <p><strong>Nome:</strong></p>
-                                <p><?php echo $_SESSION['UserFname'], $_SESSION['UserLname']; ?></p>
-                            <br>
-                                <p><strong>Login:</strong></p>
-                                <p><?php echo $_SESSION['UserLogin'] ?></p>
-                            <br>
-                                <p><strong>Email:</strong></p>
-                                <p><?php echo $_SESSION['UserEmail'] ?></p>
-                            <br>
-                                <p><strong>Permissão no Atencil:</strong></p>
-                                <p><?php echo $_SESSION['UserPermLvl'] ?></p>
-                            <br>
-                                <p><strong>Empresa:</strong></p>
-                                <p><?php echo $_SESSION['UserCompany'] ?></p>
-                            <br>
-                                <p><strong>Permissão na Empresa:</strong></p>
-                                <p><?php echo $_SESSION['UserCompanyLvl'] ?></p>
-                            <br>
-                                <p><strong>Status:</strong></p>
-                                <p><?php echo $_SESSION['UserActive'] ?></p>
-                            <br>
-                                <p><strong>Data de Registro:</strong></p>
-                                <p><?php echo $_SESSION['UserRegDate'] ?></p>
+                            <p><strong>ID do Usuário:</strong></p>
+                            <br><?php echo $_SESSION['UserID'] ?>
+                            
+                            <p><strong>Nome:</strong></p>
+                            <br><?php echo $_SESSION['UserFname'], $_SESSION['UserLname']; ?>
+
+                            <p><strong>Login:</strong></p>
+                            <br><?php echo $_SESSION['UserLogin'] ?>
+
+                            <p><strong>Email:</strong></p>
+                            <br><?php echo $_SESSION['UserEmail'] ?>
+
+                            <p><strong>Permissão no Atencil:</strong></p>
+                            <br><?php echo $_SESSION['UserPermLvl'] ?>
+
+                            <p><strong>Empresa:</strong></p>
+                            <br><?php echo $_SESSION['UserCompany'] ?>
+
+                            <p><strong>Permissão na Empresa:</strong></p>
+                            <br><?php echo $_SESSION['UserCompanyLvl'] ?>
+
+                            <p><strong>Status:</strong></p>
+                            <br><?php echo $_SESSION['UserActive'] ?>
+
+                            <p><strong>Data de Registro:</strong></p>
+                            <br><?php echo $_SESSION['UserRegDate'] ?>
                         </div>
                     </div>
                 </div>
