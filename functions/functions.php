@@ -141,7 +141,7 @@ function remove_user($permvar, $removeuserid, $removeuserlogin) {
 function get_comp_byid($compid) {
 
 	$sql = "SELECT * FROM at_companies WHERE companyid = '$compid'";
-    $query = mysqli_query($mysql, $sql);
+    $query = mysqli_query(global $mysql, $sql);
 	
     if (empty($query)) { return false; } else { return $query; };
 
