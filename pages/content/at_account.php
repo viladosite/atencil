@@ -28,19 +28,16 @@
 
                             <p><strong>ID do Usuário:</strong>
                             <?php echo $_SESSION['UserID'] ?></p>
-                            <br>
 
                             <p><strong>Login:</strong>
                             <?php echo $_SESSION['UserLogin'] ?></p>
-                            <br>
 
                             <p><strong>Permissão no Atencil:</strong>
                             <?php echo $_SESSION['UserPermLvl'] ?></p>
-                            <br>
 
                             <p><strong>Permissão na Empresa:</strong>
                             <?php echo $_SESSION['UserCompanyLvl'] ?></p>
-                            <br>
+
                             <p><strong>Status:</strong>
                             <?php echo $_SESSION['UserActive'] ?></p>
                             <br>
