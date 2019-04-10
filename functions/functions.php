@@ -58,12 +58,6 @@ function perm_comp_check($permvar) {
 
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
-function badge_no($permission) {
-	if(perm_check($permission) == true) {echo '<span class="badge badge-dark permtag">Sem Acesso</span><br>';}
-}
-
-
-// Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badges($permview, $permedit) {
 	
 	// Verifica se o usuário tem a permissão de visualização informada
@@ -128,6 +122,29 @@ function remove_user($permvar, $removeuserid, $removeuserlogin) {
 			$userdellogin = $removeuserlogin;
 		}
 }
+
+
+
+
+
+
+// -----------------------------------------------------
+// FUNÇÕES DE OBTENÇÃO DE DADOS
+// -----------------------------------------------------
+
+
+// Obtem os dados da compania a partir do ID dela
+function get_comp_byid($compid) {
+
+	$sql = "SELECT * FROM at_companies WHERE companyid = '$compid'";
+    $query = mysqli_query($mysql, $sql);
+	
+    if !empty($query){ return $query; } else { return false; }
+    
+}
+
+
+
 
 
 

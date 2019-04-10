@@ -26,7 +26,9 @@
                             <?php echo $_SESSION['UserPermLvl'] ?></p>
 
                             <p><strong>Empresa:</strong></p>
-                            <p><?php echo $_SESSION['UserCompany'] ?></p>
+                            <p><?php
+                                get_company_byid(echo $_SESSION['UserCompany']);
+                            ?></p>
 
                             <p><strong>Permissão na Empresa:</strong>
                             <?php echo $_SESSION['UserCompanyLvl'] ?></p>
