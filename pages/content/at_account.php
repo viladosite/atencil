@@ -11,28 +11,28 @@
                         </div>
                         <div class="card-body">
                             <p><strong>ID do Usuário:</strong>
-                            <br><?php echo $_SESSION['UserID'] ?></p>
+                            <?php echo $_SESSION['UserID'] ?></p>
                             
                             <p><strong>Nome:</strong>
                             <br><?php echo $_SESSION['UserFname'], $_SESSION['UserLname']; ?></p>
 
                             <p><strong>Login:</strong>
-                            <br><?php echo $_SESSION['UserLogin'] ?></p>
+                            <?php echo $_SESSION['UserLogin'] ?></p>
 
                             <p><strong>Email:</strong>
                             <br><?php echo $_SESSION['UserEmail'] ?></p>
 
                             <p><strong>Permissão no Atencil:</strong>
-                            <br><?php echo $_SESSION['UserPermLvl'] ?></p>
+                            <?php echo $_SESSION['UserPermLvl'] ?></p>
 
                             <p><strong>Empresa:</strong>
                             <br><?php echo $_SESSION['UserCompany'] ?></p>
 
                             <p><strong>Permissão na Empresa:</strong>
-                            <br><?php echo $_SESSION['UserCompanyLvl'] ?></p>
+                            <?php echo $_SESSION['UserCompanyLvl'] ?></p>
 
                             <p><strong>Status:</strong>
-                            <br><?php echo $_SESSION['UserActive'] ?></p>
+                            <?php echo $_SESSION['UserActive'] ?></p>
 
                             <p><strong>Data de Registro:</strong>
                             <br><?php echo $_SESSION['UserRegDate'] ?></p>
