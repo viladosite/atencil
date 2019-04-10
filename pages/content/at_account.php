@@ -10,26 +10,31 @@
                             Dados do <strong>Cadastro</strong>
                         </div>
                         <div class="card-body">
-                            <p><strong>ID do Usuário:</strong>
-                            <?php echo $_SESSION['UserID'] ?></p>
-                            <br>
+                            <p>Opa</p>
                             <p><strong>Nome:</strong></p>
                             <p><?php echo $_SESSION['UserFname'], " ", $_SESSION['UserLname']; ?></p>
                             <br>
-                            <p><strong>Login:</strong>
-                            <?php echo $_SESSION['UserLogin'] ?></p>
-                            <br>
+
                             <p><strong>Email:</strong></p>
                             <p><?php echo $_SESSION['UserEmail'] ?></p>
                             <br>
+
+                            <p><strong>Empresa:</strong></p>
+                            <p><?php compinfo_byid($_SESSION['UserCompany'], 'companyname'); ?></p>
+                            <br>
+
+                            <p><strong>ID do Usuário:</strong>
+                            <?php echo $_SESSION['UserID'] ?></p>
+                            <br>
+
+                            <p><strong>Login:</strong>
+                            <?php echo $_SESSION['UserLogin'] ?></p>
+                            <br>
+
                             <p><strong>Permissão no Atencil:</strong>
                             <?php echo $_SESSION['UserPermLvl'] ?></p>
                             <br>
-                            <p><strong>Empresa:</strong></p>
-                            <p><?php
-                                compinfo_byid($_SESSION['UserCompany'], 'companyname');
-                            ?></p>
-                            <br>
+
                             <p><strong>Permissão na Empresa:</strong>
                             <?php echo $_SESSION['UserCompanyLvl'] ?></p>
                             <br>
