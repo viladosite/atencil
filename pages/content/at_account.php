@@ -32,15 +32,15 @@
                             <p><strong>Login:</strong>
                             <?php echo $_SESSION['UserLogin'] ?></p>
 
+                            <p><strong>Status:</strong>
+                            <?php echo $_SESSION['UserActive'] ?></p>
+
                             <p><strong>Permissão no Atencil:</strong>
                             <?php echo $_SESSION['UserPermLvl'] ?></p>
 
                             <p><strong>Permissão na Empresa:</strong>
                             <?php echo $_SESSION['UserCompanyLvl'] ?></p>
 
-                            <p><strong>Status:</strong>
-                            <?php echo $_SESSION['UserActive'] ?></p>
-                            <br>
                         </div>
                     </div>
                 </div>
