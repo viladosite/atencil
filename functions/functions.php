@@ -140,8 +140,9 @@ function remove_user($permvar, $removeuserid, $removeuserlogin) {
 // Obtem os dados da compania a partir do ID dela
 function get_comp_byid($compid) {
 
+	global $mysql;
 	$sql = "SELECT * FROM at_companies WHERE companyid = '$compid'";
-    $query = mysqli_query(global $mysql, $sql);
+    $query = mysqli_query($mysql, $sql);
 	
     if (empty($query)) { return false; } else { return $query; };
 
