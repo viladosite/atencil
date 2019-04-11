@@ -10,42 +10,47 @@
             </div>
             <div class="modal-body">
                 <p>
-                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
-                    risus, porta ac consectetur ac, vestibulum at eros.
-                    <br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-                    faucibus dolor auctor.
-                    <br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-                    <br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-                    leo risus, porta ac consectetur ac, vestibulum at eros.
-                    <br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-                    faucibus dolor auctor.
-                    <br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-                    <br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-                    leo risus, porta ac consectetur ac, vestibulum at eros.
-                    <br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-                    faucibus dolor auctor.
-                    <br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-                    <br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-                    leo risus, porta ac consectetur ac, vestibulum at eros.
-                    <br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-                    faucibus dolor auctor.
-                    <br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-                    <br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-                    leo risus, porta ac consectetur ac, vestibulum at eros.
-                    <br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-                    faucibus dolor auctor.
-                    <br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-                    <br> Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi
-                    leo risus, porta ac consectetur ac, vestibulum at eros.
-                    <br> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-                    faucibus dolor auctor.
-                    <br> Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                    Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                    Em breve os termos e condições para uso do Atencil.
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    Português:
+                    <br>
+                    ATENCIL (Atendimento Fácil) é um sistema de controle e gerenciamento de atendimento ao cliente montado utilizando html5, css3, javascript, jquery, ajax e o template Cool Admin da Colorlib. O sistema foi montado para suprir uma necessidade da Vila do Site de acompanhamento dos atendimentos ao cliente via telefone e internet mas acabou se expandindo e incorporando módulos como o JMIC que expandem ainda mais seu funcionamento. Por utilizar recursos e tecnologias leves e responsivas, o sistema roda facilmente em boa parte dos dispositivos, sejam eles computadores, smartphones ou tablets.
+                    <br>
+                    <br>
+                    <br>
+                    English:
+                    <br>
+                    ATENCIL (Easy Attendance) is a management system to control client attendances and the relationship with your clients. It’s made using html5, css3, javascript, jquery, ajax and the Cool Admin template from Colorlib. The system was first built to solve our own needs about keeping control of our client attendances via phone and over the internet but it ended up getting bigger and incorporating a few modules like JMIC that give it even more funcionalities. Since it was made from lightweight and responsive technologies and resources it runs easily in almost any device like pcs, smartphones and tablets.
+                    <br>
+                    <br>
+                    <br>
+                    Repositório Oficial (Oficial Repository):
+                    <br>
+                    https://github.com/viladosite/atencil
+                    <br>
+                    <br>
+                    <br>
+                    Desenvolvedores envolvidos (Project Devs):
+                    <br>
+                    <br>
+                    Diogo Fagundes
+                    <br>
+                    Coordenação de projeto, criação de layout e desenvolvimento de código
+                    <br>
+                    <br>
+                    Bruno Braga – (github.com/bruckbmrj)
+                    <br>
+                    Desenvolvimento de código, implementação de layout e estrutura e testes operacionais
+                    <br>
+                    <br>
+                    Bruno Fagundes – (github.com/brunokenshin)
+                    <br>
+                    Implementação modular e configuração de módulos
                 </p>
             </div>
             <div class="modal-footer">
