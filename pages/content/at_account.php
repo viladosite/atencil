@@ -58,7 +58,7 @@
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         
                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
-                                         aria-selected="true">Meu Login e Conta</a>
+                                         aria-selected="true">Minha Conta</a>
                                         
                                         <?php if (perm_check($perm_edit_owncomp) == true){ ?>
                                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Minha Empresa</a>
@@ -74,7 +74,7 @@
                                 <!-- Conteúdo das abas -->
                                 <div class="tab-content pl-3 pt-2" id="nav-tabContent">
                                     
-                                    <!-- Aba Meu Login e Conta -->
+                                    <!-- Aba Minha Conta -->
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                         <div>
                                             <br>
@@ -129,63 +129,78 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <!-- Aba Meu Login e Conta -->
+                                    <!-- Aba Minha Conta -->
 
                                     <!-- Aba Minha Empresa -->
                                     <?php if (perm_check($perm_edit_owncomp) == true){ ?>
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label class=" form-control-label">Login</label>
+                                                    <label class=" form-control-label">Código</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
                                                     <p class="form-control-static">
-                                                        <?php echo $_SESSION['UserLogin'] ?>
+                                                        <?php echo $_SESSION['UserCompany'] ?>
                                                     </p>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Empresa</label>
+                                                    <label for="input_compname" class=" form-control-label">Empresa</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="text-input" placeholder="Nome da Empresa" class="form-control">
+                                                    <input type="text" id="input_compname" name="input_compname" placeholder="Nome da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companyname'); ?>'>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="email-input" class=" form-control-label">Email</label>
+                                                    <label for="input_comptel" class=" form-control-label">Telefone</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="email" id="email-input" name="email-input" placeholder="Email da Empresa" class="form-control">
+                                                    <input type="text" id="input_comptel" name="input_comptel" placeholder="Nome da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companytel'); ?>'>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="password-input" class=" form-control-label">Senha</label>
+                                                    <label for="input_compemail" class=" form-control-label">Email</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="password" id="password-input" name="password-input" placeholder="Senha da Conta" class="form-control">
+                                                    <input type="email" id="input_compemail" name="input_compemail" placeholder="Email da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companymail'); ?>'>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="disabled-input" class=" form-control-label">Categoria</label>
+                                                    <label for="input_compsite" class=" form-control-label">Telefone</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="disabled-input" name="disabled-input" placeholder="Categoria da Empresa" disabled="" class="form-control">
-                                                    <small class="help-block form-text">Este recurso estará disponível em breve</small>
+                                                    <input type="text" id="input_compsite" name="input_compsite" placeholder="Nome da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companysite'); ?>'>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="textarea-input" class=" form-control-label">Descrição</label>
+                                                    <label for="input_compaddress" class=" form-control-label">Endereço</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Fale um pouco sobre a sua empresa" class="form-control"></textarea>
+                                                    <textarea name="input_compaddress" id="input_compaddress" rows="9" placeholder="Fale um pouco sobre a sua empresa" class="form-control"><?php compinfo_byid($_SESSION['UserCompany'], 'companyaddress'); ?></textarea>
                                                 </div>
                                             </div>
+
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="input_compsector" class=" form-control-label">Setor de Atuação</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="input_compsector" name="input_compsector" placeholder="Categoria da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companysector'); ?>'>
+                                                </div>
+                                            </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label for="select" class=" form-control-label">Estado</label>
@@ -200,6 +215,7 @@
                                                     </select>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label for="disabledSelect" class=" form-control-label">Categoria</label>
@@ -213,6 +229,7 @@
                                                     </select>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label for="multiple-select" class=" form-control-label">Multiple select</label>
@@ -232,6 +249,7 @@
                                                     </select>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label class=" form-control-label">Radios</label>
@@ -256,6 +274,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label class=" form-control-label">Inline Radios</label>
@@ -274,6 +293,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label class=" form-control-label">Checkboxes</label>
@@ -297,7 +317,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>                                            
+                                            </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label class=" form-control-label">Inline Checkboxes</label>
@@ -316,6 +337,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label for="file-input" class=" form-control-label">File input</label>
@@ -324,6 +346,7 @@
                                                     <input type="file" id="file-input" name="file-input" class="form-control-file">
                                                 </div>
                                             </div>
+
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label for="file-multiple-input" class=" form-control-label">Multiple File input</label>
@@ -332,6 +355,16 @@
                                                     <input type="file" id="file-multiple-input" name="file-multiple-input" multiple="" class="form-control-file">
                                                 </div>
                                             </div>
+
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="password-input" class=" form-control-label">Senha</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="password" id="password-input" name="password-input" placeholder="Senha da Conta" class="form-control">
+                                                </div>
+                                            </div>
+
                                         </form>
                                         
                                         <button type="submit" class="btn btn-primary btn-sm">
