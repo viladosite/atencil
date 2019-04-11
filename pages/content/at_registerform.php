@@ -23,8 +23,9 @@
                         </div>
                         <div class="login-checkbox">
                             <label>
-                                <input type="checkbox" name="aggree">Concordo com os <a data-toggle="modal" data-target="#modalterms">termos e condições</a>
+                                <input type="checkbox" name="aggree">Concordo com os 
                             </label>
+                            <a href="#" data-toggle="modal" data-target="#modalterms">termos e condições</a>
                         </div>
                         <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Cadastrar</button>
                         

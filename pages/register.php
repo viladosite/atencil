@@ -19,12 +19,14 @@ if (perm_check($perm_view_dashboard) == true) {header("Location: dashboard.php")
 
     <body class="animsition">
         <div class="page-wrapper">
+        
             <!-- Carregamento do conteúdo da página -->
             <?php require 'content/at_registerform.php'; ?>
-        </div>
+        
+            <!-- Carrega os avisos e modais da página -->
+            <?php include '../includes/at_modal_terms.php' ?>
 
-        <!-- Carrega os avisos e modais da página -->
-        <?php include '../includes/at_modal_terms.php' ?>
+        </div>
 
         <!-- Carregamento dos scripts -->
         <?php require '../includes/at_scripts.php'; ?>
