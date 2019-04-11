@@ -27,7 +27,7 @@ $email = $_POST['fieldemail'];
 
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
-	$sql = "SELECT * FROM `at_users` WHERE (`usermail` = '".$email ."') AND (`userpass` = '". sha1($pass) ."') AND (`userstatus` = 1) LIMIT 1";
+	$sql = "SELECT * FROM `at_users` WHERE (`usermail` = '".$email ."') AND (`userpass` = '". sha1($pass) ."') AND (`userstatus` = `ativo`) LIMIT 1";
 
     $query = mysqli_query($mysql, $sql);
 	
