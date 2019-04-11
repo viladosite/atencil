@@ -7,7 +7,7 @@
                 <div class="col-lg-4">
                     <div class="card">
                         <div class="card-header">
-                            Dados do <strong>Cadastro</strong>
+                            <strong>Dados da Conta</strong>
                         </div>
                         <div class="card-body">
                             <p><strong>Data de Registro:</strong></p>
@@ -229,7 +229,7 @@
                                                     <label for="password-input" class=" form-control-label">Senha</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="password" id="password-input" name="password-input" placeholder="Senha da Conta" class="form-control">
+                                                    <input type="password" id="input_pass" name="input_pass" placeholder="Senha da Conta" class="form-control">
                                                 </div>
                                             </div>
 
