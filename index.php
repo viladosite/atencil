@@ -11,7 +11,6 @@ if (perm_check($perm_view_dashboard) == true) {
     header("Location: pages/dashboard.php"); exit;
 } else {
     session_destroy();
-    echo '<script type="text/javascript">window.alert("Você foi deslogado do sistema.");</script>';
 }
 
 ?>
