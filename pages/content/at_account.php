@@ -239,10 +239,6 @@
                                             <i class="fa fa-dot-circle-o"></i> Salvar
                                         </button>
                                         
-                                        <button type="reset" class="btn btn-danger btn-sm">
-                                            <i class="fa fa-ban"></i> Apagar
-                                        </button>
-
                                     </div>
                                     <?php } ?>
                                     <!-- Aba Minha Empresa -->
