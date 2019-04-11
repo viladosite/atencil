@@ -22,6 +22,10 @@ if (perm_check($perm_view_dashboard) == true) {header("Location: dashboard.php")
             <!-- Carregamento do conteúdo da página -->
             <?php require 'content/at_registerform.php'; ?>
         </div>
+
+        <!-- Carrega os avisos e modais da página -->
+        <?php include '../includes/at_modal_terms.php' ?>
+
         <!-- Carregamento dos scripts -->
         <?php require '../includes/at_scripts.php'; ?>
     </body>
