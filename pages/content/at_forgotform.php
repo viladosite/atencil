@@ -1,15 +1,16 @@
 <?php
 // Processamento do pedido
 
+// Inclui as informações de conexão
+require __DIR__ . '/includes/at_core.php';
+
   if( !empty($_POST) ){
-    // Inclui as informações de conexão
-    require __DIR__ . '/../includes/at_core.php';
 
     // escolher a base de dados pretendida
-    mysql_select_db('at_passredef');
+    mysql_select_db('atencil');
  
     $user = mysql_real_escape_string($_POST['email']);
-    $q = mysql_query("SELECT * FROM at_passredef WHERE user = '$user'");
+    $q = mysql_query("SELECT * FROM at_users WHERE usermail = '$user'");
  
     if( mysql_num_rows($q) == 1 ){
       // o utilizador existe, vamos gerar um link único e enviá-lo para o e-mail
@@ -24,7 +25,7 @@
  
       if( mysql_affected_rows() == 1 ){
  
-        $link = "http://atencil.com.br/functions/user_redef.php?user=$user&confirmation=$chave";
+        $link = "https://atencil.com.br/functions/user_redef.php?user=$user&confirmation=$chave";
  
         if( mail($user, 'ATENCIL - Recuperação de password', 'Olá '.$user.', para redefinir sua senha visite este link '.$link) ){
           echo '<p>Foi enviado um e-mail para o seu endereço, onde poderá encontrar um link único para alterar a sua password</p>';
@@ -59,7 +60,7 @@
                 </div>
 
                 <div class="login-form">
-                    <form action="" method="post">
+                    <form method="post">
                         <div class="form-group">
                             <label>Email</label>
                             <input class="au-input au-input--full" type="email" name="email" id="email" placeholder="Digite o Email Cadastrado">
