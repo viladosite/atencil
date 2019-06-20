@@ -11,6 +11,8 @@
                     <p>
                         Crie um cadastro para sua empresa e você poderá criar sub-cadastros para seus funcionários posteriormente.
                     </p>
+                    <br>
+                    
                     <form action="" method="post">
                         <div class="form-group">
                             <label>Nome de Usuário</label>
