@@ -5,11 +5,8 @@
   // Inclui as informações de conexão
   require __DIR__ . '/../includes/at_core.php';
   
-  // escolher a base de dados pretendida
-  mysql_select_db('atencil');
- 
-  $user = mysql_real_escape_string($_GET['user']);
-  $hash = mysql_real_escape_string($_GET['confirmation']);
+  $user = mysqli_real_escape_string($mysql, $_GET['user']);
+  $hash = mysqli_real_escape_string($mysql, $_GET['confirmation']);
  
   $q = mysql_query("SELECT COUNT(*) FROM at_passredef WHERE user = '$user' AND confirmation = '$hash'");
  
