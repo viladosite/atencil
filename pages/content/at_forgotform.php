@@ -3,10 +3,10 @@
 
   if( !empty($_POST) ){
 
-    $user = mysql_real_escape_string($_POST['email']);
+    $user = mysqli_real_escape_string($_POST['email']);
     $q = mysql_query("SELECT * FROM at_users WHERE usermail = '$user'");
  
-    if( mysql_num_rows($q) == 1 ){
+    if( mysqli_num_rows($q) == 1 ){
       // o utilizador existe, vamos gerar um link único e enviá-lo para o e-mail
  
       // gerar a chave
@@ -14,10 +14,10 @@
       $chave = sha1(uniqid( mt_rand(), true));
  
       // guardar este par de valores na tabela para confirmar mais tarde
-      $conf = mysql_query("INSERT INTO at_passredef VALUES ('$user', '$chave')");
+      $conf = mysqli_query("INSERT INTO at_passredef VALUES ('$user', '$chave')");
       echo "INSERT INTO at_passredef VALUES ('$user', '$chave')";
  
-      if( mysql_affected_rows() == 1 ){
+      if( mysqli_affected_rows() == 1 ){
  
         $link = "https://atencil.com.br/functions/user_redef.php?user=$user&confirmation=$chave";
  
