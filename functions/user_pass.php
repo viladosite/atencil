@@ -30,7 +30,7 @@
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: /pages/account.php");
+	    // header("Location: /index.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
@@ -43,7 +43,7 @@
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: /pages/error_permission.php");
+	    // header("Location: /index.php.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
