@@ -20,58 +20,55 @@
       if( mysqli_affected_rows($mysql) == 1 ){
  
         $link = "https://atencil.com.br/functions/user_redef.php?user=$user&confirmation=$chave";
- 
-        if(
-          // Recipientes (Para usar mais de um destinatário, usar a virgula como na linha comentada abaixo)
-          // $to  = 'aidan@example.com' . ', ';
-          $to .= $user;
+        // Recipientes (Para  mais de um recipiente, usar a virgula como na linha comentada abaixo)
+        // $to  = 'aidan@example.com' . ', ';
+        $to .= $user;
 
-          // Assunto do e-mail
-          $subject = 'ATENCIL - Recuperação de senha';
+        // Assunto do e-mail
+        $subject = 'ATENCIL - Recuperação de senha';
 
-          // Mensagem do e-mail
-          $message = '
-          <html>
-            <head>
-              <title>
-                Recuperação de senha
-              </title>
-            </head>
-            
-            <body>
-              <p>Olá!</p>
-              <br>
-              <br>
-              <p> Para redefinir sua senha, acesse o link abaixo e informe uma nova senha. </p>
-              <br>
-              <br>
-              '.$link.'
-              <br>
-              <br>
-              <p>OBS: Uma vez que este link for utilizado para redefinir sua senha ele não poderá mais ser utilizado para esse fim. Caso precise alterar novamente sua senha, será necessário gerar um novo link.</p>
-            </body>
-          </html>
-          ';
+        // Mensagem do e-mail
+        $message = '
+        <html>
+          <head>
+            <title>
+              Recuperação de senha
+            </title>
+          </head>
+          
+          <body>
+            <p>Olá!</p>
+            <br>
+            <br>
+            <p> Para redefinir sua senha, acesse o link abaixo e informe uma nova senha. </p>
+            <br>
+            <br>
+            '.$link.'
+            <br>
+            <br>
+            <p>OBS: Uma vez que este link for utilizado para redefinir sua senha ele não poderá mais ser utilizado para esse fim. Caso precise alterar novamente sua senha, será necessário gerar um novo link.</p>
+          </body>
+        </html>
+        ';
 
-          // Para enviar conteúdo HTML é preciso configurar o cabeçalho Content-type
-          $headers  = 'MIME-Version: 1.0' . "\r\n";
-          $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+        // Para enviar conteúdo HTML é preciso configurar o cabeçalho Content-type
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
-          // Cabeçalhos adicionais
-          $headers .= 'To: '.$user . "\r\n";
-          $headers .= 'From: ATENCIL <noreply@atencil.com.br>' . "\r\n";
-          $headers .= 'Reply-To: admin@viladosite.com.br';
-          // $headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-          // $headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
+        // Cabeçalhos adicionais
+        $headers .= 'To: '.$user . "\r\n";
+        $headers .= 'From: ATENCIL <noreply@atencil.com.br>' . "\r\n";
+        $headers .= 'Reply-To: admin@viladosite.com.br';
+        // $headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
+        // $headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
 
-          // Envia o e-mail
-          mail($to, $subject, $message, $headers)
-        )
 
-        { echo '<p>Foi enviado um e-mail para o seu endereço, onde poderá encontrar um link único para alterar a sua password</p>'; }
+        if ( mail($to, $subject, $message, $headers) )
 
+          { echo '<p>Foi enviado um e-mail para o seu endereço, onde poderá encontrar um link único para alterar a sua senha</p>'; }
+        
         else
-
+        
           { echo '<p>Houve um erro ao enviar o email, entre em contato com nossos administradores.</p>'; }
  
         // Apenas para testar o link, no caso do e-mail falhar
