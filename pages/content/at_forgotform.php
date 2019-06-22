@@ -3,9 +3,6 @@
 
   if( !empty($_POST) ){
 
-    // escolher a base de dados pretendida
-    mysql_select_db('atencil');
- 
     $user = mysql_real_escape_string($_POST['email']);
     $q = mysql_query("SELECT * FROM at_users WHERE usermail = '$user'");
  
