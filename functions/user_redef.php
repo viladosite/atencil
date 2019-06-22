@@ -15,18 +15,35 @@
     mysqli_query($mysql, "DELETE FROM at_passredef WHERE user = '$user' AND confirmation = '$hash'");
  
     echo '
-      <form action="/functions/user_pass.php" method="post">
-        <div class="form-group">
-          <label>Nova senha</label>
-          <input class="au-input au-input--full" type="password" name="newpass" placeholder="Digite uma NOVA senha">
-        </div>
-        <div class="form-group">
-          <label>Repita a nova senha</label>
-          <input class="au-input au-input--full" type="password" name="repnewpass" placeholder="REPITA a nova senha">
-        </div>
-        <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Enviar</button>
-        <input type="hidden" id="user" name="user" value='.$user.'>
-      </form>
+      <!DOCTYPE html>
+      <html lang="pt-br">
+          <head>
+              <!-- Carregamento do head -->
+              <?php require `../includes/at_head.php`; ?>
+          </head>
+
+          <body class="animsition">
+              <div class="page-wrapper">
+                  <!-- Carregamento do conteúdo da página -->
+                  <form action="/functions/user_pass.php" method="post">
+                    <div class="form-group">
+                      <label>Nova senha</label>
+                      <input class="au-input au-input--full" type="password" name="newpass" placeholder="Digite uma NOVA senha">
+                    </div>
+                    <div class="form-group">
+                      <label>Repita a nova senha</label>
+                      <input class="au-input au-input--full" type="password" name="repnewpass" placeholder="REPITA a nova senha">
+                    </div>
+                    <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Enviar</button>
+                    <input type="hidden" id="user" name="user" value='.$user.'>
+                  </form>
+              </div>
+              <!-- Carregamento dos scripts -->
+              <?php require `../includes/at_scripts.php`; ?>
+          </body>
+
+      </html>
+
     ';
 
   } else {
