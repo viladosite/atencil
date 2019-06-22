@@ -17,7 +17,7 @@
       $conf = mysqli_query($mysql, "INSERT INTO at_passredef VALUES ('$user', '$chave')");
       echo "INSERT INTO at_passredef VALUES ('$user', '$chave')";
  
-      if( mysqli_affected_rows() == 1 ){
+      if( mysqli_affected_rows($mysql) == 1 ){
  
         $link = "https://atencil.com.br/functions/user_redef.php?user=$user&confirmation=$chave";
  
