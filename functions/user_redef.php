@@ -28,7 +28,7 @@
           <input class="au-input au-input--full" type="password" name="repnewpass" placeholder="REPITA a nova senha">
         </div>
         <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Enviar</button>
-        <input type="hidden" id="user" name="user" value='$user'>
+        <input type="hidden" id="user" name="user" value='.$user.'>
       </form>
     ';
 
