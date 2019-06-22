@@ -14,7 +14,7 @@
 
 	// Queries de inserção dos dados
 	$usersql = "
-		INSERT INTO at_users (userpass)	VALUES ($repnewpass) WHERE usermail = '$user';
+		INSERT INTO at_users (userpass)	VALUES ('$repnewpass') WHERE (usermail = '$user');
 	";
 
 	// Execução de inserção de dados
@@ -25,11 +25,11 @@
 
 		// Mostra o aviso para relogar
 		echo '<script type="text/javascript"> 
-	    window.alert("O usuário foi criado com sucesso.");
+	    window.alert("Sua senha foi alterada com sucesso.");
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: /pages/user_list.php");
+	    header("Location: /pages/account.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
@@ -38,11 +38,11 @@
 
 		// Mostra o aviso para relogar
 		echo '<script type="text/javascript"> 
-	    window.alert("Houve um erro ao cadastrar o usuário.");
+	    window.alert("Houve um erro ao alterar sua senha e ela não foi alterada.");
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: /pages/user_new.php");
+	    header("Location: /pages/error_permission.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
