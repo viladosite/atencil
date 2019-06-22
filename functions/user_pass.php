@@ -10,7 +10,7 @@
 	$newpass = mysqli_real_escape_string($mysql, $_POST['newpass']);
 	$repnewpass = mysqli_real_escape_string($mysql, $_POST['repnewpass']);
 	$passencryp = sha1($repnewpass)
-	$user = mysqli_real_escape_string($mysql, $_POST['user']);
+	$user = $_POST['user'];
 
 
 	// Queries de inserção dos dados
