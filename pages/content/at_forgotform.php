@@ -42,7 +42,7 @@
             <p> Para redefinir sua senha, acesse o link abaixo e informe uma nova senha. </p>
             <br>
             <br>
-            '.$link.'
+            <a href="'.$link.'">Clique aqui para redefinir sua senha</a>
             <br>
             <br>
             <p>OBS: Uma vez que este link for utilizado para redefinir sua senha ele não poderá mais ser utilizado para esse fim. Caso precise alterar novamente sua senha, será necessário gerar um novo link.</p>
