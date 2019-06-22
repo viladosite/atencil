@@ -19,7 +19,7 @@
       <html lang="pt-br">
           <head>
               <!-- Carregamento do head -->
-              <?php require `../includes/at_head.php`; ?>
+              '. require '../includes/at_head.php'; .'
           </head>
 
           <body class="animsition">
@@ -39,7 +39,7 @@
                   </form>
               </div>
               <!-- Carregamento dos scripts -->
-              <?php require `../includes/at_scripts.php`; ?>
+              '. require '../includes/at_scripts.php'; .'
           </body>
 
       </html>
