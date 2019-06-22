@@ -2,7 +2,7 @@
 // Processamento do pedido
 
 // Inclui as informações de conexão
-require __DIR__ . './includes/at_core.php';
+require __DIR__ . '../../includes/at_core.php';
 
   if( !empty($_POST) ){
 
