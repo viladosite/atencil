@@ -1,4 +1,7 @@
 <?php
+	// Inclui as informações de conexão
+	require __DIR__ . '/../includes/at_core.php';
+
 	// Checagem de conexão
 	if (!$mysql) { die("A Conexão Falhou: " . mysqli_connect_error()); }
 
