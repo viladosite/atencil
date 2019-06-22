@@ -9,12 +9,13 @@
 	// Monta as variáveis com os valores passados
 	$newpass = mysqli_real_escape_string($mysql, $_POST['newpass']);
 	$repnewpass = mysqli_real_escape_string($mysql, $_POST['repnewpass']);
+	$passencryp = sha1($repnewpass)
 	$user = mysqli_real_escape_string($mysql, $_POST['user']);
 
 
 	// Queries de inserção dos dados
 	$usersql = "
-		INSERT INTO at_users (userpass)	VALUES ('$repnewpass') WHERE (usermail = '$user');
+		UPDATE at_users SET userpass = '$passencryp' WHERE usermail = '$user';
 	";
 
 	// Execução de inserção de dados
