@@ -1,9 +1,6 @@
 <?php
 // Processamento do pedido
 
-// Inclui as informações de conexão
-require __DIR__ . '/../../includes/at_core.php';
-
   if( !empty($_POST) ){
 
     // escolher a base de dados pretendida
