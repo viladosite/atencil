@@ -8,7 +8,7 @@
   $user = mysqli_real_escape_string($mysql, $_GET['user']);
   $hash = mysqli_real_escape_string($mysql, $_GET['confirmation']);
  
-  $q = mysql_query("SELECT COUNT(*) FROM at_passredef WHERE user = '$user' AND confirmation = '$hash'");
+  $q = mysqli_query($mysql, "SELECT COUNT(*) FROM at_passredef WHERE user = '$user' AND confirmation = '$hash'");
  
   if( mysql_result($q, 0, 0) == "1" ){
     // os dados estão corretos: eliminar o pedido e permitir alterar a password
