@@ -6,7 +6,7 @@
     $user = mysqli_real_escape_string($mysql, $_POST['email']);
     $q = mysqli_query($mysql, "SELECT * FROM at_users WHERE usermail = '$user'");
  
-    if( mysqli_num_rows($mysql, $q) == 1 ){
+    if( mysqli_num_rows($q) == 1 ){
       // o utilizador existe, vamos gerar um link único e enviá-lo para o e-mail
  
       // gerar a chave
