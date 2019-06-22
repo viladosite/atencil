@@ -18,13 +18,11 @@
       <!DOCTYPE html>
       <html lang="pt-br">
           <head>
-              <!-- Carregamento do head -->
               ', require '../includes/at_head.php', '
           </head>
 
           <body class="animsition">
               <div class="page-wrapper">
-                  <!-- Carregamento do conteúdo da página -->
                   <form action="/functions/user_pass.php" method="post">
                     <div class="form-group">
                       <label>Nova senha</label>
@@ -38,7 +36,6 @@
                     <input type="hidden" id="user" name="user" value='.$user.'>
                   </form>
               </div>
-              <!-- Carregamento dos scripts -->
               ', require '../includes/at_scripts.php', '
           </body>
 
