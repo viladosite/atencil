@@ -29,11 +29,15 @@
 	    window.alert("Sua senha foi alterada com sucesso.");
 	    </script>';
 
-	    // Direciona para a tela de login
-	    // header("Location: /index.php");
+	    // Se certifica de que há uma sessão iniciada para destrui-la e garantir o logout.
+	    session_start(); session_destroy();
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
+
+	    // Direciona para a tela de login
+	    header("Location: /index.php");
+
 
 	} else {
 
@@ -42,11 +46,15 @@
 	    window.alert("Houve um erro ao alterar sua senha e ela não foi alterada.");
 	    </script>';
 
-	    // Direciona para a tela de login
-	    // header("Location: /index.php.php");
+	    // Se certifica de que há uma sessão iniciada para destrui-la e garantir o logout.
+	    session_start(); session_destroy();
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
+
+	    // Direciona para a tela de login
+	    header("Location: /index.php");
+
 	}
 
 ?>
