@@ -3,10 +3,10 @@
 
   if( !empty($_POST) ){
 
-    $user = mysqli_real_escape_string($_POST['email']);
-    $q = mysql_query("SELECT * FROM at_users WHERE usermail = '$user'");
+    $user = mysqli_real_escape_string($mysql, $_POST['email']);
+    $q = mysqli_query($mysql, "SELECT * FROM at_users WHERE usermail = '$user'");
  
-    if( mysqli_num_rows($q) == 1 ){
+    if( mysqli_num_rows($mysql, $q) == 1 ){
       // o utilizador existe, vamos gerar um link único e enviá-lo para o e-mail
  
       // gerar a chave
@@ -14,7 +14,7 @@
       $chave = sha1(uniqid( mt_rand(), true));
  
       // guardar este par de valores na tabela para confirmar mais tarde
-      $conf = mysqli_query("INSERT INTO at_passredef VALUES ('$user', '$chave')");
+      $conf = mysqli_query($mysql, "INSERT INTO at_passredef VALUES ('$user', '$chave')");
       echo "INSERT INTO at_passredef VALUES ('$user', '$chave')";
  
       if( mysqli_affected_rows() == 1 ){
