@@ -12,7 +12,7 @@
  
   if( mysqli_num_rows($q) == 1 ){
     // os dados estão corretos: eliminar o pedido e permitir alterar a password
-    mysql_query("DELETE FROM at_passredef WHERE user = '$user' AND confirmation = '$hash'");
+    mysqli_query($mysql, "DELETE FROM at_passredef WHERE user = '$user' AND confirmation = '$hash'");
  
     echo '
       <form action="/functions/user_pass.php" method="post">
