@@ -14,7 +14,6 @@
  
       // Guardar este par de valores na tabela para confirmar mais tarde
       $conf = mysqli_query($mysql, "INSERT INTO at_passredef VALUES ('$user', '$chave')");
-      echo "INSERT INTO at_passredef VALUES ('$user', '$chave')";
  
       // Caso encontre o usuário, cria o link e envia por e-mail
       if( mysqli_affected_rows($mysql) == 1 ){
@@ -63,24 +62,28 @@
         // $headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
 
 
-        if ( mail($to, $subject, $message, $headers) )
+        if ( mail($to, $subject, $message, $headers) ) {
 
-          { echo '<p>Foi enviado um e-mail para o seu endereço, onde poderá encontrar um link único para alterar a sua senha</p>'; }
-        
-        else
-        
-          { echo '<p>Houve um erro ao enviar o email, entre em contato com nossos administradores.</p>'; }
- 
-        // Apenas para testar o link, no caso do e-mail falhar
-        echo '<p>Link: '.$link.' (apresentado apenas para testes; nunca expor a público!)</p>';
+          echo '<p>Foi enviado um e-mail para o seu endereço, onde poderá encontrar um link único para alterar a sua senha</p>';
+
+        } else {
+
+          echo '<p>Houve um erro ao enviar o email, entre em contato com nossos administradores.</p>';
+
+        }
  
       } else {
+
         echo '<p>Não foi possível gerar o endereço único</p>';
- 
+
       }
+
     } else {
+
       echo '<p>Esse usuário não existe</p>';
+
     }
+
   } else { ?>
     
 <!-- Visual do formulário -->
