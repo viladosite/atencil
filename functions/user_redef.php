@@ -23,18 +23,41 @@
 
           <body class="animsition">
               <div class="page-wrapper">
-                  <form action="/functions/user_pass.php" method="post">
-                    <div class="form-group">
-                      <label>Nova senha</label>
-                      <input class="au-input au-input--full" type="password" name="newpass" placeholder="Digite uma NOVA senha">
+                <div class="page-content--bge5">
+                    <div class="container">
+                        <div class="login-wrap">
+                            <div class="login-content">
+
+                                <div class="login-logo">
+                                    <a href="/index.php">
+                                        <img src="/images/logo_atencil_horiz.png" alt="Atencil">
+                                    </a>
+                                </div>
+
+                                <div class="login-form">
+                                  <form action="/functions/user_pass.php" method="post">
+                                    
+                                    <div class="form-group">
+                                      <label>Nova senha</label>
+                                      <input class="au-input au-input--full" type="password" name="newpass" placeholder="Digite uma NOVA senha">
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label>Repita a nova senha</label>
+                                      <input class="au-input au-input--full" type="password" name="repnewpass" placeholder="REPITA a nova senha">
+                                    </div>
+
+                                    <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Enviar</button>
+
+                                    <input type="hidden" id="user" name="user" value='.$user.'>
+                                  
+                                  </form>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                      <label>Repita a nova senha</label>
-                      <input class="au-input au-input--full" type="password" name="repnewpass" placeholder="REPITA a nova senha">
-                    </div>
-                    <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Enviar</button>
-                    <input type="hidden" id="user" name="user" value='.$user.'>
-                  </form>
+                </div>
               </div>
               ', require '../includes/at_scripts.php', '
           </body>
