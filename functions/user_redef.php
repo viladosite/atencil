@@ -14,6 +14,7 @@
     // os dados estão corretos: eliminar o pedido e permitir alterar a password
     mysqli_query($mysql, "DELETE FROM at_passredef WHERE user = '$user' AND confirmation = '$hash'");
  
+    // Tela de troca de senha
     echo '
       <!DOCTYPE html>
       <html lang="pt-br">
@@ -66,8 +67,9 @@
 
     ';
 
+  // Mensagem de erro na troca de senha
   } else {
-    echo '<p>Não é possível alterar a password: dados incorretos</p>';
+    echo '<p>Não é possível alterar a senha: dados incorretos</p>';
  
   }
  
