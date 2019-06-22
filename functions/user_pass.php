@@ -9,7 +9,7 @@
 	// Monta as variáveis com os valores passados
 	$newpass = mysqli_real_escape_string($mysql, $_POST['newpass']);
 	$repnewpass = mysqli_real_escape_string($mysql, $_POST['repnewpass']);
-	$passencryp = sha1($repnewpass)
+	$passencryp = sha1($repnewpass);
 	$user = $_POST['user'];
 
 
