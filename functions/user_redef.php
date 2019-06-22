@@ -18,7 +18,7 @@
       <!DOCTYPE html>
       <html lang="pt-br">
           <head>
-              ', require '../includes/at_head.php', '
+              '; require '../includes/at_head.php'; echo '
           </head>
 
           <body class="animsition">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
               </div>
-              ', require '../includes/at_scripts.php', '
+              '; require '../includes/at_scripts.php'; echo '
           </body>
 
       </html>
