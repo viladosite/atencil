@@ -10,7 +10,7 @@
  
   $q = mysqli_query($mysql, "SELECT COUNT(*) FROM at_passredef WHERE user = '$user' AND confirmation = '$hash'");
  
-  if( mysql_result($q, 0, 0) == "1" ){
+  if( mysqli_result($q, 0, 0) == "1" ){
     // os dados estão corretos: eliminar o pedido e permitir alterar a password
     mysql_query("DELETE FROM at_passredef WHERE user = '$user' AND confirmation = '$hash'");
  
