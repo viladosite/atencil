@@ -4,24 +4,24 @@
         <div class="container-fluid">
 
             <!-- DATA TABLE -->
-            <h3 class="title-5 m-b-35">Usuários Cadastrados</h3>
+            <h3 class="title-5 m-b-35">Módulos Instalados</h3>
             
             <div class="table-data__tool">
                 <div class="table-data__tool-left">
                     
                     <div class="rs-select2--light rs-select2--md">
                         <select class="js-select2" name="grupo">
-                            <option selected="selected">Grupos</option>
-                            <option value="">Funcionários</option>
-                            <option value="">Gerentes</option>
-                            <option value="">Diretores</option>
+                            <option selected="selected">Categoria</option>
+                            <option value="">Utilidades</option>
+                            <option value="">Segurança</option>
+                            <option value="">Relacionamento</option>
                         </select>
                         <div class="dropDownSelect2"></div>
                     </div>
                     
                     <div class="rs-select2--light rs-select2--md">
                         <select class="js-select2" name="tempo">
-                            <option selected="selected">Cadastrado</option>
+                            <option selected="selected">Instalados</option>
                             <option value="">Hoje</option>
                             <option value="">Até 7 dias</option>
                             <option value="">Até 30 dias</option>
@@ -38,11 +38,11 @@
 
                 <div class="table-data__tool-right">
                     <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                        <i class="zmdi zmdi-plus"></i>Cadastrar Usuário</button>
+                        <i class="zmdi zmdi-plus"></i>Instalar Módulo</button>
                     <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <select class="js-select2" name="type">
-                            <option selected="selected">Exportar</option>
-                            <option value="">Todos os Usuários</option>
+                            <option selected="selected">Atualizar Mods</option>
+                            <option value="">Todos</option>
                             <option value="">Apenas os selecionados</option>
                         </select>
                         <div class="dropDownSelect2"></div>
@@ -62,9 +62,9 @@
                                 </label>
                             </th>
                             <th>nome</th>
-                            <th>email</th>
-                            <th>cadastrado</th>
-                            <th>grupo</th>
+                            <th>autor</th>
+                            <th>instalado</th>
+                            <th>categoria</th>
                             <th>ações</th>
                         </tr>
                     </thead>
@@ -73,13 +73,13 @@
 
                         <?php
                         // Monta os parâmetros da query
-                        $sql = "SELECT * FROM `at_users` WHERE (`usercomp` = '".$_SESSION['UserCompany'] ."')";
+                        $sql = "SELECT * FROM `at_modules` WHERE (`modstatus` = 1)";
 
                         // Monta a query para execução
-                        $usuarios = mysqli_query($mysql, $sql);
+                        $mods = mysqli_query($mysql, $sql);
 
                         // Executa o loop com a query
-                        foreach ($usuarios as $usuario) { ?>
+                        foreach ($mods as $mod) { ?>
                             
                         <tr class="tr-shadow">
                             <td>
@@ -88,15 +88,19 @@
                                     <span class="au-checkmark"></span>
                                 </label>
                             </td>
-                            <td><?php echo $usuario['userfname'] . ' ' . $usuario['userlname']; ?></td>
-                            <td><span class="block-email"> <?php echo $usuario['usermail']; ?> </span></td>
-                            <td><?php echo $usuario['userregdate']; ?></td>
-                            <td><?php echo $usuario['usercomplvl'];?> </td>
+                            <td><?php echo $mod['modname']; ?></td>
+                            <td><span class="block-email"> <?php echo $mod['modauthor']; ?> </span></td>
+                            <td><?php echo $mod['modinst']; ?></td>
+                            <td><?php echo $mod['status'];?> </td>
                             <td>
                                 <div class="table-data-feature">
 
-                                    <button class="item" title="Editar" name="function" value='edit' type="submit">
-                                        <i class="zmdi zmdi-edit"></i>
+                                    <button class="item" title="Iniciar" name="iniciar" value='run' type="submit">
+                                        <i class="zmdi zmdi-caret-right-circle"></i>
+                                    </button>
+
+                                    <button class="item" title="Atualizar" name="atualizar" value='update' type="submit">
+                                        <i class="zmdi zmdi-refresh"></i>
                                     </button>
 
                                     <button class="item" data-toggle="modal" data-target="#confirmar" title="Remover" name="function" value='delete' type="submit">
