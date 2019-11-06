@@ -138,12 +138,14 @@
                                         
                                         <br>
                                         
-                                        <p> <?php phpinfo() ?> </p>
+                                        <p> Em breve </p>
+
+                                        <p> <?php // phpinfo() ?> </p>
                                                                                 
                                     </div>
                                     <?php } ?>
                                     <!-- Aba Servidor -->
-                                    
+
 
                                     <!-- Aba Minhas Permissões -->
                                     <div class="tab-pane fade" id="nav-perm" role="tabpanel" aria-labelledby="nav-perm-tab">
