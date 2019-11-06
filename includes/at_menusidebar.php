@@ -56,7 +56,7 @@
 
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-briefcase"></i>Clientes</a>
+                        <i class="fas fa-usd"></i>Clientes</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
                             <a href="/pages/client_list.php">Listar Clientes</a>
@@ -89,6 +89,19 @@
                         </li>
                         <li>
                             <a href="/pages/user_new.php">Cadastrar Usuário</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-sub">
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-archive"></i>Módulos</a>
+                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        <li>
+                            <a href="/pages/mod_list.php">Listar Módulos</a>
+                        </li>
+                        <li>
+                            <a href="/pages/mod_inst.php">Instalar Módulo</a>
                         </li>
                     </ul>
                 </li>
