@@ -48,37 +48,23 @@ if($_FILES["modulos"]["name"]) {
 		$message = "O arquivo que você está tentando enviar não é um arquivo zip. Só é possível instalar arquivos de módulo em formato .zip válido.";
 	}
 
-	$target_path = "/home/var/yoursite/httpdocs/".$filename;  // change this to the correct site path
+	$target_path = $home_dir . "/" . $mods_dir . "/" . $filename;
 	if(move_uploaded_file($source, $target_path)) {
 		$zip = new ZipArchive();
 		$x = $zip->open($target_path);
 		if ($x === true) {
-			$zip->extractTo("/home/var/yoursite/httpdocs/"); // change this to the correct site path
+			$zip->extractTo($home_dir . "/" . $mods_dir . "/"); // change this to the correct site path
 			$zip->close();
 	
 			unlink($target_path);
 		}
-		$message = "Your .zip file was uploaded and unpacked.";
+		$message = "Seu módulo foi enviado e instalado com sucesso.";
 	} else {	
-		$message = "There was a problem with the upload. Please try again.";
+		$message = "Houve um problema na instalação do módulo. Por favor tente novamente ou entre em contato conosco.";
 	}
 }
 
-
-
-<body>
-<?php if($message) echo "<p>$message</p>"; ?>
-<form enctype="multipart/form-data" method="post" action="">
-<label>Choose a zip file to upload: <input type="file" name="zip_file" /></label>
-<br />
-<input type="submit" name="submit" value="Upload" />
-</form>
-</body>
-</html>
-
-
-
-
+/*
 
 // Condicionais de verificação de preenchimento de campos
 if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formemail) or empty($formsenha) ) {
@@ -130,5 +116,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 	}
 
 }
+
+*/
 
 ?>
