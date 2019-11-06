@@ -37,13 +37,17 @@
                 </div>
 
                 <div class="table-data__tool-right">
-                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                        <i class="zmdi zmdi-plus"></i>Instalar Módulo</button>
+                    <form action="/pages/mod_inst.php">
+                        <button class="au-btn au-btn-icon au-btn--green au-btn--small" type="submit">
+                            <i class="zmdi zmdi-plus"></i>Instalar MOD
+                        </button>
+                    </form>
+
                     <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <select class="js-select2" name="type">
-                            <option selected="selected">Atualizar Mods</option>
+                            <option selected="selected">Atualizar</option>
                             <option value="">Todos</option>
-                            <option value="">Apenas os selecionados</option>
+                            <option value="">Selecionados</option>
                         </select>
                         <div class="dropDownSelect2"></div>
                     </div>

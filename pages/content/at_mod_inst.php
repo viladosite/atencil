@@ -3,7 +3,7 @@
     <div class="section__content section__content--p30">
         <div class="container-fluid">
 
-            <h3 class="title-5 m-b-35">Cadastrar Usuário</h3>
+            <h3 class="title-5 m-b-35">Instalar Módulo</h3>
 
             <div class="row">
                 <div class="col-lg-4">
@@ -12,8 +12,8 @@
                             <strong>Atenção:</strong>
                         </div>
                         <div class="card-body">
-                            <p>Este usuário será cadastrado como um usuário vinculado à sua empresa e poderá ver detalhes de sua empresa como </p>
-                            <p>Em breve</p>
+                            <p>Este módulo será instalado globalmente no sistema e poderá ser ativado para as empresas individualmente. </p>
+                            <p>Não prossiga se não souber o que está fazendo.</p>
                         </div>
                     </div>
                 </div>
