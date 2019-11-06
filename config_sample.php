@@ -23,7 +23,7 @@ Below you can set the main paths to the system directories
 */
 
 
-/*
+
 
 // Caminho do website (websites http path)
 global $website_path;
@@ -49,6 +49,10 @@ $index_dir2 = str_replace("/index.php", '', $index_dir1);
 global $index_dir2;
 $index_dir3 = '/v2';
 
+// Diretório de módulos (Modules directory)
+global $mods_dir;
+$mods_dir = '/modules';
+
 // Diretório de funções (Functions directory)
 global $func_dir;
  $func_dir = '';
@@ -69,15 +73,12 @@ $pages_dir = '';
 global $contents_dir;
 $contents_dir = '';
 
-// Diretório de plugins (Plugins directory)
-global $vendor_dir;
-$vendor_dir = '';
-
 // Arquivo de conexão (Connection file)
 global $con_file;
 $con_file = 'at_connect.php';
 
 */
+
 
 
 
