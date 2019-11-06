@@ -6,7 +6,7 @@
 require __DIR__ . '/../includes/at_core.php';
 
 // Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
-if (perm_comp_check($perm_edit_users) == false) {
+if (perm_comp_check($perm_edit_clients) == false) {
     header("Location: error_permission.php"); exit;
 }
 ?>
