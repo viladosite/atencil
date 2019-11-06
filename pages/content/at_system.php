@@ -84,43 +84,43 @@
                                         </p>
                                         <br>
 
-                                        <p> <bold> Website: </bold> <br>
+                                        <p>Website:<br>
                                         <?php echo $website_path; ?></p>
 
-                                        <p> <bold> Home: </bold> <br>
+                                        <p>Home:<br>
                                         <?php echo $home_dir; ?> </p>
 
-                                        <p> <bold> Index 1: </bold> <br>
+                                        <p>Index 1:<br>
                                         <?php echo $index_path; ?> </p>
 
-                                        <p> <bold> Index 2: </bold> <br>
+                                        <p>Index 2:<br>
                                         <?php echo $index_dir1; ?> </p>
 
-                                        <p> <bold> Index 3: </bold> <br>
+                                        <p>Index 3:<br>
                                         <?php echo $index_dir2; ?> </p>
 
-                                        <p> <bold> Index 4: </bold> <br>
+                                        <p>Index 4:<br>
                                         <?php echo $index_dir3; ?> </p>
 
-                                        <p> <bold> Modules Dir: </bold> <br>
+                                        <p>Modules Dir:<br>
                                         <?php echo $mods_dir; ?> </p>
 
-                                        <p> <bold> Functions Dir: </bold> <br>
+                                        <p>Functions Dir:<br>
                                         <?php echo $func_dir; ?> </p>
 
-                                        <p> <bold> Includes Dir: </bold> <br>
+                                        <p>Includes Dir:<br>
                                         <?php echo $inc_dir; ?> </p>
 
-                                        <p> <bold> Assets Dir: </bold> <br>
+                                        <p>Assets Dir:<br>
                                         <?php echo $assets_dir; ?> </p>
 
-                                        <p> <bold> Pages Dir: </bold> <br>
+                                        <p>Pages Dir:<br>
                                         <?php echo $pages_dir; ?> </p>
 
-                                        <p> <bold> Contents Dir: </bold> <br>
+                                        <p>Contents Dir:<br>
                                         <?php echo $contents_dir; ?> </p>
 
-                                        <p> <bold> Connection File: </bold> <br>
+                                        <p>Connection File:<br>
                                         <?php echo $con_file; ?> </p>
 
 
