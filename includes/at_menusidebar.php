@@ -59,13 +59,13 @@
                         <i class="fas fa-briefcase"></i>Clientes</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="#">Listar Clientes</a>
+                            <a href="/pages/client_list.php">Listar Clientes</a>
                         </li>
                         <li>
-                            <a href="#">Cadastrar Cliente</a>
+                            <a href="/pages/client_new.php">Cadastrar Cliente</a>
                         </li>
                         <li>
-                            <a href="#">Grupos de Clientes</a>
+                            <a href="/pages/client_groups.php">Grupos de Clientes</a>
                         </li>
                     </ul>
                 </li>
@@ -88,7 +88,7 @@
                             <a href="/pages/user_list.php">Listar Usuários</a>
                         </li>
                         <li>
-                            <a href="/pages/user_new.php">Novo Usuário</a>
+                            <a href="/pages/user_new.php">Cadastrar Usuário</a>
                         </li>
                     </ul>
                 </li>
