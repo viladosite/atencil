@@ -23,14 +23,14 @@
                     <div class="card">
                         <div class="card-header">Instalar módulo</div>
                         <div class="card-body card-block">
-                            <form action="/functions/mod_install.php" method="post">
+                            <form action="/functions/mod_install.php" enctype="multipart/form-data" method="post">
 
                                 <div class="row form-group">
                                     <div class="col col-md-3">
                                         <label for="file-multiple-input" class=" form-control-label">Selecione o(s) MOD(s) </label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="file" id="file-multiple-input" name="file-multiple-input" multiple="" class="form-control-file">
+                                        <input type="file" id="modulos" name="modulos" multiple="" class="form-control-file">
                                     </div>
                                 </div>
 
@@ -50,7 +50,11 @@
 
                                 <div class="form-actions form-group">
                                     <button type="submit" class="btn btn-primary btn-sm">
-                                        Cadastrar
+                                        <i class="fa fa-dot-circle-o"></i> Instalar
+                                    </button>
+
+                                    <button type="reset" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-ban"></i> Limpar
                                     </button>
                                 </div>
 

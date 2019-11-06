@@ -160,7 +160,7 @@
                                             <i class="zmdi zmdi-account"></i>Minha Conta</a>
                                     </div>
                                     <div class="account-dropdown__item">
-                                        <a href="#">
+                                        <a href="pages/system.php">
                                             <i class="zmdi zmdi-settings"></i>Configurações</a>
                                     </div>
                                     <div class="account-dropdown__item">

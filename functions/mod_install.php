@@ -3,7 +3,6 @@
 // Carrega as configurações, funções e elementos base para funcionamento do sistema
 require __DIR__ . '/../includes/at_core.php';
 
-
 // Variáveis com dados do formulário
 $formpnome = mysqli_real_escape_string($mysql, $_POST['pnome']);
 $formunome = mysqli_real_escape_string($mysql, $_POST['unome']);
@@ -19,6 +18,65 @@ $usercompany = $_SESSION['UserCompany'];
 $userperm = 1;
 $userregstatus = 1;
 $regdate = date("Y-m-d H:i:s");
+
+
+
+
+
+
+
+// Verifica se foram selecionados arquivos e define as variáveis
+if($_FILES["modulos"]["name"]) {
+	$filename = $_FILES["modulos"]["name"];
+	$source = $_FILES["modulos"]["tmp_name"];
+	$type = $_FILES["modulos"]["type"];
+	
+	$name = explode(".", $filename);
+	$accepted_types = array('application/zip', 'application/x-zip-compressed', 'multipart/x-zip', 'application/x-compressed');
+
+	//	Gera o loop de arquivos enviados para confirma se seus tipos de arquivo são válidos
+	foreach($accepted_types as $mime_type) {
+		if($mime_type == $type) {
+			$okay = true;
+			break;
+		} 
+	}
+	
+	// Verifica as extensões de arquivo e continua caso sejam válidas
+	$continue = strtolower($name[1]) == 'zip' ? true : false;
+	if(!$continue) {
+		$message = "O arquivo que você está tentando enviar não é um arquivo zip. Só é possível instalar arquivos de módulo em formato .zip válido.";
+	}
+
+	$target_path = "/home/var/yoursite/httpdocs/".$filename;  // change this to the correct site path
+	if(move_uploaded_file($source, $target_path)) {
+		$zip = new ZipArchive();
+		$x = $zip->open($target_path);
+		if ($x === true) {
+			$zip->extractTo("/home/var/yoursite/httpdocs/"); // change this to the correct site path
+			$zip->close();
+	
+			unlink($target_path);
+		}
+		$message = "Your .zip file was uploaded and unpacked.";
+	} else {	
+		$message = "There was a problem with the upload. Please try again.";
+	}
+}
+
+
+
+<body>
+<?php if($message) echo "<p>$message</p>"; ?>
+<form enctype="multipart/form-data" method="post" action="">
+<label>Choose a zip file to upload: <input type="file" name="zip_file" /></label>
+<br />
+<input type="submit" name="submit" value="Upload" />
+</form>
+</body>
+</html>
+
+
 
 
 
