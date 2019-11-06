@@ -48,12 +48,12 @@ if($_FILES["modulos"]["name"]) {
 		$message = "O arquivo que você está tentando enviar não é um arquivo zip. Só é possível instalar arquivos de módulo em formato .zip válido.";
 	}
 
-	$target_path = $home_dir . "/" . $mods_dir . "/" . $filename;
+	$target_path = $home_dir . $mods_dir . "/" . $filename;
 	if(move_uploaded_file($source, $target_path)) {
 		$zip = new ZipArchive();
 		$x = $zip->open($target_path);
 		if ($x === true) {
-			$zip->extractTo($home_dir . "/" . $mods_dir . "/"); // change this to the correct site path
+			$zip->extractTo($home_dir . $mods_dir . "/"); // change this to the correct site path
 			$zip->close();
 	
 			unlink($target_path);
