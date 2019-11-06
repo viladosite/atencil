@@ -61,10 +61,10 @@
                                          aria-selected="true">Caminhos de Sistema</a>
                                         
                                         <?php if (perm_check($perm_edit_owncomp) == true){ ?>
-                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Minha Empresa</a>
+                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Empresas</a>
                                         <?php } ?>
 
-                                        <a class="nav-item nav-link" id="nav-perm-tab" data-toggle="tab" href="#nav-perm" role="tab" aria-controls="nav-perm" aria-selected="false">Minhas Permissões</a>
+                                        <a class="nav-item nav-link" id="nav-perm-tab" data-toggle="tab" href="#nav-perm" role="tab" aria-controls="nav-perm" aria-selected="false">Permissões</a>
 
                                     </div>
                                 </nav>
@@ -80,53 +80,49 @@
                                     <div class="tab-pane fade" id="nav-paths" role="tabpanel" aria-labelledby="nav-paths-tab">
                                         
                                         <p class="text-muted m-b-15">
-                                            Confira abaixo as permissões de seu usuário:
+                                            Confira abaixo os caminhos de seu sistema:
                                         </p>
                                         <br>
 
-                                        <p>Painel:  
-                                        <?php badges($perm_view_dashboard, $perm_edit_dashboard); ?>
-                                        </p>
-                                        
-                                        <p>Minha Conta:  
-                                        <?php badges($perm_view_editacc, $perm_edit_editacc); ?>
-                                        </p>
+                                        <p> Website:<br>
+                                        <?php echo $website_path; ?></p>
 
-                                        <p>Atendimentos:  
-                                        <?php badges($perm_view_attendance, $perm_edit_attendance); ?>
-                                        </p>
+                                        <p> Home:<br>
+                                        <?php echo $home_dir; ?> </p>
 
-                                        <p>Empresas:  
-                                        <?php badges($perm_view_comps, $perm_edit_comps); ?>
-                                        </p>
+                                        <p> Index 1:<br>
+                                        <?php echo $index_path; ?> </p>
 
-                                        <p>Sua Empresa:  
-                                        <?php badges($perm_view_owncomp, $perm_edit_owncomp); ?>
-                                        </p>
+                                        <p> Index 2:<br>
+                                        <?php echo $index_dir1; ?> </p>
 
-                                        <p>Clientes:  
-                                        <?php badges($perm_view_clients, $perm_edit_clients); ?>
-                                        </p>
+                                        <p> Index 3:<br>
+                                        <?php echo $index_dir2; ?> </p>
 
-                                        <p>Usuários:  
-                                        <?php badges($perm_view_users, $perm_edit_users); ?>
-                                        </p>
+                                        <p> Index 4:<br>
+                                        <?php echo $index_dir3; ?> </p>
 
-                                        <p>Sistema Atencil:  
-                                        <?php badges($perm_view_sys, $perm_edit_sys); ?>
-                                        </p>
+                                        <p> Modules Dir:<br>
+                                        <?php echo $mods_dir; ?> </p>
 
-                                        <p>Pesquisa:  
-                                        <?php badges($perm_view_search, $perm_edit_search); ?>
-                                        </p>
+                                        <p> Functions Dir:<br>
+                                        <?php echo $func_dir; ?> </p>
 
-                                        <p>Módulos:  
-                                        <?php badges($perm_view_modules, $perm_edit_modules); ?>
-                                        </p>
+                                        <p> Includes Dir:<br>
+                                        <?php echo $inc_dir; ?> </p>
 
-                                        <p>Permissões:  
-                                        <?php badges($perm_view_perms, $perm_edit_perms); ?>
-                                        </p>
+                                        <p> Assets Dir:<br>
+                                        <?php echo $assets_dir; ?> </p>
+
+                                        <p> Pages Dir:<br>
+                                        <?php echo $pages_dir; ?> </p>
+
+                                        <p> Contents Dir:<br>
+                                        <?php echo $contents_dir; ?> </p>
+
+                                        <p> Connection File:<br>
+                                        <?php echo $con_file; ?> </p>
+
 
                                     </div>
                                     <!-- Aba Caminhos de Sistema -->
