@@ -7,7 +7,7 @@
                 <div class="col-lg-4">
                     <div class="card">
                         <div class="card-header">
-                            <strong>Info do Servidor</strong>
+                            <strong>Server Info</strong>
                         </div>
                         <div class="card-body">
                             <p><strong>Data de Registro:</strong></p>
@@ -61,7 +61,7 @@
                                          aria-selected="true">Caminhos de Sistema</a>
                                         
                                         <?php if (perm_check($perm_edit_owncomp) == true){ ?>
-                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Empresas</a>
+                                        <a class="nav-item nav-link" id="nav-server-tab" data-toggle="tab" href="#nav-server" role="tab" aria-controls="nav-server" aria-selected="false">Servidor</a>
                                         <?php } ?>
 
                                         <a class="nav-item nav-link" id="nav-perm-tab" data-toggle="tab" href="#nav-perm" role="tab" aria-controls="nav-perm" aria-selected="false">Permissões</a>
@@ -128,117 +128,22 @@
                                     <!-- Aba Caminhos de Sistema -->
 
 
-                                    <!-- Aba Minha Empresa -->
-                                    <?php if (perm_check($perm_edit_owncomp) == true){ ?>
-                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label">Código</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <p class="form-control-static">
-                                                        <?php echo $_SESSION['UserCompany'] ?>
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="input_compname" class=" form-control-label">Empresa</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="input_compname" name="input_compname" placeholder="Nome da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companyname'); ?>'>
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="input_comptel" class=" form-control-label">Telefone</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="input_comptel" name="input_comptel" placeholder="Nome da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companytel'); ?>'>
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="input_compemail" class=" form-control-label">Email</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="email" id="input_compemail" name="input_compemail" placeholder="Email da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companymail'); ?>'>
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="input_compsite" class=" form-control-label">Telefone</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="input_compsite" name="input_compsite" placeholder="Nome da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companysite'); ?>'>
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="input_compaddress" class=" form-control-label">Endereço</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <textarea name="input_compaddress" id="input_compaddress" rows="9" placeholder="Fale um pouco sobre a sua empresa" class="form-control"><?php compinfo_byid($_SESSION['UserCompany'], 'companyaddress'); ?></textarea>
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="input_compsector" class=" form-control-label">Setor de Atuação</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="input_compsector" name="input_compsector" placeholder="Categoria da Empresa" class="form-control" value='<?php compinfo_byid($_SESSION['UserCompany'], 'companysector'); ?>'>
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="input_plan" class=" form-control-label">Plano</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <select name="input_plan" id="input_plan" class="form-control" disabled="">
-                                                        <option value="0">Alterar seu plano</option>
-                                                        <option value="gratuito">Gratuito</option>
-                                                        <option value="regular">Regular</option>
-                                                        <option value="profissional">Profissional</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="input_logosend" class=" form-control-label">Logo da Empresa</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="file" id="input_logosend" name="input_logosend" class="form-control-file">
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="password-input" class=" form-control-label">Senha</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="password" id="input_pass" name="input_pass" placeholder="Senha da Conta" class="form-control">
-                                                </div>
-                                            </div>
-
-                                        </form>
+                                    <!-- Aba Servidor -->
+                                    <?php if (perm_check($perm_edit_sys) == true){ ?>
+                                    <div class="tab-pane fade" id="nav-server" role="tabpanel" aria-labelledby="nav-server-tab">
                                         
-                                        <button type="submit" class="btn btn-primary btn-sm">
-                                            <i class="fa fa-dot-circle-o"></i> Salvar
-                                        </button>
+                                        <p class="text-muted m-b-15">
+                                            Confira abaixo as informações do PHPInfo:
+                                        </p>
                                         
+                                        <br>
+                                        
+                                        <p> <?php phpinfo() ?> </p>
+                                                                                
                                     </div>
                                     <?php } ?>
-                                    <!-- Aba Minha Empresa -->
+                                    <!-- Aba Servidor -->
+                                    
 
                                     <!-- Aba Minhas Permissões -->
                                     <div class="tab-pane fade" id="nav-perm" role="tabpanel" aria-labelledby="nav-perm-tab">
