@@ -12,7 +12,7 @@
                             <strong>Atenção:</strong>
                         </div>
                         <div class="card-body">
-                            <p>Este usuário será cadastrado como um usuário vinculado à sua empresa e poderá ver detalhes de sua empresa como </p>
+                            <p>Este cliente será cadastrado como um cliente vinculado à sua empresa e seus funcionários ou usuários podem ter acesso a dados dele como:</p>
                             <p>Em breve</p>
                         </div>
                     </div>
@@ -21,9 +21,9 @@
                 <div class="col-lg-8">
                     
                     <div class="card">
-                        <div class="card-header">Dados do Usuário</div>
+                        <div class="card-header">Dados do Cliente</div>
                         <div class="card-body card-block">
-                            <form action="/functions/user_create.php" method="post">
+                            <form action="/functions/client_create.php" method="post">
 
                                 <div class="form-group">
                                     <div class="input-group">
@@ -47,16 +47,6 @@
                                 
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <div class="input-group-addon">Nome de Usuário</div>
-                                        <input type="text" id="user" name="user" class="form-control">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-user"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="input-group">
                                         <div class="input-group-addon">Email</div>
                                         <input type="email" id="email" name="email" class="form-control">
                                         <div class="input-group-addon">
@@ -65,24 +55,14 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">Senha</div>
-                                        <input type="password" id="senha" name="senha" class="form-control">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-asterisk"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="permissao" class=" form-control-label">Permissão</label>
+                                        <label for="status" class=" form-control-label">Status</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <select name="permissao" id="permissao" class="form-control">
-                                            <option value="1">Ver</option>
-                                            <option value="2">Editar</option>
+                                        <select name="status" id="status" class="form-control">
+                                            <option value="1">Ativo</option>
+                                            <option value="2">Inativo</option>
                                         </select>
                                     </div>
                                 </div>
