@@ -55,7 +55,7 @@ $mods_dir = '/modules';
 
 // Diretório de funções (Functions directory)
 global $func_dir;
- $func_dir = '';
+$func_dir = '';
 
 // Diretório de includes (Includes directory)
 global $inc_dir;
@@ -77,7 +77,7 @@ $contents_dir = '';
 global $con_file;
 $con_file = 'at_connect.php';
 
-*/
+
 
 
 
