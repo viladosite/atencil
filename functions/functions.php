@@ -179,6 +179,38 @@ function userinfo_byid($userid, $info) {
 }
 
 
+// -----------------------------------------------------
+// CLASSES DE OBTENÇÂO DE DADOS
+// -----------------------------------------------------
+
+// Constroi a classe que checa os nomes de diretórios diretamente dentro de um arquivo zip
+// Build a class to check zip files and the directories inside them
+class zipadmin{
+
+  private $file;
+  private $folder;
+  private $zip;
+
+  public function __construct($filename, $folder) {
+    $this->zip = new ZipArchive;
+    $this->file = $filename ;
+    $this->folder = $folder ;
+    }
+
+  public function listzip() {
+    $res = false;
+    if ($this->zip->open($this->folder . $this->file) == TRUE) {
+      $i = 0;
+      while ($info = $this->zip->statIndex($i)) {
+        if ($info['crc'] == 0 && preg_match('#^[^/]*?/$#', $info['name']))
+          $res[] = preg_replace('#^([^/]*?)/$#', '$1', $info['name']);
+        $i++;
+        }
+      }
+    return $res;
+    }
+
+}
 
 
 

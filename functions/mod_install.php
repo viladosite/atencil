@@ -24,9 +24,6 @@ $modpath = '';
 $modstatus = 1;
 
 
-
-
-
 // Verifica se foram selecionados arquivos e define as variáveis
 if($_FILES["modulos"]["name"]) {
 	$filename = $_FILES["modulos"]["name"];
@@ -53,8 +50,10 @@ if($_FILES["modulos"]["name"]) {
 
 	// Set the path variables for later use
 	$target_path = $home_dir . $mods_dir . "/" . $filename;
-	$mod_path = $home_dir . $mods_dir . "/" . $name[0];
-	$mod_info_path = $home_dir . $mods_dir . "/" . $name[0] . "/" . "modinfo.json";
+	$mod_path = $home_dir . $mods_dir . "/";
+	$mod_dir_path = new zipadmin('$filename', '$mod_path');
+	$mod_info_path = $mod_dir_path[0] . "/" . "modinfo.json";
+
 
 	if(move_uploaded_file($source, $target_path)) {
 		$zip = new ZipArchive();
@@ -100,6 +99,10 @@ if ($inststatus = 2){
 		INSERT INTO at_modules (modinst, modname, modcat, modauthor, modauthorlink, modlogo, modpath, modstatus)
 		VALUES ('$modinstdate', '$modname', '$modcateg', '$modauthor', '$modauthorlink', '$modlogo', '$modpath', '$modstatus');
 	";
+
+	echo $mod_info_path;
+	echo $moddata[0], " || ", $moddata[1], " || ", $moddata[2], " || ", $moddata[3], " || ", $moddata[4], " || ", $moddata[5];
+
 
 
 	// Execução de inserção de dados
