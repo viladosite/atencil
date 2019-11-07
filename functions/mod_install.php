@@ -4,12 +4,7 @@
 require __DIR__ . '/../includes/at_core.php';
 
 // Variáveis com dados do formulário
-$formpnome = mysqli_real_escape_string($mysql, $_POST['pnome']);
-$formunome = mysqli_real_escape_string($mysql, $_POST['unome']);
-$formuser = mysqli_real_escape_string($mysql, $_POST['user']);
-$formemail = mysqli_real_escape_string($mysql, $_POST['email']);
-$formsenha = sha1($_POST['senha']);
-$usercompanylvl = mysqli_real_escape_string($mysql, $_POST['permissao']);
+$filepath = mysqli_real_escape_string($mysql, $_POST['permissao']);
 
 
 // Variáveis nativas do usuário
@@ -17,9 +12,16 @@ $useridatual = $_SESSION['UserID'];
 $usercompany = $_SESSION['UserCompany'];
 $userperm = 1;
 $userregstatus = 1;
-$regdate = date("Y-m-d H:i:s");
 
-
+// Criação das variáveis padrão para inclusão no banco
+$modinstdate = date("Y-m-d H:i:s");
+$modname = 'Sem Nome';
+$modcat = 'Sem Categoria';
+$modauthor = 'Vila do Site';
+$modauthorlink = 'http://viladosite.com.br';
+$modlogo = 'logo.png';
+$modpath = '';
+$modstatus = 1;
 
 
 
@@ -46,77 +48,66 @@ if($_FILES["modulos"]["name"]) {
 	$continue = strtolower($name[1]) == 'zip' ? true : false;
 	if(!$continue) {
 		$message = "O arquivo que você está tentando enviar não é um arquivo zip. Só é possível instalar arquivos de módulo em formato .zip válido.";
+		$inststatus = 1;
 	}
 
+	// Set the path variables for later use
 	$target_path = $home_dir . $mods_dir . "/" . $filename;
+	$mod_path = $home_dir . $mods_dir . "/" . $name[0];
+	$mod_info_path = $home_dir . $mods_dir . "/" . $name[0] . "/" . "modinfo.json";
+
 	if(move_uploaded_file($source, $target_path)) {
 		$zip = new ZipArchive();
 		$x = $zip->open($target_path);
 		if ($x === true) {
-			$zip->extractTo($home_dir . $mods_dir . "/"); // change this to the correct site path
+			$zip->extractTo($home_dir . $mods_dir . "/");
 			$zip->close();
 	
 			unlink($target_path);
 		}
 		$message = "Seu módulo foi enviado e instalado com sucesso.";
+		$inststatus = 2;
+
 	} else {	
+
 		$message = "Houve um problema na instalação do módulo. Por favor tente novamente ou entre em contato conosco.";
+		$inststatus = 0;
 	}
 }
 
-/*
+if ($inststatus = 2){
 
-// Condicionais de verificação de preenchimento de campos
-if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formemail) or empty($formsenha) ) {
+	// Get the contents of hte modinfo JSON file
+	$strmodinfojson = file_get_contents('$mod_info_path');
 	
-	// Retorna o erro caso algum campo tenha sido deixado em branco
-	echo '<script type="text/javascript">alert("Você não preencheu algum campo. Preencha todos os campos para continuar.");history.go(-1);</script>';
+	// Convert to array 
+	$moddata = json_decode($strmodinfojson, true);
 
-} else {
+	// Obtem e altera as variáveis com os dados do plugin para enviar ao banco
+	$modname = $moddata[0];
+	$modcateg = $moddata[1];
+	$modauthor = $moddata[2];
+	$modauthorurl = $moddata[3];
+	$modlogo = $moddata[4];
+	$modpath = $moddata[5];
 
 	// Checagem de conexão
 	if (!$mysql) { die("A Conexão Falhou: " . mysqli_connect_error()); }
 
 
 	// Queries de inserção dos dados
-	$usersql = "
-		INSERT INTO at_users (userfname, userlname, userlogin, userpass, usermail, userpermlvl, usercomp, usercomplvl, userstatus, userregdate)
-		VALUES ('$formpnome', '$formunome', '$formuser', '$formsenha', '$formemail', '$userperm', '$usercompany', '$usercompanylvl', '$userregstatus', '$regdate');
+	$modinstsql = "
+		INSERT INTO at_modules (modinst, modname, modcat, modauthor, modauthorlink, modlogo, modpath, modstatus)
+		VALUES ('$modinstdate', '$modname', '$modcateg', '$modauthor', '$modauthorlink', '$modlogo', '$modpath', '$modstatus');
 	";
 
+
 	// Execução de inserção de dados
-	$criauser = mysqli_query($mysql, $usersql);
+	$modinstall = mysqli_query($mysql, $modinstsql);
 
-	// Mostra mensagem de confirmação caso o registro funcione
-	if ($criauser) {
-
-		// Mostra o aviso para relogar
-		echo '<script type="text/javascript"> 
-	    window.alert("O usuário foi criado com sucesso.");
-	    </script>';
-
-	    // Direciona para a tela de login
-	    header("Location: /pages/user_list.php");
-
-	    // Encerra a conexão
-		mysqli_close($mysql);
-
-	} else {
-
-		// Mostra o aviso para relogar
-		echo '<script type="text/javascript"> 
-	    window.alert("Houve um erro ao cadastrar o usuário.");
-	    </script>';
-
-	    // Direciona para a tela de login
-	    header("Location: /pages/user_new.php");
-
-	    // Encerra a conexão
-		mysqli_close($mysql);
-	}
+	mysqli_close($mysql);
 
 }
 
-*/
 
 ?>
