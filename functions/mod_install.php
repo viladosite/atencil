@@ -78,7 +78,7 @@ if($_FILES["modulos"]["name"]) {
 if ($inststatus = 2){
 
 	// Get the contents of hte modinfo JSON file
-	$strmodinfojson = file_get_contents('$mod_info_path');
+	$strmodinfojson = file_get_contents($mod_info_path);
 	
 	// Convert to array 
 	$moddata = json_decode($strmodinfojson, true);
