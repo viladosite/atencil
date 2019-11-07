@@ -51,18 +51,17 @@ if($_FILES["modulos"]["name"]) {
 	// Set the path variables
 	$target_path = $home_dir . $mods_dir . "/" . $filename;
 	$mod_path = $home_dir . $mods_dir . "/";
+
 	
+	// Move the file to the right location and extract it
 	if(move_uploaded_file($source, $target_path)) {
 		$zip = new ZipArchive();
 		$x = $zip->open($target_path);
-		$moddiscover = new zipadmin('$filename', '$mod_path');
-		$mod_dir_path = $moddiscover->listzip();
 		if ($x === true) {
 			$zip->extractTo($home_dir . $mods_dir . "/");
+			$zipdir = trim($zip->getNameIndex(0), '/');
+			$mod_info_path = $zipdir . "/" . "modinfo.json";
 			$zip->close();
-			
-			$mod_info_path = $mod_dir_path[0] . "/" . "modinfo.json";
-
 			unlink($target_path);
 		}
 		$message = "Seu módulo foi enviado e instalado com sucesso.";
@@ -100,10 +99,6 @@ if ($inststatus = 2){
 		INSERT INTO at_modules (modinst, modname, modcat, modauthor, modauthorlink, modlogo, modpath, modstatus)
 		VALUES ('$modinstdate', '$modname', '$modcateg', '$modauthor', '$modauthorlink', '$modlogo', '$modpath', '$modstatus');
 	";
-
-	print_r($mod_dir_path->listzip());
-	echo $moddata[0], " || ", $moddata[1], " || ", $moddata[2], " || ", $moddata[3], " || ", $moddata[4], " || ", $moddata[5];
-
 
 
 	// Execução de inserção de dados
