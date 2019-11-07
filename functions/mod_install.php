@@ -48,14 +48,10 @@ if($_FILES["modulos"]["name"]) {
 		$inststatus = 1;
 	}
 
-	// Set the path variables for later use
+	// Set the path variables
 	$target_path = $home_dir . $mods_dir . "/" . $filename;
 	$mod_path = $home_dir . $mods_dir . "/";
-	$moddiscover = new zipadmin('$filename', '$mod_path');
-	$mod_dir_path = $moddiscover->listzip();
-	$mod_info_path = $mod_dir_path[0] . "/" . "modinfo.json";
-
-
+	
 	if(move_uploaded_file($source, $target_path)) {
 		$zip = new ZipArchive();
 		$x = $zip->open($target_path);
@@ -63,6 +59,10 @@ if($_FILES["modulos"]["name"]) {
 			$zip->extractTo($home_dir . $mods_dir . "/");
 			$zip->close();
 	
+			$moddiscover = new zipadmin('$filename', '$mod_path');
+			$mod_dir_path = $moddiscover->listzip();
+			$mod_info_path = $mod_dir_path[0] . "/" . "modinfo.json";
+
 			unlink($target_path);
 		}
 		$message = "Seu módulo foi enviado e instalado com sucesso.";
