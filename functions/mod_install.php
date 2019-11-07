@@ -55,12 +55,12 @@ if($_FILES["modulos"]["name"]) {
 	if(move_uploaded_file($source, $target_path)) {
 		$zip = new ZipArchive();
 		$x = $zip->open($target_path);
+		$moddiscover = new zipadmin('$filename', '$mod_path');
+		$mod_dir_path = $moddiscover->listzip();
 		if ($x === true) {
 			$zip->extractTo($home_dir . $mods_dir . "/");
 			$zip->close();
-	
-			$moddiscover = new zipadmin('$filename', '$mod_path');
-			$mod_dir_path = $moddiscover->listzip();
+			
 			$mod_info_path = $mod_dir_path[0] . "/" . "modinfo.json";
 
 			unlink($target_path);
