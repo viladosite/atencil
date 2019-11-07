@@ -51,7 +51,8 @@ if($_FILES["modulos"]["name"]) {
 	// Set the path variables for later use
 	$target_path = $home_dir . $mods_dir . "/" . $filename;
 	$mod_path = $home_dir . $mods_dir . "/";
-	$mod_dir_path = new zipadmin('$filename', '$mod_path');
+	$moddiscover = new zipadmin('$filename', '$mod_path');
+	$mod_dir_path = $moddiscover->listzip();
 	$mod_info_path = $mod_dir_path[0] . "/" . "modinfo.json";
 
 
@@ -100,7 +101,7 @@ if ($inststatus = 2){
 		VALUES ('$modinstdate', '$modname', '$modcateg', '$modauthor', '$modauthorlink', '$modlogo', '$modpath', '$modstatus');
 	";
 
-	echo $mod_info_path;
+	print_r($mod_dir_path->listzip());
 	echo $moddata[0], " || ", $moddata[1], " || ", $moddata[2], " || ", $moddata[3], " || ", $moddata[4], " || ", $moddata[5];
 
 
