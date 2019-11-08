@@ -78,7 +78,7 @@
 
                         <?php
                         // Monta os parâmetros da query
-                        $sql = "SELECT * FROM `at_modules` WHERE (`modstatus` = 1)";
+                        $sql = "SELECT * FROM `at_modules`";
 
                         // Monta a query para execução
                         $mods = mysqli_query($mysql, $sql);
@@ -103,7 +103,7 @@
                             <td><?php echo $mod['modcat']; ?></td>
                             <td>
                                 <?php
-                                statuscheck($mod['modstatus'];, 'Desativado', 'Ativado')
+                                statuscheck($mod['modstatus'], 'Desativado', 'Ativado', 1)
                                 ?>
                             </td>
                             <td>
