@@ -1,17 +1,7 @@
 <?php
 
-// Carrega as configurações, funções e elementos base para funcionamento do sistema
-require __DIR__ . '/../includes/at_core.php';
-
 // Variáveis com dados do formulário
 $filepath = mysqli_real_escape_string($mysql, $_POST['permissao']);
-
-
-// Variáveis nativas do usuário
-$useridatual = $_SESSION['UserID'];
-$usercompany = $_SESSION['UserCompany'];
-$userperm = 1;
-$userregstatus = 1;
 
 // Criação das variáveis padrão para inclusão no banco
 $minstdate = date("Y-m-d H:i:s");
