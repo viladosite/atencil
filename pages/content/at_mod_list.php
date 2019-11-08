@@ -101,7 +101,7 @@
                             <td><?php echo $mod['modauthor']; ?></td>
                             <td><?php echo $mod['modinst']; ?></td>
                             <td><?php echo $mod['modcat']; ?></td>
-                            <td><?php echo $mod['status'];?> </td>
+                            <td><?php echo $mod['modstatus'];?> </td>
                             <td>
                                 <div class="table-data-feature">
 
