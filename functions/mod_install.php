@@ -14,18 +14,19 @@ $userperm = 1;
 $userregstatus = 1;
 
 // Criação das variáveis padrão para inclusão no banco
-$modinstdate = date("Y-m-d H:i:s");
-$modname = 'Sem Nome';
-$modcat = 'Sem Categoria';
-$modauthor = 'Vila do Site';
-$modauthorlink = 'http://viladosite.com.br';
-$modlogo = 'logo.png';
-$modpath = '';
-$modstatus = 1;
+$minstdate = date("Y-m-d H:i:s");
+$mname = 'Sem Nome';
+$mcat = 'Sem Categoria';
+$mauthor = 'Vila do Site';
+$mauthorlink = 'http://viladosite.com.br';
+$mlogo = 'logo.png';
+$mpath = '';
+$mstatus = 1;
 
 
 // Verifica se foram selecionados arquivos e define as variáveis
 if($_FILES["modulos"]["name"]) {
+
 	$filename = $_FILES["modulos"]["name"];
 	$source = $_FILES["modulos"]["tmp_name"];
 	$type = $_FILES["modulos"]["type"];
@@ -50,7 +51,7 @@ if($_FILES["modulos"]["name"]) {
 
 	// Set the path variables
 	$target_path = $home_dir . $mods_dir . "/" . $filename;
-	$mod_path = $home_dir . $mods_dir . "/";
+
 
 	
 	// Move the file to the right location and extract it
@@ -60,7 +61,7 @@ if($_FILES["modulos"]["name"]) {
 		if ($x === true) {
 			$zip->extractTo($home_dir . $mods_dir . "/");
 			$zipdir = trim($zip->getNameIndex(0), '/');
-			$mod_info_path = $zipdir . "/" . "modinfo.json";
+			$mod_info_path = $website_path . $mods_dir . "/" . $zipdir . "/" . "modinfo.json";
 			$zip->close();
 			unlink($target_path);
 		}
@@ -74,39 +75,47 @@ if($_FILES["modulos"]["name"]) {
 	}
 }
 
+// When the upload works the data is saved in database
 if ($inststatus = 2){
 
+
 	// Get the contents of hte modinfo JSON file
-	$strmodinfojson = file_get_contents($mod_info_path);
+	$modinfojson = file_get_contents($mod_info_path);
 	
-	// Convert to array 
-	$moddata = json_decode($strmodinfojson, true);
+	// Convert to array
+	$moddata = json_decode($modinfojson, true);
 
-	// Obtem e altera as variáveis com os dados do plugin para enviar ao banco
-	$modname = $moddata[0];
-	$modcateg = $moddata[1];
-	$modauthor = $moddata[2];
-	$modauthorurl = $moddata[3];
-	$modlogo = $moddata[4];
-	$modpath = $moddata[5];
+	// Set the variables to populate the database
+	$mname = $moddata['name'];
+	$mcateg = $moddata['category'];
+	$mauthor = $moddata['author'];
+	$mauthorurl = $moddata['authorurl'];
+	$mlogo = $moddata['modlogo'];
+	$mpath = $moddata['modpath'];
 
-	// Checagem de conexão
+
+	// Check the connection
 	if (!$mysql) { die("A Conexão Falhou: " . mysqli_connect_error()); }
 
 
-	// Queries de inserção dos dados
+	// Set the query
 	$modinstsql = "
 		INSERT INTO at_modules (modinst, modname, modcat, modauthor, modauthorlink, modlogo, modpath, modstatus)
-		VALUES ('$modinstdate', '$modname', '$modcateg', '$modauthor', '$modauthorlink', '$modlogo', '$modpath', '$modstatus');
+		VALUES ('$minstdate', '$mname', '$mcateg', '$mauthor', '$mauthorlink', '$mlogo', '$mpath', '$mstatus');
 	";
 
 
-	// Execução de inserção de dados
+	// Run the query
 	$modinstall = mysqli_query($mysql, $modinstsql);
 
+	// Close the connection
 	mysqli_close($mysql);
 
 }
+
+
+// Redirect back to the instalation page
+header("Location: pages/mod_install.php");
 
 
 ?>

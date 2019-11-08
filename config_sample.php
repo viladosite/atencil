@@ -37,6 +37,10 @@ $home_dir = $_SERVER['DOCUMENT_ROOT'];
 global $index_path;
 $index_path = realpath('index.php');
 
+// Caminho do arquivo atual (Actual file path)
+global $actual_path;
+$actual_path = dirname(__FILE__);
+
 // Diretório do index - com index.php (Index directory - with index.php)
 global $index_dir1;
 $index_dir1 = str_replace($home_dir, '', $index_path);

@@ -1,3 +1,5 @@
+<?php include __DIR__ . '/../functions/mod_install.php'; ?>
+
 <!-- MAIN CONTENT-->
 <div class="main-content">
     <div class="section__content section__content--p30">
@@ -61,9 +63,13 @@
                             </form>
                         </div>
                     </div>
+                </div>
 
 
+                <div class="col-lg-12">
+                    
                     <!-- Alerts -->
+                    <?php if ($inststatus == 2) { ?>
                     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
                         <span class="badge badge-pill badge-success">Sucesso</span>
                         Seu módulo foi instalado com sucesso.
@@ -71,7 +77,10 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    <?php } ?>
 
+
+                    <?php if ($inststatus == 0) { ?>
                     <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
                         <span class="badge badge-pill badge-danger">Erro</span>
                         Ocorreu um erro e seu módulo não foi instalado.
@@ -79,7 +88,10 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    <?php } ?>
 
+
+                    <?php if ($inststatus == 1) { ?>
                     <div class="sufee-alert alert with-close alert-warning alert-dismissible fade show">
                         <span class="badge badge-pill badge-warning">Atenção</span>
                         Seu módulo foi instalado mas pode não funcionar corretamente.
@@ -87,10 +99,11 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-
-
+                    <?php } ?>
 
                 </div>
+
+
             </div>
         </div>
     </div>
