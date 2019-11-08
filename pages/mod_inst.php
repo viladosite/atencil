@@ -5,9 +5,6 @@
 // Carrega as configurações, funções e elementos base para funcionamento do sistema
 require __DIR__ . '/../includes/at_core.php';
 
-// Inclui o arquivo de instalação para carregar variáveis relativas à instalação
-include __DIR__ . '/../functions/mod_install.php';
-
 // Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
 if (perm_comp_check($perm_edit_modules) == false) {
     header("Location: error_permission.php"); exit;
