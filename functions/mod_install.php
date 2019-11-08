@@ -1,5 +1,8 @@
 <?php
 
+// Carrega as configurações, funções e elementos base para funcionamento do sistema
+require __DIR__ . '/../includes/at_core.php';
+
 // Variáveis com dados do formulário
 $filepath = mysqli_real_escape_string($mysql, $_POST['permissao']);
 
