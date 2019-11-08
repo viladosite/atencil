@@ -108,7 +108,7 @@ if ($inststatus = 2){
 
 
 // Redirect back to the instalation page
-header("Location: pages/mod_install.php");
+header("Location: ../pages/mod_install.php");
 
 
 ?>
