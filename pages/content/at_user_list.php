@@ -99,13 +99,15 @@
                                         <i class="zmdi zmdi-edit"></i>
                                     </button>
 
+                                    <!--
                                     <form action="/includes/at_modal_userdel_conf.php" style="display: inline;" method="post">
                                         <input type="hidden" id="useridtorem" name="useridtorem" value="<?php echo $usuario['userid']; ?>">
                                         <input type="hidden" id="userlogintorem" name="userlogintorem" value="<?php echo $usuario['userlogin']; ?>">
+                                        -->
                                         <button class="item" data-toggle="modal" data-target="#confirmar" title="Remover" name="function" value='delete' type="submit">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button>
-                                    </form>
+                                    <!-- </form> -->
 
                                 </div>
                             </td>
