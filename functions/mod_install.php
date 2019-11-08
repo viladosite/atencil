@@ -36,7 +36,7 @@ if($_FILES["modulos"]["name"]) {
 	$continue = strtolower($name[1]) == 'zip' ? true : false;
 	if(!$continue) {
 		$message = "O arquivo que você está tentando enviar não é um arquivo zip. Só é possível instalar arquivos de módulo em formato .zip válido.";
-		$inststatus = 1;
+		$inststatus = 'warn';
 	}
 
 	// Set the path variables
@@ -56,12 +56,12 @@ if($_FILES["modulos"]["name"]) {
 			unlink($target_path);
 		}
 		$message = "Seu módulo foi enviado e instalado com sucesso.";
-		$inststatus = 2;
+		$inststatus = 'ok';
 
 	} else {	
 
 		$message = "Houve um problema na instalação do módulo. Por favor tente novamente ou entre em contato conosco.";
-		$inststatus = 0;
+		$inststatus = 'error';
 	}
 }
 

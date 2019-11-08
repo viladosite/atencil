@@ -67,7 +67,7 @@
                 <div class="col-lg-12">
                     
                     <!-- Alerts -->
-                    <?php if ($inststatus == 2) { ?>
+                    <?php if ($inststatus == 'ok') { ?>
                     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
                         <span class="badge badge-pill badge-success">Sucesso</span>
                         <?php echo $message; ?>
@@ -78,7 +78,7 @@
                     <?php } ?>
 
 
-                    <?php if ($inststatus == 0) { ?>
+                    <?php if ($inststatus == 'error') { ?>
                     <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
                         <span class="badge badge-pill badge-danger">Erro</span>
                         <?php echo $message; ?>
@@ -89,7 +89,7 @@
                     <?php } ?>
 
 
-                    <?php if ($inststatus == 1) { ?>
+                    <?php if ($inststatus == 'warn') { ?>
                     <div class="sufee-alert alert with-close alert-warning alert-dismissible fade show">
                         <span class="badge badge-pill badge-warning">Atenção</span>
                         <?php echo $message; ?>
