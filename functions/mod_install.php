@@ -18,11 +18,11 @@ $mstatus = 1;
 
 
 // Verifica se foram selecionados arquivos e define as variáveis
-if($_FILES["modulos"]["name"]) {
+if($_FILES["modfile"]["name"]) {
 
-	$filename = $_FILES["modulos"]["name"];
-	$source = $_FILES["modulos"]["tmp_name"];
-	$type = $_FILES["modulos"]["type"];
+	$filename = $_FILES["modfile"]["name"];
+	$source = $_FILES["modfile"]["tmp_name"];
+	$type = $_FILES["modfile"]["type"];
 	
 	$name = explode(".", $filename);
 	$accepted_types = array('application/zip', 'application/x-zip-compressed', 'multipart/x-zip', 'application/x-compressed');

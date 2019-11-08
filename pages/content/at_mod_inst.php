@@ -27,10 +27,10 @@
 
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="file-multiple-input" class=" form-control-label">Selecione o(s) MOD(s) </label>
+                                        <label for="modfile" class=" form-control-label">Selecione o(s) MOD(s) </label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="file" id="modulos" name="modulos" multiple="" class="form-control-file">
+                                        <input type="file" id="modfile" name="modfile" class="form-control-file">
                                     </div>
                                 </div>
 
