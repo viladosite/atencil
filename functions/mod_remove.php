@@ -23,8 +23,10 @@ $modremdb = mysqli_query($mysql, $modremquery);
 
 if ($modrembd = true & $modremdir = true) {
 	
+	echo $modformdir;
+	echo $modformid;
 	// Redirect back to the instalation page
-	header("Location: ../pages/mod_list.php");
+	// header("Location: ../pages/mod_list.php");
 
 }
 

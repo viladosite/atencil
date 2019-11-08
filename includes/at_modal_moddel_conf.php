@@ -17,6 +17,8 @@
                 <br>
                 <p>Você tem certeza que deseja <strong>remover este módulo?</strong></p>
                 <p><?php echo $mod['modname']; ?></p>
+                <p><?php echo $mod['modid']; ?></p>
+                <p><?php echo $mod['modpath']; ?></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
