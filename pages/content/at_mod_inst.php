@@ -99,6 +99,8 @@
                     </div>
                     <?php } ?>
 
+                
+                <?php $inststatus = ''; // Reset the installation status back to empty ?>
                 </div>
 
 
