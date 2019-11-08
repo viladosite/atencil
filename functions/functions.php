@@ -57,12 +57,16 @@ function perm_comp_check($permvar) {
 
 // Função para checagem de status baseado em informação binaria
 // Informe uma variável, uma resposta caso 0 e outra caso 1
-function statuscheck($variable, $zeroanswer, $oneanswer){
+// Informe como deseja o resultado (0 para result / 1 para echo)
+function statuscheck($variable, $zeroanswer, $oneanswer, $resmode = 0){
 	if ($variable == 0) { $result = $zeroanswer; };
 	if ($variable == 1) { $result = $oneanswer; };
 
-	echo $result;
-	return $result;
+	if ($resmode = 1) {
+		echo $result;
+	} else {
+		return $result;
+	}
 
 }
 
