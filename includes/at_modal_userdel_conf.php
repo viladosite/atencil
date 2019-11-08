@@ -1,11 +1,4 @@
 <!-- INÍCIO da Confirmação de Remoção -->
-<?php
-// Define as variáveis para carregar o alerta com os dados corretos
-$idtodel = $_POST['useridtorem'];
-$logintodel = $_POST['userlogintorem'];
-
-
-?>
 <div class="modal fade" id="confirmar" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
