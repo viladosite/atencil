@@ -117,7 +117,7 @@
                                         <i class="zmdi zmdi-refresh"></i>
                                     </button>
 
-                                    <button class="item" data-toggle="modal" data-target="#confirmar" title="Remover" name="function" value='delete' type="button">
+                                    <button class="item" data-toggle="modal" data-target="#confirmar" title="Remover" name="function" value='delete' type="submit">
                                         <i class="zmdi zmdi-delete"></i>
                                     </button>
 
