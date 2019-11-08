@@ -61,7 +61,7 @@ function statuscheck($variable, $zeroanswer, $oneanswer){
 	if ($variable == 0) { $result = $zeroanswer; };
 	if ($variable == 1) { $result = $oneanswer; };
 
-	return echo $result;
+	return $result;
 
 }
 
