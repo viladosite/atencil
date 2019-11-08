@@ -70,7 +70,7 @@
                     <?php if ($inststatus == 2) { ?>
                     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
                         <span class="badge badge-pill badge-success">Sucesso</span>
-                        Seu módulo foi instalado com sucesso.
+                        <?php echo $message; ?>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -81,7 +81,7 @@
                     <?php if ($inststatus == 0) { ?>
                     <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
                         <span class="badge badge-pill badge-danger">Erro</span>
-                        Ocorreu um erro e seu módulo não foi instalado.
+                        <?php echo $message; ?>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -92,7 +92,7 @@
                     <?php if ($inststatus == 1) { ?>
                     <div class="sufee-alert alert with-close alert-warning alert-dismissible fade show">
                         <span class="badge badge-pill badge-warning">Atenção</span>
-                        Seu módulo foi instalado mas pode não funcionar corretamente.
+                        <?php echo $message; ?>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
