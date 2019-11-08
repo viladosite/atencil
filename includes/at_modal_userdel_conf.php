@@ -20,7 +20,11 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Remover</button>
+                
+                <form action="" style="display: inline;">
+                    <button type="button" class="btn btn-primary">Remover</button>
+                </form>
+
             </div>
         </div>
     </div>
