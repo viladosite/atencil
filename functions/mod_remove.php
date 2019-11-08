@@ -26,7 +26,7 @@ if ($modrembd = true) {
 
 
 	// Redirect back to the instalation page
-	// header("Location: ../pages/mod_list.php");
+	header("Location: ../pages/mod_list.php");
 
 }
 
