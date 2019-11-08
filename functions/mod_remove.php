@@ -4,8 +4,8 @@
 require __DIR__ . '/../includes/at_core.php';
 
 // Variáveis com dados do formulário
-$modformid = mysqli_real_escape_string($mysql, $_POST['modtoremid']);
-$modformdir = mysqli_real_escape_string($mysql, $_POST['modtoremdir']);
+$modformid = $_POST['modtoremid'];
+$modformdir = $_POST['modtoremdir'];
 
 // Checagem de conexão
 if (!$mysql) { die("A Conexão Falhou: " . mysqli_connect_error()); }
@@ -25,7 +25,7 @@ if ($modrembd = true & $modremdir = true) {
 	
 	// Redirect back to the instalation page
 	header("Location: ../pages/mod_list.php");
-	
+
 }
 
 
