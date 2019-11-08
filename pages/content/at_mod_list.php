@@ -92,8 +92,12 @@
                                     <span class="au-checkmark"></span>
                                 </label>
                             </td>
-                            <td><?php echo $mod['modname']; ?></td>
-                            <td><span class="block-email"> <?php echo $mod['modauthor']; ?> </span></td>
+                            <td>
+                                <span class="block-email">
+                                    <?php echo $mod['modname']; ?>
+                                </span>
+                            </td>
+                            <td><?php echo $mod['modauthor']; ?></td>
                             <td><?php echo $mod['modinst']; ?></td>
                             <td><?php echo $mod['modcat']; ?></td>
                             <td><?php echo $mod['status'];?> </td>
