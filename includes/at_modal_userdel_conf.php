@@ -16,12 +16,14 @@
                 <p><strong>ATENÇÃO:</strong> Não é possível desfazer esta ação.</p>
                 <br>
                 <p>Você tem certeza que deseja <strong>remover este usuário?</strong></p>
-                <p><?php echo $seluserid . ' - ' . $userdellogin; ?></p>
+                <p>ID: <?php echo $usuario['userid'] ?></p>
+                <p>LOGIN: <?php echo $usuario['userlogin']; ?></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 
-                <form action="" style="display: inline;">
+                <form action="/functions/user_delete.php" style="display: inline;" method="post">
+                    <input type="hidden" id="usertodel" name="usertodel" value="<?php echo $mod['modid']; ?>">
                     <button type="button" class="btn btn-primary">Remover</button>
                 </form>
 
