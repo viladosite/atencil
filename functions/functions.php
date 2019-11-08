@@ -200,6 +200,9 @@ function userinfo_byid($userid, $info) {
 }
 
 
+
+
+
 // -----------------------------------------------------
 // CLASSES DE OBTENÇÂO DE DADOS
 // -----------------------------------------------------
@@ -232,6 +235,30 @@ class zipadmin{
     }
 
 }
+
+
+// -----------------------------------------------------
+// FUNÇÕES DE PROCESSAMENTO DE ARQUIVOS
+// -----------------------------------------------------
+
+
+// Apaga arquivos de um diretório recursivamente
+function delete_files($target) {
+    if(is_dir($target)){
+        $files = glob( $target . '*', GLOB_MARK );
+        //GLOB_MARK adiciona uma barra ao final do endereço
+
+        foreach( $files as $file ){
+            delete_files( $file );      
+        }
+
+        rmdir( $target );
+    } elseif(is_file($target)) {
+        unlink( $target );  
+    }
+}
+
+
 
 
 
