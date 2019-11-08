@@ -16,14 +16,14 @@ $modremquery = " DELETE FROM at_modules WHERE modid = '$modformid' ";
 $modremdb = mysqli_query($mysql, $modremquery);
 
 // Prepara o path da pasta para remoção
-$modremdir = '$home_dir . $mods_dir . "/" . $modformdir';
+$modremdir = $home_dir . $mods_dir . "/" . $modformdir;
 
 // Executa a remoção do banco e dos arquivos
 if ($modrembd = true) {
 	
 	// Remove os arquivos e a pasta do módulo
-	// delete_files('$home_dir . $mods_dir . "/" . $modformdir');
-	echo $modremdir;
+	delete_dir($modremdir);
+
 
 	// Redirect back to the instalation page
 	// header("Location: ../pages/mod_list.php");
