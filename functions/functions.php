@@ -5,6 +5,10 @@
 // Este arquivo monta as funções e variáveis básicas para o funcionamento do sistema
 
 
+// -----------------------------------------------------
+// FUNÇÕES DE CHECAGEM DE INFORMAÇÃO
+// -----------------------------------------------------
+
 // Função para checagem das permissões de acesso geral ao sistema
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária
 function perm_check($permvar) {
@@ -49,6 +53,18 @@ function perm_comp_check($permvar) {
 
 	}
 }
+
+
+// Função para checagem de status baseado em informação binaria
+// Informe uma variável, uma resposta caso 0 e outra caso 1
+function statuscheck($variable, $zeroanswer, $oneanswer){
+	if $variable == 0{ $result = $zeroanswer; };
+	if $variable == 1{ $result = $oneanswer; };
+
+	return echo $result;
+
+}
+
 
 
 
