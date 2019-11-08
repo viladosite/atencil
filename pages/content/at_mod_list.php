@@ -69,6 +69,7 @@
                             <th>autor</th>
                             <th>instalado</th>
                             <th>categoria</th>
+                            <th>status</th>
                             <th>ações</th>
                         </tr>
                     </thead>
