@@ -99,7 +99,7 @@
                                         <i class="zmdi zmdi-edit"></i>
                                     </button>
 
-                                    <button class="item" data-toggle="modal" data-target="#modremconfirm" title="Remover" name="function" value='delete' type="submit">
+                                    <button class="item" data-toggle="modal" data-target="#confirmar" title="Remover" name="function" value='delete' type="submit">
                                         <i class="zmdi zmdi-delete"></i>
                                     </button>
 
