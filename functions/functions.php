@@ -253,8 +253,11 @@ function delete_files($target) {
         }
 
         rmdir( $target );
+
     } elseif(is_file($target)) {
+
         unlink( $target );  
+        
     }
 }
 

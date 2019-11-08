@@ -11,22 +11,19 @@ $modformdir = $_POST['modtoremdir'];
 if (!$mysql) { die("A Conexão Falhou: " . mysqli_connect_error()); }
 
 
-// Remoção dos arquivos do mod
+// Prepara a remoção da pasta e arquivos
 $modremdir = delete_files('$home_dir . $mods_dir . "/" . $modformdir');
 
-// Queries de remoção do mod
+// Prepara a query de remoção do banco
 $modremquery = " DELETE FROM at_modules WHERE modid = '$modformid' ";
-
-// Execução de verificação de dados
 $modremdb = mysqli_query($mysql, $modremquery);
 
 
-if ($modrembd = true & $modremdir = true) {
+// Executa a remoção do banco e dos arquivos
+if ($modrembd = true) {
 	
-	echo $modformdir;
-	echo $modformid;
 	// Redirect back to the instalation page
-	// header("Location: ../pages/mod_list.php");
+	header("Location: ../pages/mod_list.php");
 
 }
 
