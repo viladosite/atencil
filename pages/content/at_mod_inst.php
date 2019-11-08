@@ -1,5 +1,3 @@
-<?php include __DIR__ . '/../functions/mod_install.php'; ?>
-
 <!-- MAIN CONTENT-->
 <div class="main-content">
     <div class="section__content section__content--p30">
