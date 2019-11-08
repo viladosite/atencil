@@ -1,4 +1,11 @@
 <!-- INÍCIO da Confirmação de Remoção -->
+<?php
+// Define as variáveis para carregar o alerta com os dados corretos
+$idtodel = $_POST['useridtorem'];
+$logintodel = $_POST['userlogintorem'];
+
+
+?>
 <div class="modal fade" id="confirmar" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
@@ -16,14 +23,14 @@
                 <p><strong>ATENÇÃO:</strong> Não é possível desfazer esta ação.</p>
                 <br>
                 <p>Você tem certeza que deseja <strong>remover este usuário?</strong></p>
-                <p>ID: <?php echo $usuario['userid'] ?></p>
-                <p>LOGIN: <?php echo $usuario['userlogin']; ?></p>
+                <p>ID: <?php echo $idtodel; ?></p>
+                <p>LOGIN: <?php echo $logintodel; ?></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 
                 <form action="/functions/user_delete.php" style="display: inline;" method="post">
-                    <input type="hidden" id="usertodel" name="usertodel" value="<?php echo $mod['modid']; ?>">
+                    <input type="hidden" id="usertodel" name="usertodel" value="<?php echo $idtodel; ?>">
                     <button type="button" class="btn btn-primary">Remover</button>
                 </form>
 
