@@ -23,9 +23,9 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 
-                <form action="/functions/mod_remove.php" style="display: inline;">
-                    <input type="hidden" id="modtoremid" name="modtoremid" value='<?php echo $mod['modid']; ?>'>
-                    <input type="hidden" id="modtoremdir" name="modtoremdir" value='<?php echo $mod['modpath']; ?>'>
+                <form action="/functions/mod_remove.php" style="display: inline;" method="post">
+                    <input type="hidden" id="modtoremid" name="modtoremid" value="<?php echo $mod['modid']; ?>">
+                    <input type="hidden" id="modtoremdir" name="modtoremdir" value="<?php echo $mod['modpath']; ?>">
                     <button type="submit" class="btn btn-primary">Remover</button>
                 </form>
 
