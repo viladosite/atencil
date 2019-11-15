@@ -93,6 +93,12 @@
                     </ul>
                 </li>
 
+                <?php
+                // Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
+                if (perm_check($perm_adm_modules) == true) { ?>
+
+                
+                <!-- Item de módulos exclusivo para admins -->
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
                         <i class="fas fa-archive"></i>Módulos</a>
@@ -105,6 +111,11 @@
                         </li>
                     </ul>
                 </li>
+                <!-- Item de módulos exclusivo para admins -->
+
+                <?php }; ?>
+
+
 
                 <li>
                     <a href="/pages/help.php">
