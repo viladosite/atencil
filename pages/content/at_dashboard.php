@@ -5,9 +5,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="overview-wrap">
-                        <h2 class="title-1">overview</h2>
+                        <h2 class="title-1">Visão Geral</h2>
                         <button class="au-btn au-btn-icon au-btn--blue">
-                            <i class="zmdi zmdi-plus"></i>add item</button>
+                            <i class="zmdi zmdi-plus"></i>Adicionar painel</button>
                     </div>
                 </div>
             </div>
@@ -20,8 +20,8 @@
                                     <i class="zmdi zmdi-account-o"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>10368</h2>
-                                    <span>members online</span>
+                                    <h2>2.580</h2>
+                                    <span>clientes</span>
                                 </div>
                             </div>
                             <div class="overview-chart">
@@ -38,8 +38,8 @@
                                     <i class="zmdi zmdi-shopping-cart"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>388,688</h2>
-                                    <span>items solid</span>
+                                    <h2>1.223</h2>
+                                    <span>vendas</span>
                                 </div>
                             </div>
                             <div class="overview-chart">
@@ -56,8 +56,8 @@
                                     <i class="zmdi zmdi-calendar-note"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>1,086</h2>
-                                    <span>this week</span>
+                                    <h2>1.342</h2>
+                                    <span>atendimentos</span>
                                 </div>
                             </div>
                             <div class="overview-chart">
@@ -74,8 +74,8 @@
                                     <i class="zmdi zmdi-money"></i>
                                 </div>
                                 <div class="text">
-                                    <h2>$1,060,386</h2>
-                                    <span>total earnings</span>
+                                    <h2>R$ 15.863</h2>
+                                    <span>lucro total</span>
                                 </div>
                             </div>
                             <div class="overview-chart">
@@ -89,28 +89,28 @@
                 <div class="col-lg-6">
                     <div class="au-card recent-report">
                         <div class="au-card-inner">
-                            <h3 class="title-2">recent reports</h3>
+                            <h3 class="title-2">taxa de conversão</h3>
                             <div class="chart-info">
                                 <div class="chart-info__left">
                                     <div class="chart-note">
                                         <span class="dot dot--blue"></span>
-                                        <span>products</span>
+                                        <span>atendimentos</span>
                                     </div>
                                     <div class="chart-note mr-0">
                                         <span class="dot dot--green"></span>
-                                        <span>services</span>
+                                        <span>vendas</span>
                                     </div>
                                 </div>
                                 <div class="chart-info__right">
                                     <div class="chart-statis">
                                         <span class="index incre">
                                             <i class="zmdi zmdi-long-arrow-up"></i>25%</span>
-                                        <span class="label">products</span>
+                                        <span class="label">atendimentos</span>
                                     </div>
                                     <div class="chart-statis mr-0">
                                         <span class="index decre">
                                             <i class="zmdi zmdi-long-arrow-down"></i>10%</span>
-                                        <span class="label">services</span>
+                                        <span class="label">vendas</span>
                                     </div>
                                 </div>
                             </div>
@@ -123,17 +123,17 @@
                 <div class="col-lg-6">
                     <div class="au-card chart-percent-card">
                         <div class="au-card-inner">
-                            <h3 class="title-2 tm-b-5">char by %</h3>
+                            <h3 class="title-2 tm-b-5">grafico de %</h3>
                             <div class="row no-gutters">
                                 <div class="col-xl-6">
                                     <div class="chart-note-wrap">
                                         <div class="chart-note mr-0 d-block">
                                             <span class="dot dot--blue"></span>
-                                            <span>products</span>
+                                            <span>atendimentos</span>
                                         </div>
                                         <div class="chart-note mr-0 d-block">
                                             <span class="dot dot--red"></span>
-                                            <span>services</span>
+                                            <span>vendas</span>
                                         </div>
                                     </div>
                                 </div>
@@ -149,16 +149,16 @@
             </div>
             <div class="row">
                 <div class="col-lg-9">
-                    <h2 class="title-1 m-b-25">Earnings By Items</h2>
+                    <h2 class="title-1 m-b-25">Últimas Vendas</h2>
                     <div class="table-responsive table--no-card m-b-40">
                         <table class="table table-borderless table-striped table-earning">
                             <thead>
                                 <tr>
-                                    <th>date</th>
-                                    <th>order ID</th>
-                                    <th>name</th>
-                                    <th class="text-right">price</th>
-                                    <th class="text-right">quantity</th>
+                                    <th>data</th>
+                                    <th>ID do pedido</th>
+                                    <th>item</th>
+                                    <th class="text-right">preço</th>
+                                    <th class="text-right">quantidade</th>
                                     <th class="text-right">total</th>
                                 </tr>
                             </thead>
