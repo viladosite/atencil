@@ -74,54 +74,78 @@
                                 <!-- Conteúdo das abas -->
                                 <div class="tab-content pl-3 pt-2" id="nav-tabContent">
                                     
-
-
                                     <!-- Aba Caminhos de Sistema -->
-                                    <div class="tab-pane fade" id="nav-paths" role="tabpanel" aria-labelledby="nav-paths-tab">
+                                    <div class="tab-pane fade show active" id="nav-paths" role="tabpanel" aria-labelledby="nav-paths-tab">
                                         
                                         <p class="text-muted m-b-15">
                                             Confira abaixo os caminhos de seu sistema:
                                         </p>
                                         <br>
 
-                                        <p>Website:<br>
-                                        <?php echo $website_path; ?></p>
+                                        <p><strong>Website:</strong><br> <?php
+                                        badge_onoff($website_path);
+                                        echo " " . $website_path;
+                                        ?></p>
 
-                                        <p>Home:<br>
-                                        <?php echo $home_dir; ?> </p>
+                                        <p><strong>Home:</strong><br> <?php
+                                        badge_onoff($home_dir);
+                                        echo " " . $home_dir;
+                                        ?> </p>
 
-                                        <p>Index 1:<br>
-                                        <?php echo $index_path; ?> </p>
+                                        <p><strong>Index 1:</strong><br> <?php
+                                        badge_onoff($index_path);
+                                        echo " " . $index_path;
+                                        ?> </p>
 
-                                        <p>Index 2:<br>
-                                        <?php echo $index_dir1; ?> </p>
+                                        <p><strong>Index 2:</strong><br> <?php
+                                        badge_onoff($index_dir1);
+                                        echo " " . $index_dir1;
+                                        ?> </p>
 
-                                        <p>Index 3:<br>
-                                        <?php echo $index_dir2; ?> </p>
+                                        <p><strong>Index 3:</strong><br> <?php
+                                        badge_onoff($index_dir2);
+                                        echo " " . $index_dir2;
+                                        ?> </p>
 
-                                        <p>Index 4:<br>
-                                        <?php echo $index_dir3; ?> </p>
+                                        <p><strong>Index 4:</strong><br> <?php
+                                        badge_onoff($index_dir3);
+                                        echo " " . $index_dir3;
+                                        ?> </p>
 
-                                        <p>Modules Dir:<br>
-                                        <?php echo $mods_dir; ?> </p>
+                                        <p><strong>Modules Dir:</strong><br> <?php
+                                        badge_onoff($mods_dir);
+                                        echo " " . $mods_dir;
+                                        ?> </p>
 
-                                        <p>Functions Dir:<br>
-                                        <?php echo $func_dir; ?> </p>
+                                        <p><strong>Functions Dir:</strong><br> <?php
+                                        badge_onoff($func_dir);
+                                        echo " " . $func_dir;
+                                        ?> </p>
 
-                                        <p>Includes Dir:<br>
-                                        <?php echo $inc_dir; ?> </p>
+                                        <p><strong>Includes Dir:</strong><br> <?php
+                                        badge_onoff($inc_dir);
+                                        echo " " . $inc_dir;
+                                        ?> </p>
 
-                                        <p>Assets Dir:<br>
-                                        <?php echo $assets_dir; ?> </p>
+                                        <p><strong>Assets Dir:</strong><br> <?php
+                                        badge_onoff($assets_dir);
+                                        echo " " . $assets_dir;
+                                        ?> </p>
 
-                                        <p>Pages Dir:<br>
-                                        <?php echo $pages_dir; ?> </p>
+                                        <p><strong>Pages Dir:</strong><br> <?php
+                                        badge_onoff($pages_dir);
+                                        echo " " . $pages_dir;
+                                        ?> </p>
 
-                                        <p>Contents Dir:<br>
-                                        <?php echo $contents_dir; ?> </p>
+                                        <p><strong>Contents Dir:</strong><br> <?php
+                                        badge_onoff($contents_dir);
+                                        echo " " . $contents_dir;
+                                        ?> </p>
 
-                                        <p>Connection File:<br>
-                                        <?php echo $con_file; ?> </p>
+                                        <p><strong>Connection File:</strong><br> <?php
+                                        badge_onoff($con_file);
+                                        echo " " . $con_file;
+                                        ?> </p>
 
 
                                     </div>

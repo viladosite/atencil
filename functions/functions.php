@@ -95,55 +95,23 @@ function badges($permview, $permedit) {
 	}
 }
 
-
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badge_adm($permission) {
 	if(perm_check($permission) == true) {echo '<span class="badge badge-danger permtag">', 'ADM', '</span><br>';}
 }
 
 
+// Função para exibição das badges on/off
+function badge_onoff($var) {
+	
+	// Verifica se o usuário tem a permissão de visualização informada
+	if (empty($var)) {
+		echo '<span class="badge badge-danger permtag">Off</span>';
+	} else {
+		echo '<span class="badge badge-success permtag">On</span>';
+	}
 
-
-
-// Função para criar usuários
-// Retorna false quando o usuário não está logado ou não possui a permissão necessária
-function create_user($login, $email, $pass) {
-
-	// A sessão precisa estar iniciada
-	if (!isset($_SESSION)) {session_start();}
-
-	// Verifica se não há a variável da sessão que identifica o usuário e se ele tem a permissão para criar outros usuários
-	if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $permvar))
-		{return FALSE;}
-	else
-		{
-			return TRUE;
-		}
 }
-
-
-
-
-// Função para setar o usuário para remoção
-// Retorna false quando o usuário não está logado ou não possui a permissão necessária
-function remove_user($permvar, $removeuserid, $removeuserlogin) {
-
-	// A sessão precisa estar iniciada
-	if (!isset($_SESSION)) {session_start();}
-
-	// Verifica se não há a variável da sessão que identifica o usuário e se ele tem a permissão para criar outros usuários
-	if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $permvar))
-		{
-			$userdelid = 'Não autorizado';
-			$userdellogin = 'Não autorizado';
-		}
-	else
-		{
-			$userdelid = $removeuserid;
-			$userdellogin = $removeuserlogin;
-		}
-}
-
 
 
 

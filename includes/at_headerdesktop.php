@@ -156,11 +156,11 @@
                                 </div>
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
-                                        <a href="/pages/account.php">
+                                        <a href="../pages/account.php">
                                             <i class="zmdi zmdi-account"></i>Minha Conta</a>
                                     </div>
                                     <div class="account-dropdown__item">
-                                        <a href="/pages/system.php">
+                                        <a href="../pages/system.php">
                                             <i class="zmdi zmdi-settings"></i>Configurações</a>
                                     </div>
                                     <div class="account-dropdown__item">
@@ -169,7 +169,7 @@
                                     </div>
                                 </div>
                                 <div class="account-dropdown__footer">
-                                    <a href="/auth/at_logout.php">
+                                    <a href="../auth/at_logout.php">
                                         <i class="zmdi zmdi-power"></i>Sair</a>
                                 </div>
                             </div>
