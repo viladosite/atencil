@@ -78,7 +78,10 @@
         // Insere as informações de configuração no novo arquivo config.php
         file_put_contents($configdest, $configs);
 
-        
+        // Inserção dos dados no banco
+        // $db = new PDO($dsn, $user, $password);
+        // $sql = file_get_contents('file.sql');
+        // $qr = $db->exec($sql);
         
         
         // Direcionamento caso o procedimento seja concluído corretamente
