@@ -2,10 +2,12 @@
 
     if (file_exists('config.php')){
         
-        echo "erro";
+        header("Location: index.php");
     
     } else {
 
+        // Caso não tenha sido enviado o host ou usuário, direcionado de volta para o index
+        if (empty($_POST['dbhost']) or empty($_POST['dbuser'])) { header("Location: install_step1.php"); exit;}
         
         // -----------------------------------------------------
         // MONTAGEM DOS DADOS PADRÃO PARA A TROCA

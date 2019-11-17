@@ -3,7 +3,7 @@
 // Mais informações em:   viladosite.com.br/atencil
 
 // Direciona para a instalação caso não encontra o config.php
-if (file_exists('config.php')){  } else { header("Location: install.php"); }
+if (file_exists('config.php')){  } else { header("Location: install_step1.php"); }
 
 // Carrega as configurações, funções e elementos base para funcionamento do sistema
 require __DIR__ . '/includes/at_core.php';
