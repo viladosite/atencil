@@ -79,7 +79,7 @@
         file_put_contents($configdest, $configs);
 
         // Inserção dos dados no banco
-        $dsn = 'mysql:host=' . $dbhost . ';dbname=' . $dbname . ;
+        $dsn = 'mysql:host=' . $dbhost . ';dbname=' . $dbname;
         $user = $dbuser;
         $password = $dbpass;
         
