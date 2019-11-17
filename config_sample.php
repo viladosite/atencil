@@ -5,11 +5,17 @@
 // CONEXÃO COM O BANCO DE DADOS (Database connection)
 // -----------------------------------------------------
 
-// Define as variáveis com dados para acesso ao banco de dados
+// Define as constantes com os dados para acesso ao banco de dados
 $dbserver = 'server.name.com';
 $dbname = 'databasename';
 $dbuser = 'username';
 $dbpass = 'password';
+
+define('DB_HOST', 'server.name.com');
+define('DB_NAME', 'dbname');
+define('DB_USER', 'dbuser');
+define('DB_PASS', 'dbpass');
+
 
 
 
