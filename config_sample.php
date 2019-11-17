@@ -6,15 +6,11 @@
 // -----------------------------------------------------
 
 // Define as constantes com os dados para acesso ao banco de dados
-$dbserver = 'server.name.com';
-$dbname = 'databasename';
-$dbuser = 'username';
-$dbpass = 'password';
 
-define('DB_HOST', 'server.name.com');
-define('DB_NAME', 'dbname');
-define('DB_USER', 'dbuser');
-define('DB_PASS', 'dbpass');
+// define('DB_HOST', 'server.name.com');
+// define('DB_NAME', 'dbname');
+// define('DB_USER', 'dbuser');
+// define('DB_PASS', 'dbpass');
 
 
 
@@ -202,17 +198,6 @@ $perm_edit_modules = 3; // Permissão para manipular os módulos ativos na conta
 global $perm_edit_perms;
 $perm_edit_perms = 3; // Permissão para alterar as permissões de usuário da conta
 
-
-
-
-// Define as permissões de edição para as funções secundárias
-// Set the permissions to edit the secundary functions
-
-global $perm_edit_modules;
-$perm_edit_modules = 3; // Permissão para manipular os módulos ativos na conta
-
-global $perm_edit_perms;
-$perm_edit_perms = 3; // Permissão para alterar as permissões de usuário da conta
 
 
 
