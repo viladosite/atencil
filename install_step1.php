@@ -53,6 +53,9 @@
                             <?php
                             $siteurl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
                             $sitedir = dirname($_SERVER['PHP_SELF']);
+                            
+                            // Se o diretório de instalação for a raiz, não usar a barra
+                            if ($sitedir = '/') {$sitedir = ''}
 
                             ?>
 
@@ -81,7 +84,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input class="au-input au-input--full" type="text" name="dir" placeholder="Diretório de instalação" value='<?php echo $sitedir; ?>'>
+                                        <input class="au-input au-input--full" type="text" name="dir" placeholder="Diretório de instalação (Para instalar na raiz, deixe em branco) " value='<?php echo $sitedir; ?>'>
                                     </div>
 
                                     <!--
