@@ -1,10 +1,13 @@
 <?php
 
 // Tenta se conectar ao servidor MySQL
-$mysql = mysqli_connect($dbserver, $dbuser, $dbpass, $dbname) or trigger_error(mysql_error());
 
-// Tenta se conectar ao banco de dados MySQL prédefinido nas configurações
-mysqli_select_db($mysql, $dbname) or trigger_error(mysql_error());
+if ( defined('DB_HOST') && defined('DB_USER') && defined('DB_PASS') && defined('DB_NAME') ){
+    $mysql = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    mysqli_select_db($mysql, DB_NAME)
+} else {
+    trigger_error('Os dados de acesso ao banco não foram encontrados', E_USER_ERROR);
+}
 
 // Definições extras de charset para a conexão
 mysqli_query($mysql, "SET NAMES 'utf8'");
