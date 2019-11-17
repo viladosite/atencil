@@ -4,7 +4,7 @@
         <div class="container-fluid">
 
             <!-- DATA TABLE -->
-            <h3 class="title-5 m-b-35">Clientes Cadastrados</h3>
+            <h3 class="title-5 m-b-35">Grupos de Clientes</h3>
             
             <div class="table-data__tool">
                 <div class="table-data__tool-left">
@@ -37,11 +37,10 @@
                 </div>
 
                 <div class="table-data__tool-right">
-                    <form action="client_new.php" style="display: inline;">
-                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                            <i class="zmdi zmdi-plus"></i> Cadastrar Cliente
-                        </button>
-                    </form>
+
+                    <button class="au-btn au-btn-icon au-btn--green au-btn--small" data-toggle="modal" data-target="#modcligrnew" type="submit">
+                        <i class="zmdi zmdi-plus"></i> Novo Grupo
+                    </button>
 
                     <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <select class="js-select2" name="type">
@@ -66,9 +65,7 @@
                                 </label>
                             </th>
                             <th>nome</th>
-                            <th>email</th>
-                            <th>cadastrado</th>
-                            <th>status</th>
+                            <th>descrição</th>
                             <th>ações</th>
                         </tr>
                     </thead>
@@ -77,13 +74,13 @@
 
                         <?php
                         // Monta os parâmetros da query
-                        $sql = "SELECT * FROM `at_clients` WHERE (`clientcompany` = '".$_SESSION['UserCompany'] ."')";
+                        $sql = "SELECT * FROM `at_clientgroups` WHERE (`cligrcompany` = '".$_SESSION['UserCompany'] ."')";
 
                         // Monta a query para execução
-                        $clients = mysqli_query($mysql, $sql);
+                        $groups = mysqli_query($mysql, $sql);
 
                         // Executa o loop com a query
-                        foreach ($clients as $client) { ?>
+                        foreach ($groups as $group) { ?>
                             
                         <tr class="tr-shadow">
                             <td>
@@ -92,18 +89,20 @@
                                     <span class="au-checkmark"></span>
                                 </label>
                             </td>
-                            <td><?php echo $client['clientfname'] . ' ' . $client['clientlname']; ?></td>
-                            <td><span class="block-email"> <?php echo $client['clientmail']; ?> </span></td>
-                            <td><?php echo $client['clientregister']; ?></td>
-                            <td><?php echo $client['clientstatus'];?> </td>
+
+                            <td><span class="block-email"> <?php echo $group['cligrname']; ?> </span></td>
+                            
+                            <td><?php echo $group['cligrdesc'] ?></td>
+
                             <td>
                                 <div class="table-data-feature">
                                     <button class="item" title="Editar" name="function" value='edit' type="submit">
                                         <i class="zmdi zmdi-edit"></i>
                                     </button>
-                                    <form action="../functions/client_remove.php" method="post">
-                                        <button class="item" data-toggle="modal" data-target="#confirmar" title="Remover" name="function" value='delete' type="submit"><i class="zmdi zmdi-delete"></i></button>
-                                        <input type="hidden" id="clientid" name="clientid" value="<?php echo $client['clientid']; ?>">
+                                    
+                                    <form action="../functions/cligr_remove.php" method="post">
+                                        <button class="item" title="Remover" name="function" value='delete' type="submit"><i class="zmdi zmdi-delete"></i></button>
+                                        <input type="hidden" id="cligrid" name="cligrid" value="<?php echo $group['cligrid']; ?>">
                                     </form>
                                 </div>
                             </td>
@@ -114,16 +113,10 @@
                         <?php } ?>
                         
 
-
-
-
-
-
                     </tbody>
 
                 </table>
             </div>
-            <!-- END DATA TABLE -->
         	
         </div>
     </div>

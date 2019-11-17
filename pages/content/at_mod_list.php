@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="table-data__tool-right">
-                    <form action="/pages/mod_inst.php" style="display: inline;">
+                    <form action="mod_inst.php" style="display: inline;">
                         <button class="au-btn au-btn-icon au-btn--green au-btn--small" type="submit">
                             <i class="zmdi zmdi-plus"></i>Instalar MOD
                         </button>

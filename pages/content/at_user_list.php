@@ -37,8 +37,12 @@
                 </div>
 
                 <div class="table-data__tool-right">
-                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                        <i class="zmdi zmdi-plus"></i>Cadastrar Usuário</button>
+                    <form action="user_new.php" style="display: inline;">
+                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                            <i class="zmdi zmdi-plus"></i> Cadastrar Usuário
+                        </button>
+                    </form>
+
                     <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <select class="js-select2" name="type">
                             <option selected="selected">Exportar</option>

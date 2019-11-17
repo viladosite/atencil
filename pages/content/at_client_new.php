@@ -23,7 +23,7 @@
                     <div class="card">
                         <div class="card-header">Dados do Cliente</div>
                         <div class="card-body card-block">
-                            <form action="/functions/client_create.php" method="post">
+                            <form action="../functions/client_create.php" method="post">
 
                                 <div class="form-group">
                                     <div class="input-group">

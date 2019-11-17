@@ -1,7 +1,7 @@
 <!-- MENU SIDEBAR-->
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
-        <a href="/index.php">
+        <a href="../index.php">
             <img src="/images/logo_atencil_horiz.png" alt="Atencil" />
         </a>
     </div>
@@ -54,18 +54,20 @@
 
                 <?php }; ?>
 
+
+
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
                         <i class="fas fa-usd"></i>Clientes</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="/pages/client_list.php">Listar Clientes</a>
+                            <a href="client_list.php">Listar Clientes</a>
                         </li>
                         <li>
-                            <a href="/pages/client_new.php">Cadastrar Cliente</a>
+                            <a href="client_new.php">Cadastrar Cliente</a>
                         </li>
                         <li>
-                            <a href="/pages/client_groups.php">Grupos de Clientes</a>
+                            <a href="client_groups.php">Grupos de Clientes</a>
                         </li>
                     </ul>
                 </li>
@@ -85,10 +87,10 @@
                         <i class="fas fa-users"></i>Usuários</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="/pages/user_list.php">Listar Usuários</a>
+                            <a href="user_list.php">Listar Usuários</a>
                         </li>
                         <li>
-                            <a href="/pages/user_new.php">Cadastrar Usuário</a>
+                            <a href="user_new.php">Cadastrar Usuário</a>
                         </li>
                     </ul>
                 </li>
@@ -104,10 +106,10 @@
                         <i class="fas fa-archive"></i>Módulos</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="/pages/mod_list.php">Listar Módulos</a>
+                            <a href="mod_list.php">Listar Módulos</a>
                         </li>
                         <li>
-                            <a href="/pages/mod_inst.php">Instalar Módulo</a>
+                            <a href="mod_inst.php">Instalar Módulo</a>
                         </li>
                     </ul>
                 </li>
@@ -118,7 +120,7 @@
 
 
                 <li>
-                    <a href="/pages/help.php">
+                    <a href="help.php">
                         <i class="fas fa-question"></i>Ajuda</a>
                 </li>
 

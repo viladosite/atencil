@@ -57,7 +57,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formemail) or empty($clien
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: /pages/client_list.php");
+	    header("Location: ../pages/client_list.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
@@ -70,7 +70,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formemail) or empty($clien
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: /pages/client_new.php");
+	    header("Location: ../pages/client_new.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
