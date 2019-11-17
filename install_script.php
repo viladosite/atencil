@@ -79,9 +79,19 @@
         file_put_contents($configdest, $configs);
 
         // Inserção dos dados no banco
-        // $db = new PDO($dsn, $user, $password);
-        // $sql = file_get_contents('file.sql');
-        // $qr = $db->exec($sql);
+        $dsn = 'mysql:host=' . $dbhost . ';dbname=' . $dbname . ;
+        $user = $dbuser;
+        $password = $dbpass;
+        
+        try {
+            $conn = new PDO($dsn, $user, $password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+        
+        $sql = file_get_contents('atencil.sql');
+        $qr = $conn->exec($sql);
         
         
         // Direcionamento caso o procedimento seja concluído corretamente
