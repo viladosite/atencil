@@ -8,9 +8,9 @@
 // Define as constantes com os dados para acesso ao banco de dados
 
 // define('DB_HOST', 'server.name.com');
-// define('DB_NAME', 'dbname');
-// define('DB_USER', 'dbuser');
-// define('DB_PASS', 'dbpass');
+// define('DB_USER', 'databaseuser');
+// define('DB_PASS', 'databasepass');
+// define('DB_NAME', 'databasename');
 
 
 
