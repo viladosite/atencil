@@ -5,17 +5,22 @@
         echo "erro";
     
     } else {
+
         
+        // -----------------------------------------------------
+        // MONTAGEM DOS DADOS PADRÃO PARA A TROCA
+        // -----------------------------------------------------
+
         // Monta as variáveis com os dados padrão à serem trocados
         $oldhost = 'server.name.com';
         $olduser = 'databaseuser';
         $oldpass = 'databasepass';
         $oldname = 'databasename';
+        $oldsite = 'http://site.com.br';
+        $oldhomedir = 'homedirpath';
+                
         
-        
-        
-        
-        // Monta a variável para descomentar os itens
+        // Monta as variáveis para descomentar os itens
         $oldcomment = '// define(';
         $oldcomment2 = '/* VARIÁVEIS (VARIABLES)';
         $oldcomment3 = 'VARIÁVEIS (VARIABLES)  */';
@@ -25,7 +30,9 @@
 
 
 
-
+        // -----------------------------------------------------
+        // DADOS NOVOS PARA INCLUSÃO NO CONFIG
+        // -----------------------------------------------------
         
         
         // Monta as variáveis com os dados enviados pelo form
@@ -33,17 +40,18 @@
         $dbuser = $_POST['dbuser'];
         $dbpass = $_POST['dbpass'];
         $dbname = $_POST['dbname'];
-        
-        
-
-
-
-
-
+        $newsite = $_POST['site'];
+        $newdir = $_POST['dir'];
 
         // Descomenta as definições de constantes
         $comment = 'define(';
 
+
+
+
+        // -----------------------------------------------------
+        // PROCEDIMENTOS DE TROCA E SALVAMENTO
+        // -----------------------------------------------------
 
         // Define os nomes de arquivos de configuração de origem e de destino
         $configsource = 'config_sample.php';
@@ -56,6 +64,10 @@
         $configs = str_replace($olduser, $dbuser, $configs);
         $configs = str_replace($oldpass, $dbpass, $configs);
         $configs = str_replace($oldname, $dbname, $configs);
+        $configs = str_replace($oldsite, $newsite, $configs);
+        $configs = str_replace($oldhomedir, $newdir, $configs);
+
+        // Descomenta os itens da configuração
         $configs = str_replace($oldcomment, $comment, $configs);
         $configs = str_replace($oldcomment2, '', $configs);
         $configs = str_replace($oldcomment3, '', $configs);
@@ -63,7 +75,14 @@
 
         // Insere as informações de configuração no novo arquivo config.php
         file_put_contents($configdest, $configs);
+
         
+        
+        
+        // Direcionamento caso o procedimento seja concluído corretamente
+        header("Location: install_step2.php");
+
+
     }
 
 ?>

@@ -13,6 +13,13 @@
 // define('DB_NAME', 'databasename');
 
 
+// Define as constantes de endereçamento
+
+// define('SITE_URL', 'http://site.com.br');
+// define('HOME_DIR', 'homedirpath');
+// define('HOME_PATH', SITE_URL . HOME_DIR);
+
+
 
 
 // -----------------------------------------------------

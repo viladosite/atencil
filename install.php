@@ -39,10 +39,93 @@
         <div class="page-wrapper">
         
             <!-- Carregamento do conteúdo da página -->
-            <?php require 'install_step1.php'; ?>
+            <div class="page-content--bge5">
+                <div class="container">
+                    <div class="login-wrap">
+                        <div class="login-content">
+                            
+                            <div class="login-logo">
+                                <a href="index.php">
+                                    <img src="images/logo_atencil_horiz.png" alt="Atencil">
+                                </a>
+                            </div>
+
+                            <?php
+                            $siteurl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+                            $sitedir = dirname($_SERVER['PHP_SELF']);
+
+                            ?>
+
+                            <div class="login-form">
+                                <p>Informe os dados de seu servidor MYSQL para instalar o ATENCIL:</p>
+                                <br>
+                                <form action="install_script.php" method="post">
+                                    <div class="form-group">
+                                        <input class="au-input au-input--full" type="text" name="dbhost" placeholder="Endereço do servidor">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="au-input au-input--full" type="text" name="dbuser" placeholder="Nome do Usuário">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="au-input au-input--full" type="password" name="dbpass" placeholder="Senha do Usuário">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="au-input au-input--full" type="text" name="dbname" placeholder="Nome do Banco de Dados">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="au-input au-input--full" type="text" name="site" placeholder="Endereço do site com http" value='<?php echo $siteurl; ?>'>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="au-input au-input--full" type="text" name="dir" placeholder="Diretório de instalação" value='<?php echo $sitedir; ?>'>
+                                    </div>
+
+                                    <!--
+                                    <div class="login-checkbox">
+                                        <label>
+                                            <input type="checkbox" name="aggree">Concordo com os <a href="#" data-toggle="modal" data-target="#modalterms">termos e condições</a>
+                                        </label>
+                                    </div>
+                                    -->
+
+                                    <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Instalar</button>
+
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         
-            <!-- Carrega os avisos e modais da página -->
-            <?php include 'install_modal.php' ?>
+            <!-- INÍCIO do modal de Termos e Condições -->
+            <div class="modal fade" id="modalterms" tabindex="-1" role="dialog" aria-labelledby="scrollmodalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="scrollmodalLabel">Termos e Condições - Atencil</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Se você está instalando o ATENCIL você concorda com estes termos.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM do modal de Termos e Condições -->
+
 
         </div>
 
