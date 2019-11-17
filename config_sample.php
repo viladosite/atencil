@@ -25,6 +25,7 @@ Below you can set the main paths to the system directories
 */
 
 
+/* VARIÁVEIS (VARIABLES)
 
 
 // Caminho do website (websites http path)
@@ -92,11 +93,9 @@ $con_file = 'at_connect.php';
 // PERMISSÕES (Permissions)
 // -----------------------------------------------------
 
-/*
-Abaixo define-se as permissões mínimas de visualização e de edição para cada uma das áreas e recursos do sistema.
+// Abaixo define-se as permissões mínimas de visualização e de edição para cada uma das áreas e recursos do sistema.
+// Below you can set the minimum permissions to view and edit each system area.
 
-Below you can set the minimum permissions to view and edit each system area.
-*/
 
 
 
@@ -235,6 +234,7 @@ global $perm_adm_plans;
 $perm_adm_plans = 10; // Permissão para manipular os planos de usuários e seus membros
 
 
+VARIÁVEIS (VARIABLES)  */ 
 
 
 ?>
