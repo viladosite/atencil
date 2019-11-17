@@ -16,7 +16,8 @@
 // Define as constantes de endereçamento
 
 // define('SITE_URL', 'http://site.com.br');
-// define('HOME_DIR', 'homedirpath');
+// Desabilitado para testes   define('HOME_DIR', ltrim('/atencil', '/'));
+// define('HOME_DIR', ltrim('homedirpath', '/');
 // define('HOME_PATH', SITE_URL . HOME_DIR);
 
 

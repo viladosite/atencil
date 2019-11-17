@@ -4,11 +4,11 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="/index.php">
-                        <img src="/images/logo_atencil_horiz.png" alt="Atencil">
+                        <img src="<?php echo HOME_DIR; ?>/images/logo_atencil_horiz.png" alt="Atencil">
                     </a>
                 </div>
                 <div class="login-form">
-                    <form action="/auth/at_login.php" method="post">
+                    <form action="<?php echo HOME_DIR; ?>/auth/at_login.php" method="post">
                         <div class="form-group">
                             <label>Email</label>
                             <input class="au-input au-input--full" type="email" name="fieldemail" placeholder="Digite seu Email">

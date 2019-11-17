@@ -2,7 +2,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
         <a href="../index.php">
-            <img src="/images/logo_atencil_horiz.png" alt="Atencil" />
+            <img src="../images/logo_atencil_horiz.png" alt="Atencil" />
         </a>
     </div>
     <div class="menu-sidebar__content js-scrollbar1">
