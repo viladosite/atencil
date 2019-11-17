@@ -4,7 +4,7 @@
 
 if ( defined('DB_HOST') && defined('DB_USER') && defined('DB_PASS') && defined('DB_NAME') ){
     $mysql = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    mysqli_select_db($mysql, DB_NAME)
+    mysqli_select_db($mysql, DB_NAME);
 } else {
     trigger_error('Os dados de acesso ao banco não foram encontrados', E_USER_ERROR);
 }
