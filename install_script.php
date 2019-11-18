@@ -90,7 +90,7 @@
             echo $e->getMessage();
         }
         
-        $sql = file_get_contents('atencil.sql');
+        $sql = file_get_contents('install_db.sql');
         $qr = $conn->exec($sql);
         
         
