@@ -69,7 +69,7 @@ Below you can set the main paths to the system directories
 // define('PAGES_DIR', '/pages');
 
 // Diretório de conteúdos (Content directory)
-// define('CONTENT_DIR', '/content');
+// define('CONTENT_DIR', PAGES_DIR . '/content');
 
 // Diretório de autenticação (Auth directory)
 // define('AUTH_DIR', '/auth');
