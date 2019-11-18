@@ -38,7 +38,7 @@ if (perm_check($perm_view_clients) == false) {
             <!-- FIM DO PAGE CONTAINER-->
 
             <!-- Carrega os avisos e modais da página -->
-            <?php include '../includes/at_modal_userdel_conf.php' ?>
+            <?php include '../includes/at_modal_userdel_conf.php'; ?>
         
         </div>
         
