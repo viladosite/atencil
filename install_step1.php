@@ -55,7 +55,7 @@
                             $sitedir = dirname($_SERVER['PHP_SELF']);
                             
                             // Se o diretório de instalação for a raiz, não usar a barra
-                            if ($sitedir = '/') {$sitedir = '';}
+                            if ($sitedir == '/') {$sitedir = '';}
 
                             ?>
 
