@@ -10,20 +10,20 @@
                             <strong>Server Info</strong>
                         </div>
                         <div class="card-body">
-                            <p><strong>Data de Registro:</strong></p>
-                            <p><?php echo $_SESSION['UserRegDate'] ?></p>
+                        <p><strong>Data de Registro:</strong></p>
+                            <p><?php echo $_SESSION['UserRegDate']; ?></p>
                             <br>
 
-                            <p><strong>Nome:</strong></p>
-                            <p><?php echo $_SESSION['UserFname'], " ", $_SESSION['UserLname']; ?></p>
+                            <p><strong>Endereço do Servidor:</strong></p>
+                            <p><?php echo $_SERVER['SERVER_ADDR']; ?></p>
                             <br>
 
-                            <p><strong>Email:</strong></p>
-                            <p><?php echo $_SESSION['UserEmail'] ?></p>
+                            <p><strong>Nome do Servidor:</strong></p>
+                            <p><?php echo $_SERVER['SERVER_NAME']; ?></p>
                             <br>
 
-                            <p><strong>Empresa:</strong></p>
-                            <p><?php compinfo_byid($_SESSION['UserCompany'], 'companyname'); ?></p>
+                            <p><strong>Software do Servidor:</strong></p>
+                            <p><?php $_SERVER['SERVER_SOFTWARE'] ?></p>
                             <br>
 
                             <p><strong>ID do Usuário:</strong>
@@ -83,68 +83,58 @@
                                         <br>
 
                                         <p><strong>Website:</strong><br> <?php
-                                        badge_onoff($website_path);
-                                        echo " " . $website_path;
+                                        badge_onoff(SITE_URL);
+                                        echo " " . SITE_URL;
                                         ?></p>
 
                                         <p><strong>Home:</strong><br> <?php
-                                        badge_onoff($home_dir);
-                                        echo " " . $home_dir;
+                                        badge_onoff(HOME_DIR);
+                                        echo " " . HOME_DIR;
                                         ?> </p>
 
-                                        <p><strong>Index 1:</strong><br> <?php
-                                        badge_onoff($index_path);
-                                        echo " " . $index_path;
-                                        ?> </p>
-
-                                        <p><strong>Index 2:</strong><br> <?php
-                                        badge_onoff($index_dir1);
-                                        echo " " . $index_dir1;
-                                        ?> </p>
-
-                                        <p><strong>Index 3:</strong><br> <?php
-                                        badge_onoff($index_dir2);
-                                        echo " " . $index_dir2;
-                                        ?> </p>
-
-                                        <p><strong>Index 4:</strong><br> <?php
-                                        badge_onoff($index_dir3);
-                                        echo " " . $index_dir3;
+                                        <p><strong>Directory Path:</strong><br> <?php
+                                        badge_onoff(DIR_PATH);
+                                        echo " " . DIR_PATH;
                                         ?> </p>
 
                                         <p><strong>Modules Dir:</strong><br> <?php
-                                        badge_onoff($mods_dir);
-                                        echo " " . $mods_dir;
+                                        badge_onoff(MODS_DIR);
+                                        echo " " . MODS_DIR;
                                         ?> </p>
 
                                         <p><strong>Functions Dir:</strong><br> <?php
-                                        badge_onoff($func_dir);
-                                        echo " " . $func_dir;
+                                        badge_onoff(FUNC_DIR);
+                                        echo " " . FUNC_DIR;
                                         ?> </p>
 
                                         <p><strong>Includes Dir:</strong><br> <?php
-                                        badge_onoff($inc_dir);
-                                        echo " " . $inc_dir;
-                                        ?> </p>
-
-                                        <p><strong>Assets Dir:</strong><br> <?php
-                                        badge_onoff($assets_dir);
-                                        echo " " . $assets_dir;
+                                        badge_onoff(INC_DIR);
+                                        echo " " . INC_DIR;
                                         ?> </p>
 
                                         <p><strong>Pages Dir:</strong><br> <?php
-                                        badge_onoff($pages_dir);
-                                        echo " " . $pages_dir;
+                                        badge_onoff(PAGES_DIR);
+                                        echo " " . PAGES_DIR;
                                         ?> </p>
 
                                         <p><strong>Contents Dir:</strong><br> <?php
-                                        badge_onoff($contents_dir);
-                                        echo " " . $contents_dir;
+                                        badge_onoff(CONTENT_DIR);
+                                        echo " " . CONTENT_DIR;
+                                        ?> </p>
+
+                                        <p><strong>Authentication Dir:</strong><br> <?php
+                                        badge_onoff(AUTH_DIR);
+                                        echo " " . AUTH_DIR;
+                                        ?> </p>
+
+                                        <p><strong>Plugins Dir:</strong><br> <?php
+                                        badge_onoff(PLUGINS_DIR);
+                                        echo " " . PLUGINS_DIR;
                                         ?> </p>
 
                                         <p><strong>Connection File:</strong><br> <?php
-                                        badge_onoff($con_file);
-                                        echo " " . $con_file;
+                                        badge_onoff(CONN_FILE);
+                                        echo " " . CONN_FILE;
                                         ?> </p>
 
 
