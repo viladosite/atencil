@@ -43,7 +43,7 @@ if($_FILES["modfile"]["name"]) {
 	}
 
 	// Set the path variables
-	$target_path = $home_dir . $mods_dir . "/" . $filename;
+	$target_path = DIR_PATH . MOD_DIR . "/" . $filename;
 
 
 	
@@ -52,9 +52,9 @@ if($_FILES["modfile"]["name"]) {
 		$zip = new ZipArchive();
 		$x = $zip->open($target_path);
 		if ($x === true) {
-			$zip->extractTo($home_dir . $mods_dir . "/");
+			$zip->extractTo(DIR_PATH . MOD_DIR . "/");
 			$zipdir = trim($zip->getNameIndex(0), '/');
-			$mod_info_path = $website_path . $mods_dir . "/" . $zipdir . "/" . "modinfo.json";
+			$mod_info_path = SITE_URL . MOD_DIR . "/" . $zipdir . "/" . "modinfo.json";
 			$zip->close();
 			unlink($target_path);
 		}

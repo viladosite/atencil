@@ -2,10 +2,8 @@
 
 
 // -----------------------------------------------------
-// CONEXÃO COM O BANCO DE DADOS (Database connection)
+// CONEXÃO COM O BANCO DE DADOS (Database Connection)
 // -----------------------------------------------------
-
-// Define as constantes com os dados para acesso ao banco de dados
 
 // define('DB_HOST', 'server.name.com');
 // define('DB_USER', 'databaseuser');
@@ -13,18 +11,9 @@
 // define('DB_NAME', 'databasename');
 
 
-// Define as constantes de endereçamento
-
-// define('SITE_URL', 'http://site.com.br');
-// Desabilitado para testes   define('HOME_DIR', ltrim('/atencil', '/'));
-// define('HOME_DIR', 'homedirpath');
-// define('HOME_PATH', SITE_URL . HOME_DIR);
-
-
-
 
 // -----------------------------------------------------
-// Caminhos de arquivo e acesso (Paths)
+// Constantes de endereçamento (Path Constants)
 // -----------------------------------------------------
 
 /*
@@ -33,64 +22,63 @@ Below you can set the main paths to the system directories
 */
 
 
-/* VARIÁVEIS (VARIABLES)
+// URL do site na qual o Atencil está publicado
+// define('SITE_URL', 'http://site.com.br');
+
+// Nome da pasta interna onde está instalado o Atencil
+// define('HOME_DIR', 'homedirpath');
+
+// Caminho completo na qual o Atencil está publicado
+// define('HOME_PATH', SITE_URL . HOME_DIR);
+
+// Caminho da pasta na mídia local do servidor
+// define('DIR_PATH', $_SERVER['DOCUMENT_ROOT']);
 
 
-// Caminho do website (websites http path)
-global $website_path;
-$website_path = "https://www.atencil.com.br";
 
-// Diretório da home do servidor (Home server directory)
-global $home_dir;
-$home_dir = $_SERVER['DOCUMENT_ROOT'];
 
-// Caminho do arquivo index (Index file path)
-global $index_path;
-$index_path = realpath('index.php');
 
-// Caminho do arquivo atual (Actual file path)
-global $actual_path;
-$actual_path = dirname(__FILE__);
+// -----------------------------------------------------
+// Pastas de sistema e módulos internos
+// (Internal Modules and Directory Paths)
+// -----------------------------------------------------
 
-// Diretório do index - com index.php (Index directory - with index.php)
-global $index_dir1;
-$index_dir1 = str_replace($home_dir, '', $index_path);
 
-// Diretório do index - sem index.php (Index directory - without index.php)
-global $index_dir2;
-$index_dir2 = str_replace("/index.php", '', $index_dir1);
+// Diretório de Fontes (Fonts directory)
+// define('FONTS_DIR', '/fonts');
 
-// Diretório do index - indicação manual (Index directory - manually provided)
-global $index_dir2;
-$index_dir3 = '/v2';
+// Diretório de CSS (CSS directory)
+// define('CSS_DIR', '/css');
+
+// Diretório de Javascript (Javascripts directory)
+// define('JS_DIR', '/js');
+
+// Diretório de Imagens (Images directory)
+// define('IMGS_DIR', '/images');
 
 // Diretório de módulos (Modules directory)
-global $mods_dir;
-$mods_dir = '/modules';
+// define('MODS_DIR', '/modules');
 
 // Diretório de funções (Functions directory)
-global $func_dir;
-$func_dir = '';
+// define('FUNC_DIR', '/functions');
 
 // Diretório de includes (Includes directory)
-global $inc_dir;
-$inc_dir = '';
-
-// Diretório de recursos (Assets directory)
-global $assets_dir;
-$assets_dir = '';
+// define('INC_DIR', '/includes');
 
 // Diretório de páginas (Pages directory)
-global $pages_dir;
-$pages_dir = '';
+// define('PAGES_DIR', '/pages');
 
 // Diretório de conteúdos (Content directory)
-global $contents_dir;
-$contents_dir = '';
+// define('CONTENT_DIR', '/content');
+
+// Diretório de autenticação (Auth directory)
+// define('AUTH_DIR', '/auth');
+
+// Diretório de Plugins (Plugins directory)
+// define('PLUGINS_DIR', '/vendor');
 
 // Arquivo de conexão (Connection file)
-global $con_file;
-$con_file = 'at_connect.php';
+// define('CONN_FILE', 'at_connect.php');
 
 
 
@@ -105,7 +93,7 @@ $con_file = 'at_connect.php';
 // Below you can set the minimum permissions to view and edit each system area.
 
 
-
+/* VARIÁVEIS (VARIABLES)
 
 
 // -----------------------------------------------------
