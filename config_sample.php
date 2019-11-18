@@ -85,8 +85,29 @@ Below you can set the main paths to the system directories
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // -----------------------------------------------------
-// PERMISSÕES (Permissions)
+//                      DEPRECATED
+// LINES BELOW WILL BE DELETED ON NEXT VERSION OF ATENCIL
+// -----------------------------------------------------
+
+
+
+
+
+// -----------------------------------------------------
+// PERMISSÕES (Permissions) DEPRECATED
 // -----------------------------------------------------
 
 // Abaixo define-se as permissões mínimas de visualização e de edição para cada uma das áreas e recursos do sistema.
