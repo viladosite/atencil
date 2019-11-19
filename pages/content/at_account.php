@@ -39,7 +39,7 @@
                             <?php echo $_SESSION['UserPermLvl'] ?></p>
 
                             <p><strong>Permissão na Empresa:</strong>
-                            <?php echo $_SESSION['UserCompanyLvl'] ?></p>
+                            <?php echo $_SESSION['UserGroup'] ?></p>
 
                         </div>
                     </div>
