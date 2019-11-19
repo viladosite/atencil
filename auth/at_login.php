@@ -60,7 +60,7 @@ $email = $_POST['fieldemail'];
         $_SESSION['UserEmail'] = $resultado['usermail'];
         $_SESSION['UserPermLvl'] = $resultado['userpermlvl'];
         $_SESSION['UserCompany'] = $resultado['usercomp'];
-        $_SESSION['UserCompanyLvl'] = $resultado['usercomplvl'];
+        $_SESSION['UserGroup'] = $resultado['usergroup'];
         $_SESSION['UserActive'] = $resultado['userstatus'];
         $_SESSION['UserRegDate'] = $resultado['userregdate'];
       

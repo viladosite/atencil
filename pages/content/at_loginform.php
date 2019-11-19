@@ -27,15 +27,6 @@
                         </div>
                         <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">Acessar</button>
                         
-                        <!--
-                        <div class="social-login-content">
-                            <div class="social-button">
-                                <button class="au-btn au-btn--block au-btn--blue m-b-20">Acessar com Facebook</button>
-                                <button class="au-btn au-btn--block au-btn--blue2">Acessar com Google</button>
-                            </div>
-                        </div>
-                        -->
-
                     </form>
                     <div class="register-link">
                         <p>

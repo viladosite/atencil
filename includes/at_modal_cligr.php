@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="smallmodalLabel">Cadastrar Novo Grupo</h5>
+                <h5 class="modal-title" id="smallmodalLabel">Novo Grupo de Clientes</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -12,7 +12,7 @@
             <form action="../functions/cligr_create.php" style="display: inline;" method="post">
                 
                 <div class="modal-body">
-                    <p>Este grupo estará vinculado à <strong>sua empresa</strong>.</p>
+                    <p>Este grupo de clientes estará vinculado e disponível apenas para a <strong>sua empresa</strong>.</p>
                     <br>
                     <div class="row form-group">
                         <div class="col-12">
