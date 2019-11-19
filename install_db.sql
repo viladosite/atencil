@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 17-Nov-2019 às 07:36
+-- Generation Time: 19-Nov-2019 às 15:06
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.3.5
 
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `at_attendances` (
   KEY `userid` (`attenuser`),
   KEY `clientid` (`attenclient`),
   KEY `companyid` (`attencompany`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='This is the table where the attendances are stored with their details and information. This table is the main connections hubs between the other ones.';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='This is the table where the attendances are stored with their details and information. This table is the main connections hubs between the other ones.';
 
 -- --------------------------------------------------------
 
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `at_clients` (
   `clientobs` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`clientid`),
   KEY `clientcompany` (`clientcompany`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='This is the table where we store the clients data and their personal infos.';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='This is the table where we store the clients data and their personal infos.';
 
 -- --------------------------------------------------------
 
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `at_companies` (
   `companylogo` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `companyplan` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`companyid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='This is the table where the companies and their details are saved.';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='This is the table where the companies and their details are saved.';
 
 --
 -- Extraindo dados da tabela `at_companies`
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `at_config` (
   `configregister` int(50) NOT NULL COMMENT 'This is the userid of the person that have registered this configuration in the system. This information is for loggin.',
   `configviewperm` int(11) NOT NULL COMMENT 'This is the permission level required to VIEW this configuration or it''s effects in the system. It should be one of the permission level numbers used in the system.',
   `configeditperm` int(11) NOT NULL COMMENT 'This is the permission level required to EDIT this configuration or it''s effects in the system. It should be one of the permission level numbers used in the system.'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='This is a global configurations table. We´ve build it so you can store all kind of system configurations here like permissions to access some areas of the system or values of specific system configs. Be aware that every column in here have it''s own explanation. Be sure to read it before using it.';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='This is a global configurations table. We´ve build it so you can store all kind of system configurations here like permissions to access some areas of the system or values of specific system configs. Be aware that every column in here have it''s own explanation. Be sure to read it before using it.';
 
 -- --------------------------------------------------------
 
@@ -164,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `at_modules` (
   `modpath` varchar(500) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Caminho do módulo a partir da pasta de instalação de módulos',
   `modstatus` int(11) NOT NULL COMMENT 'Status dos módulos',
   PRIMARY KEY (`modid`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabela de definições dos módulos e suas configurações e categorias.';
+) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabela de definições dos módulos e suas configurações e categorias.';
 
 --
 -- Extraindo dados da tabela `at_modules`
@@ -185,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `at_passredef` (
   `user` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `confirmation` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   KEY `user` (`user`,`confirmation`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabela de requisições de redefinição de senha pelos usuários.';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabela de requisições de redefinição de senha pelos usuários.';
 
 --
 -- Extraindo dados da tabela `at_passredef`
@@ -203,24 +203,10 @@ INSERT INTO `at_passredef` (`user`, `confirmation`) VALUES
 
 DROP TABLE IF EXISTS `at_usergroups`;
 CREATE TABLE IF NOT EXISTS `at_usergroups` (
-  `usergrid` int(11) NOT NULL AUTO_INCREMENT,
-  `usergrcomp` int(11) NOT NULL,
-  `usergrname` int(11) NOT NULL,
-  `usergrdesc` int(11) NOT NULL,
-  PRIMARY KEY (`usergrid`),
-  KEY `usergrcomp` (`usergrcomp`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `at_usergrperms`
---
-
-DROP TABLE IF EXISTS `at_usergrperms`;
-CREATE TABLE IF NOT EXISTS `at_usergrperms` (
-  `usergrpermid` int(11) NOT NULL AUTO_INCREMENT,
-  `usergroupid` int(11) NOT NULL,
+  `usergroupid` int(11) NOT NULL AUTO_INCREMENT,
+  `usergroupcomp` int(11) NOT NULL,
+  `usergroupname` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `usergroupdesc` text COLLATE utf8_unicode_ci NOT NULL,
   `viewdashboard` tinyint(4) NOT NULL,
   `viewaccount` tinyint(4) NOT NULL,
   `viewattendance` tinyint(4) NOT NULL,
@@ -240,9 +226,17 @@ CREATE TABLE IF NOT EXISTS `at_usergrperms` (
   `editsystem` tinyint(4) NOT NULL,
   `editmodules` tinyint(4) NOT NULL,
   `editperms` tinyint(4) NOT NULL,
-  PRIMARY KEY (`usergrpermid`),
-  KEY `usergroupid` (`usergroupid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  PRIMARY KEY (`usergroupid`) USING BTREE,
+  KEY `usergroupcomp` (`usergroupcomp`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `at_usergroups`
+--
+
+INSERT INTO `at_usergroups` (`usergroupid`, `usergroupcomp`, `usergroupname`, `usergroupdesc`, `viewdashboard`, `viewaccount`, `viewattendance`, `viewcompany`, `viewclients`, `viewusers`, `viewsystem`, `viewsearch`, `viewmodules`, `viewperms`, `editdashboard`, `editaccount`, `editattendance`, `editcompany`, `editclients`, `editusers`, `editsystem`, `editmodules`, `editperms`) VALUES
+(3, 1, 'Usuários simples', '', 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0),
+(2, 1, 'Administradores', 'Grupo de administradores com todas as permissões', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -258,24 +252,23 @@ CREATE TABLE IF NOT EXISTS `at_users` (
   `userlogin` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `userpass` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `usermail` varchar(320) COLLATE utf8_unicode_ci NOT NULL,
-  `userpermlvl` int(3) UNSIGNED NOT NULL DEFAULT '1',
+  `userpermlvl` int(3) NOT NULL,
   `usercomp` int(50) NOT NULL,
-  `usercomplvl` int(3) UNSIGNED NOT NULL,
+  `usergroup` int(11) NOT NULL,
   `userstatus` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'ativo',
   `userregdate` datetime NOT NULL,
   PRIMARY KEY (`userid`),
-  UNIQUE KEY `usuario` (`userlogin`),
-  KEY `nivel` (`userpermlvl`)
+  UNIQUE KEY `usuario` (`userlogin`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `at_users`
 --
 
-INSERT INTO `at_users` (`userid`, `userfname`, `userlname`, `userlogin`, `userpass`, `usermail`, `userpermlvl`, `usercomp`, `usercomplvl`, `userstatus`, `userregdate`) VALUES
-(1, 'Admin', 'User', 'admin', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'admin@viladosite.com.br', 50, 1, 10, 'ativo', '2016-05-06 13:08:54'),
-(4, 'Bruno', 'Braga', 'bruno', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'dev@viladosite.com.br', 1, 1, 3, 'ativo', '2019-04-01 00:00:00'),
-(11, 'Zé', 'Barriga', 'zebarriga', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'ze@barriga.com', 1, 1, 1, 'ativo', '2019-04-06 07:42:14');
+INSERT INTO `at_users` (`userid`, `userfname`, `userlname`, `userlogin`, `userpass`, `usermail`, `userpermlvl`, `usercomp`, `usergroup`, `userstatus`, `userregdate`) VALUES
+(1, 'Admin', 'User', 'admin', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'admin@viladosite.com.br', 50, 1, 2, 'ativo', '2016-05-06 13:08:54'),
+(4, 'Bruno', 'Braga', 'bruno', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'dev@viladosite.com.br', 1, 1, 2, 'ativo', '2019-04-01 00:00:00'),
+(11, 'Zé', 'Barriga', 'zebarriga', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'ze@barriga.com', 1, 1, 3, 'ativo', '2019-04-06 07:42:14');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
