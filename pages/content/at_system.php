@@ -38,8 +38,8 @@
                             <p><strong>Permissão no Atencil:</strong>
                             <?php echo $_SESSION['UserPermLvl'] ?></p>
 
-                            <p><strong>Permissão na Empresa:</strong>
-                            <?php echo $_SESSION['UserGroup'] ?></p>
+                            <p><strong>Grupo do Usuário:</strong>
+                            <?php groupinfo_byid($_SESSION['UserGroup'], 'usergroupname') ?></p>
 
                         </div>
                     </div>
@@ -143,7 +143,6 @@
 
 
                                     <!-- Aba Servidor -->
-                                    <?php if (perm_check($perm_edit_sys) == true){ ?>
                                     <div class="tab-pane fade" id="nav-server" role="tabpanel" aria-labelledby="nav-server-tab">
                                         
                                         <p class="text-muted m-b-15">
@@ -157,7 +156,6 @@
                                         <p> <?php // phpinfo() ?> </p>
                                                                                 
                                     </div>
-                                    <?php } ?>
                                     <!-- Aba Servidor -->
 
 
@@ -174,41 +172,39 @@
                                             <div class="col-md-6">
                                             
                                                 <p>Painel:</p>
-                                                <?php badges($perm_view_dashboard, $perm_edit_dashboard); ?>
+                                                <?php badges('viewdashboard', 'editdashboard'); ?>
                                                 
                                                 <p>Minha Conta:</p>
-                                                <?php badges($perm_view_editacc, $perm_edit_editacc); ?>
+                                                <?php badges('viewaccount', 'editaccount'); ?>
 
                                                 <p>Atendimentos:</p>
-                                                <?php badges($perm_view_attendance, $perm_edit_attendance); ?>
+                                                <?php badges('viewattendance', 'editattendance'); ?>
 
                                                 <p>Empresas:</p>
-                                                <?php badges($perm_view_comps, $perm_edit_comps); ?>
-
-                                                <p>Sua Empresa:</p>
-                                                <?php badges($perm_view_owncomp, $perm_edit_owncomp); ?>
+                                                <?php badges('viewcompany', 'editcompany'); ?>
 
                                                 <p>Clientes:</p>
-                                                <?php badges($perm_view_clients, $perm_edit_clients); ?>
-                                            
+                                                <?php badges('viewclients', 'editclients'); ?>
+
                                             </div>
 
+                                            
                                             <div class="col-md-6">
 
                                                 <p>Usuários:</p>
-                                                <?php badges($perm_view_users, $perm_edit_users); ?>
-
-                                                <p>Sistema Atencil:</p>
-                                                <?php badges($perm_view_sys, $perm_edit_sys); ?>
+                                                <?php badges('viewusers', 'editusers'); ?>
+                                            
+                                                <p>Sistema:</p>
+                                                <?php badges('viewsystem', 'editsystem'); ?>
 
                                                 <p>Pesquisa:</p>
-                                                <?php badges($perm_view_search, $perm_edit_search); ?>
+                                                <?php badges('viewsearch'); ?>
 
                                                 <p>Módulos:</p>
-                                                <?php badges($perm_view_modules, $perm_edit_modules); ?>
+                                                <?php badges('viewmodules', 'editmodules'); ?>
 
                                                 <p>Permissões:</p>
-                                                <?php badges($perm_view_perms, $perm_edit_perms); ?>
+                                                <?php badges('viewperms', 'editperms'); ?>
 
                                             </div>
 

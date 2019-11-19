@@ -250,50 +250,46 @@
                                             Confira abaixo as permissões de seu usuário:
                                         </p>
                                         <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                
+                                                <p>Painel:</p>
+                                                <?php badges('viewdashboard', 'editdashboard'); ?>
+                                                
+                                                <p>Minha Conta:</p>
+                                                <?php badges('viewaccount', 'editaccount'); ?>
 
-                                        <p>Painel:  
-                                        <?php badges($perm_view_dashboard, $perm_edit_dashboard); ?>
-                                        </p>
-                                        
-                                        <p>Minha Conta:  
-                                        <?php badges($perm_view_editacc, $perm_edit_editacc); ?>
-                                        </p>
+                                                <p>Atendimentos:</p>
+                                                <?php badges('viewattendance', 'editattendance'); ?>
 
-                                        <p>Atendimentos:  
-                                        <?php badges($perm_view_attendance, $perm_edit_attendance); ?>
-                                        </p>
+                                                <p>Empresas:</p>
+                                                <?php badges('viewcompany', 'editcompany'); ?>
 
-                                        <p>Empresas:  
-                                        <?php badges($perm_view_comps, $perm_edit_comps); ?>
-                                        </p>
+                                                <p>Clientes:</p>
+                                                <?php badges('viewclients', 'editclients'); ?>
 
-                                        <p>Sua Empresa:  
-                                        <?php badges($perm_view_owncomp, $perm_edit_owncomp); ?>
-                                        </p>
+                                            </div>
 
-                                        <p>Clientes:  
-                                        <?php badges($perm_view_clients, $perm_edit_clients); ?>
-                                        </p>
+                                            
+                                            <div class="col-md-6">
 
-                                        <p>Usuários:  
-                                        <?php badges($perm_view_users, $perm_edit_users); ?>
-                                        </p>
+                                                <p>Usuários:</p>
+                                                <?php badges('viewusers', 'editusers'); ?>
+                                            
+                                                <p>Sistema:</p>
+                                                <?php badges('viewsystem', 'editsystem'); ?>
 
-                                        <p>Sistema Atencil:  
-                                        <?php badges($perm_view_sys, $perm_edit_sys); ?>
-                                        </p>
+                                                <p>Pesquisa:</p>
+                                                <?php badges('viewsearch'); ?>
 
-                                        <p>Pesquisa:  
-                                        <?php badges($perm_view_search, $perm_edit_search); ?>
-                                        </p>
+                                                <p>Módulos:</p>
+                                                <?php badges('viewmodules', 'editmodules'); ?>
 
-                                        <p>Módulos:  
-                                        <?php badges($perm_view_modules, $perm_edit_modules); ?>
-                                        </p>
+                                                <p>Permissões:</p>
+                                                <?php badges('viewperms', 'editperms'); ?>
 
-                                        <p>Permissões:  
-                                        <?php badges($perm_view_perms, $perm_edit_perms); ?>
-                                        </p>
+                                            </div>
+                                        </div>
 
                                     </div>
                                     <!-- Aba Minhas Permissões -->
