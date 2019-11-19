@@ -5,10 +5,8 @@
 // Carrega as configurações, funções e elementos base para funcionamento do sistema
 require __DIR__ . '/../includes/at_core.php';
 
-// Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
-if (perm_check($perm_view_users) == false) {
-    header("Location: error_permission.php"); exit;
-}
+// Confere se o grupo do usuário tem permissão
+if (perm_group_check('viewusers') == false) { header("Location: error_permission.php"); exit; }
 ?>
 
 

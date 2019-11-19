@@ -55,6 +55,37 @@ function perm_comp_check($permvar) {
 }
 
 
+// Função para checar se o grupo do usuário logado tem permissão para acessar uma página informada
+// Retorna false quando o usuário não está logado ou não possui a permissão necessária
+function perm_group_check($permslug) {
+
+	// A sessão precisa ser iniciada em cada página diferente
+	if (!isset($_SESSION)) {session_start();}
+
+	// Verifica se não há a variável da sessão que identifica o usuário
+	if (!isset($_SESSION['UserID']) AND !isset($_SESSION['UserGroup'])) {
+
+		return FALSE;
+
+	} else {
+
+		$usergroup = $_SESSION['UserGroup'];
+
+		// Monta a conexão e checagem no banco para obter as permissões do grupo fornecido
+		global $mysql;
+		$sql = "SELECT * FROM at_usergroups WHERE usergroupid = '$usergroup'";
+		$query = mysqli_query($mysql, $sql);
+		$grperms = mysqli_fetch_assoc($query);
+
+		
+		if ($grperms[$permslug] == '1'){ return TRUE; }
+		
+		if ($grperms[$permslug] == '0'){ return FALSE; }
+
+	}
+}
+
+
 // Função para checagem de status baseado em informação binaria
 // Informe uma variável, uma resposta caso 0 e outra caso 1
 // Informe como deseja o resultado (0 para result / 1 para echo)

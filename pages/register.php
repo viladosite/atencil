@@ -5,9 +5,8 @@
 // Carrega as configurações, funções e elementos base para funcionamento do sistema
 require __DIR__ . '/../includes/at_core.php';
 
-// Caso o usuário já tenha as permissões de credencial, direciona para o dashboard
-if (perm_check($perm_view_dashboard) == true) {header("Location: dashboard.php"); exit;}
-
+// Confere se o grupo do usuário tem permissão
+if (perm_group_check('viewdashboard') == true) { header("Location: dashboard.php"); exit; }
 ?>
 
 <!DOCTYPE html>

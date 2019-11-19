@@ -92,6 +92,9 @@
                         <li>
                             <a href="user_new.php">Cadastrar Usuário</a>
                         </li>
+                        <li>
+                            <a href="user_groups.php">Grupos de Usuários</a>
+                        </li>
                     </ul>
                 </li>
 
