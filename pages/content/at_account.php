@@ -60,7 +60,7 @@
                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
                                          aria-selected="true">Minha Conta</a>
                                         
-                                        <?php if (perm_check($perm_edit_owncomp) == true){ ?>
+                                        <?php if (perm_group_check('viewcompany') == true) { ?>
                                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Minha Empresa</a>
                                         <?php } ?>
 
@@ -132,7 +132,7 @@
                                     <!-- Aba Minha Conta -->
 
                                     <!-- Aba Minha Empresa -->
-                                    <?php if (perm_check($perm_edit_owncomp) == true){ ?>
+                                    <?php if (perm_group_check('editcompany') == true) { ?>
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
 

@@ -29,11 +29,10 @@
                 </li>
                 
 
-
                 <?php
-                // Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
-                if (perm_check($perm_adm_comps) == true) { ?>
-                    
+                // Confere se o grupo do usuário tem permissão
+                if (perm_group_check('viewsystem') == true) { ?>
+
                 <!-- Item de empresas exclusivo para admins -->
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
@@ -53,7 +52,6 @@
                 <!-- Item de empresas exclusivo para admins -->
 
                 <?php }; ?>
-
 
 
                 <li class="has-sub">
@@ -98,10 +96,11 @@
                     </ul>
                 </li>
 
-                <?php
-                // Caso o usuário não tenha as permissões corretas, destroi a sessão e direciona para o index
-                if (perm_check($perm_adm_modules) == true) { ?>
 
+
+                <?php
+                // Confere se o grupo do usuário tem permissão
+                if (perm_group_check('viewmodules') == true) { ?>
                 
                 <!-- Item de módulos exclusivo para admins -->
                 <li class="has-sub">

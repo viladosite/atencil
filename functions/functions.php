@@ -31,6 +31,19 @@ function perm_check($permvar) {
 	}
 }
 
+// Função para checagem de status baseado em informação binaria
+// Informe uma variável, uma resposta caso 0 e outra caso 1
+// Informe como deseja o resultado (0 para result / 1 para echo)
+function statuscheck($variable, $zeroanswer, $oneanswer, $resmode = 0){
+	if ($variable == 0) { $result = $zeroanswer; };
+	if ($variable == 1) { $result = $oneanswer; };
+	if ($resmode = 1) {
+		echo $result;
+	} else {
+		return $result;
+	}
+}
+
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária

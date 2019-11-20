@@ -60,7 +60,7 @@
                                         <a class="nav-item nav-link active" id="nav-paths-tab" data-toggle="tab" href="#nav-paths" role="tab" aria-controls="nav-paths"
                                          aria-selected="true">Caminhos de Sistema</a>
                                         
-                                        <?php if (perm_check($perm_edit_owncomp) == true){ ?>
+                                        <?php if (perm_group_check('viewsystem') == true) { ?>
                                         <a class="nav-item nav-link" id="nav-server-tab" data-toggle="tab" href="#nav-server" role="tab" aria-controls="nav-server" aria-selected="false">Servidor</a>
                                         <?php } ?>
 
