@@ -95,7 +95,7 @@
                             <td><?php echo $usuario['userfname'] . ' ' . $usuario['userlname']; ?></td>
                             <td><span class="block-email"> <?php echo $usuario['usermail']; ?> </span></td>
                             <td><?php echo $usuario['userregdate']; ?></td>
-                            <td><?php echo $usuario['usercomplvl'];?> </td>
+                            <td><?php echo $usuario['usergroup'];?> </td>
                             <td>
                                 <div class="table-data-feature">
 

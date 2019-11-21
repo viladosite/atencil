@@ -19,13 +19,10 @@ if (perm_group_check('viewmodules') == false) { header("Location: error_permissi
 
     <body class="animsition">
         <div class="page-wrapper">
-            
             <!-- Carregamento do header mobile -->
             <?php require '../includes/at_headermobile.php'; ?>
-            
             <!-- Carregamento do menu sidebar -->
             <?php require '../includes/at_menusidebar.php'; ?>
-            
             <!-- INÍCIO DO PAGE CONTAINER-->
             <div class="page-container">
                 <!-- Carregamento do header desktop -->
@@ -34,10 +31,8 @@ if (perm_group_check('viewmodules') == false) { header("Location: error_permissi
                 <?php require 'content/at_mod_list.php'; ?>
             </div>
             <!-- FIM DO PAGE CONTAINER-->
-
             <!-- Carrega os avisos e modais da página -->
             <?php include '../includes/at_modal_moddel_conf.php'; ?>
-        
         </div>
         
         <!-- Carregamento dos scripts -->

@@ -31,6 +31,19 @@ function perm_check($permvar) {
 	}
 }
 
+// Função para checagem de status baseado em informação binaria
+// Informe uma variável, uma resposta caso 0 e outra caso 1
+// Informe como deseja o resultado (0 para result / 1 para echo)
+function statuscheck($variable, $zeroanswer, $oneanswer, $resmode = 0){
+	if ($variable == 0) { $result = $zeroanswer; };
+	if ($variable == 1) { $result = $oneanswer; };
+	if ($resmode = 1) {
+		echo $result;
+	} else {
+		return $result;
+	}
+}
+
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária
@@ -69,37 +82,28 @@ function perm_group_check($permslug) {
 
 	} else {
 
-		$usergroup = $_SESSION['UserGroup'];
-
-		// Monta a conexão e checagem no banco para obter as permissões do grupo fornecido
-		global $mysql;
-		$sql = "SELECT * FROM at_usergroups WHERE usergroupid = '$usergroup'";
-		$query = mysqli_query($mysql, $sql);
-		$grperms = mysqli_fetch_assoc($query);
-
+		if ($permslug == null) {
 		
-		if ($grperms[$permslug] == '1'){ return TRUE; }
+			return FALSE;
 		
-		if ($grperms[$permslug] == '0'){ return FALSE; }
+		} else {
+		
+			$usergroup = $_SESSION['UserGroup'];
+
+			// Monta a conexão e checagem no banco para obter as permissões do grupo fornecido
+			global $mysql;
+			$sql = "SELECT * FROM at_usergroups WHERE usergroupid = '$usergroup'";
+			$query = mysqli_query($mysql, $sql);
+			$grperms = mysqli_fetch_assoc($query);
+
+			if ($grperms[$permslug] == '1'){ return TRUE; }
+			if ($grperms[$permslug] == '0'){ return FALSE; }
+		}
 
 	}
 }
 
 
-// Função para checagem de status baseado em informação binaria
-// Informe uma variável, uma resposta caso 0 e outra caso 1
-// Informe como deseja o resultado (0 para result / 1 para echo)
-function statuscheck($variable, $zeroanswer, $oneanswer, $resmode = 0){
-	if ($variable == 0) { $result = $zeroanswer; };
-	if ($variable == 1) { $result = $oneanswer; };
-
-	if ($resmode = 1) {
-		echo $result;
-	} else {
-		return $result;
-	}
-
-}
 
 
 
@@ -110,25 +114,25 @@ function statuscheck($variable, $zeroanswer, $oneanswer, $resmode = 0){
 
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
-function badges($permview, $permedit) {
+function badges($permview, $permedit = null) {
 	
 	// Verifica se o usuário tem a permissão de visualização informada
-	if(perm_check($permview) == true) {echo '<span class="badge badge-success permtag">Ver</span>';}
+	if(perm_group_check($permview) == true) {echo '<span class="badge badge-success permtag">Ver</span>';}
 	
 	echo " "; // Espaçador entre tags
 	
 	// Verifica se o usuário tem a permissão de edição informada
-	if(perm_check($permedit) == true) {echo '<span class="badge badge-warning permtag">Editar</span>';}	
+	if(perm_group_check($permedit) == true) {echo '<span class="badge badge-warning permtag">Editar</span>';}	
 
 	// Checa se o usuário não possui nenhuma das duas permissões anteriores para mostrar a tag de "sem acesso"
-	if(perm_check($permview) == false && perm_check($permedit) == false) {
+	if(perm_group_check($permview) == false && perm_group_check($permedit) == false) {
 		echo '<span class="badge badge-dark permtag">Sem Acesso</span><br>';
 	}
 }
 
 // Função para checagem das permissões de acesso dos recursos específicos da empresa
 function badge_adm($permission) {
-	if(perm_check($permission) == true) {echo '<span class="badge badge-danger permtag">', 'ADM', '</span><br>';}
+	if(perm_group_check($permission) == true) {echo '<span class="badge badge-danger permtag">', 'ADM', '</span><br>';}
 }
 
 
@@ -154,7 +158,7 @@ function badge_onoff($var) {
 
 
 // Obtem os dados da compania a partir do ID dela
-// $compid é o id da compania, enquanto $info é o nome do campo desejado da tabela de empresas
+// $compid é o id da compania, enquanto $info é o nome do campo desejado da tabela
 function compinfo_byid($compid, $info) {
 
 	global $mysql;
@@ -178,7 +182,7 @@ function compinfo_byid($compid, $info) {
 
 
 // Obtem os dados de usuário a partir do ID dele
-// $compid é o id do usuário, enquanto $info é o nome do campo desejado da tabela de usuários
+// $compid é o id do usuário, enquanto $info é o nome do campo desejado da tabela
 function userinfo_byid($userid, $info) {
 
 	global $mysql;
@@ -198,6 +202,28 @@ function userinfo_byid($userid, $info) {
 
 }
 
+
+
+// Obtem os dados do grupo do usuário a partir do ID
+// $groupid é o id do grupo, enquanto $info é o nome do campo desejado da tabela
+function groupinfo_byid($groupid, $info) {
+
+	global $mysql;
+	$sql = "SELECT * FROM at_usergroups WHERE usergroupid = '$groupid'";
+    $query = mysqli_query($mysql, $sql);
+	$result = mysqli_fetch_assoc($query);
+
+    if (empty($result)) {
+    
+    	echo "Não Encontrado";
+
+    } else {
+
+    	echo $result[$info];
+
+    };
+
+}
 
 
 

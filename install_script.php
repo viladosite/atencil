@@ -24,8 +24,6 @@
         
         // Monta as variáveis para descomentar os itens
         $oldcomment = '// define(';
-        $oldcomment2 = '/* VARIÁVEIS (VARIABLES)';
-        $oldcomment3 = 'VARIÁVEIS (VARIABLES)  */';
 
 
 
@@ -71,8 +69,6 @@
 
         // Descomenta os itens da configuração
         $configs = str_replace($oldcomment, $comment, $configs);
-        $configs = str_replace($oldcomment2, '', $configs);
-        $configs = str_replace($oldcomment3, '', $configs);
 
 
         // Insere as informações de configuração no novo arquivo config.php
