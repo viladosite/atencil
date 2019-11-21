@@ -37,7 +37,6 @@ Below you can set the main paths to the system directories
 
 
 
-
 // -----------------------------------------------------
 // Pastas de sistema e módulos internos
 // (Internal Modules and Directory Paths)
@@ -80,5 +79,38 @@ Below you can set the main paths to the system directories
 // Arquivo de conexão (Connection file)
 // define('CONN_FILE', 'at_connect.php');
 
+
+
+// -----------------------------------------------------
+// Bancos de dados e tabelas do sistema
+// (System databases and tables)
+// -----------------------------------------------------
+
+// Tabela de atendimentos
+// define('ATB_ATT', 'at_attendances');
+
+// Tabela de grupos de clientes
+// define('ATB_CLIGR', 'at_clientgroups');
+
+// Tabela de clientes
+// define('ATB_CLIENTS', 'at_clients');
+
+// Tabela de empresas
+// define('ATB_COMPS', 'at_companies');
+
+// Tabela de configurações
+// define('ATB_CONFIG', 'at_config');
+
+// Tabela de módulos
+// define('ATB_MOD', 'at_modules');
+
+// Tabela de redefinição de senha
+// define('ATB_PASS', 'at_passredef');
+
+// Tabela de grupos de usuários
+// define('ATB_USERGR', 'at_usergroups');
+
+// Tabela de usuários
+// define('ATB_USERS', 'at_users');
 
 ?>
