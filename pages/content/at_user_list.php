@@ -103,9 +103,10 @@
                                         <i class="zmdi zmdi-edit"></i>
                                     </button>
 
-                                    <button class="item" data-toggle="modal" data-target="#confirmar" data-userid="<?php echo $usuario['userid'] ?>" data-userlog="<?php echo $usuario['userlogin'] ?>" title="Remover" name="function" value='delete' type="button">
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
+                                    <form action="../functions/user_remove.php" method="post">
+                                        <button class="item" title="Remover" name="function" value='delete' type="submit"><i class="zmdi zmdi-delete"></i></button>
+                                        <input type="hidden" id="user" name="user" value="<?php echo $usuario['userid']; ?>">
+                                    </form>
                                     
                                 </div>
                             </td>

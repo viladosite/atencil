@@ -23,7 +23,33 @@
                     <div class="card">
                         <div class="card-header">Dados do Usuário</div>
                         <div class="card-body card-block">
-                            <form action="/functions/user_create.php" method="post">
+                            <form action="../functions/user_create.php" method="post">
+
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="group" class=" form-control-label">Grupo</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <select name="group" id="group" class="form-control">
+                                            <?php
+                                            // Monta os parâmetros da query
+                                            $sqlgr = "SELECT * FROM `at_usergroups` WHERE (`usergroupcomp` = '".$_SESSION['UserCompany'] ."')";
+
+                                            // Monta a query para execução
+                                            $usergrs = mysqli_query($mysql, $sqlgr);
+
+                                            // Executa o loop com a query
+                                            foreach ($usergrs as $usergr) { ?>
+                                            
+                                            <option value="<?php echo $usergr['usergroupid']; ?>">
+                                                <?php echo $usergr['usergroupname']; ?>
+                                            </option>
+                                            
+                                            <?php } ?>
+
+                                        </select>
+                                    </div>
+                                </div>
 
                                 <div class="form-group">
                                     <div class="input-group">
@@ -72,18 +98,6 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-asterisk"></i>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col col-md-3">
-                                        <label for="permissao" class=" form-control-label">Permissão</label>
-                                    </div>
-                                    <div class="col-12 col-md-9">
-                                        <select name="permissao" id="permissao" class="form-control">
-                                            <option value="1">Ver</option>
-                                            <option value="2">Editar</option>
-                                        </select>
                                     </div>
                                 </div>
 

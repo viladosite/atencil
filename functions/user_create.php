@@ -10,13 +10,12 @@ $formunome = mysqli_real_escape_string($mysql, $_POST['unome']);
 $formuser = mysqli_real_escape_string($mysql, $_POST['user']);
 $formemail = mysqli_real_escape_string($mysql, $_POST['email']);
 $formsenha = sha1($_POST['senha']);
-$usercompanylvl = mysqli_real_escape_string($mysql, $_POST['permissao']);
+$formgroup = mysqli_real_escape_string($mysql, $_POST['group']);
 
 
 // Variáveis nativas do usuário
 $useridatual = $_SESSION['UserID'];
 $usercompany = $_SESSION['UserCompany'];
-$userperm = 1;
 $userregstatus = 1;
 $regdate = date("Y-m-d H:i:s");
 
@@ -36,8 +35,8 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 
 	// Queries de inserção dos dados
 	$usersql = "
-		INSERT INTO at_users (userfname, userlname, userlogin, userpass, usermail, userpermlvl, usercomp, usercomplvl, userstatus, userregdate)
-		VALUES ('$formpnome', '$formunome', '$formuser', '$formsenha', '$formemail', '$userperm', '$usercompany', '$usercompanylvl', '$userregstatus', '$regdate');
+		INSERT INTO at_users (userfname, userlname, userlogin, userpass, usermail, usercomp, usergroup, userstatus, userregdate)
+		VALUES ('$formpnome', '$formunome', '$formuser', '$formsenha', '$formemail', '$usercompany', '$formgroup', '$userregstatus', '$regdate');
 	";
 
 	// Execução de inserção de dados
@@ -52,7 +51,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: /pages/user_list.php");
+	    header("Location: ../pages/user_list.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
@@ -65,7 +64,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 	    </script>';
 
 	    // Direciona para a tela de login
-	    header("Location: /pages/user_new.php");
+	    header("Location: ../pages/user_new.php");
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
