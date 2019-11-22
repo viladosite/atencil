@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 21-Nov-2019 às 05:28
+-- Generation Time: 22-Nov-2019 às 18:31
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.3.5
 
@@ -63,15 +63,14 @@ CREATE TABLE IF NOT EXISTS `at_clientgroups` (
   `cligrdesc` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'Descrição e observações do grupo de clientes',
   PRIMARY KEY (`cligrid`),
   KEY `cligrcompany` (`cligrcompany`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabela com os grupos de clientes e seus respectivos vinculos';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabela com os grupos de clientes e seus respectivos vinculos';
 
 --
 -- Extraindo dados da tabela `at_clientgroups`
 --
 
 INSERT INTO `at_clientgroups` (`cligrid`, `cligrcompany`, `cligrname`, `cligrdesc`) VALUES
-(11, 1, 'Grupo de Clientes 1', 'Este é um grupo de clientes que serve como exemplo para ilustrar os grupos de cliente'),
-(12, 1, 'Grupo de Clientes 2', 'Este é outro grupo de clientes que serve como exemplo para ilustrar os grupos de cliente');
+(1, 1, 'Sem Grupo', 'Este é o grupo padrão para onde são movidos os clientes cadastrados sem que se selecione um grupo ou clientes de um grupo que foi removido.\r\n(Este grupo não pode ser excluído)');
 
 -- --------------------------------------------------------
 
@@ -229,15 +228,14 @@ CREATE TABLE IF NOT EXISTS `at_usergroups` (
   `editperms` tinyint(4) NOT NULL,
   PRIMARY KEY (`usergroupid`) USING BTREE,
   KEY `usergroupcomp` (`usergroupcomp`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `at_usergroups`
 --
 
 INSERT INTO `at_usergroups` (`usergroupid`, `usergroupcomp`, `usergroupname`, `usergroupdesc`, `viewdashboard`, `viewaccount`, `viewattendance`, `viewcompany`, `viewclients`, `viewusers`, `viewsystem`, `viewsearch`, `viewmodules`, `viewperms`, `editdashboard`, `editaccount`, `editattendance`, `editcompany`, `editclients`, `editusers`, `editsystem`, `editmodules`, `editperms`) VALUES
-(3, 1, 'Usuários simples', '', 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0),
-(2, 1, 'Administradores', 'Grupo de administradores com todas as permissões', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+(1, 1, 'Administradores', 'Grupo de administradores com todas as permissões', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -260,16 +258,14 @@ CREATE TABLE IF NOT EXISTS `at_users` (
   `userregdate` datetime NOT NULL,
   PRIMARY KEY (`userid`),
   UNIQUE KEY `usuario` (`userlogin`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `at_users`
 --
 
 INSERT INTO `at_users` (`userid`, `userfname`, `userlname`, `userlogin`, `userpass`, `usermail`, `userpermlvl`, `usercomp`, `usergroup`, `userstatus`, `userregdate`) VALUES
-(1, 'Admin', 'User', 'admin', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'admin@viladosite.com.br', 50, 1, 2, 'ativo', '2016-05-06 13:08:54'),
-(4, 'Bruno', 'Braga', 'bruno', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'dev@viladosite.com.br', 1, 1, 2, 'ativo', '2019-04-01 00:00:00'),
-(11, 'Zé', 'Barriga', 'zebarriga', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'ze@barriga.com', 1, 1, 3, 'ativo', '2019-04-06 07:42:14');
+(1, 'Admin', 'User', 'admin', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'admin@viladosite.com.br', 50, 1, 1, 'ativo', '2016-05-06 13:08:54');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
