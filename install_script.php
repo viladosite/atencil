@@ -96,13 +96,13 @@
         $triggerdrops = "DROP TRIGGER IF EXISTS `client_group_id1block`; DROP TRIGGER IF EXISTS `company_id1block`; DROP TRIGGER IF EXISTS `user_group_id1block`; DROP TRIGGER IF EXISTS `user_id1block`;";
 
         // Monta os triggers para as tabelas
-        $trigger1 = "CREATE TRIGGER `client_group_id1block` BEFORE DELETE ON `at_clientgroups` FOR EACH ROW IF old.cligrid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'This record is sacred! You are not allowed to remove it!!'; END IF";
+        $trigger1 = "CREATE TRIGGER `client_group_id1block` BEFORE DELETE ON `at_clientgroups` FOR EACH ROW IF old.cligrid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Este grupo não pode ser removido!!'; END IF";
 
-        $trigger2 = "CREATE TRIGGER `company_id1block` BEFORE DELETE ON `at_companies` FOR EACH ROW IF old.companyid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'This record is sacred! You are not allowed to remove it!!'; END IF";
+        $trigger2 = "CREATE TRIGGER `company_id1block` BEFORE DELETE ON `at_companies` FOR EACH ROW IF old.companyid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Esta empresa não pode ser removida!!'; END IF";
        
-        $trigger3 = "CREATE TRIGGER `user_group_id1block` BEFORE DELETE ON `at_usergroups` FOR EACH ROW IF old.usergroupid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'This record is sacred! You are not allowed to remove it!!'; END IF";
+        $trigger3 = "CREATE TRIGGER `user_group_id1block` BEFORE DELETE ON `at_usergroups` FOR EACH ROW IF old.usergroupid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Este grupo não pode ser removido!!'; END IF";
                 
-        $trigger4 = "CREATE TRIGGER `user_id1block` BEFORE DELETE ON `at_users` FOR EACH ROW IF old.userid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'This record is sacred! You are not allowed to remove it!!'; END IF";
+        $trigger4 = "CREATE TRIGGER `user_id1block` BEFORE DELETE ON `at_users` FOR EACH ROW IF old.userid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Este usuário é o Superadmin e não pode ser removido!!'; END IF";
 
         // Agrupa os triggers para inclusão no banco
         $triggers = $trigger1 . ";" . $trigger2 . ";" . $trigger3 . ";" . $trigger4 . ";";
