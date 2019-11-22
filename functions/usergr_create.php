@@ -88,24 +88,6 @@ $formeditperms = mysqli_real_escape_string($mysql, $_POST['editperms']);
 } else { $formeditperms = '0'; }
 
 
-
-
-
-/*
-
-viewdashboard, viewaccount, viewattendance, viewcompany, viewclients, viewusers, viewsystem, viewsearch, viewmodules, viewperms, editdashboard, editaccount, editattendance, editcompany, editclients, editusers, editsystem, editmodules, editperms
-
-
-
-
-'$formviewdashboard', '$formviewaccount', '$formviewattendance', '$formviewcompany', '$formviewclients', '$formviewusers', '$formviewsystem', '$formviewsearch', '$formviewmodules', '$formviewperms', '$formeditdashboard', '$formeditaccount', '$formeditattendance', '$formeditcompany', '$formeditclients', '$formeditusers', '$formeditsystem', '$formeditmodules', '$formeditperms'
-
-
-
-
-*/
-
-
 // Variáveis nativas do usuário
 $useridatual = $_SESSION['UserID'];
 $usergroup = $_SESSION['UserGroup'];
