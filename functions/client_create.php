@@ -69,8 +69,8 @@ if ( empty($formpnome) or empty($formunome)	or empty($formemail) or empty($formg
 	    // </script>';
 
 	    // Direciona para a tela de login
-		// header("Location: ../pages/client_new.php");
-		echo mysqli_error($mysql);
+		header("Location: ../pages/client_new.php");
+		// echo mysqli_error($mysql);
 
 	    // Encerra a conexão
 		mysqli_close($mysql);

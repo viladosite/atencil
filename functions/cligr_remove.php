@@ -19,16 +19,18 @@ $cligrdel = mysqli_query($mysql, $cligrquery);
 if ($cligrdel = true) {
 	
 	// Move os usuários do grupo excluído para o grupo padrão
-	$moveuserquery = "UPDATE `at_clients` SET `clientgroup` = `1` WHERE `clientcompany` = `$clientcomp` AND `clientgroup` = `$cligrformid`";
+	$moveuserquery = " UPDATE at_clients SET clientgroup = '1'	WHERE clientgroup = $cligrformid AND clientcompany = $clientcomp;";
 	$moveusers = mysqli_query($mysql, $moveuserquery);
 
 	// Redirect back to the list
 	header("Location: ../pages/client_groups.php");
+	// echo mysqli_error($mysql);
 
 } else {
 
 	// Redirect back to the list
 	header("Location: ../pages/client_groups.php");
+	// echo mysqli_error($mysql);
     
 }
 

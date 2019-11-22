@@ -82,7 +82,7 @@
                             <th>nome</th>
                             <th>email</th>
                             <th>cadastrado</th>
-                            <th>status</th>
+                            <th>grupo</th>
                             <th>ações</th>
                         </tr>
                     </thead>
@@ -109,7 +109,7 @@
                             <td><?php echo $client['clientfname'] . ' ' . $client['clientlname']; ?></td>
                             <td><span class="block-email"> <?php echo $client['clientmail']; ?> </span></td>
                             <td><?php echo $client['clientregister']; ?></td>
-                            <td><?php echo $client['clientstatus'];?> </td>
+                            <td><?php echo $client['clientgroup'];?> </td>
                             <td>
                                 <div class="table-data-feature">
                                     <button class="item" title="Editar" name="function" value='edit' type="submit">
