@@ -36,7 +36,7 @@ if (perm_group_check('editusers') == false) { header("Location: error_permission
             <!-- FIM DO PAGE CONTAINER-->
 
             <!-- Carrega os avisos e modais da página -->
-            <?php include '../includes/at_modal_usergr.php'; ?>
+            <?php include '../modals/at_modal_usergr.php'; ?>
         
         </div>
         

@@ -23,7 +23,7 @@ if (perm_group_check('viewdashboard') == true) { header("Location: dashboard.php
             <?php require 'content/at_registerform.php'; ?>
         
             <!-- Carrega os avisos e modais da página -->
-            <?php include '../includes/at_modal_terms.php'; ?>
+            <?php include '../modals/at_modal_terms.php'; ?>
 
         </div>
 

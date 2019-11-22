@@ -36,7 +36,7 @@ if (perm_group_check('editclients') == false) { header("Location: error_permissi
             <!-- FIM DO PAGE CONTAINER-->
 
             <!-- Carrega os avisos e modais da página -->
-            <?php include '../includes/at_modal_cligr.php'; ?>
+            <?php include '../modals/at_modal_cligr.php'; ?>
         
         </div>
         

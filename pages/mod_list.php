@@ -32,7 +32,7 @@ if (perm_group_check('viewmodules') == false) { header("Location: error_permissi
             </div>
             <!-- FIM DO PAGE CONTAINER-->
             <!-- Carrega os avisos e modais da página -->
-            <?php include '../includes/at_modal_moddel_conf.php'; ?>
+            <?php include '../modals/at_modal_moddel_conf.php'; ?>
         </div>
         
         <!-- Carregamento dos scripts -->
