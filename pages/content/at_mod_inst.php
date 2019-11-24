@@ -23,7 +23,7 @@
                     <div class="card">
                         <div class="card-header">Instalar módulo</div>
                         <div class="card-body card-block">
-                            <form action="/functions/mod_install.php" enctype="multipart/form-data" method="post">
+                            <form action="../functions/mod_install.php" enctype="multipart/form-data" method="post">
 
                                 <div class="row form-group">
                                     <div class="col col-md-3">
@@ -36,10 +36,10 @@
 
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="instperm" class=" form-control-label">Permissão</label>
+                                        <label for="modperm" class=" form-control-label">Permissão</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <select name="instperm" id="instperm" disabled="" class="form-control">
+                                        <select name="modperm" id="modperm" disabled="" class="form-control">
                                             <option value="0">Selecione a permissão</option>
                                             <option value="1">Para Todos</option>
                                             <option value="2">Para uma Empresa</option>
