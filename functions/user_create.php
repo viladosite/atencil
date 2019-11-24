@@ -16,7 +16,7 @@ $formgroup = mysqli_real_escape_string($mysql, $_POST['group']);
 // Variáveis nativas do usuário
 $useridatual = $_SESSION['UserID'];
 $usercompany = $_SESSION['UserCompany'];
-$userregstatus = 1;
+$userregstatus = 'ativo';
 $regdate = date("Y-m-d H:i:s");
 
 
