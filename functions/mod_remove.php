@@ -4,8 +4,8 @@
 require __DIR__ . '/../includes/at_core.php';
 
 // Variáveis com dados do formulário
-$modformid = $_POST['modtoremid'];
-$modformdir = $_POST['modtoremdir'];
+$modformid = $_POST['modid'];
+$modformdir = $_POST['moddir'];
 
 // Checagem de conexão
 if (!$mysql) { die("A Conexão Falhou: " . mysqli_connect_error()); }
@@ -16,7 +16,7 @@ $modremquery = " DELETE FROM at_modules WHERE modid = '$modformid' ";
 $modremdb = mysqli_query($mysql, $modremquery);
 
 // Prepara o path da pasta para remoção
-$modremdir = $home_dir . $mods_dir . "/" . $modformdir;
+$modremdir = DIR_PATH . "/" . $modformdir;
 
 // Executa a remoção do banco e dos arquivos
 if ($modrembd = true) {
