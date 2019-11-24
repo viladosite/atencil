@@ -16,7 +16,7 @@ $modremquery = " DELETE FROM at_modules WHERE modid = '$modformid' ";
 $modremdb = mysqli_query($mysql, $modremquery);
 
 // Prepara o path da pasta para remoção
-$modremdir = DIR_PATH . "/" . $modformdir;
+$modremdir = DIR_PATH . HOME_DIR . MODS_DIR . "/" . $modformdir;
 
 // Executa a remoção do banco e dos arquivos
 if ($modrembd = true) {

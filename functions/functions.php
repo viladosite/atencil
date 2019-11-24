@@ -271,7 +271,7 @@ class zipadmin{
 function delete_dir($path) {
 	$files = glob($path . '/*');
 	foreach ($files as $file) {
-		is_dir($file) ? removeDirectory($file) : unlink($file);
+		is_dir($file) ? delete_dir($file) : unlink($file);
 	}
 	rmdir($path);
 	return;
