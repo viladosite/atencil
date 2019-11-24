@@ -11,10 +11,24 @@
                     
                     <div class="rs-select2--light rs-select2--md">
                         <select class="js-select2" name="grupo">
-                            <option selected="selected">Grupos</option>
-                            <option value="">Funcionários</option>
-                            <option value="">Gerentes</option>
-                            <option value="">Diretores</option>
+                            <option selected="selected">Todos os Grupos</option>
+
+                            <?php
+                            // Monta os parâmetros da query
+                            $sqlgr = "SELECT * FROM `at_clientgroups` WHERE (`cligrcompany` = '".$_SESSION['UserCompany'] ."')";
+
+                            // Monta a query para execução
+                            $usergrs = mysqli_query($mysql, $sqlgr);
+
+                            // Executa o loop com a query
+                            foreach ($usergrs as $usergr) { ?>
+                            
+                            <option value="<?php echo $usergr['cligrid']; ?>">
+                                <?php echo $usergr['cligrname']; ?>
+                            </option>
+                            
+                            <?php } ?>
+
                         </select>
                         <div class="dropDownSelect2"></div>
                     </div>
@@ -32,7 +46,7 @@
                     </div>
                     
                     <button class="au-btn-filter">
-                        <i class="zmdi zmdi-filter-list"></i>filtros
+                        <i class="zmdi zmdi-filter-list"></i>filtrar
                     </button>
                 </div>
 
@@ -68,7 +82,7 @@
                             <th>nome</th>
                             <th>email</th>
                             <th>cadastrado</th>
-                            <th>status</th>
+                            <th>grupo</th>
                             <th>ações</th>
                         </tr>
                     </thead>
@@ -95,7 +109,7 @@
                             <td><?php echo $client['clientfname'] . ' ' . $client['clientlname']; ?></td>
                             <td><span class="block-email"> <?php echo $client['clientmail']; ?> </span></td>
                             <td><?php echo $client['clientregister']; ?></td>
-                            <td><?php echo $client['clientstatus'];?> </td>
+                            <td><?php echo $client['clientgroup'];?> </td>
                             <td>
                                 <div class="table-data-feature">
                                     <button class="item" title="Editar" name="function" value='edit' type="submit">

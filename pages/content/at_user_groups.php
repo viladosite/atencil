@@ -100,10 +100,13 @@
                                         <i class="zmdi zmdi-edit"></i>
                                     </button>
                                     
+                                    <?php if($group['usergroupid'] !== '1') { ?>
                                     <form action="../functions/usergr_remove.php" method="post">
                                         <button class="item" title="Remover" name="function" value='delete' type="submit"><i class="zmdi zmdi-delete"></i></button>
                                         <input type="hidden" id="usergr" name="usergr" value="<?php echo $group['usergroupid']; ?>">
                                     </form>
+                                    <?php } ?>
+                                    
                                 </div>
                             </td>
                         </tr>

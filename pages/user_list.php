@@ -36,7 +36,7 @@ if (perm_group_check('viewusers') == false) { header("Location: error_permission
             <!-- FIM DO PAGE CONTAINER-->
 
             <!-- Carrega os avisos e modais da página -->
-            <?php include '../includes/at_modal_userdel_conf.php'; ?>
+            <?php include '../modals/at_modal_user_list.php'; ?>
         
         </div>
         

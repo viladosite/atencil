@@ -12,9 +12,21 @@
                     <div class="rs-select2--light rs-select2--md">
                         <select class="js-select2" name="grupo">
                             <option selected="selected">Grupos</option>
-                            <option value="">Funcionários</option>
-                            <option value="">Gerentes</option>
-                            <option value="">Diretores</option>
+                            <?php
+                            // Monta os parâmetros da query
+                            $sqlgr = "SELECT * FROM `at_usergroups` WHERE (`usergroupcomp` = '".$_SESSION['UserCompany'] ."')";
+
+                            // Monta a query para execução
+                            $usergrs = mysqli_query($mysql, $sqlgr);
+
+                            // Executa o loop com a query
+                            foreach ($usergrs as $usergr) { ?>
+                            
+                            <option value="<?php echo $usergr['usergroupid']; ?>">
+                                <?php echo $usergr['usergroupname']; ?>
+                            </option>
+                            
+                            <?php } ?>
                         </select>
                         <div class="dropDownSelect2"></div>
                     </div>
@@ -32,7 +44,7 @@
                     </div>
                     
                     <button class="au-btn-filter">
-                        <i class="zmdi zmdi-filter-list"></i>filtros
+                        <i class="zmdi zmdi-filter-list"></i>filtrar
                     </button>
                 </div>
 
@@ -103,9 +115,12 @@
                                         <i class="zmdi zmdi-edit"></i>
                                     </button>
 
-                                    <button class="item" data-toggle="modal" data-target="#confirmar" data-userid="<?php echo $usuario['userid'] ?>" data-userlog="<?php echo $usuario['userlogin'] ?>" title="Remover" name="function" value='delete' type="button">
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
+                                    <?php if($usuario['userid'] !== '1') { ?>
+                                    <form action="../functions/user_remove.php" method="post">
+                                        <button class="item" title="Remover" name="function" value='delete' type="submit"><i class="zmdi zmdi-delete"></i></button>
+                                        <input type="hidden" id="user" name="user" value="<?php echo $usuario['userid']; ?>">
+                                    </form>
+                                    <?php } ?>
                                     
                                 </div>
                             </td>

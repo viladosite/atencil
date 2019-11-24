@@ -17,6 +17,10 @@ $usergrdel = mysqli_query($mysql, $usergrquery);
 // Executa a remoção do banco e dos arquivos
 if ($usergrdel = true) {
 	
+	// Move os usuários do grupo excluído para o grupo padrão
+	$moveuserquery = " UPDATE at_users SET usergroup = '1'	WHERE usergroup = $groupid;";
+	$moveusers = mysqli_query($mysql, $moveuserquery);
+
 	// Redirect back to the list
 	header("Location: ../pages/user_groups.php");
 

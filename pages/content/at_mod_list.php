@@ -117,9 +117,15 @@
                                         <i class="zmdi zmdi-refresh"></i>
                                     </button>
 
-                                    <button class="item" data-toggle="modal" data-target="#modremconfirm" title="Remover" name="function" value='delete' type="submit">
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
+                                    <?php if($mod['modid'] !== '1') { ?>
+                                    <form action="../functions/mod_remove.php" method="post">
+                                        <button class="item" title="Remover" name="function" value='delete' type="submit">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                        <input type="hidden" id="modid" name="modid" value="<?php echo $mod['modid']; ?>">
+                                        <input type="hidden" id="moddir" name="moddir" value="<?php echo $mod['modpath']; ?>">
+                                    </form>
+                                    <?php } ?>
 
 
                                 </div>
