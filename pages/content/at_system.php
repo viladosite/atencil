@@ -87,9 +87,14 @@
                                         echo " " . SITE_URL;
                                         ?></p>
 
-                                        <p><strong>Home:</strong><br> <?php
+                                        <p><strong>Pasta da Home:</strong><br> <?php
                                         badge_onoff(HOME_DIR);
                                         echo " " . HOME_DIR;
+                                        ?> </p>
+
+                                        <p><strong>Caminho da Home:</strong><br> <?php
+                                        badge_onoff(HOME_PATH);
+                                        echo " " . HOME_PATH;
                                         ?> </p>
 
                                         <p><strong>Directory Path:</strong><br> <?php
