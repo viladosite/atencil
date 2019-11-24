@@ -46,12 +46,16 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 	if ($criauser) {
 
 		// Mostra o aviso para relogar
+		/*
 		echo '<script type="text/javascript"> 
 	    window.alert("O usuário foi criado com sucesso.");
-	    </script>';
+		</script>';
+		*/
 
 	    // Direciona para a tela de login
 	    header("Location: ../pages/user_list.php");
+
+		// echo mysqli_error($mysql);
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
@@ -59,12 +63,16 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 	} else {
 
 		// Mostra o aviso para relogar
+		/*
 		echo '<script type="text/javascript"> 
 	    window.alert("Houve um erro ao cadastrar o usuário.");
-	    </script>';
+		</script>';
+		*/
 
 	    // Direciona para a tela de login
 	    header("Location: ../pages/user_new.php");
+
+		// echo mysqli_error($mysql);
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
