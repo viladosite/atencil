@@ -93,7 +93,7 @@
 
 
         // Apaga os triggers caso existam
-        $triggerdrops = "DROP TRIGGER IF EXISTS `client_group_id1block`; DROP TRIGGER IF EXISTS `company_id1block`; DROP TRIGGER IF EXISTS `user_group_id1block`; DROP TRIGGER IF EXISTS `user_id1block`;";
+        // $triggerdrops = "DROP TRIGGER IF EXISTS `client_group_id1block`; DROP TRIGGER IF EXISTS `company_id1block`; DROP TRIGGER IF EXISTS `user_group_id1block`; DROP TRIGGER IF EXISTS `user_id1block`;";
 
         // Monta os triggers para as tabelas
         $trigger1 = "CREATE TRIGGER `client_group_id1block` BEFORE DELETE ON `at_clientgroups` FOR EACH ROW IF old.cligrid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Este grupo não pode ser removido!!'; END IF";
