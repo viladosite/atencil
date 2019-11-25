@@ -11,7 +11,9 @@ $formuser = mysqli_real_escape_string($mysql, $_POST['user']);
 $formemail = mysqli_real_escape_string($mysql, $_POST['email']);
 $formsenha = sha1($_POST['senha']);
 $formgroup = mysqli_real_escape_string($mysql, $_POST['group']);
-$formstatus = mysqli_real_escape_string($mysql, $_POST['status']);
+if (isset($_POST['status'])) {
+	$formstatus = mysqli_real_escape_string($mysql, $_POST['status']);
+} else { $formstatus = 'inativo'; }
 
 // Variáveis nativas do usuário
 $useridatual = $_SESSION['UserID'];
