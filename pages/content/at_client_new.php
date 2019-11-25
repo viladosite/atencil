@@ -25,6 +25,33 @@
                         <div class="card-body card-block">
                             <form action="../functions/client_create.php" method="post">
 
+                            <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="status" class=" form-control-label">Grupo</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <select name="group" id="group" class="form-control">
+
+                                            <?php
+                                            // Monta os parâmetros da query
+                                            $sqlgr = "SELECT * FROM `at_clientgroups` WHERE (`cligrcompany` = '".$_SESSION['UserCompany'] ."')";
+
+                                            // Monta a query para execução
+                                            $usergrs = mysqli_query($mysql, $sqlgr);
+
+                                            // Executa o loop com a query
+                                            foreach ($usergrs as $usergr) { ?>
+                                            
+                                            <option value="<?php echo $usergr['cligrid']; ?>">
+                                                <?php echo $usergr['cligrname']; ?>
+                                            </option>
+                                            
+                                            <?php } ?>
+
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Primeiro Nome</div>
@@ -52,33 +79,6 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-envelope"></i>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col col-md-3">
-                                        <label for="status" class=" form-control-label">Grupo</label>
-                                    </div>
-                                    <div class="col-12 col-md-9">
-                                        <select name="group" id="group" class="form-control">
-
-                                            <?php
-                                            // Monta os parâmetros da query
-                                            $sqlgr = "SELECT * FROM `at_clientgroups` WHERE (`cligrcompany` = '".$_SESSION['UserCompany'] ."')";
-
-                                            // Monta a query para execução
-                                            $usergrs = mysqli_query($mysql, $sqlgr);
-
-                                            // Executa o loop com a query
-                                            foreach ($usergrs as $usergr) { ?>
-                                            
-                                            <option value="<?php echo $usergr['cligrid']; ?>">
-                                                <?php echo $usergr['cligrname']; ?>
-                                            </option>
-                                            
-                                            <?php } ?>
-
-                                        </select>
                                     </div>
                                 </div>
 
