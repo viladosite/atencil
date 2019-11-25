@@ -11,12 +11,11 @@ $formuser = mysqli_real_escape_string($mysql, $_POST['user']);
 $formemail = mysqli_real_escape_string($mysql, $_POST['email']);
 $formsenha = sha1($_POST['senha']);
 $formgroup = mysqli_real_escape_string($mysql, $_POST['group']);
-
+$formstatus = mysqli_real_escape_string($mysql, $_POST['status']);
 
 // Variáveis nativas do usuário
 $useridatual = $_SESSION['UserID'];
 $usercompany = $_SESSION['UserCompany'];
-$userregstatus = 'ativo';
 $regdate = date("Y-m-d H:i:s");
 
 
@@ -36,7 +35,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 	// Queries de inserção dos dados
 	$usersql = "
 		INSERT INTO at_users (userfname, userlname, userlogin, userpass, usermail, usercomp, usergroup, userstatus, userregdate)
-		VALUES ('$formpnome', '$formunome', '$formuser', '$formsenha', '$formemail', '$usercompany', '$formgroup', '$userregstatus', '$regdate');
+		VALUES ('$formpnome', '$formunome', '$formuser', '$formsenha', '$formemail', '$usercompany', '$formgroup', '$formstatus', '$regdate');
 	";
 
 	// Execução de inserção de dados

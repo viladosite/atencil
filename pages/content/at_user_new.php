@@ -101,6 +101,18 @@
                                     </div>
                                 </div>
 
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="status" class=" form-control-label">Status</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <select name="status" id="status" class="form-control">
+                                            <option value="ativo" selected>Ativo</option>
+                                            <option value="inativo">Inativo</option> 
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="form-actions form-group">
                                     <button type="submit" class="btn btn-primary btn-sm">
                                         Cadastrar
