@@ -71,7 +71,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formuser)	or empty($formem
 	    // Direciona para a tela de login
 	    header("Location: ../pages/user_new.php");
 
-		// echo mysqli_error($mysql);
+		//echo mysqli_error($mysql);
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
