@@ -11,7 +11,7 @@
     <div class="section__content section__content--p30">
         <div class="container-fluid">
 
-            <h3 class="title-5 m-b-35">Cadastrar Usuário</h3>
+            <h3 class="title-5 m-b-35">Cadastrar Cliente</h3>
 
             <form action="../functions/client_create.php" method="post">
                 <div class="row">
