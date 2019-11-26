@@ -58,7 +58,6 @@ $email = $_POST['fieldemail'];
         $_SESSION['UserLname'] = $resultado['userlname'];
         $_SESSION['UserLogin'] = $resultado['userlogin'];
         $_SESSION['UserEmail'] = $resultado['usermail'];
-        $_SESSION['UserPermLvl'] = $resultado['userpermlvl'];
         $_SESSION['UserCompany'] = $resultado['usercomp'];
         $_SESSION['UserGroup'] = $resultado['usergroup'];
         $_SESSION['UserActive'] = $resultado['userstatus'];
