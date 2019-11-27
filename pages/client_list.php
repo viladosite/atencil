@@ -36,7 +36,7 @@ if (perm_group_check('viewclients') == false) { header("Location: error_permissi
             <!-- FIM DO PAGE CONTAINER-->
 
             <!-- Carrega os avisos e modais da página -->
-            <?php include '../modals/at_modal_userdel_conf.php'; ?>
+            <?php // include '../modals/at_modal_userdel_conf.php'; ?>
         
         </div>
         
