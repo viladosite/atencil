@@ -8,100 +8,63 @@ require __DIR__ . '/at_connect.php';
 // Carrega as funções para funcionamento do sistema
 require __DIR__ . '/../functions/functions.php';
 
-//Monta as variáveis para os campos do form
-    //$user = $_POST['fielduser'];
-    $pass = isset($_POST['fieldpass']) ? $_POST['fieldpass'] : '';
-    $email = isset($_POST['fieldemail']) ? $_POST['fieldemail'] : '';
-    // $name = $_POST['fname'];
-    // $name = $_POST['lname'];
+//Monta as variáveis
+$pass = isset($_POST['fieldpass']) ? $_POST['fieldpass'] : '';
+$email = isset($_POST['fieldemail']) ? $_POST['fieldemail'] : '';
+$status = 'ativo';
 
-    // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-    if (empty($_POST['fieldemail']) || empty($_POST['fieldpass'])) {
+// Verifica se houve POST e se o usuário ou a senha estão vazios
+if (empty($_POST['fieldemail']) || empty($_POST['fieldpass'])) { header("Location: ../index.php"); exit; }
 
-        header("Location: ../index.php");
-        exit;
-    }
+// cria o hash da senha
+$passwordHash = make_hash($pass);
 
-    // cria o hash da senha
-    $passwordHash = make_hash($pass);
+// Faz a conexão com o banco
+$conn = getConnection(DB_HOST, DB_NAME, DB_USER, DB_PASS);
 
-    $conn = getConnection();
-    $table_name = "at_users";
+// Monta a query para seleção e localização do usuário
+$query = "SELECT * FROM at_users WHERE (usermail = :email) AND (userpass = :password) AND (userstatus = :status)";
 
-        $query = "SELECT * FROM at_users WHERE usermail = :email AND userpass = :password AND (userstatus = 'ativo')";
+// Prepara o query statement
+$stmt = $conn->prepare($query);
 
-        // prepare query statement
-        $stmt = $conn->prepare($query);
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':password', $passwordHash);
+$stmt->bindParam(':status', $status);
 
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', $passwordHash);
-     
-        // execute query
-        $stmt->execute();
-     
-        // Salva os dados encontados na variável $users
-        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// Executa a query
+$stmt->execute();
 
-        if (count($users) <= 0)
-        {
-            echo '<script type="text/javascript"> window.alert("Dados incorretos, tente novamente ou procure o administrador do sistema.");
-            window.history.back();</script>';
-            exit;
-        }
+// Salva os dados encontados na variável $users
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// Pega o primeiro user
+$user = $users[0];
 
-        // pega o primeiro usuário
-        $user = $users[0]; 
-        session_start();
-          
-            // Salva os dados encontrados na sessão
-        $_SESSION['logged_in'] = true;
-        $_SESSION['UserEmail'] = $users['usermail'];
+if (count($users) <= 0)
+{
+    echo '<script type="text/javascript"> window.alert("Dados incorretos, tente novamente ou procure o administrador do sistema.");
+    window.history.back();</script>';
+    exit;
 
-          
-            // Redireciona o visitante
-            header("Location: ../pages/dashboard.php"); exit;
-    
+} else {
 
-
-// Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro
-	/*$sql = "SELECT * FROM `at_users` WHERE (`usermail` = '".$email ."') AND (`userpass` = '". sha1($pass) ."') AND (`userstatus` = 'ativo') LIMIT 1";
-
-    $query = mysqli_query($mysql, $sql);*/
-	
-    //if (mysqli_num_rows($query) != 1) {
-
-// Caso a resposta do select seja diferente de 1, exibe a mensagem de erro
-// Este caso se aplica quando os dados são inválidos, o usuário não foi encontrado ou até mesmo por algum erro foram encontrados mais de 1 login
+    // pega o primeiro usuário e inicia a sessão
+    session_start();
         
-	/*echo '<script type="text/javascript"> 
-    window.alert("Dados incorretos, tente novamente ou procure o administrador do sistema.");
-    window.history.back();
-    </script>';*/
+    // Salva os dados encontrados na sessão
+    $_SESSION['UserLogged'] = true;
+    $_SESSION['UserID'] = $user['userid'];
+    $_SESSION['UserFname'] = $user['userfname'];
+    $_SESSION['UserLname'] = $user['userlname'];
+    $_SESSION['UserLogin'] = $user['userlogin'];
+    $_SESSION['UserEmail'] = $user['usermail'];
+    $_SESSION['UserCompany'] = $user['usercomp'];
+    $_SESSION['UserGroup'] = $user['usergroup'];
+    $_SESSION['UserActive'] = $user['userstatus'];
+    $_SESSION['UserRegDate'] = $user['userregdate'];
 
-
-// Caso a resposta do select seja 1, o sistema encontrou o usuário, portanto salva os dados encontrados na sessão e redireciona o visitante para a devida página
-
-    /*} else {
-
-		// Salva os dados encontados na variável $resultado
-        $resultado = mysqli_fetch_assoc($query);
-      
-        // Se a sessão não existir, inicia uma
-        if (!isset($_SESSION)) session_start();
-      
-        // Salva os dados encontrados na sessão
-        $_SESSION['UserID'] = $resultado['userid'];
-        $_SESSION['UserFname'] = $resultado['userfname'];
-        $_SESSION['UserLname'] = $resultado['userlname'];
-        $_SESSION['UserLogin'] = $resultado['userlogin'];
-        $_SESSION['UserEmail'] = $resultado['usermail'];
-        $_SESSION['UserCompany'] = $resultado['usercomp'];
-        $_SESSION['UserGroup'] = $resultado['usergroup'];
-        $_SESSION['UserActive'] = $resultado['userstatus'];
-        $_SESSION['UserRegDate'] = $resultado['userregdate'];
-      
-        // Redireciona o visitante
-        header("Location: ../pages/dashboard.php"); exit;
-    }*/
+    // Redireciona o visitante
+    header("Location: ../pages/dashboard.php"); exit;
+}
 
 ?>

@@ -8,44 +8,18 @@
 // -----------------------------------------------------
 // FUNÇÕES DE CHECAGEM DE INFORMAÇÃO
 // -----------------------------------------------------
+
+
 //Verifica se o usuário está logado
-function isLoggedIn()
-{
-    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true)
-    {
-        return false;
-    }
- 
-    return true;
+function checklogged() {
+    if ( isset($_SESSION['UserLogged']) ) { return true; } else { return false; }
 }
 
-//Cria o hash da senha, usando SHA-1
-function make_hash($str)
-{
+// Cria o hash da senha, usando SHA-1
+function make_hash($str) {
     return sha1($str);
 }
 
-// Função para checagem das permissões de acesso geral ao sistema
-// Retorna false quando o usuário não está logado ou não possui a permissão necessária
-function perm_check($permvar) {
-
-	// A sessão precisa ser iniciada em cada página diferente
-	if (!isset($_SESSION)) {session_start();}
-
-	// Informa qual o conjunto de caracteres a ser utilizado na conexão
-	// header('Content-Type: text/html; charset=utf-8');
-
-	// Verifica se não há a variável da sessão que identifica o usuário
-	if (!isset($_SESSION['UserID']) OR ($_SESSION['UserPermLvl'] < $permvar)) {
-
-		return FALSE;
-
-	} else {
-
-		return TRUE;
-
-	}
-}
 
 // Função para checagem de status baseado em informação binaria
 // Informe uma variável, uma resposta caso 0 e outra caso 1
@@ -61,29 +35,6 @@ function statuscheck($variable, $zeroanswer, $oneanswer, $resmode = 0){
 }
 
 
-// Função para checagem das permissões de acesso dos recursos específicos da empresa
-// Retorna false quando o usuário não está logado ou não possui a permissão necessária
-function perm_comp_check($permvar) {
-
-	// A sessão precisa ser iniciada em cada página diferente
-	if (!isset($_SESSION)) {session_start();}
-
-	// Informa qual o conjunto de caracteres a ser utilizado na conexão
-	// header('Content-Type: text/html; charset=utf-8');
-
-	// Verifica se não há a variável da sessão que identifica o usuário
-	if (!isset($_SESSION['UserID']) OR ($_SESSION['UserCompanyLvl'] < $permvar)) {
-
-		return FALSE;
-
-	} else {
-
-		return TRUE;
-
-	}
-}
-
-
 // Função para checar se o grupo do usuário logado tem permissão para acessar uma página informada
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária
 function perm_group_check($permslug) {
@@ -92,7 +43,7 @@ function perm_group_check($permslug) {
 	if (!isset($_SESSION)) {session_start();}
 
 	// Verifica se não há a variável da sessão que identifica o usuário
-	if (!isset($_SESSION['UserID']) AND !isset($_SESSION['UserGroup'])) {
+	if (!isset($_SESSION['UserID']) AND !isset($_SESSION['UserID']) AND !isset($_SESSION['UserGroup'])) {
 
 		return FALSE;
 
@@ -104,16 +55,31 @@ function perm_group_check($permslug) {
 		
 		} else {
 		
-			$usergroup = $_SESSION['UserGroup'];
+            // Obtem o grupo de permissão do usuário
+            $usergroup = $_SESSION['UserGroup'];
 
-			// Monta a conexão e checagem no banco para obter as permissões do grupo fornecido
-			global $mysql;
-			$sql = "SELECT * FROM at_usergroups WHERE usergroupid = '$usergroup'";
-			$query = mysqli_query($mysql, $sql);
-			$grperms = mysqli_fetch_assoc($query);
+            // Faz a conexão com o banco
+            $mysql = getConnection(DB_HOST, DB_NAME, DB_USER, DB_PASS);
 
-			if ($grperms[$permslug] == '1'){ return TRUE; }
-			if ($grperms[$permslug] == '0'){ return FALSE; }
+            // Monta a query para seleção e localização do usuário
+            $query = "SELECT * FROM at_usergroups WHERE usergroupid = :usergroup";
+
+            // Prepara o query statement e params
+            $stmt = $mysql->prepare($query);
+
+            $stmt->bindParam(':usergroup', $usergroup);
+            
+            // Executa a query
+            $stmt->execute();
+
+            // Salva os dados encontados na variável
+            $grperms = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $grperm = $grperms[0];
+
+            // Entrega resultados da checagem
+			if ($grperm[$permslug] == '1'){ return TRUE; }
+            if ($grperm[$permslug] == '0'){ return FALSE; }
+            // print_r($grperms);
 		}
 
 	}
@@ -240,6 +206,60 @@ function groupinfo_byid($groupid, $info) {
     };
 
 }
+
+
+
+
+
+
+/* 
+
+// Função para obter itens do banco
+// Usar as seguintes opções no $type: attendances, clientgroups, clients, companies, configs, mods, usergroups, users
+function getitems($type, $condition, $result){
+    
+    // Define a tabela a ser utilizada na query dependendo do tipo de item passado
+    if ($type == 'attendances') { $table = ATB_ATT ;}
+    if ($type == 'clientgroups') { $table = ATB_CLIGR ;}
+    if ($type == 'clients') { $table = ATB_CLIENTS ;}
+    if ($type == 'companies') { $table = ATB_COMPS ;}
+    if ($type == 'configs') { $table = ATB_CONFIG ;}
+    if ($type == 'mods') { $table = ATB_MOD ;}
+    if ($type == 'usergroups') { $table = ATB_USERGR ;}
+    if ($type == 'users') { $table = ATB_USERS ;}
+
+    if (!isset($type)) {
+
+        echo "Erro";
+
+    } else {
+
+        // Faz a conexão com o banco
+        $conn = getConnection(DB_HOST, DB_NAME, DB_USER, DB_PASS);
+
+        // Monta a query para seleção e localização do usuário
+        $query = "SELECT * FROM $type WHERE $condition ";
+
+        // Prepara o query statement
+        $stmt = $conn->prepare($query);
+
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $passwordHash);
+        $stmt->bindParam(':status', $status);
+
+        // Executa a query
+        $stmt->execute();
+
+        // Salva os dados encontados na variável $users
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // Pega o primeiro user
+        $user = $users[0];
+    }
+
+}
+ */
+
+
 
 
 
