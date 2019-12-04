@@ -1,26 +1,21 @@
 <?php
-
-class Database{
 	// Tenta se conectar ao servidor MySQL
-	public $conn;
-
+	
 	// get the database connection
-    public function getConnection(){
+    function getConnection(){
  
-        $this->conn = null;
+        $conn = null;
  
         try{
-            $this->conn = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
-            $this->conn->exec("set names utf8");
+            $conn = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
+            
         }catch(PDOException $exception){
-            echo "Erro na conexão: " . $exception->getMessage();
+            die($exception->getMessage());
+            
         }
  
-        return $this->conn;
+        return $conn;
     }
-
-}
-
 
 
 /*if ( defined('DB_HOST') && defined('DB_USER') && defined('DB_PASS') && defined('DB_NAME') ){

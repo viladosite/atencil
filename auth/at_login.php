@@ -16,27 +16,25 @@ require __DIR__ . '/../functions/functions.php';
     // $name = $_POST['lname'];
 
     // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-    if (!empty($_POST) AND (empty($_POST['fieldemail']) OR empty($_POST['fieldpass']))) {
-        header("Location: ../index.php"); exit;
+    if (empty($_POST['fieldemail']) || empty($_POST['fieldpass'])) {
+
+        header("Location: ../index.php");
+        exit;
     }
 
-class Login{
-    private $conn;
-    private $table_name = "at_users";
+    // cria o hash da senha
+    $passwordHash = make_hash($pass);
 
-    // constructor with $db as database connection
-    public function __construct($db){
-        $this->conn = $db;
-    }
+    $conn = getConnection();
+    $table_name = "at_users";
 
-    function readLogin(){
-        $query = "SELECT * FROM". $this->table_name ." WHERE ( usermail = :email) AND (userpass = :password) AND (userstatus = 'ativo') LIMIT 1";
+        $query = "SELECT * FROM at_users WHERE usermail = :email AND userpass = :password AND (userstatus = 'ativo')";
 
         // prepare query statement
-        $stmt = $this->conn->prepare($query);
+        $stmt = $conn->prepare($query);
 
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', sha1($pass));
+        $stmt->bindParam(':password', $passwordHash);
      
         // execute query
         $stmt->execute();
@@ -48,29 +46,21 @@ class Login{
         {
             echo '<script type="text/javascript"> window.alert("Dados incorretos, tente novamente ou procure o administrador do sistema.");
             window.history.back();</script>';
-        } else{
-            // Se a sessão não existir, inicia uma
-            if (!isset($_SESSION)) session_start();
+            exit;
+        }
+
+        // pega o primeiro usuário
+        $user = $users[0]; 
+        session_start();
           
             // Salva os dados encontrados na sessão
-            $_SESSION['UserID'] = $users['userid'];
-            $_SESSION['UserFname'] = $users['userfname'];
-            $_SESSION['UserLname'] = $users['userlname'];
-            $_SESSION['UserLogin'] = $users['userlogin'];
-            $_SESSION['UserEmail'] = $users['usermail'];
-            $_SESSION['UserCompany'] = $users['usercomp'];
-            $_SESSION['UserGroup'] = $users['usergroup'];
-            $_SESSION['UserActive'] = $users['userstatus'];
-            $_SESSION['UserRegDate'] = $users['userregdate'];
+        $_SESSION['logged_in'] = true;
+        $_SESSION['UserEmail'] = $users['usermail'];
+
           
             // Redireciona o visitante
             header("Location: ../pages/dashboard.php"); exit;
-
-        }
-
-    }    
-
-}    
+    
 
 
 // Query que da um select no banco e se encontrar algo diferente de 1 como resultado, retorna erro

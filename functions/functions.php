@@ -8,6 +8,22 @@
 // -----------------------------------------------------
 // FUNÇÕES DE CHECAGEM DE INFORMAÇÃO
 // -----------------------------------------------------
+//Verifica se o usuário está logado
+function isLoggedIn()
+{
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true)
+    {
+        return false;
+    }
+ 
+    return true;
+}
+
+//Cria o hash da senha, usando SHA-1
+function make_hash($str)
+{
+    return sha1($str);
+}
 
 // Função para checagem das permissões de acesso geral ao sistema
 // Retorna false quando o usuário não está logado ou não possui a permissão necessária
