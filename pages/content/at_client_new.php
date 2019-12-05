@@ -97,7 +97,9 @@
                                 </div>
 
                                 <button type="button" class="btn btn-link">
-                                    <i class="fa fa-link"></i>&nbsp; Campos Adicionais</button>
+                                    <i class="fa fa-plus"></i>&nbsp; Campos Adicionais
+                                </button>
+                                
                                 <hr>
 
                                 <div class="row form-group">
