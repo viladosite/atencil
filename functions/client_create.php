@@ -10,11 +10,15 @@ $formstatus = mysqli_real_escape_string($mysql, $_POST['obs']);
 $formpnome = mysqli_real_escape_string($mysql, $_POST['pnome']);
 $formunome = mysqli_real_escape_string($mysql, $_POST['unome']);
 $formemail = mysqli_real_escape_string($mysql, $_POST['email']);
-$formtel1 = $_POST['ddd1'] . $_POST['tel1'];
-$formtel2 = $_POST['ddd2'] . $_POST['tel2'];
-$formtel3 = $_POST['ddd3'] . $_POST['tel3'];
-$formzap = $_POST['dddz'] . $_POST['telz'];
+$formtel1 = $_POST['ddi1'] . $_POST['ddd1'] . $_POST['tel1'];
+$formtel2 = $_POST['ddi2'] . $_POST['ddd2'] . $_POST['tel2'];
+$formtel3 = $_POST['ddi3'] . $_POST['ddd3'] . $_POST['tel3'];
+$formzap = $_POST['ddiz'] . $_POST['dddz'] . $_POST['telz'];
 $formbirth = $_POST['anonasc'] . "-" . $_POST['mesnasc'] . "-" . $_POST['dianasc'];
+
+// Define a data de nascimento como vazia caso não sejam passados dados do dia, mês ou ano
+if ( empty($_POST['dianasc']) OR empty($_POST['mesnasc']) OR empty($_POST['anonasc']) ) { $formbirth = '1000-01-01'; };
+
 $formaddress = mysqli_real_escape_string($mysql, $_POST['endereco']);
 $formobs = mysqli_real_escape_string($mysql, $_POST['obs']);
 
@@ -22,7 +26,6 @@ $formobs = mysqli_real_escape_string($mysql, $_POST['obs']);
 // Variáveis nativas do usuário
 $useridatual = $_SESSION['UserID'];
 $usercompany = $_SESSION['UserCompany'];
-$userregstatus = 1;
 $regdate = date("Y-m-d H:i:s");
 
 
@@ -31,7 +34,7 @@ $regdate = date("Y-m-d H:i:s");
 if ( empty($formpnome) or empty($formunome)	or empty($formemail) or empty($formgroup) ) {
 	
 	// Retorna o erro caso algum campo tenha sido deixado em branco
-	echo '<script type="text/javascript">alert("Você não preencheu algum campo. Preencha todos os campos para continuar.");history.go(-1);</script>';
+	echo '<script type="text/javascript">alert("Você não preencheu algum campo. Preencha os campos obrigatórios para continuar.");history.go(-1);</script>';
 
 } else {
 

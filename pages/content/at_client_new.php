@@ -96,7 +96,8 @@
                                     </div>
                                 </div>
 
-                                <span>Dados Opcionais</span>
+                                <button type="button" class="btn btn-link">
+                                    <i class="fa fa-link"></i>&nbsp; Campos Adicionais</button>
                                 <hr>
 
                                 <div class="row form-group">
@@ -113,7 +114,7 @@
                                     
                                 <div class="row form-group">
                                     <div class="col-md-2 col-sm-6">
-                                        <input type="text" class="form-control" value="+55">
+                                        <input name="ddi1" id="ddi1" type="text" class="form-control" value="+55">
                                     </div>
                                     <div class="col-md-2 col-sm-6">
                                         <input name="ddd1" id="ddd1" type="text" value="<?php echo $ddd; ?>"  class="form-control">
@@ -125,7 +126,7 @@
 
                                 <div class="row form-group">
                                     <div class="col-md-2 col-sm-6">
-                                        <input type="text" class="form-control" value="+55">
+                                        <input name="ddi2" id="ddi2" type="text" class="form-control" value="+55">
                                     </div>
                                     <div class="col-md-2 col-sm-6">
                                         <input name="ddd2" id="ddd2" type="text" value="<?php echo $ddd; ?>"  class="form-control">
@@ -137,7 +138,7 @@
 
                                 <div class="row form-group">
                                     <div class="col-md-2 col-sm-6">
-                                        <input type="text" class="form-control" value="+55">
+                                        <input name="ddi3" id="ddi3" type="text" class="form-control" value="+55">
                                     </div>
                                     <div class="col-md-2 col-sm-6">
                                         <input name="ddd3" id="ddd3" type="text" value="<?php echo $ddd; ?>"  class="form-control">
@@ -153,7 +154,7 @@
                                 
                                 <div class="row form-group">
                                     <div class="col-md-2 col-sm-6">
-                                        <input type="text" class="form-control" value="+55">
+                                        <input name="ddiz" id="ddiz" type="text" class="form-control" value="+55">
                                     </div>
                                     <div class="col-md-2 col-sm-6">
                                         <input name="dddz" id="dddz" type="text" value="<?php echo $ddd; ?>"  class="form-control">
