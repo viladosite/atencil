@@ -96,13 +96,13 @@
                                     </div>
                                 </div>
 
-                                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#camposad" aria-expanded="false">
+                                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#camposad" aria-expanded="false" aria-controls="camposad">
                                     <i class="fa fa-plus"></i>&nbsp; Campos Adicionais
                                 </button>
 
                                 <hr>
                                 
-                                <div class="colapse" id="camposad" name="camposad">
+                                <div class="collapse" id="camposad">
 
                                     <div class="row form-group">
                                         <div class="col-md-2 col-sm-6 d-flex justify-content-center">
