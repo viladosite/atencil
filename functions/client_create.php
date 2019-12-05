@@ -5,18 +5,18 @@ require __DIR__ . '/../includes/at_core.php';
 
 
 // Variáveis com dados do formulário
+$formgroup = mysqli_real_escape_string($mysql, $_POST['group']);
+$formstatus = mysqli_real_escape_string($mysql, $_POST['obs']);
 $formpnome = mysqli_real_escape_string($mysql, $_POST['pnome']);
 $formunome = mysqli_real_escape_string($mysql, $_POST['unome']);
 $formemail = mysqli_real_escape_string($mysql, $_POST['email']);
-$clienttel1 = '';
-$clienttel2 = '';
-$clienttel3 = '';
-$clientzap = '';
-$clientbirthdate = date("Y-m-d");
-$clientaddress = '';
-$formgroup = $_POST['group'];
-$clientstatus = '1';
-$clientobs = '';
+$formtel1 = $_POST['ddd1'] . $_POST['tel1'];
+$formtel2 = $_POST['ddd2'] . $_POST['tel2'];
+$formtel3 = $_POST['ddd3'] . $_POST['tel3'];
+$formzap = $_POST['dddz'] . $_POST['telz'];
+$formbirth = $_POST['anonasc'] . "-" . $_POST['mesnasc'] . "-" . $_POST['dianasc'];
+$formaddress = mysqli_real_escape_string($mysql, $_POST['endereco']);
+$formobs = mysqli_real_escape_string($mysql, $_POST['obs']);
 
 
 // Variáveis nativas do usuário
@@ -42,7 +42,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formemail) or empty($formg
 	// Queries de inserção dos dados
 	$usersql = "
 	INSERT INTO at_clients (clientcompany, clientgroup, clientregister, clientfname, clientlname, clientmail, clienttel1, clienttel2, clienttel3, clientzap, clientbirthdate, clientaddress, clientstatus, clientobs)
-	VALUES ('$usercompany', '$formgroup', '$regdate', '$formpnome', '$formunome', '$formemail', '$clienttel1', '$clienttel2', '$clienttel3', '$clientzap', '$clientbirthdate', '$clientaddress', '$clientstatus', '$clientobs');";
+	VALUES ('$usercompany', '$formgroup', '$regdate', '$formpnome', '$formunome', '$formemail', '$formtel1', '$formtel2', '$formtel3', '$formzap', '$formbirth', '$formaddress', '$formstatus', '$formobs');";
 
 	// Execução de inserção de dados
 	$criaclient = mysqli_query($mysql, $usersql);
@@ -57,6 +57,7 @@ if ( empty($formpnome) or empty($formunome)	or empty($formemail) or empty($formg
 
 	    // Direciona para a tela de login
 	    header("Location: ../pages/client_list.php");
+        // echo mysqli_error($mysql);
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
@@ -69,8 +70,8 @@ if ( empty($formpnome) or empty($formunome)	or empty($formemail) or empty($formg
 	    // </script>';
 
 	    // Direciona para a tela de login
-		header("Location: ../pages/client_new.php");
-		// echo mysqli_error($mysql);
+		// header("Location: ../pages/client_new.php");
+		echo mysqli_error($mysql);
 
 	    // Encerra a conexão
 		mysqli_close($mysql);
