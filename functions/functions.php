@@ -281,4 +281,33 @@ function delete_dir($path) {
 
 
 
+
+
+// -----------------------------------------------------
+// FUNÇÕES DE MÓDULOS
+// -----------------------------------------------------
+
+/*
+
+// Atualiza a lista de módulos instalados baseados nas pastas presentes no sistema
+function mod_refresh() {
+    $modpath = DIR_PATH . HOME_DIR . MODS_DIR;
+    $moddirs = glob($modpath . '/*' , GLOB_ONLYDIR);
+
+    foreach ($moddirs as $moddir) {
+        $moddir = str_replace($modpath,'',$moddir);
+        $moddir = str_replace("/",'',$moddir);
+
+        echo $moddir;
+        echo "<br>";
+
+    }
+
+    
+}
+
+*/
+
+
+
 ?>
