@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 12-Dez-2019 às 14:40
+-- Generation Time: 12-Dez-2019 às 14:45
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.3.5
 
@@ -72,15 +72,6 @@ CREATE TABLE IF NOT EXISTS `at_clientgroups` (
 INSERT INTO `at_clientgroups` (`cligrid`, `cligrcompany`, `cligrname`, `cligrdesc`) VALUES
 (1, 1, 'Sem Grupo', 'Este é o grupo padrão para onde são movidos os clientes cadastrados sem que se selecione um grupo ou clientes de um grupo que foi removido.\r\n(Este grupo não pode ser excluído)');
 
---
--- Acionadores `at_clientgroups`
---
-DROP TRIGGER IF EXISTS `client_group_id1block`;
-DELIMITER $$
-CREATE TRIGGER `client_group_id1block` BEFORE DELETE ON `at_clientgroups` FOR EACH ROW IF old.cligrid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Este grupo não pode ser removido!!'; END IF
-$$
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --
@@ -134,15 +125,6 @@ CREATE TABLE IF NOT EXISTS `at_companies` (
 
 INSERT INTO `at_companies` (`companyid`, `companyname`, `companytel`, `companymail`, `companysite`, `companyaddress`, `companysector`, `companylogo`, `companyplan`) VALUES
 (1, 'Vila do Site', '2141076584', 'comercial@viladosite.com.br', 'viladosite.com.br', 'Rua Gonzaga Bastos 394 fundos\r\nVila Isabel - Rio de Janeiro - RJ', 'Tecnologia', '', 'Completo');
-
---
--- Acionadores `at_companies`
---
-DROP TRIGGER IF EXISTS `company_id1block`;
-DELIMITER $$
-CREATE TRIGGER `company_id1block` BEFORE DELETE ON `at_companies` FOR EACH ROW IF old.companyid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Esta empresa não pode ser removida!!'; END IF
-$$
-DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -275,15 +257,6 @@ CREATE TABLE IF NOT EXISTS `at_usergroups` (
 INSERT INTO `at_usergroups` (`usergroupid`, `usergroupcomp`, `usergroupname`, `usergroupdesc`, `viewdashboard`, `viewaccount`, `viewattendance`, `viewcompany`, `viewclients`, `viewusers`, `viewsystem`, `viewsearch`, `viewmodules`, `viewperms`, `editdashboard`, `editaccount`, `editattendance`, `editcompany`, `editclients`, `editusers`, `editsystem`, `editmodules`, `editperms`) VALUES
 (1, 1, 'Administradores', 'Grupo de administradores com todas as permissões', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
---
--- Acionadores `at_usergroups`
---
-DROP TRIGGER IF EXISTS `user_group_id1block`;
-DELIMITER $$
-CREATE TRIGGER `user_group_id1block` BEFORE DELETE ON `at_usergroups` FOR EACH ROW IF old.usergroupid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Este grupo não pode ser removido!!'; END IF
-$$
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --
@@ -312,15 +285,6 @@ CREATE TABLE IF NOT EXISTS `at_users` (
 
 INSERT INTO `at_users` (`userid`, `userfname`, `userlname`, `userlogin`, `userpass`, `usermail`, `usercomp`, `usergroup`, `userstatus`, `userregdate`) VALUES
 (1, 'Admin', 'User', 'admin', 'b71b045f944dfd82c3265766a5e80f791d6bfab0', 'admin@viladosite.com.br', 1, 1, 'ativo', '2016-05-06 13:08:54');
-
---
--- Acionadores `at_users`
---
-DROP TRIGGER IF EXISTS `user_id1block`;
-DELIMITER $$
-CREATE TRIGGER `user_id1block` BEFORE DELETE ON `at_users` FOR EACH ROW IF old.userid IN (1) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Este usuário é o Superadmin e não pode ser removido!!'; END IF
-$$
-DELIMITER ;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
