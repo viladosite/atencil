@@ -69,7 +69,7 @@ if($_FILES["modfile"]["name"]) {
 }
 
 // When the upload works the data is saved in database
-if ($inststatus = 2){
+if ($inststatus == 'ok'){
 
 
 	// Get the contents of hte modinfo JSON file
