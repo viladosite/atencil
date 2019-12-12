@@ -36,7 +36,7 @@ $modrundir = $_POST['moddir'];
             </div>
             <!-- FIM DO PAGE CONTAINER-->
             <!-- Carrega os avisos e modais da página -->
-            <?php include '../modals/at_modal_moddel_conf.php'; ?>
+            <?php include '../modules/' . $modrundir . '/modal.php'; ?>
         </div>
         
         <!-- Carregamento dos scripts -->
