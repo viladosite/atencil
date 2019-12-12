@@ -37,11 +37,9 @@
                 </div>
 
                 <div class="table-data__tool-right">
-                    <form action="mod_inst.php" style="display: inline;">
-                        <button class="au-btn au-btn-icon au-btn--green au-btn--small" type="submit">
-                            <i class="zmdi zmdi-plus"></i>Criar Backup
-                        </button>
-                    </form>
+                    <button class="au-btn au-btn-icon au-btn--green au-btn--small" type="submit" data-toggle="modal" data-target="#atbkpcreate">
+                        <i class="zmdi zmdi-plus"></i>Criar Backup
+                    </button>
 
                     <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <select class="js-select2" name="type">
@@ -51,6 +49,7 @@
                         </select>
                         <div class="dropDownSelect2"></div>
                     </div>
+                    
                 </div>
             </div>
 
@@ -66,10 +65,8 @@
                                 </label>
                             </th>
                             <th>nome</th>
-                            <th>autor</th>
-                            <th>instalado</th>
-                            <th>categoria</th>
-                            <th>status</th>
+                            <th>data</th>
+                            <th>website</th>
                             <th>ações</th>
                         </tr>
                     </thead>
@@ -78,13 +75,13 @@
 
                         <?php
                         // Monta os parâmetros da query
-                        $sql = "SELECT * FROM `at_modules`";
+                        $sql = "SELECT * FROM `at_mod_bkps`";
 
                         // Monta a query para execução
-                        $mods = mysqli_query($mysql, $sql);
+                        $bkps = mysqli_query($mysql, $sql);
 
                         // Executa o loop com a query
-                        foreach ($mods as $mod) { ?>
+                        foreach ($bkps as $bkp) { ?>
                             
                         <tr class="tr-shadow">
                             <td>
@@ -95,42 +92,29 @@
                             </td>
                             <td>
                                 <span class="block-email">
-                                    <?php echo $mod['modname']; ?>
+                                    <?php echo $bkp['bkp_name']; ?>
                                 </span>
                             </td>
-                            <td><?php echo $mod['modauthor']; ?></td>
-                            <td><?php echo $mod['modinst']; ?></td>
-                            <td><?php echo $mod['modcat']; ?></td>
-                            <td>
-                                <?php
-                                statuscheck($mod['modstatus'], 'Desativado', 'Ativado', 1)
-                                ?>
-                            </td>
+                            <td><?php echo $bkp['bkp_date']; ?></td>
+                            <td><?php echo $mod['bkp_website']; ?></td>
                             <td>
                                 <div class="table-data-feature">
 
-                                    <form action="../pages/mod_run.php" method="post">
-                                        <button class="item" title="Iniciar" name="iniciar" value='run' type="submit">
+                                    <form action="" method="post">
+                                        <button class="item" title="Baixar" name="baixar" value='baixar' type="submit">
                                             <i class="zmdi zmdi-caret-right-circle"></i>
                                         </button>
-                                        <input type="hidden" id="modid" name="modid" value="<?php echo $mod['modid']; ?>">
-                                        <input type="hidden" id="moddir" name="moddir" value="<?php echo $mod['modpath']; ?>">
+                                        <input type="hidden" id="bkpid" name="bkpid" value="<?php echo $bkp['bkp_id']; ?>">
+                                        <input type="hidden" id="bkpdir" name="bkpdir" value="<?php echo $bkp['bkp_path']; ?>">
                                     </form>
 
-                                    <button class="item" title="Atualizar" name="atualizar" value='update' type="submit">
-                                        <i class="zmdi zmdi-refresh"></i>
-                                    </button>
-
-                                    <?php if($mod['modid'] !== '1') { ?>
-                                    <form action="../functions/mod_remove.php" method="post">
-                                        <button class="item" title="Remover" name="function" value='delete' type="submit">
+                                    <form action="" method="post">
+                                        <button class="item" title="Remover" name="remover" value='remover' type="submit">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button>
-                                        <input type="hidden" id="modid" name="modid" value="<?php echo $mod['modid']; ?>">
-                                        <input type="hidden" id="moddir" name="moddir" value="<?php echo $mod['modpath']; ?>">
+                                        <input type="hidden" id="bkpid" name="bkpid" value="<?php echo $bkp['bkp_id']; ?>">
+                                        <input type="hidden" id="bkpdir" name="bkpdir" value="<?php echo $bkp['bkp_path']; ?>">
                                     </form>
-                                    <?php } ?>
-
 
                                 </div>
                             </td>
