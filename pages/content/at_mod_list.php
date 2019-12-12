@@ -127,6 +127,7 @@
                                         </button>
                                         <input type="hidden" id="modid" name="modid" value="<?php echo $mod['modid']; ?>">
                                         <input type="hidden" id="moddir" name="moddir" value="<?php echo $mod['modpath']; ?>">
+                                        <input type="hidden" id="modtable" name="modtable" value="<?php echo $mod['modtable']; ?>">                                        
                                     </form>
                                     <?php } ?>
 
@@ -137,8 +138,7 @@
 
                         <tr class="spacer"></tr>
 
-                        <?php } ?>
-                        
+                        <?php }  mysqli_close($mysql); ?>
 
 
                     </tbody>
