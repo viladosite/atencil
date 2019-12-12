@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 05-Dez-2019 às 15:58
+-- Generation Time: 12-Dez-2019 às 14:40
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.3.5
 
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `at_clients` (
   `clienttel2` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `clienttel3` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `clientzap` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `clientbirthdate` date NOT NULL,
+  `clientbirthdate` date DEFAULT NULL COMMENT 'Data de nascimento do cliente',
   `clientaddress` text COLLATE utf8_unicode_ci NOT NULL,
   `clientstatus` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `clientobs` text COLLATE utf8_unicode_ci NOT NULL,
@@ -181,18 +181,36 @@ CREATE TABLE IF NOT EXISTS `at_modules` (
   `modauthorlink` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   `modlogo` varchar(500) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Caminho da logo do módulo ou autor do módulo.',
   `modpath` varchar(500) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Caminho do módulo a partir da pasta de instalação de módulos',
+  `modtable` varchar(20) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Nome da tabela à ser utilizada pelo módulo',
   `modstatus` int(11) NOT NULL COMMENT 'Status dos módulos',
   PRIMARY KEY (`modid`)
-) ENGINE=MyISAM AUTO_INCREMENT=68 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabela de definições dos módulos e suas configurações e categorias.';
+) ENGINE=MyISAM AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tabela de definições dos módulos e suas configurações e categorias.';
 
 --
 -- Extraindo dados da tabela `at_modules`
 --
 
-INSERT INTO `at_modules` (`modid`, `modinst`, `modname`, `modcat`, `modauthor`, `modauthorlink`, `modlogo`, `modpath`, `modstatus`) VALUES
-(65, '2019-11-24 22:03:20', 'Default Test Module', 'Default', 'Vila do Site', 'http://viladosite.com.br', 'logo.png', 'defaultmod', 1),
-(66, '2019-11-24 22:03:25', 'Atencil Contracts Module', 'Default', 'Vila do Site', 'http://viladosite.com.br', 'logo.png', 'contracts', 1),
-(67, '2019-11-24 22:03:32', 'AT Backups', 'Segurança', 'Vila do Site', 'http://viladosite.com.br', 'logo.png', 'atbackups', 1);
+INSERT INTO `at_modules` (`modid`, `modinst`, `modname`, `modcat`, `modauthor`, `modauthorlink`, `modlogo`, `modpath`, `modtable`, `modstatus`) VALUES
+(65, '2019-11-24 22:03:20', 'Default Test Module', 'Default', 'Vila do Site', 'http://viladosite.com.br', 'logo.png', 'defaultmod', '', 1),
+(66, '2019-11-24 22:03:25', 'Atencil Contracts Module', 'Default', 'Vila do Site', 'http://viladosite.com.br', 'logo.png', 'contracts', '', 1),
+(78, '2019-12-12 07:27:10', 'AT Backups', 'Segurança', 'Vila do Site', 'http://viladosite.com.br', 'logo.png', 'atbackups', 'at_mod_bkps', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `at_mod_bkps`
+--
+
+DROP TABLE IF EXISTS `at_mod_bkps`;
+CREATE TABLE IF NOT EXISTS `at_mod_bkps` (
+  `bkp_id` int(11) NOT NULL AUTO_INCREMENT,
+  `bkp_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `bkp_comp` int(11) NOT NULL,
+  `bkp_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `bkp_website` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `bkp_path` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`bkp_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
