@@ -84,25 +84,43 @@ if ($inststatus = 2){
 	$mauthor = $moddata['author'];
 	$mauthorurl = $moddata['authorurl'];
 	$mlogo = $moddata['modlogo'];
-	$mpath = $moddata['modpath'];
+    $mpath = $moddata['modpath'];
+    $mtable = $moddata['modtable'];
+    $mfields = $moddata['modfields'];
 
 
 	// Check the connection
 	if (!$mysql) { die("A Conexão Falhou: " . mysqli_connect_error()); }
 
 
-	// Set the query
-	$modinstsql = "
-		INSERT INTO at_modules (modinst, modname, modcat, modauthor, modauthorlink, modlogo, modpath, modstatus)
-		VALUES ('$minstdate', '$mname', '$mcateg', '$mauthor', '$mauthorlink', '$mlogo', '$mpath', '$mstatus');
-	";
 
+    // Define a query de cadastro do mod na lista de mods
+    $sql = "INSERT INTO at_modules (modinst, modname, modcat, modauthor, modauthorlink, modlogo, modpath, modtable, modstatus)
+    VALUES ('$minstdate', '$mname', '$mcateg', '$mauthor', '$mauthorlink', '$mlogo', '$mpath', '$mtable', '$mstatus');";
+    
+    // Define a query de criação da tabela do mod no banco
+    $sql .= "CREATE TABLE $mtable ($mfields)";
+        
+    
+    if (mysqli_multi_query($mysql, $sql)) {
+        do {
+            // Grava a primeira leva de resultados
+            if ($result = mysqli_store_result($mysql)) {
+            while ($row = mysqli_fetch_row($result)) {
+                printf("%s\n", $row[0]);
+            }
+            mysqli_free_result($result);
+            }
+            // Caso hajam mais resultados, cria um divisor
+            if (mysqli_more_results($mysql)) {
+            printf("-------------\n");
+            }
+            // Mostra os demais resultados
+        } while (mysqli_next_result($mysql));
+        }
+        
+        mysqli_close($mysql);
 
-	// Run the query
-	$modinstall = mysqli_query($mysql, $modinstsql);
-
-	// Close the connection
-	mysqli_close($mysql);
 
 }
 

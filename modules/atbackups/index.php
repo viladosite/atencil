@@ -2,51 +2,52 @@
 <div class="main-content">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
+            
+
 
             <!-- DATA TABLE -->
-            <h3 class="title-5 m-b-35">Módulos Instalados</h3>
+            <h3 class="title-4 m-b-35">AT Backups</h3>
+            <h3 class="title-5 m-b-35">Backups Cadastrados</h3>
             <div class="table-data__tool">
                 <div class="table-data__tool-left">
                     
                     <div class="rs-select2--light rs-select2--md">
                         <select class="js-select2" name="grupo">
-                            <option selected="selected">Categoria</option>
-                            <option value="">Utilidades</option>
-                            <option value="">Segurança</option>
-                            <option value="">Relacionamento</option>
+                            <option selected="selected">Por Website</option>
+                            <option value="">Website 1</option>
+                            <option value="">Website 2</option>
                         </select>
                         <div class="dropDownSelect2"></div>
                     </div>
                     
                     <div class="rs-select2--light rs-select2--md">
                         <select class="js-select2" name="tempo">
-                            <option selected="selected">Instalados</option>
+                            <option selected="selected">Por Data</option>
                             <option value="">Hoje</option>
                             <option value="">Até 7 dias</option>
                             <option value="">Até 30 dias</option>
                             <option value="">Até 365 Dias</option>
-                            <option value="">Todos os períodos</option>
                         </select>
                         <div class="dropDownSelect2"></div>
                     </div>
                     
                     <button class="au-btn-filter">
-                        <i class="zmdi zmdi-filter-list"></i>filtros
+                        <i class="zmdi zmdi-filter-list"></i>filtrar
                     </button>
                 </div>
 
                 <div class="table-data__tool-right">
                     <form action="mod_inst.php" style="display: inline;">
                         <button class="au-btn au-btn-icon au-btn--green au-btn--small" type="submit">
-                            <i class="zmdi zmdi-plus"></i>Instalar MOD
+                            <i class="zmdi zmdi-plus"></i>Criar Backup
                         </button>
                     </form>
 
                     <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <select class="js-select2" name="type">
-                            <option selected="selected">Atualizar</option>
+                            <option selected="selected">Excluir</option>
                             <option value="">Todos</option>
-                            <option value="">Selecionados</option>
+                            <option value="">Marcados</option>
                         </select>
                         <div class="dropDownSelect2"></div>
                     </div>
@@ -127,7 +128,6 @@
                                         </button>
                                         <input type="hidden" id="modid" name="modid" value="<?php echo $mod['modid']; ?>">
                                         <input type="hidden" id="moddir" name="moddir" value="<?php echo $mod['modpath']; ?>">
-                                        <input type="hidden" id="modtable" name="modtable" value="<?php echo $mod['modtable']; ?>">                                        
                                     </form>
                                     <?php } ?>
 
@@ -138,7 +138,8 @@
 
                         <tr class="spacer"></tr>
 
-                        <?php }  mysqli_close($mysql); ?>
+                        <?php } ?>
+                        
 
 
                     </tbody>
@@ -146,7 +147,13 @@
                 </table>
             </div>
             <!-- END DATA TABLE -->
-        	
+
+
+
+
+
+
         </div>
     </div>
 </div>
+<!-- END MAIN CONTENT-->
