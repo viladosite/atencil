@@ -6,5 +6,5 @@
     "modlogo": "logo.png",
     "modpath": "atbackups",
     "modtable": "at_mod_bkps",
-    "modfields": "bkp_id int NOT NULL auto_increment, bkp_date datetime NOT NULL DEFAULT CURRENT_TIMESTAMP, bkp_comp int NOT NULL, bkp_name varchar (50) NOT NULL, bkp_website varchar (50) NOT NULL, bkp_path varchar (50) NOT NULL, PRIMARY KEY (bkp_id)"    
+    "modsql": "atbackups.sql"
 }
