@@ -1,23 +1,59 @@
 <?php 
 
-// Load configs, functions, constants and variables from atencil system
-require 'includes/at_core.php';
+// Carrega as configurações, funções e elementos base para funcionamento do sistema
+require '../../../includes/at_core.php';
 
-// Backup variables
-$bkpname = '';
-$bkpcomp = '';
+// Variáveis com dados do formulário
+$bkpid = $_POST['bkpid'];
+$bkpdir = $_POST['bkpdir'];
+$bkptable = $_POST['bkptable'];
 
-// Mysql variables
-$bkpdbhost = '';
-$bkpdbuser = '';
-$bkpdbpass = '';
-$bkpdbname = '';
-$bkpdbport = '';
+// Variáveis do mod vindas como hidden do form
+$modid = $_POST['modid'];
+$moddir = $_POST['moddir'];
+$modtable = $_POST['modtable'];
+
+// Obtem os dados de acesso para o backup
+$bkpselect = "SELECT * FROM $modtable WHERE bkp_id = $bkpid";
+$bkpregistry = mysqli_query($mysql, $bkpselect);
+$bkpdata = mysqli_fetch_array($bkpregistry, MYSQLI_ASSOC);
+
+// General variables
+$bkpcomp = $bkpdata['bkp_comp'];
+$bkpdate = $bkpdata['bkp_date'];
+$bkpname = $bkpdata['bkp_name'];
+$bkpwebsite = $bkpdata['bkp_website'];
+
+// FTP variables
+$bkpftphost = $bkpdata['bkp_ftphost'];
+$bkpftpuser = $bkpdata['bkp_ftpuser'];
+$bkpftppass = $bkpdata['bkp_ftppass'];
+$bkpftpport = $bkpdata['bkp_ftpport'];
+
+// MYSQL variables
+$bkpdbhost = $bkpdata['bkp_dbhost'];
+$bkpdbname = $bkpdata['bkp_dbname'];
+$bkpdbuser = $bkpdata['bkp_dbuser'];
+$bkpdbpass = $bkpdata['bkp_dbpass'];
+$bkpdbport = $bkpdata['bkp_dbport'];
+
+
+
+// Cria o nome da pasta para o backup removendo acentos, caracteres especiais e espaços
+date_default_timezone_set('America/Sao_Paulo');
+$dirdate = date("Ymd_His");
+$dirname = str_replace(' ', '', $bkpname);
+$dirname = preg_replace('/\s+/', '', $dirname);
+$dirname = preg_replace('/[^A-Za-z0-9]/', '', $dirname);
+$dirname = remove_accents($dirname);
+if (strlen($dirname) > 10) { $dirname = substr($dirname, 0, 10); };
+$dirname = strtolower($dirname);
+$bkppath = $dirdate . "_" . $dirname;
 
 
 
 // Comment this line to use same script's directory ('.')
-define("BACKUP_DIR", 'mysqlbkps');
+define("BACKUP_DIR", '../backups/' . $bkppath);
 
 // Tables to backup. Use * to backup all of them or define("TABLES", 'table1, table2, table3'); to backup only a few
 define("TABLES", '*');
@@ -109,7 +145,7 @@ class Backup_Database {
         $this->charset                 = $charset;
         $this->conn                    = $this->initializeDatabase();
         $this->backupDir               = BACKUP_DIR ? BACKUP_DIR : '.';
-        $this->backupFile              = 'myphp-backup-'.$this->dbName.'-'.date("Ymd_His", time()).'.sql';
+        $this->backupFile              = $this->dbName.'-'.date("Ymd_His", time()).'.sql';
         $this->gzipBackupFile          = defined('GZIP_BACKUP_FILE') ? GZIP_BACKUP_FILE : true;
         $this->disableForeignKeyChecks = defined('DISABLE_FOREIGN_KEY_CHECKS') ? DISABLE_FOREIGN_KEY_CHECKS : true;
         $this->batchSize               = defined('BATCH_SIZE') ? BATCH_SIZE : 1000; // default 1000 rows
