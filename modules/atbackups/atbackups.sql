@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 13-Dez-2019 às 08:10
+-- Generation Time: 13-Dez-2019 às 09:03
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.3.5
 
@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `at_mod_bkps` (
   `bkp_bduser` varchar(50) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Usuário do MYSQL para o backup',
   `bkp_bdpass` varchar(50) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Senha do MYSQL para o backup',
   `bkp_bdport` varchar(10) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Porta do MYSQL para o backup',
+  `bkp_obs` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'Observações sobre o backup',
   PRIMARY KEY (`bkp_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 COMMIT;
