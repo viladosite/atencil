@@ -54,7 +54,7 @@ if($_FILES["modfile"]["name"]) {
 		if ($x === true) {
 			$zip->extractTo(DIR_PATH . HOME_DIR . MODS_DIR . "/");
 			$zipdir = trim($zip->getNameIndex(0), '/');
-			$mod_info_path = HOME_PATH . MODS_DIR . "/" . $zipdir . "/" . "modinfo.json";
+            $mod_info_path = HOME_PATH . MODS_DIR . "/" . $zipdir . "/" . "modinfo.json";
 			$zip->close();
 			unlink($target_path);
 		}
@@ -86,41 +86,31 @@ if ($inststatus == 'ok'){
 	$mlogo = $moddata['modlogo'];
     $mpath = $moddata['modpath'];
     $mtable = $moddata['modtable'];
-    $mfields = $moddata['modfields'];
+    $msql = $moddata['modsql'];
+    
+    // Set the path to the db sql file
+    $mod_db_path = HOME_PATH . MODS_DIR . "/" . $mpath . "/" . $msql;
 
-
-	// Check the connection
-	if (!$mysql) { die("A Conexão Falhou: " . mysqli_connect_error()); }
-
-
-
-    // Define a query de cadastro do mod na lista de mods
-    $sql = "INSERT INTO at_modules (modinst, modname, modcat, modauthor, modauthorlink, modlogo, modpath, modtable, modstatus)
+    // Inserção dos dados no banco
+    $dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8';
+    $user = DB_USER;
+    $password = DB_PASS;
+    
+    try {
+        $conn = new PDO($dsn, $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    
+    // Set the mod registry and mod tables to include in database
+    $modregistry = "INSERT INTO at_modules (modinst, modname, modcat, modauthor, modauthorlink, modlogo, modpath, modtable, modstatus)
     VALUES ('$minstdate', '$mname', '$mcateg', '$mauthor', '$mauthorlink', '$mlogo', '$mpath', '$mtable', '$mstatus');";
+    $modtables = file_get_contents($mod_db_path);
     
-    // Define a query de criação da tabela do mod no banco
-    $sql .= "CREATE TABLE $mtable ($mfields)";
-        
-    
-    if (mysqli_multi_query($mysql, $sql)) {
-        do {
-            // Grava a primeira leva de resultados
-            if ($result = mysqli_store_result($mysql)) {
-            while ($row = mysqli_fetch_row($result)) {
-                printf("%s\n", $row[0]);
-            }
-            mysqli_free_result($result);
-            }
-            // Caso hajam mais resultados, cria um divisor
-            if (mysqli_more_results($mysql)) {
-            printf("-------------\n");
-            }
-            // Mostra os demais resultados
-        } while (mysqli_next_result($mysql));
-        }
-        
-        mysqli_close($mysql);
-
+    // Run the queries to include the data in database
+    $qr1 = $conn->exec($modregistry);
+    $qr2 = $conn->exec($modtables);
 
 }
 
