@@ -32,7 +32,7 @@ $modrundir = $_POST['moddir'];
                 <!-- Carregamento do header desktop -->
                 <?php require '../includes/at_headerdesktop.php'; ?>
                 <!-- Carregamento do conteúdo da página -->
-                <?php include '../modules/' . $modrundir . '/index.php'; ?>
+                <?php require '../modules/' . $modrundir . '/index.php'; ?>
             </div>
             <!-- FIM DO PAGE CONTAINER-->
             <!-- Carrega os avisos e modais da página -->
