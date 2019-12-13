@@ -8,9 +8,10 @@ require __DIR__ . '/../includes/at_core.php';
 // Confere se o grupo do usuário tem permissão
 if (perm_group_check('viewmodules') == false) { header("Location: error_permission.php"); exit; }
 
-// Variáveis com dados do formulário
+// Variáveis com dados do formulário para uso nas demais páginas do mod
 $modrunid = $_POST['modid'];
 $modrundir = $_POST['moddir'];
+$modruntable = $_POST['modtable'];
 ?>
 
 
