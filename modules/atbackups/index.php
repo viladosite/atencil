@@ -3,8 +3,6 @@
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             
-
-
             <!-- DATA TABLE -->
             <h3 class="title-4 m-b-35">AT Backups</h3>
             <h3 class="title-5 m-b-35">Backups Cadastrados</h3>
@@ -75,7 +73,7 @@
 
                         <?php
                         // Monta os parâmetros da query
-                        $sql = "SELECT * FROM `at_mod_bkps`";
+                        $sql = "SELECT * FROM $modruntable";
 
                         // Monta a query para execução
                         $bkps = mysqli_query($mysql, $sql);
@@ -96,24 +94,50 @@
                                 </span>
                             </td>
                             <td><?php echo $bkp['bkp_date']; ?></td>
-                            <td><?php echo $mod['bkp_website']; ?></td>
+                            <td><?php echo $bkp['bkp_website']; ?></td>
                             <td>
                                 <div class="table-data-feature">
 
-                                    <form action="" method="post">
-                                        <button class="item" title="Baixar" name="baixar" value='baixar' type="submit">
+                                    <form action="../modules/<?php echo $modrundir; ?>/functions/bkp_db_run.php" method="post">
+                                        <button class="item" title="Iniciar" name="iniciar" value='iniciar' type="submit">
                                             <i class="zmdi zmdi-caret-right-circle"></i>
                                         </button>
                                         <input type="hidden" id="bkpid" name="bkpid" value="<?php echo $bkp['bkp_id']; ?>">
                                         <input type="hidden" id="bkpdir" name="bkpdir" value="<?php echo $bkp['bkp_path']; ?>">
+                                        <input type="hidden" id="bkptable" name="bkptable" value="<?php echo $modruntable; ?>">
+
+                                        <!-- Inputs para passagem de dados básicos do mod -->
+                                        <input type="hidden" id="modid" name="modid" value="<?php echo $modrunid; ?>">
+                                        <input type="hidden" id="moddir" name="moddir" value="<?php echo $modrundir; ?>">
+                                        <input type="hidden" id="modtable" name="modtable" value="<?php echo $modruntable; ?>">
                                     </form>
 
-                                    <form action="" method="post">
+                                    <form action="../modules/<?php echo $modrundir; ?>/functions/bkp_download.php" method="post">
+                                        <button class="item" title="Baixar" name="baixar" value='baixar' type="submit">
+                                            <i class="zmdi zmdi-download"></i>
+                                        </button>
+                                        <input type="hidden" id="bkpid" name="bkpid" value="<?php echo $bkp['bkp_id']; ?>">
+                                        <input type="hidden" id="bkpdir" name="bkpdir" value="<?php echo $bkp['bkp_path']; ?>">
+                                        <input type="hidden" id="bkptable" name="bkptable" value="<?php echo $modruntable; ?>">
+
+                                        <!-- Inputs para passagem de dados básicos do mod -->
+                                        <input type="hidden" id="modid" name="modid" value="<?php echo $modrunid; ?>">
+                                        <input type="hidden" id="moddir" name="moddir" value="<?php echo $modrundir; ?>">
+                                        <input type="hidden" id="modtable" name="modtable" value="<?php echo $modruntable; ?>">
+                                    </form>
+
+                                    <form action="../modules/<?php echo $modrundir; ?>/functions/bkp_remove.php" method="post">
                                         <button class="item" title="Remover" name="remover" value='remover' type="submit">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button>
                                         <input type="hidden" id="bkpid" name="bkpid" value="<?php echo $bkp['bkp_id']; ?>">
                                         <input type="hidden" id="bkpdir" name="bkpdir" value="<?php echo $bkp['bkp_path']; ?>">
+                                        <input type="hidden" id="bkptable" name="bkptable" value="<?php echo $modruntable; ?>">
+                                        
+                                        <!-- Inputs para passagem de dados básicos do mod -->
+                                        <input type="hidden" id="modid" name="modid" value="<?php echo $modrunid; ?>">
+                                        <input type="hidden" id="moddir" name="moddir" value="<?php echo $modrundir; ?>">
+                                        <input type="hidden" id="modtable" name="modtable" value="<?php echo $modruntable; ?>">
                                     </form>
 
                                 </div>
@@ -124,17 +148,11 @@
 
                         <?php } ?>
                         
-
-
                     </tbody>
 
                 </table>
             </div>
             <!-- END DATA TABLE -->
-
-
-
-
 
 
         </div>
