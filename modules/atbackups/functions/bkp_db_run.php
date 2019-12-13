@@ -476,3 +476,14 @@ $output = $backupDatabase->getOutput();
 if (php_sapi_name() != "cli") {
     echo '</div>';
 }
+
+?>
+
+<form action="../../../pages/mod_run.php" method="post">
+    <button class="item" title="Voltar" name="voltar" value='voltar' type="submit">
+        Voltar
+    </button>
+    <input type="hidden" id="modid" name="modid" value="<?php echo $modid; ?>">
+    <input type="hidden" id="moddir" name="moddir" value="<?php echo $moddir; ?>">
+    <input type="hidden" id="modtable" name="modtable" value="<?php echo $modtable; ?>">
+</form>
